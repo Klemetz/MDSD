@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codeGen -->
+      <package
+            uri="http:///Classes/Datalayer.ecore"
+            class="Classes.Datalayer.DatalayerPackage"
+            genModel="codeGen.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codeGen -->
+      <package
+            uri="http:///Classes/Buissnesslayer.ecore"
+            class="Classes.Buissnesslayer.BuissnesslayerPackage"
+            genModel="codeGen.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codeGen -->
+      <package
+            uri="http:///Classes/Interactionlayer.ecore"
+            class="Classes.Interactionlayer.InteractionlayerPackage"
+            genModel="codeGen.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated codeGen -->
+      <package
+            uri="http:///Classes/BuisnessLogicLayer.ecore"
+            class="Classes.BuisnessLogicLayer.BuisnessLogicLayerPackage"
+            genModel="codeGen.genmodel"/>
+   </extension>
+</plugin>

@@ -10,40 +10,35 @@
       <!-- @generated model2 -->
       <package
             uri="http:///RootElement.ecore"
-            class="RootElement.RootElementPackage"
-            genModel="model2.genmodel"/>
+            class="RootElement.RootElementPackage"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated model2 -->
       <package
             uri="http:///RootElement/Datalayer.ecore"
-            class="RootElement.Datalayer.DatalayerPackage"
-            genModel="model2.genmodel"/>
+            class="RootElement.Datalayer.DatalayerPackage"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated model2 -->
       <package
             uri="http:///RootElement/Buissnesslayer.ecore"
-            class="RootElement.Buissnesslayer.BuissnesslayerPackage"
-            genModel="model2.genmodel"/>
+            class="RootElement.Buissnesslayer.BuissnesslayerPackage"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated model2 -->
       <package
             uri="http:///RootElement/Interactionlayer.ecore"
-            class="RootElement.Interactionlayer.InteractionlayerPackage"
-            genModel="model2.genmodel"/>
+            class="RootElement.Interactionlayer.InteractionlayerPackage"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated model2 -->
       <package
             uri="http:///RootElement/BuisnessLogicLayer.ecore"
-            class="RootElement.BuisnessLogicLayer.BuisnessLogicLayerPackage"
-            genModel="model2.genmodel"/>
+            class="RootElement.BuisnessLogicLayer.BuisnessLogicLayerPackage"/>
    </extension>
 
 </plugin>
