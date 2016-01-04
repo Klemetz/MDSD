@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_kkicEJgXEeWgf_EMGD-UnQ" name="RootElement">
+  <packagedElement xmi:type="uml:Package" xmi:id="_Y88loJkOEeWgf_EMGD-UnQ" name="Data layer">
+    <packagedElement xmi:type="uml:Class" xmi:id="_b2BrkJkOEeWgf_EMGD-UnQ" name="Database"/>
+    <packagedElement xmi:type="uml:TimeObservation" xmi:id="_-KT0IJkOEeWgf_EMGD-UnQ" name="TimeObservation1"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_ATBXoJkQEeWgf_EMGD-UnQ" client="_qIqOQJkPEeWgf_EMGD-UnQ" supplier="_3NlPYJkKEeWgf_EMGD-UnQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_ErInYJkQEeWgf_EMGD-UnQ" client="_qu-nYJkPEeWgf_EMGD-UnQ" supplier="_3NlPYJkKEeWgf_EMGD-UnQ"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_YlKwEJkUEeWgf_EMGD-UnQ" name="Buissness layer">
+    <packagedElement xmi:type="uml:Class" xmi:id="_ddD3oJkKEeWgf_EMGD-UnQ" name="Room">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_f419kJkKEeWgf_EMGD-UnQ" name="Type : roomType">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_vvIsQJgXEeWgf_EMGD-UnQ" name="Booking">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LR2aYJgYEeWgf_EMGD-UnQ" name="bookingID" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_QSMu0JgYEeWgf_EMGD-UnQ" name="guest">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pAdGYJgaEeWgf_EMGD-UnQ" name="nrOfGuests">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_z5aM8JgaEeWgf_EMGD-UnQ" name="startDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_G5HYMJgbEeWgf_EMGD-UnQ" name="endDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dqRb0JgbEeWgf_EMGD-UnQ" name="extras">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0ECoQJgdEeWgf_EMGD-UnQ" name="parkings">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Pc4BoJgeEeWgf_EMGD-UnQ" name="rooms">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_SkXXAJgeEeWgf_EMGD-UnQ" name="checkedIn">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_da9tIJgeEeWgf_EMGD-UnQ" name="checkedOut">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_homyQJgeEeWgf_EMGD-UnQ" name="payment">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qtLxIJgeEeWgf_EMGD-UnQ" name="paymentComplete">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bGfNMqUQEeW-MevX_-oa-Q" name="room" type="_ddD3oJkKEeWgf_EMGD-UnQ" association="_bGemIKUQEeW-MevX_-oa-Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d2DKwKUQEeW-MevX_-oa-Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_d2G1IKUQEeW-MevX_-oa-Q" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_S0sSIJkHEeWgf_EMGD-UnQ" name="BookingHandler">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1qCgYJkHEeWgf_EMGD-UnQ" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ad8tEJkIEeWgf_EMGD-UnQ" name="Bookings" visibility="private" type="_vvIsQJgXEeWgf_EMGD-UnQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__Esz4KUDEeW-MevX_-oa-Q" name="singletonBooking" type="_S0sSIJkHEeWgf_EMGD-UnQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5wWkYaUOEeW-MevX_-oa-Q" name="&lt;&lt;abstract>>user" type="_3NlPYJkKEeWgf_EMGD-UnQ" association="_5wVWQKUOEeW-MevX_-oa-Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GudZkKUPEeW-MevX_-oa-Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Guw7kKUPEeW-MevX_-oa-Q" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ixC6kaUPEeW-MevX_-oa-Q" name="database" type="_b2BrkJkOEeWgf_EMGD-UnQ" association="_ixCTgKUPEeW-MevX_-oa-Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RazLAaUQEeW-MevX_-oa-Q" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" association="_Rax84KUQEeW-MevX_-oa-Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UkITcKUQEeW-MevX_-oa-Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UkMk4KUQEeW-MevX_-oa-Q" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_lfOpMJkIEeWgf_EMGD-UnQ" name="int fetchAvailability(StartDate, EndDate, RoomType, NrOfGuests)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DiJqQJkJEeWgf_EMGD-UnQ" name="Booking fetchBooking(int bookingID)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xNxegJkJEeWgf_EMGD-UnQ" name="attemptBookRoom(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2DJSAJkJEeWgf_EMGD-UnQ" name="cancelBooking(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_64WGYJkJEeWgf_EMGD-UnQ" name="changeBooking(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_D0PDUJkKEeWgf_EMGD-UnQ" name="checkIn(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_IU388JkKEeWgf_EMGD-UnQ" name="checkOut(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_PvdfMJkKEeWgf_EMGD-UnQ" name="sendErrorMsg() : String"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Kw8YkKUEEeW-MevX_-oa-Q" name="getSingletonBooking"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NVYEMKUEEeW-MevX_-oa-Q" name="createSingletonHandler"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qMKpUKUEEeW-MevX_-oa-Q" name="fetchAvailableExtras"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qu-nYJkPEeWgf_EMGD-UnQ" name="Guest">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_gTIWwJkTEeWgf_EMGD-UnQ" name="int bookRoom(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_lvUSoJkTEeWgf_EMGD-UnQ" name="changeBooking(Booking oldBooking, Booking newBooking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xaGewJkTEeWgf_EMGD-UnQ" name="cancelBooking(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_56Fi0JkTEeWgf_EMGD-UnQ" name="attemptCheckIn(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_97MAwJkTEeWgf_EMGD-UnQ" name="attemptCheckOut(Booking booking)"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qIqOQJkPEeWgf_EMGD-UnQ" name="Employee">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Gd8BwJkQEeWgf_EMGD-UnQ" name="ID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LzxeAJkQEeWgf_EMGD-UnQ" name="Password">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_eMycsJkQEeWgf_EMGD-UnQ" name="int bookRoom(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qGFl8JkQEeWgf_EMGD-UnQ" name="changeBooking(Booking oldBooking, Booking newBooking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_CEwwIJkSEeWgf_EMGD-UnQ" name="cancelBooking(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LrTMkJkSEeWgf_EMGD-UnQ" name="attemptCheckIn(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6Im8cJkSEeWgf_EMGD-UnQ" name="attemptCheckOut(Booking booking)"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3NlPYJkKEeWgf_EMGD-UnQ" name="&lt;&lt;Abstract>>User">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AjGNQJkLEeWgf_EMGD-UnQ" name="Name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GllUIJkLEeWgf_EMGD-UnQ" name="Email">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Rkn0kJkLEeWgf_EMGD-UnQ" name="bookingHandler" type="_S0sSIJkHEeWgf_EMGD-UnQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wWDNIaUOEeW-MevX_-oa-Q" name="logincontroller" type="_766t8JkaEeWgf_EMGD-UnQ" association="_wWCmEKUOEeW-MevX_-oa-Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OL8e0aUPEeW-MevX_-oa-Q" name="userhandler" type="_bd3fsJkNEeWgf_EMGD-UnQ" association="_OL73wKUPEeW-MevX_-oa-Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_mmlMQaUQEeW-MevX_-oa-Q" name="address" type="_yYCx4JkMEeWgf_EMGD-UnQ" association="_mmj-IKUQEeW-MevX_-oa-Q"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_XuANoJkLEeWgf_EMGD-UnQ" name="enterContactData(String name, Email email, Address adress)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hJ_m8JkLEeWgf_EMGD-UnQ" name="int bookRoom(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_vO328JkLEeWgf_EMGD-UnQ" name="changeBooking(Booking oldBooking, Booking newBooking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1XOVQJkLEeWgf_EMGD-UnQ" name="cancelBooking(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_L_2H8JkMEeWgf_EMGD-UnQ" name="attemptCheckIn(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_RNFB0JkMEeWgf_EMGD-UnQ" name="attemptCheckOut(Booking booking)"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yYCx4JkMEeWgf_EMGD-UnQ" name="Address">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__0GHUJkMEeWgf_EMGD-UnQ" name="street">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_DscR4JkNEeWgf_EMGD-UnQ" name="postalNumber">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HkaB8JkNEeWgf_EMGD-UnQ" name="city">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_K5VWYJkNEeWgf_EMGD-UnQ" name="country">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bd3fsJkNEeWgf_EMGD-UnQ" name="UserHandler">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ir07MJkNEeWgf_EMGD-UnQ" name="Users" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LBjK8KUFEeW-MevX_-oa-Q" name="singletonUserHandler" type="_bd3fsJkNEeWgf_EMGD-UnQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NqDvMaUOEeW-MevX_-oa-Q" name="logincontroller" type="_766t8JkaEeWgf_EMGD-UnQ" association="_NqChEKUOEeW-MevX_-oa-Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0gh0EqUPEeW-MevX_-oa-Q" name="database" type="_b2BrkJkOEeWgf_EMGD-UnQ" association="_0ghNAKUPEeW-MevX_-oa-Q"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1lmdkJkNEeWgf_EMGD-UnQ" name="addGuestDB(PaymentInfo paymentInfo, User user)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6_sHsJkNEeWgf_EMGD-UnQ" name="sendEmailVerification(String email)" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_UUwbsKUFEeW-MevX_-oa-Q" name="getSingletonHandler"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_wF0u4KUFEeW-MevX_-oa-Q" name="createSingletonHandler"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_K8QN4JkVEeWgf_EMGD-UnQ" name="Interaction layer">
+    <packagedElement xmi:type="uml:Class" xmi:id="_O47e0JkVEeWgf_EMGD-UnQ" name="GUI">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CG9U4aUNEeW-MevX_-oa-Q" name="guicontroller" type="_RxfnYJkVEeWgf_EMGD-UnQ" association="_CG8t0KUNEeW-MevX_-oa-Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RxfnYJkVEeWgf_EMGD-UnQ" name="GUIController">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_XQJBYJkVEeWgf_EMGD-UnQ" name="display" visibility="private" type="_O47e0JkVEeWgf_EMGD-UnQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_nq7Y0JkVEeWgf_EMGD-UnQ" name="Attribute1"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_P1W-kaUNEeW-MevX_-oa-Q" name="logincontroller" type="_766t8JkaEeWgf_EMGD-UnQ" association="_P1VwcKUNEeW-MevX_-oa-Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0QxrYKUQEeW-MevX_-oa-Q" name="bookinghandler" type="_S0sSIJkHEeWgf_EMGD-UnQ" association="_0QwdQKUQEeW-MevX_-oa-Q"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_yFPbkJkVEeWgf_EMGD-UnQ" name="showAvailability(startDate, endDate, roomType, NrOfGuests)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_39mrMJkXEeWgf_EMGD-UnQ" name="displayError(string errorMsg)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F-WCEJkYEeWgf_EMGD-UnQ" name="displayExtras(List&lt;extras>Extras)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hwTtIJkYEeWgf_EMGD-UnQ" name="displayParkings(List&lt;parkings>Parkings)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_uOo2EJkYEeWgf_EMGD-UnQ" name="displayRoomTypes(List&lt;roomType>RoomType)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6WAQgJkYEeWgf_EMGD-UnQ" name="displayRoomsGrid(List&lt;Room> roomType)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_RPHWQJkZEeWgf_EMGD-UnQ" name="displayPaymentOption()"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_U6HBUJkZEeWgf_EMGD-UnQ" name="displayRoomsByID(int bookingID)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_bHtzEJkZEeWgf_EMGD-UnQ" name="displayBookingsByID(int bookingID)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hZAyAJkZEeWgf_EMGD-UnQ" name="displayBookingCancelled()"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_766t8JkaEeWgf_EMGD-UnQ" name="LoginController">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__nyBQJkaEeWgf_EMGD-UnQ" name="currentUser" type="_3NlPYJkKEeWgf_EMGD-UnQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4-6W0KUCEeW-MevX_-oa-Q" name="LoginController" visibility="private" type="_766t8JkaEeWgf_EMGD-UnQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_XU__8KUNEeW-MevX_-oa-Q" name="paymenthandler" type="_DXwyoJkeEeWgf_EMGD-UnQ" association="_XU-x0KUNEeW-MevX_-oa-Q"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_0WDY4JkbEeWgf_EMGD-UnQ" name="Employee loginEmployee(int ID, string password)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oyVooJkcEeWgf_EMGD-UnQ" name="Guest makeGuestBookingLogin(Booking booking)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_udBTgJkcEeWgf_EMGD-UnQ" name="Guest loginGuest(int bookingID, string name)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_HcmIYKUDEeW-MevX_-oa-Q" name="getSingletonController"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_SkFaMKUDEeW-MevX_-oa-Q" name="createSingletonHandler"/>
+      <nestedClassifier xmi:type="uml:DataType" xmi:id="_9VWZsJkcEeWgf_EMGD-UnQ" name="DataType1"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5DtI4JkdEeWgf_EMGD-UnQ" name="Buisness Logic Layer">
+    <packagedElement xmi:type="uml:Class" xmi:id="_DXwyoJkeEeWgf_EMGD-UnQ" name="PaymentHandler">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MzLkMJkeEeWgf_EMGD-UnQ" name="PaymentInfo makePayment(PaymentInfo paymentInfo, Booking booking)"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YBZwIJkeEeWgf_EMGD-UnQ" name="PaymentInfo">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_efvFgJkeEeWgf_EMGD-UnQ" name="PaymentComplete">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_M_u2QKUCEeW-MevX_-oa-Q" name="CreditCard">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WOLi0KUCEeW-MevX_-oa-Q" name="CVV">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZtiloKUCEeW-MevX_-oa-Q" name="ExpiryDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rOxmwaUNEeW-MevX_-oa-Q" name="paymenthandler" type="_DXwyoJkeEeWgf_EMGD-UnQ" association="_rOwYoKUNEeW-MevX_-oa-Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_zwtLkKUNEeW-MevX_-oa-Q" client="_DXwyoJkeEeWgf_EMGD-UnQ" supplier="_lQ7sgJkeEeWgf_EMGD-UnQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_lQ7sgJkeEeWgf_EMGD-UnQ" name="Bank"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_blT0YJkhEeWgf_EMGD-UnQ" name="Interaction1">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_PeAZcJkjEeWgf_EMGD-UnQ" name="Guest" coveredBy="_HYaV4JkkEeWgf_EMGD-UnQ _RvvWEJkkEeWgf_EMGD-UnQ _dnswoJkmEeWgf_EMGD-UnQ _dwM6cJkoEeWgf_EMGD-UnQ _wJ7q0JkoEeWgf_EMGD-UnQ _G7IKsJkpEeWgf_EMGD-UnQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Rqdp8JkjEeWgf_EMGD-UnQ" name="Booking" coveredBy="_HYbkAJkkEeWgf_EMGD-UnQ _RvuH8JkkEeWgf_EMGD-UnQ _dnt-wJkmEeWgf_EMGD-UnQ _osdekJkmEeWgf_EMGD-UnQ _ZeQkIJkoEeWgf_EMGD-UnQ _dwLsUJkoEeWgf_EMGD-UnQ _wJ9gAJkoEeWgf_EMGD-UnQ _5rqfwJkoEeWgf_EMGD-UnQ _Egf7UJkpEeWgf_EMGD-UnQ _G7G8kJkpEeWgf_EMGD-UnQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_UWqKcJkjEeWgf_EMGD-UnQ" name="Database" coveredBy="_osf60JkmEeWgf_EMGD-UnQ _ZePWAJkoEeWgf_EMGD-UnQ _5rrt4JkoEeWgf_EMGD-UnQ _EgetMJkpEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HYaV4JkkEeWgf_EMGD-UnQ" name="MessageSend" covered="_PeAZcJkjEeWgf_EMGD-UnQ" message="_HYYgsJkkEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HYbkAJkkEeWgf_EMGD-UnQ" name="MessageRecv" covered="_Rqdp8JkjEeWgf_EMGD-UnQ" message="_HYYgsJkkEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_RvuH8JkkEeWgf_EMGD-UnQ" name="MessageSend0" covered="_Rqdp8JkjEeWgf_EMGD-UnQ" message="_Rvs50JkkEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_RvvWEJkkEeWgf_EMGD-UnQ" name="MessageRecv0" covered="_PeAZcJkjEeWgf_EMGD-UnQ" message="_Rvs50JkkEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dnswoJkmEeWgf_EMGD-UnQ" name="MessageSend1" covered="_PeAZcJkjEeWgf_EMGD-UnQ" message="_dnq7cJkmEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dnt-wJkmEeWgf_EMGD-UnQ" name="MessageRecv1" covered="_Rqdp8JkjEeWgf_EMGD-UnQ" message="_dnq7cJkmEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_osdekJkmEeWgf_EMGD-UnQ" name="MessageSend2" covered="_Rqdp8JkjEeWgf_EMGD-UnQ" message="_osbpYJkmEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_osf60JkmEeWgf_EMGD-UnQ" name="MessageRecv2" covered="_UWqKcJkjEeWgf_EMGD-UnQ" message="_osbpYJkmEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ZePWAJkoEeWgf_EMGD-UnQ" name="MessageSend3" covered="_UWqKcJkjEeWgf_EMGD-UnQ" message="_ZeOH4JkoEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ZeQkIJkoEeWgf_EMGD-UnQ" name="MessageRecv3" covered="_Rqdp8JkjEeWgf_EMGD-UnQ" message="_ZeOH4JkoEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dwLsUJkoEeWgf_EMGD-UnQ" name="MessageSend4" covered="_Rqdp8JkjEeWgf_EMGD-UnQ" message="_dwJ3IJkoEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dwM6cJkoEeWgf_EMGD-UnQ" name="MessageRecv4" covered="_PeAZcJkjEeWgf_EMGD-UnQ" message="_dwJ3IJkoEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_wJ7q0JkoEeWgf_EMGD-UnQ" name="MessageSend5" covered="_PeAZcJkjEeWgf_EMGD-UnQ" message="_wJ51oJkoEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_wJ9gAJkoEeWgf_EMGD-UnQ" name="MessageRecv5" covered="_Rqdp8JkjEeWgf_EMGD-UnQ" message="_wJ51oJkoEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5rqfwJkoEeWgf_EMGD-UnQ" name="MessageSend6" covered="_Rqdp8JkjEeWgf_EMGD-UnQ" message="_5roqkJkoEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5rrt4JkoEeWgf_EMGD-UnQ" name="MessageRecv6" covered="_UWqKcJkjEeWgf_EMGD-UnQ" message="_5roqkJkoEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_EgetMJkpEeWgf_EMGD-UnQ" name="MessageSend7" covered="_UWqKcJkjEeWgf_EMGD-UnQ" message="_Egc4AJkpEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Egf7UJkpEeWgf_EMGD-UnQ" name="MessageRecv7" covered="_Rqdp8JkjEeWgf_EMGD-UnQ" message="_Egc4AJkpEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_G7G8kJkpEeWgf_EMGD-UnQ" name="MessageSend8" covered="_Rqdp8JkjEeWgf_EMGD-UnQ" message="_G7FHYJkpEeWgf_EMGD-UnQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_G7IKsJkpEeWgf_EMGD-UnQ" name="MessageRecv8" covered="_PeAZcJkjEeWgf_EMGD-UnQ" message="_G7FHYJkpEeWgf_EMGD-UnQ"/>
+    <message xmi:type="uml:Message" xmi:id="_HYYgsJkkEeWgf_EMGD-UnQ" name="login(email)" messageSort="asynchCall" receiveEvent="_HYbkAJkkEeWgf_EMGD-UnQ" sendEvent="_HYaV4JkkEeWgf_EMGD-UnQ"/>
+    <message xmi:type="uml:Message" xmi:id="_Rvs50JkkEeWgf_EMGD-UnQ" name=" true" messageSort="asynchCall" receiveEvent="_RvvWEJkkEeWgf_EMGD-UnQ" sendEvent="_RvuH8JkkEeWgf_EMGD-UnQ"/>
+    <message xmi:type="uml:Message" xmi:id="_dnq7cJkmEeWgf_EMGD-UnQ" name="returnAvailableRooms(StartDate, EndDate)" messageSort="asynchCall" receiveEvent="_dnt-wJkmEeWgf_EMGD-UnQ" sendEvent="_dnswoJkmEeWgf_EMGD-UnQ"/>
+    <message xmi:type="uml:Message" xmi:id="_osbpYJkmEeWgf_EMGD-UnQ" name="returnAvailableRooms(StartDate, EndDate)" messageSort="asynchCall" receiveEvent="_osf60JkmEeWgf_EMGD-UnQ" sendEvent="_osdekJkmEeWgf_EMGD-UnQ"/>
+    <message xmi:type="uml:Message" xmi:id="_ZeOH4JkoEeWgf_EMGD-UnQ" name="availableRooms" messageSort="asynchCall" receiveEvent="_ZeQkIJkoEeWgf_EMGD-UnQ" sendEvent="_ZePWAJkoEeWgf_EMGD-UnQ"/>
+    <message xmi:type="uml:Message" xmi:id="_dwJ3IJkoEeWgf_EMGD-UnQ" name="availableRooms" messageSort="asynchCall" receiveEvent="_dwM6cJkoEeWgf_EMGD-UnQ" sendEvent="_dwLsUJkoEeWgf_EMGD-UnQ"/>
+    <message xmi:type="uml:Message" xmi:id="_wJ51oJkoEeWgf_EMGD-UnQ" name="makeBooking(roomType, extras, parking, payment)" messageSort="asynchCall" receiveEvent="_wJ9gAJkoEeWgf_EMGD-UnQ" sendEvent="_wJ7q0JkoEeWgf_EMGD-UnQ"/>
+    <message xmi:type="uml:Message" xmi:id="_5roqkJkoEeWgf_EMGD-UnQ" name="storeBooking(ID, roomType, extras, parking, payment)" messageSort="asynchCall" receiveEvent="_5rrt4JkoEeWgf_EMGD-UnQ" sendEvent="_5rqfwJkoEeWgf_EMGD-UnQ"/>
+    <message xmi:type="uml:Message" xmi:id="_Egc4AJkpEeWgf_EMGD-UnQ" name="confirmBooking" messageSort="asynchCall" receiveEvent="_Egf7UJkpEeWgf_EMGD-UnQ" sendEvent="_EgetMJkpEeWgf_EMGD-UnQ"/>
+    <message xmi:type="uml:Message" xmi:id="_G7FHYJkpEeWgf_EMGD-UnQ" name="confirmBooking" messageSort="asynchCall" receiveEvent="_G7IKsJkpEeWgf_EMGD-UnQ" sendEvent="_G7G8kJkpEeWgf_EMGD-UnQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_9abeQJktEeWNibpp71hW3w" name="Interaction2">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_BLcRwJkuEeWNibpp71hW3w" name="Guest" coveredBy="_OU1J4JkuEeWNibpp71hW3w _gWjC4JkuEeWNibpp71hW3w _p1BvgJkuEeWNibpp71hW3w _G8Vc4JkvEeWNibpp71hW3w"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Co_04JkuEeWNibpp71hW3w" name="Employee" coveredBy="_OU2YAJkuEeWNibpp71hW3w _gWh0wJkuEeWNibpp71hW3w _p1C9oJkuEeWNibpp71hW3w _vWAr0JkuEeWNibpp71hW3w _CczWgJkvEeWNibpp71hW3w _G8UOwJkvEeWNibpp71hW3w"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_FVLHQJkuEeWNibpp71hW3w" name="Booking" coveredBy="_vWChAJkuEeWNibpp71hW3w _xTK8EJkuEeWNibpp71hW3w _27NioJkuEeWNibpp71hW3w _5oXFYJkuEeWNibpp71hW3w _7luJ8JkuEeWNibpp71hW3w _9Av9gJkuEeWNibpp71hW3w _9AxLoJkuEeWNibpp71hW3w _CcyIYJkvEeWNibpp71hW3w"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_GXs7QJkuEeWNibpp71hW3w" name="Database" coveredBy="_xTMxQJkuEeWNibpp71hW3w _27MUgJkuEeWNibpp71hW3w"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_IvR2oJkuEeWNibpp71hW3w" name="Bank" coveredBy="_5oY6kJkuEeWNibpp71hW3w _7lsUwJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OU1J4JkuEeWNibpp71hW3w" name="MessageSend" covered="_BLcRwJkuEeWNibpp71hW3w" message="_OUytoJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OU2YAJkuEeWNibpp71hW3w" name="MessageRecv" covered="_Co_04JkuEeWNibpp71hW3w" message="_OUytoJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_gWh0wJkuEeWNibpp71hW3w" name="MessageSend0" covered="_Co_04JkuEeWNibpp71hW3w" message="_gWf_kJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_gWjC4JkuEeWNibpp71hW3w" name="MessageRecv0" covered="_BLcRwJkuEeWNibpp71hW3w" message="_gWf_kJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_p1BvgJkuEeWNibpp71hW3w" name="MessageSend1" covered="_BLcRwJkuEeWNibpp71hW3w" message="_p0_TQJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_p1C9oJkuEeWNibpp71hW3w" name="MessageRecv1" covered="_Co_04JkuEeWNibpp71hW3w" message="_p0_TQJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_vWAr0JkuEeWNibpp71hW3w" name="MessageSend2" covered="_Co_04JkuEeWNibpp71hW3w" message="_vV_dsJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_vWChAJkuEeWNibpp71hW3w" name="MessageRecv2" covered="_FVLHQJkuEeWNibpp71hW3w" message="_vV_dsJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xTK8EJkuEeWNibpp71hW3w" name="MessageSend3" covered="_FVLHQJkuEeWNibpp71hW3w" message="_xTJG4JkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xTMxQJkuEeWNibpp71hW3w" name="MessageRecv3" covered="_GXs7QJkuEeWNibpp71hW3w" message="_xTJG4JkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_27MUgJkuEeWNibpp71hW3w" name="MessageSend4" covered="_GXs7QJkuEeWNibpp71hW3w" message="_27KfUJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_27NioJkuEeWNibpp71hW3w" name="MessageRecv4" covered="_FVLHQJkuEeWNibpp71hW3w" message="_27KfUJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5oXFYJkuEeWNibpp71hW3w" name="MessageSend5" covered="_FVLHQJkuEeWNibpp71hW3w" message="_5oVQMJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5oY6kJkuEeWNibpp71hW3w" name="MessageRecv5" covered="_IvR2oJkuEeWNibpp71hW3w" message="_5oVQMJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7lsUwJkuEeWNibpp71hW3w" name="MessageSend6" covered="_IvR2oJkuEeWNibpp71hW3w" message="_7lqfkJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7luJ8JkuEeWNibpp71hW3w" name="MessageRecv6" covered="_FVLHQJkuEeWNibpp71hW3w" message="_7lqfkJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_9Av9gJkuEeWNibpp71hW3w" name="MessageSend7" covered="_FVLHQJkuEeWNibpp71hW3w" message="_9AthQJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_9AxLoJkuEeWNibpp71hW3w" name="MessageRecv7" covered="_FVLHQJkuEeWNibpp71hW3w" message="_9AthQJkuEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CcyIYJkvEeWNibpp71hW3w" name="MessageSend8" covered="_FVLHQJkuEeWNibpp71hW3w" message="_CcwTMJkvEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CczWgJkvEeWNibpp71hW3w" name="MessageRecv8" covered="_Co_04JkuEeWNibpp71hW3w" message="_CcwTMJkvEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_G8UOwJkvEeWNibpp71hW3w" name="MessageSend9" covered="_Co_04JkuEeWNibpp71hW3w" message="_G8RLcJkvEeWNibpp71hW3w"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_G8Vc4JkvEeWNibpp71hW3w" name="MessageRecv9" covered="_BLcRwJkuEeWNibpp71hW3w" message="_G8RLcJkvEeWNibpp71hW3w"/>
+    <message xmi:type="uml:Message" xmi:id="_OUytoJkuEeWNibpp71hW3w" name="Check Out request" messageSort="asynchCall" receiveEvent="_OU2YAJkuEeWNibpp71hW3w" sendEvent="_OU1J4JkuEeWNibpp71hW3w"/>
+    <message xmi:type="uml:Message" xmi:id="_gWf_kJkuEeWNibpp71hW3w" name="Inquired about room details" messageSort="asynchCall" receiveEvent="_gWjC4JkuEeWNibpp71hW3w" sendEvent="_gWh0wJkuEeWNibpp71hW3w"/>
+    <message xmi:type="uml:Message" xmi:id="_p0_TQJkuEeWNibpp71hW3w" name="Give Room details and hand over keys" messageSort="asynchCall" receiveEvent="_p1C9oJkuEeWNibpp71hW3w" sendEvent="_p1BvgJkuEeWNibpp71hW3w"/>
+    <message xmi:type="uml:Message" xmi:id="_vV_dsJkuEeWNibpp71hW3w" name="checkOut()" messageSort="asynchCall" receiveEvent="_vWChAJkuEeWNibpp71hW3w" sendEvent="_vWAr0JkuEeWNibpp71hW3w"/>
+    <message xmi:type="uml:Message" xmi:id="_xTJG4JkuEeWNibpp71hW3w" name="fetchBooking()" messageSort="asynchCall" receiveEvent="_xTMxQJkuEeWNibpp71hW3w" sendEvent="_xTK8EJkuEeWNibpp71hW3w"/>
+    <message xmi:type="uml:Message" xmi:id="_27KfUJkuEeWNibpp71hW3w" name="returnBooking()" messageSort="asynchCall" receiveEvent="_27NioJkuEeWNibpp71hW3w" sendEvent="_27MUgJkuEeWNibpp71hW3w"/>
+    <message xmi:type="uml:Message" xmi:id="_5oVQMJkuEeWNibpp71hW3w" name="makePayment()" messageSort="asynchCall" receiveEvent="_5oY6kJkuEeWNibpp71hW3w" sendEvent="_5oXFYJkuEeWNibpp71hW3w"/>
+    <message xmi:type="uml:Message" xmi:id="_7lqfkJkuEeWNibpp71hW3w" name="true" messageSort="asynchCall" receiveEvent="_7luJ8JkuEeWNibpp71hW3w" sendEvent="_7lsUwJkuEeWNibpp71hW3w"/>
+    <message xmi:type="uml:Message" xmi:id="_9AthQJkuEeWNibpp71hW3w" name="checkOut = true" messageSort="asynchCall" receiveEvent="_9AxLoJkuEeWNibpp71hW3w" sendEvent="_9Av9gJkuEeWNibpp71hW3w"/>
+    <message xmi:type="uml:Message" xmi:id="_CcwTMJkvEeWNibpp71hW3w" name="checkOut Successful" messageSort="asynchCall" receiveEvent="_CczWgJkvEeWNibpp71hW3w" sendEvent="_CcyIYJkvEeWNibpp71hW3w"/>
+    <message xmi:type="uml:Message" xmi:id="_G8RLcJkvEeWNibpp71hW3w" name="checkOut Successful" messageSort="asynchCall" receiveEvent="_G8Vc4JkvEeWNibpp71hW3w" sendEvent="_G8UOwJkvEeWNibpp71hW3w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_CG8t0KUNEeW-MevX_-oa-Q" memberEnd="_CG9U4aUNEeW-MevX_-oa-Q _CG978KUNEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CG8t0aUNEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CG9U4KUNEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_CG978KUNEeW-MevX_-oa-Q" name="gui" type="_O47e0JkVEeWgf_EMGD-UnQ" association="_CG8t0KUNEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_P1VwcKUNEeW-MevX_-oa-Q" memberEnd="_P1W-kaUNEeW-MevX_-oa-Q _P1XloKUNEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_P1WXgKUNEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_P1W-kKUNEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_P1XloKUNEeW-MevX_-oa-Q" name="guicontroller" type="_RxfnYJkVEeWgf_EMGD-UnQ" association="_P1VwcKUNEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_XU-x0KUNEeW-MevX_-oa-Q" memberEnd="_XU__8KUNEeW-MevX_-oa-Q _XVAnAKUNEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XU_Y4KUNEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XU_Y4aUNEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_XVAnAKUNEeW-MevX_-oa-Q" name="logincontroller" type="_766t8JkaEeWgf_EMGD-UnQ" association="_XU-x0KUNEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_rOwYoKUNEeW-MevX_-oa-Q" memberEnd="_rOxmwaUNEeW-MevX_-oa-Q _rOyN0KUNEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rOw_sKUNEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rOxmwKUNEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rOyN0KUNEeW-MevX_-oa-Q" name="paymentinfo" type="_YBZwIJkeEeWgf_EMGD-UnQ" association="_rOwYoKUNEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_NqChEKUOEeW-MevX_-oa-Q" name="Gets currentUser from UserHandler" memberEnd="_NqDvMaUOEeW-MevX_-oa-Q _NqEWQKUOEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NqDIIKUOEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NqDvMKUOEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NqEWQKUOEeW-MevX_-oa-Q" name="userhandler" type="_bd3fsJkNEeWgf_EMGD-UnQ" association="_NqChEKUOEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wWCmEKUOEeW-MevX_-oa-Q" memberEnd="_wWDNIaUOEeW-MevX_-oa-Q _wWD0MKUOEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wWCmEaUOEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wWDNIKUOEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wWD0MKUOEeW-MevX_-oa-Q" name="&lt;&lt;abstract>>user" type="_3NlPYJkKEeWgf_EMGD-UnQ" association="_wWCmEKUOEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5wVWQKUOEeW-MevX_-oa-Q" memberEnd="_5wWkYaUOEeW-MevX_-oa-Q _5wXLcKUOEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5wV9UKUOEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5wWkYKUOEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_5wXLcKUOEeW-MevX_-oa-Q" name="bookinghandler" type="_S0sSIJkHEeWgf_EMGD-UnQ" association="_5wVWQKUOEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_OL73wKUPEeW-MevX_-oa-Q" name="Grants access to priviligies assiciated with satus" memberEnd="_OL8e0aUPEeW-MevX_-oa-Q _OL9F4KUPEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OL73waUPEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OL8e0KUPEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_OL9F4KUPEeW-MevX_-oa-Q" name="&lt;&lt;abstract>>user" type="_3NlPYJkKEeWgf_EMGD-UnQ" association="_OL73wKUPEeW-MevX_-oa-Q">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UNCekKUPEeW-MevX_-oa-Q" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UNFh4KUPEeW-MevX_-oa-Q" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ixCTgKUPEeW-MevX_-oa-Q" name="Successful bookings are added to DB" memberEnd="_ixC6kaUPEeW-MevX_-oa-Q _ixDhoKUPEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ixCTgaUPEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ixC6kKUPEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ixDhoKUPEeW-MevX_-oa-Q" name="bookinghandler" type="_S0sSIJkHEeWgf_EMGD-UnQ" association="_ixCTgKUPEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_0ghNAKUPEeW-MevX_-oa-Q" memberEnd="_0gh0EqUPEeW-MevX_-oa-Q _0gibIKUPEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0gh0EKUPEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0gh0EaUPEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0gibIKUPEeW-MevX_-oa-Q" name="userhandler" type="_bd3fsJkNEeWgf_EMGD-UnQ" association="_0ghNAKUPEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Rax84KUQEeW-MevX_-oa-Q" memberEnd="_RazLAaUQEeW-MevX_-oa-Q _RazyEKUQEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Rayj8KUQEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RazLAKUQEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RazyEKUQEeW-MevX_-oa-Q" name="bookinghandler" type="_S0sSIJkHEeWgf_EMGD-UnQ" association="_Rax84KUQEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bGemIKUQEeW-MevX_-oa-Q" memberEnd="_bGfNMqUQEeW-MevX_-oa-Q _bGf0QKUQEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bGfNMKUQEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bGfNMaUQEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bGf0QKUQEeW-MevX_-oa-Q" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" association="_bGemIKUQEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_mmj-IKUQEeW-MevX_-oa-Q" memberEnd="_mmlMQaUQEeW-MevX_-oa-Q _mmlzUKUQEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mmklMKUQEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mmlMQKUQEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_mmlzUKUQEeW-MevX_-oa-Q" name="&lt;&lt;abstract>>user" type="_3NlPYJkKEeWgf_EMGD-UnQ" association="_mmj-IKUQEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_0QwdQKUQEeW-MevX_-oa-Q" name="Displays bookings" memberEnd="_0QxrYKUQEeW-MevX_-oa-Q _0QxrYaUQEeW-MevX_-oa-Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0QxEUKUQEeW-MevX_-oa-Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0QxEUaUQEeW-MevX_-oa-Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0QxrYaUQEeW-MevX_-oa-Q" name="guicontroller" type="_RxfnYJkVEeWgf_EMGD-UnQ" association="_0QwdQKUQEeW-MevX_-oa-Q"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_geLt4JgbEeWgf_EMGD-UnQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_geM8AJgbEeWgf_EMGD-UnQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
