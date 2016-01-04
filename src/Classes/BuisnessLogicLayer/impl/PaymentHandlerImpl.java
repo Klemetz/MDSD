@@ -44,10 +44,11 @@ public class PaymentHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void makePayment(PaymentInfo paymentInfo, Booking booking) {
 		// TODO: implement this method
+		String lol = "calle"; 
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}

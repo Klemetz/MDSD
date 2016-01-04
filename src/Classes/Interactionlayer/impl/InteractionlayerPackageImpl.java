@@ -193,7 +193,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGUIController__ShowAvailabilitystartDateendDateroomTypeNrOfGuests() {
+	public EOperation getGUIController__ShowAvailability__int_int_Room_int() {
 		return guiControllerEClass.getEOperations().get(0);
 	}
 
@@ -202,7 +202,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGUIController__DisplayErrorstringerrorMsg() {
+	public EOperation getGUIController__DisplayError() {
 		return guiControllerEClass.getEOperations().get(1);
 	}
 
@@ -211,7 +211,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGUIController__DisplayExtrasListextrasExtras() {
+	public EOperation getGUIController__DisplayExtras__EList() {
 		return guiControllerEClass.getEOperations().get(2);
 	}
 
@@ -319,7 +319,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLoginController__EmployeeloginEmployeeintIDstringpassword() {
+	public EOperation getLoginController__LoginEmployee__int_char() {
 		return loginControllerEClass.getEOperations().get(0);
 	}
 
@@ -328,7 +328,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLoginController__GuestmakeGuestBookingLoginBookingbooking() {
+	public EOperation getLoginController__MakeGuestBookingLogin__Booking() {
 		return loginControllerEClass.getEOperations().get(1);
 	}
 
@@ -337,7 +337,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLoginController__GuestloginGuestintbookingIDstringname() {
+	public EOperation getLoginController__LoginGuest__int_char() {
 		return loginControllerEClass.getEOperations().get(2);
 	}
 
@@ -403,9 +403,9 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		createEReference(guiControllerEClass, GUI_CONTROLLER__DISPLAY);
 		createEReference(guiControllerEClass, GUI_CONTROLLER__LOGINCONTROLLER);
 		createEReference(guiControllerEClass, GUI_CONTROLLER__BOOKINGHANDLER);
-		createEOperation(guiControllerEClass, GUI_CONTROLLER___SHOW_AVAILABILITYSTART_DATEEND_DATEROOM_TYPE_NR_OF_GUESTS);
-		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ERRORSTRINGERROR_MSG);
-		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_EXTRAS_LISTEXTRAS_EXTRAS);
+		createEOperation(guiControllerEClass, GUI_CONTROLLER___SHOW_AVAILABILITY__INT_INT_ROOM_INT);
+		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ERROR);
+		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_EXTRAS__ELIST);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_PARKINGS_LISTPARKINGS_PARKINGS);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOM_TYPES_LISTROOM_TYPE_ROOM_TYPE);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOMS_GRID_LIST_ROOMROOM_TYPE);
@@ -418,9 +418,9 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		createEReference(loginControllerEClass, LOGIN_CONTROLLER__CURRENT_USER);
 		createEReference(loginControllerEClass, LOGIN_CONTROLLER__LOGIN_CONTROLLER);
 		createEReference(loginControllerEClass, LOGIN_CONTROLLER__PAYMENTHANDLER);
-		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___EMPLOYEELOGIN_EMPLOYEEINT_IDSTRINGPASSWORD);
-		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___GUESTMAKE_GUEST_BOOKING_LOGIN_BOOKINGBOOKING);
-		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___GUESTLOGIN_GUESTINTBOOKING_IDSTRINGNAME);
+		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT_CHAR);
+		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___MAKE_GUEST_BOOKING_LOGIN__BOOKING);
+		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___LOGIN_GUEST__INT_CHAR);
 		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___GET_SINGLETON_CONTROLLER);
 		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___CREATE_SINGLETON_HANDLER);
 
@@ -469,11 +469,16 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		initEReference(getGUIController_Logincontroller(), this.getLoginController(), null, "logincontroller", null, 1, 1, GUIController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getGUIController_Bookinghandler(), theBuissnesslayerPackage.getBookingHandler(), null, "bookinghandler", null, 1, 1, GUIController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getGUIController__ShowAvailabilitystartDateendDateroomTypeNrOfGuests(), null, "showAvailabilitystartDateendDateroomTypeNrOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getGUIController__ShowAvailability__int_int_Room_int(), null, "showAvailability", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theBuissnesslayerPackage.getRoom(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "nrOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getGUIController__DisplayErrorstringerrorMsg(), null, "displayErrorstringerrorMsg", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getGUIController__DisplayError(), null, "displayError", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getGUIController__DisplayExtrasListextrasExtras(), null, "displayExtrasListextrasExtras", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getGUIController__DisplayExtras__EList(), null, "displayExtras", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEChar(), "extras", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getGUIController__DisplayParkingsListparkingsParkings(), null, "displayParkingsListparkingsParkings", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -494,11 +499,16 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		initEReference(getLoginController_LoginController(), this.getLoginController(), null, "LoginController", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getLoginController_Paymenthandler(), theBuisnessLogicLayerPackage.getPaymentHandler(), null, "paymenthandler", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getLoginController__EmployeeloginEmployeeintIDstringpassword(), null, "EmployeeloginEmployeeintIDstringpassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getLoginController__LoginEmployee__int_char(), null, "loginEmployee", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "ID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEChar(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getLoginController__GuestmakeGuestBookingLoginBookingbooking(), null, "GuestmakeGuestBookingLoginBookingbooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getLoginController__MakeGuestBookingLogin__Booking(), null, "makeGuestBookingLogin", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theBuissnesslayerPackage.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getLoginController__GuestloginGuestintbookingIDstringname(), null, "GuestloginGuestintbookingIDstringname", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getLoginController__LoginGuest__int_char(), null, "loginGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEChar(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getLoginController__GetSingletonController(), null, "getSingletonController", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -527,24 +537,6 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		   source, 
 		   new String[] {
 			 "originalName", "Interaction layer"
-		   });	
-		addAnnotation
-		  (getGUIController__ShowAvailabilitystartDateendDateroomTypeNrOfGuests(), 
-		   source, 
-		   new String[] {
-			 "originalName", "showAvailability(startDate, endDate, roomType, NrOfGuests)"
-		   });	
-		addAnnotation
-		  (getGUIController__DisplayErrorstringerrorMsg(), 
-		   source, 
-		   new String[] {
-			 "originalName", "displayError(string errorMsg)"
-		   });	
-		addAnnotation
-		  (getGUIController__DisplayExtrasListextrasExtras(), 
-		   source, 
-		   new String[] {
-			 "originalName", "displayExtras(List<extras>Extras)"
 		   });	
 		addAnnotation
 		  (getGUIController__DisplayParkingsListparkingsParkings(), 
@@ -587,24 +579,6 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		   source, 
 		   new String[] {
 			 "originalName", "displayBookingCancelled()"
-		   });	
-		addAnnotation
-		  (getLoginController__EmployeeloginEmployeeintIDstringpassword(), 
-		   source, 
-		   new String[] {
-			 "originalName", "Employee loginEmployee(int ID, string password)"
-		   });	
-		addAnnotation
-		  (getLoginController__GuestmakeGuestBookingLoginBookingbooking(), 
-		   source, 
-		   new String[] {
-			 "originalName", "Guest makeGuestBookingLogin(Booking booking)"
-		   });	
-		addAnnotation
-		  (getLoginController__GuestloginGuestintbookingIDstringname(), 
-		   source, 
-		   new String[] {
-			 "originalName", "Guest loginGuest(int bookingID, string name)"
 		   });
 	}
 

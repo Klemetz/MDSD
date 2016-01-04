@@ -4,6 +4,7 @@ package Classes.Interactionlayer;
 
 import Classes.BuisnessLogicLayer.PaymentHandler;
 
+import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.User;
 import org.eclipse.emf.ecore.EObject;
 
@@ -107,26 +108,26 @@ public interface LoginController extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='Employee loginEmployee(int ID, string password)'"
+	 * @model IDRequired="true" IDOrdered="false" passwordRequired="true" passwordOrdered="false"
 	 * @generated
 	 */
-	void EmployeeloginEmployeeintIDstringpassword();
+	void loginEmployee(int ID, char password);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='Guest makeGuestBookingLogin(Booking booking)'"
+	 * @model bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void GuestmakeGuestBookingLoginBookingbooking();
+	void makeGuestBookingLogin(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='Guest loginGuest(int bookingID, string name)'"
+	 * @model bookingIDRequired="true" bookingIDOrdered="false" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
-	void GuestloginGuestintbookingIDstringname();
+	void loginGuest(int bookingID, char name);
 
 	/**
 	 * <!-- begin-user-doc -->

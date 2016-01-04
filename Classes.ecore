@@ -49,52 +49,32 @@
           lowerBound="1" upperBound="-1" eType="#//Buissnesslayer/Room"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BookingHandler">
-      <eOperations name="intfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests" ordered="false"
-          lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="int fetchAvailability(StartDate, EndDate, RoomType, NrOfGuests)"/>
-        </eAnnotations>
+      <eOperations name="fetchAvailability" ordered="false" lowerBound="1">
+        <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Room"/>
+        <eParameters name="nrOfGuests" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-      <eOperations name="BookingfetchBookingintbookingID" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="Booking fetchBooking(int bookingID)"/>
-        </eAnnotations>
+      <eOperations name="fetchBooking" ordered="false" lowerBound="1">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
-      <eOperations name="attemptBookRoomBookingbooking" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="attemptBookRoom(Booking booking)"/>
-        </eAnnotations>
+      <eOperations name="attemptBookRoom" ordered="false" lowerBound="1">
+        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
-      <eOperations name="cancelBookingBookingbooking" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="cancelBooking(Booking booking)"/>
-        </eAnnotations>
+      <eOperations name="cancelBooking" ordered="false" lowerBound="1">
+        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
-      <eOperations name="changeBookingBookingbooking" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="changeBooking(Booking booking)"/>
-        </eAnnotations>
+      <eOperations name="changeBooking" ordered="false" lowerBound="1">
+        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
-      <eOperations name="checkInBookingbooking" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="checkIn(Booking booking)"/>
-        </eAnnotations>
+      <eOperations name="checkIn" ordered="false" lowerBound="1">
+        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
-      <eOperations name="checkOutBookingbooking" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="checkOut(Booking booking)"/>
-        </eAnnotations>
+      <eOperations name="checkOut" ordered="false" lowerBound="1">
+        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
-      <eOperations name="sendErrorMsgString" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="sendErrorMsg() : String"/>
-        </eAnnotations>
-      </eOperations>
-      <eOperations name="getSingletonBookingBookingHandler" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="getSingletonBooking : BookingHandler"/>
-        </eAnnotations>
-      </eOperations>
+      <eOperations name="sendErrorMsg" ordered="false" lowerBound="1"/>
+      <eOperations name="getSinglettonBooking" ordered="false" lowerBound="1"/>
       <eOperations name="createSingletonHandler" ordered="false" lowerBound="1"/>
       <eOperations name="fetchAvailableExtras" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="booking" ordered="false"
@@ -258,21 +238,15 @@
           lowerBound="1" eType="#//Interactionlayer/GUIController"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="GUIController">
-      <eOperations name="showAvailabilitystartDateendDateroomTypeNrOfGuests" ordered="false"
-          lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="showAvailability(startDate, endDate, roomType, NrOfGuests)"/>
-        </eAnnotations>
+      <eOperations name="showAvailability" ordered="false" lowerBound="1">
+        <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Room"/>
+        <eParameters name="nrOfGuests" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-      <eOperations name="displayErrorstringerrorMsg" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="displayError(string errorMsg)"/>
-        </eAnnotations>
-      </eOperations>
-      <eOperations name="displayExtrasListextrasExtras" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="displayExtras(List&lt;extras>Extras)"/>
-        </eAnnotations>
+      <eOperations name="displayError" ordered="false" lowerBound="1"/>
+      <eOperations name="displayExtras" ordered="false" lowerBound="1">
+        <eParameters name="extras" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
       </eOperations>
       <eOperations name="displayParkingsListparkingsParkings" ordered="false" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -317,22 +291,16 @@
           lowerBound="1" eType="#//Buissnesslayer/BookingHandler"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LoginController">
-      <eOperations name="EmployeeloginEmployeeintIDstringpassword" ordered="false"
-          lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="Employee loginEmployee(int ID, string password)"/>
-        </eAnnotations>
+      <eOperations name="loginEmployee" ordered="false" lowerBound="1">
+        <eParameters name="ID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
       </eOperations>
-      <eOperations name="GuestmakeGuestBookingLoginBookingbooking" ordered="false"
-          lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="Guest makeGuestBookingLogin(Booking booking)"/>
-        </eAnnotations>
+      <eOperations name="makeGuestBookingLogin" ordered="false" lowerBound="1">
+        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
-      <eOperations name="GuestloginGuestintbookingIDstringname" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="Guest loginGuest(int bookingID, string name)"/>
-        </eAnnotations>
+      <eOperations name="loginGuest" ordered="false" lowerBound="1">
+        <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
       </eOperations>
       <eOperations name="getSingletonController" ordered="false" lowerBound="1"/>
       <eOperations name="createSingletonHandler" ordered="false" lowerBound="1"/>

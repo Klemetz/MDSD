@@ -4,6 +4,7 @@ package Classes.Interactionlayer.impl;
 
 import Classes.BuisnessLogicLayer.PaymentHandler;
 
+import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.User;
 import Classes.Interactionlayer.InteractionlayerPackage;
 import Classes.Interactionlayer.LoginController;
@@ -204,7 +205,7 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void EmployeeloginEmployeeintIDstringpassword() {
+	public void loginEmployee(int ID, char password) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -215,7 +216,7 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void GuestmakeGuestBookingLoginBookingbooking() {
+	public void makeGuestBookingLogin(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -226,7 +227,7 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void GuestloginGuestintbookingIDstringname() {
+	public void loginGuest(int bookingID, char name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -343,14 +344,14 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case InteractionlayerPackage.LOGIN_CONTROLLER___EMPLOYEELOGIN_EMPLOYEEINT_IDSTRINGPASSWORD:
-				EmployeeloginEmployeeintIDstringpassword();
+			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT_CHAR:
+				loginEmployee((Integer)arguments.get(0), (Character)arguments.get(1));
 				return null;
-			case InteractionlayerPackage.LOGIN_CONTROLLER___GUESTMAKE_GUEST_BOOKING_LOGIN_BOOKINGBOOKING:
-				GuestmakeGuestBookingLoginBookingbooking();
+			case InteractionlayerPackage.LOGIN_CONTROLLER___MAKE_GUEST_BOOKING_LOGIN__BOOKING:
+				makeGuestBookingLogin((Booking)arguments.get(0));
 				return null;
-			case InteractionlayerPackage.LOGIN_CONTROLLER___GUESTLOGIN_GUESTINTBOOKING_IDSTRINGNAME:
-				GuestloginGuestintbookingIDstringname();
+			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_GUEST__INT_CHAR:
+				loginGuest((Integer)arguments.get(0), (Character)arguments.get(1));
 				return null;
 			case InteractionlayerPackage.LOGIN_CONTROLLER___GET_SINGLETON_CONTROLLER:
 				getSingletonController();

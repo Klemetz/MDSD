@@ -5,6 +5,7 @@ package Classes.Buissnesslayer.impl;
 import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.BookingHandler;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
+import Classes.Buissnesslayer.Room;
 import Classes.Buissnesslayer.User;
 import Classes.Datalayer.Database;
 
@@ -280,7 +281,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void intfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests() {
+	public void fetchAvailability(int startDate, int endDate, Room roomType, int nrOfGuests) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -291,7 +292,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void BookingfetchBookingintbookingID() {
+	public void fetchBooking(Booking bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -302,7 +303,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void attemptBookRoomBookingbooking() {
+	public void attemptBookRoom(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -313,7 +314,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void cancelBookingBookingbooking() {
+	public void cancelBooking(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -324,7 +325,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeBookingBookingbooking() {
+	public void changeBooking(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -335,7 +336,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void checkInBookingbooking() {
+	public void checkIn(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -346,7 +347,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void checkOutBookingbooking() {
+	public void checkOut(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -357,7 +358,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void sendErrorMsgString() {
+	public void sendErrorMsg() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -368,7 +369,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getSingletonBookingBookingHandler() {
+	public void getSinglettonBooking() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -508,32 +509,32 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BuissnesslayerPackage.BOOKING_HANDLER___INTFETCH_AVAILABILITY_START_DATE_END_DATE_ROOM_TYPE_NR_OF_GUESTS:
-				intfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests();
+			case BuissnesslayerPackage.BOOKING_HANDLER___FETCH_AVAILABILITY__INT_INT_ROOM_INT:
+				fetchAvailability((Integer)arguments.get(0), (Integer)arguments.get(1), (Room)arguments.get(2), (Integer)arguments.get(3));
 				return null;
-			case BuissnesslayerPackage.BOOKING_HANDLER___BOOKINGFETCH_BOOKINGINTBOOKING_ID:
-				BookingfetchBookingintbookingID();
+			case BuissnesslayerPackage.BOOKING_HANDLER___FETCH_BOOKING__BOOKING:
+				fetchBooking((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.BOOKING_HANDLER___ATTEMPT_BOOK_ROOM_BOOKINGBOOKING:
-				attemptBookRoomBookingbooking();
+			case BuissnesslayerPackage.BOOKING_HANDLER___ATTEMPT_BOOK_ROOM__BOOKING:
+				attemptBookRoom((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.BOOKING_HANDLER___CANCEL_BOOKING_BOOKINGBOOKING:
-				cancelBookingBookingbooking();
+			case BuissnesslayerPackage.BOOKING_HANDLER___CANCEL_BOOKING__BOOKING:
+				cancelBooking((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.BOOKING_HANDLER___CHANGE_BOOKING_BOOKINGBOOKING:
-				changeBookingBookingbooking();
+			case BuissnesslayerPackage.BOOKING_HANDLER___CHANGE_BOOKING__BOOKING:
+				changeBooking((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.BOOKING_HANDLER___CHECK_IN_BOOKINGBOOKING:
-				checkInBookingbooking();
+			case BuissnesslayerPackage.BOOKING_HANDLER___CHECK_IN__BOOKING:
+				checkIn((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.BOOKING_HANDLER___CHECK_OUT_BOOKINGBOOKING:
-				checkOutBookingbooking();
+			case BuissnesslayerPackage.BOOKING_HANDLER___CHECK_OUT__BOOKING:
+				checkOut((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.BOOKING_HANDLER___SEND_ERROR_MSG_STRING:
-				sendErrorMsgString();
+			case BuissnesslayerPackage.BOOKING_HANDLER___SEND_ERROR_MSG:
+				sendErrorMsg();
 				return null;
-			case BuissnesslayerPackage.BOOKING_HANDLER___GET_SINGLETON_BOOKING_BOOKING_HANDLER:
-				getSingletonBookingBookingHandler();
+			case BuissnesslayerPackage.BOOKING_HANDLER___GET_SINGLETTON_BOOKING:
+				getSinglettonBooking();
 				return null;
 			case BuissnesslayerPackage.BOOKING_HANDLER___CREATE_SINGLETON_HANDLER:
 				createSingletonHandler();

@@ -141,31 +141,31 @@ public interface InteractionlayerPackage extends EPackage {
 	int GUI_CONTROLLER_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Show Availabilitystart Dateend Dateroom Type Nr Of Guests</em>' operation.
+	 * The operation id for the '<em>Show Availability</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUI_CONTROLLER___SHOW_AVAILABILITYSTART_DATEEND_DATEROOM_TYPE_NR_OF_GUESTS = 0;
+	int GUI_CONTROLLER___SHOW_AVAILABILITY__INT_INT_ROOM_INT = 0;
 
 	/**
-	 * The operation id for the '<em>Display Errorstringerror Msg</em>' operation.
+	 * The operation id for the '<em>Display Error</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUI_CONTROLLER___DISPLAY_ERRORSTRINGERROR_MSG = 1;
+	int GUI_CONTROLLER___DISPLAY_ERROR = 1;
 
 	/**
-	 * The operation id for the '<em>Display Extras Listextras Extras</em>' operation.
+	 * The operation id for the '<em>Display Extras</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUI_CONTROLLER___DISPLAY_EXTRAS_LISTEXTRAS_EXTRAS = 2;
+	int GUI_CONTROLLER___DISPLAY_EXTRAS__ELIST = 2;
 
 	/**
 	 * The operation id for the '<em>Display Parkings Listparkings Parkings</em>' operation.
@@ -286,31 +286,31 @@ public interface InteractionlayerPackage extends EPackage {
 	int LOGIN_CONTROLLER_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Employeelogin Employeeint IDstringpassword</em>' operation.
+	 * The operation id for the '<em>Login Employee</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER___EMPLOYEELOGIN_EMPLOYEEINT_IDSTRINGPASSWORD = 0;
+	int LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT_CHAR = 0;
 
 	/**
-	 * The operation id for the '<em>Guestmake Guest Booking Login Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Make Guest Booking Login</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER___GUESTMAKE_GUEST_BOOKING_LOGIN_BOOKINGBOOKING = 1;
+	int LOGIN_CONTROLLER___MAKE_GUEST_BOOKING_LOGIN__BOOKING = 1;
 
 	/**
-	 * The operation id for the '<em>Guestlogin Guestintbooking IDstringname</em>' operation.
+	 * The operation id for the '<em>Login Guest</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER___GUESTLOGIN_GUESTINTBOOKING_IDSTRINGNAME = 2;
+	int LOGIN_CONTROLLER___LOGIN_GUEST__INT_CHAR = 2;
 
 	/**
 	 * The operation id for the '<em>Get Singleton Controller</em>' operation.
@@ -433,34 +433,34 @@ public interface InteractionlayerPackage extends EPackage {
 	EReference getGUIController_Bookinghandler();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#showAvailabilitystartDateendDateroomTypeNrOfGuests() <em>Show Availabilitystart Dateend Dateroom Type Nr Of Guests</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#showAvailability(int, int, Classes.Buissnesslayer.Room, int) <em>Show Availability</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Show Availabilitystart Dateend Dateroom Type Nr Of Guests</em>' operation.
-	 * @see Classes.Interactionlayer.GUIController#showAvailabilitystartDateendDateroomTypeNrOfGuests()
+	 * @return the meta object for the '<em>Show Availability</em>' operation.
+	 * @see Classes.Interactionlayer.GUIController#showAvailability(int, int, Classes.Buissnesslayer.Room, int)
 	 * @generated
 	 */
-	EOperation getGUIController__ShowAvailabilitystartDateendDateroomTypeNrOfGuests();
+	EOperation getGUIController__ShowAvailability__int_int_Room_int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayErrorstringerrorMsg() <em>Display Errorstringerror Msg</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayError() <em>Display Error</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Display Errorstringerror Msg</em>' operation.
-	 * @see Classes.Interactionlayer.GUIController#displayErrorstringerrorMsg()
+	 * @return the meta object for the '<em>Display Error</em>' operation.
+	 * @see Classes.Interactionlayer.GUIController#displayError()
 	 * @generated
 	 */
-	EOperation getGUIController__DisplayErrorstringerrorMsg();
+	EOperation getGUIController__DisplayError();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayExtrasListextrasExtras() <em>Display Extras Listextras Extras</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayExtras(org.eclipse.emf.common.util.EList) <em>Display Extras</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Display Extras Listextras Extras</em>' operation.
-	 * @see Classes.Interactionlayer.GUIController#displayExtrasListextrasExtras()
+	 * @return the meta object for the '<em>Display Extras</em>' operation.
+	 * @see Classes.Interactionlayer.GUIController#displayExtras(org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getGUIController__DisplayExtrasListextrasExtras();
+	EOperation getGUIController__DisplayExtras__EList();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayParkingsListparkingsParkings() <em>Display Parkings Listparkings Parkings</em>}' operation.
@@ -576,34 +576,34 @@ public interface InteractionlayerPackage extends EPackage {
 	EReference getLoginController_Paymenthandler();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#EmployeeloginEmployeeintIDstringpassword() <em>Employeelogin Employeeint IDstringpassword</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginEmployee(int, char) <em>Login Employee</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Employeelogin Employeeint IDstringpassword</em>' operation.
-	 * @see Classes.Interactionlayer.LoginController#EmployeeloginEmployeeintIDstringpassword()
+	 * @return the meta object for the '<em>Login Employee</em>' operation.
+	 * @see Classes.Interactionlayer.LoginController#loginEmployee(int, char)
 	 * @generated
 	 */
-	EOperation getLoginController__EmployeeloginEmployeeintIDstringpassword();
+	EOperation getLoginController__LoginEmployee__int_char();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#GuestmakeGuestBookingLoginBookingbooking() <em>Guestmake Guest Booking Login Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#makeGuestBookingLogin(Classes.Buissnesslayer.Booking) <em>Make Guest Booking Login</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Guestmake Guest Booking Login Bookingbooking</em>' operation.
-	 * @see Classes.Interactionlayer.LoginController#GuestmakeGuestBookingLoginBookingbooking()
+	 * @return the meta object for the '<em>Make Guest Booking Login</em>' operation.
+	 * @see Classes.Interactionlayer.LoginController#makeGuestBookingLogin(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getLoginController__GuestmakeGuestBookingLoginBookingbooking();
+	EOperation getLoginController__MakeGuestBookingLogin__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#GuestloginGuestintbookingIDstringname() <em>Guestlogin Guestintbooking IDstringname</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginGuest(int, char) <em>Login Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Guestlogin Guestintbooking IDstringname</em>' operation.
-	 * @see Classes.Interactionlayer.LoginController#GuestloginGuestintbookingIDstringname()
+	 * @return the meta object for the '<em>Login Guest</em>' operation.
+	 * @see Classes.Interactionlayer.LoginController#loginGuest(int, char)
 	 * @generated
 	 */
-	EOperation getLoginController__GuestloginGuestintbookingIDstringname();
+	EOperation getLoginController__LoginGuest__int_char();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#getSingletonController() <em>Get Singleton Controller</em>}' operation.
@@ -711,28 +711,28 @@ public interface InteractionlayerPackage extends EPackage {
 		EReference GUI_CONTROLLER__BOOKINGHANDLER = eINSTANCE.getGUIController_Bookinghandler();
 
 		/**
-		 * The meta object literal for the '<em><b>Show Availabilitystart Dateend Dateroom Type Nr Of Guests</b></em>' operation.
+		 * The meta object literal for the '<em><b>Show Availability</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUI_CONTROLLER___SHOW_AVAILABILITYSTART_DATEEND_DATEROOM_TYPE_NR_OF_GUESTS = eINSTANCE.getGUIController__ShowAvailabilitystartDateendDateroomTypeNrOfGuests();
+		EOperation GUI_CONTROLLER___SHOW_AVAILABILITY__INT_INT_ROOM_INT = eINSTANCE.getGUIController__ShowAvailability__int_int_Room_int();
 
 		/**
-		 * The meta object literal for the '<em><b>Display Errorstringerror Msg</b></em>' operation.
+		 * The meta object literal for the '<em><b>Display Error</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUI_CONTROLLER___DISPLAY_ERRORSTRINGERROR_MSG = eINSTANCE.getGUIController__DisplayErrorstringerrorMsg();
+		EOperation GUI_CONTROLLER___DISPLAY_ERROR = eINSTANCE.getGUIController__DisplayError();
 
 		/**
-		 * The meta object literal for the '<em><b>Display Extras Listextras Extras</b></em>' operation.
+		 * The meta object literal for the '<em><b>Display Extras</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUI_CONTROLLER___DISPLAY_EXTRAS_LISTEXTRAS_EXTRAS = eINSTANCE.getGUIController__DisplayExtrasListextrasExtras();
+		EOperation GUI_CONTROLLER___DISPLAY_EXTRAS__ELIST = eINSTANCE.getGUIController__DisplayExtras__EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Parkings Listparkings Parkings</b></em>' operation.
@@ -825,28 +825,28 @@ public interface InteractionlayerPackage extends EPackage {
 		EReference LOGIN_CONTROLLER__PAYMENTHANDLER = eINSTANCE.getLoginController_Paymenthandler();
 
 		/**
-		 * The meta object literal for the '<em><b>Employeelogin Employeeint IDstringpassword</b></em>' operation.
+		 * The meta object literal for the '<em><b>Login Employee</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LOGIN_CONTROLLER___EMPLOYEELOGIN_EMPLOYEEINT_IDSTRINGPASSWORD = eINSTANCE.getLoginController__EmployeeloginEmployeeintIDstringpassword();
+		EOperation LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT_CHAR = eINSTANCE.getLoginController__LoginEmployee__int_char();
 
 		/**
-		 * The meta object literal for the '<em><b>Guestmake Guest Booking Login Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Make Guest Booking Login</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LOGIN_CONTROLLER___GUESTMAKE_GUEST_BOOKING_LOGIN_BOOKINGBOOKING = eINSTANCE.getLoginController__GuestmakeGuestBookingLoginBookingbooking();
+		EOperation LOGIN_CONTROLLER___MAKE_GUEST_BOOKING_LOGIN__BOOKING = eINSTANCE.getLoginController__MakeGuestBookingLogin__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Guestlogin Guestintbooking IDstringname</b></em>' operation.
+		 * The meta object literal for the '<em><b>Login Guest</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LOGIN_CONTROLLER___GUESTLOGIN_GUESTINTBOOKING_IDSTRINGNAME = eINSTANCE.getLoginController__GuestloginGuestintbookingIDstringname();
+		EOperation LOGIN_CONTROLLER___LOGIN_GUEST__INT_CHAR = eINSTANCE.getLoginController__LoginGuest__int_char();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Singleton Controller</b></em>' operation.

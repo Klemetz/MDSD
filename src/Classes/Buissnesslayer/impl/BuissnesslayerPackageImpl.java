@@ -370,7 +370,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__IntfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests() {
+	public EOperation getBookingHandler__FetchAvailability__int_int_Room_int() {
 		return bookingHandlerEClass.getEOperations().get(0);
 	}
 
@@ -379,7 +379,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__BookingfetchBookingintbookingID() {
+	public EOperation getBookingHandler__FetchBooking__Booking() {
 		return bookingHandlerEClass.getEOperations().get(1);
 	}
 
@@ -388,7 +388,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__AttemptBookRoomBookingbooking() {
+	public EOperation getBookingHandler__AttemptBookRoom__Booking() {
 		return bookingHandlerEClass.getEOperations().get(2);
 	}
 
@@ -397,7 +397,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__CancelBookingBookingbooking() {
+	public EOperation getBookingHandler__CancelBooking__Booking() {
 		return bookingHandlerEClass.getEOperations().get(3);
 	}
 
@@ -406,7 +406,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__ChangeBookingBookingbooking() {
+	public EOperation getBookingHandler__ChangeBooking__Booking() {
 		return bookingHandlerEClass.getEOperations().get(4);
 	}
 
@@ -415,7 +415,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__CheckInBookingbooking() {
+	public EOperation getBookingHandler__CheckIn__Booking() {
 		return bookingHandlerEClass.getEOperations().get(5);
 	}
 
@@ -424,7 +424,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__CheckOutBookingbooking() {
+	public EOperation getBookingHandler__CheckOut__Booking() {
 		return bookingHandlerEClass.getEOperations().get(6);
 	}
 
@@ -433,7 +433,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__SendErrorMsgString() {
+	public EOperation getBookingHandler__SendErrorMsg() {
 		return bookingHandlerEClass.getEOperations().get(7);
 	}
 
@@ -442,7 +442,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__GetSingletonBookingBookingHandler() {
+	public EOperation getBookingHandler__GetSinglettonBooking() {
 		return bookingHandlerEClass.getEOperations().get(8);
 	}
 
@@ -885,15 +885,15 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__SINGLETON_BOOKING);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__USER);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__DATABASE);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___INTFETCH_AVAILABILITY_START_DATE_END_DATE_ROOM_TYPE_NR_OF_GUESTS);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___BOOKINGFETCH_BOOKINGINTBOOKING_ID);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___ATTEMPT_BOOK_ROOM_BOOKINGBOOKING);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CANCEL_BOOKING_BOOKINGBOOKING);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CHANGE_BOOKING_BOOKINGBOOKING);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CHECK_IN_BOOKINGBOOKING);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CHECK_OUT_BOOKINGBOOKING);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___SEND_ERROR_MSG_STRING);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___GET_SINGLETON_BOOKING_BOOKING_HANDLER);
+		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___FETCH_AVAILABILITY__INT_INT_ROOM_INT);
+		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___FETCH_BOOKING__BOOKING);
+		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___ATTEMPT_BOOK_ROOM__BOOKING);
+		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CANCEL_BOOKING__BOOKING);
+		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CHANGE_BOOKING__BOOKING);
+		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CHECK_IN__BOOKING);
+		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CHECK_OUT__BOOKING);
+		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___SEND_ERROR_MSG);
+		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___GET_SINGLETTON_BOOKING);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CREATE_SINGLETON_HANDLER);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___FETCH_AVAILABLE_EXTRAS);
 
@@ -1003,23 +1003,33 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		initEReference(getBookingHandler_User(), this.getUser(), null, "User", null, 1, -1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingHandler_Database(), theDatalayerPackage.getDatabase(), null, "database", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getBookingHandler__IntfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests(), null, "intfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getBookingHandler__FetchAvailability__int_int_Room_int(), null, "fetchAvailability", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getRoom(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "nrOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBookingHandler__BookingfetchBookingintbookingID(), null, "BookingfetchBookingintbookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingHandler__FetchBooking__Booking(), null, "fetchBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getBooking(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBookingHandler__AttemptBookRoomBookingbooking(), null, "attemptBookRoomBookingbooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingHandler__AttemptBookRoom__Booking(), null, "attemptBookRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBookingHandler__CancelBookingBookingbooking(), null, "cancelBookingBookingbooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingHandler__CancelBooking__Booking(), null, "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBookingHandler__ChangeBookingBookingbooking(), null, "changeBookingBookingbooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingHandler__ChangeBooking__Booking(), null, "changeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBookingHandler__CheckInBookingbooking(), null, "checkInBookingbooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingHandler__CheckIn__Booking(), null, "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBookingHandler__CheckOutBookingbooking(), null, "checkOutBookingbooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingHandler__CheckOut__Booking(), null, "checkOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBookingHandler__SendErrorMsgString(), null, "sendErrorMsgString", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getBookingHandler__SendErrorMsg(), null, "sendErrorMsg", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBookingHandler__GetSingletonBookingBookingHandler(), null, "getSingletonBookingBookingHandler", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getBookingHandler__GetSinglettonBooking(), null, "getSinglettonBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBookingHandler__CreateSingletonHandler(), null, "createSingletonHandler", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -1118,60 +1128,6 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		   source, 
 		   new String[] {
 			 "originalName", "Type : roomType"
-		   });	
-		addAnnotation
-		  (getBookingHandler__IntfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests(), 
-		   source, 
-		   new String[] {
-			 "originalName", "int fetchAvailability(StartDate, EndDate, RoomType, NrOfGuests)"
-		   });	
-		addAnnotation
-		  (getBookingHandler__BookingfetchBookingintbookingID(), 
-		   source, 
-		   new String[] {
-			 "originalName", "Booking fetchBooking(int bookingID)"
-		   });	
-		addAnnotation
-		  (getBookingHandler__AttemptBookRoomBookingbooking(), 
-		   source, 
-		   new String[] {
-			 "originalName", "attemptBookRoom(Booking booking)"
-		   });	
-		addAnnotation
-		  (getBookingHandler__CancelBookingBookingbooking(), 
-		   source, 
-		   new String[] {
-			 "originalName", "cancelBooking(Booking booking)"
-		   });	
-		addAnnotation
-		  (getBookingHandler__ChangeBookingBookingbooking(), 
-		   source, 
-		   new String[] {
-			 "originalName", "changeBooking(Booking booking)"
-		   });	
-		addAnnotation
-		  (getBookingHandler__CheckInBookingbooking(), 
-		   source, 
-		   new String[] {
-			 "originalName", "checkIn(Booking booking)"
-		   });	
-		addAnnotation
-		  (getBookingHandler__CheckOutBookingbooking(), 
-		   source, 
-		   new String[] {
-			 "originalName", "checkOut(Booking booking)"
-		   });	
-		addAnnotation
-		  (getBookingHandler__SendErrorMsgString(), 
-		   source, 
-		   new String[] {
-			 "originalName", "sendErrorMsg() : String"
-		   });	
-		addAnnotation
-		  (getBookingHandler__GetSingletonBookingBookingHandler(), 
-		   source, 
-		   new String[] {
-			 "originalName", "getSingletonBooking : BookingHandler"
 		   });	
 		addAnnotation
 		  (getUser__EnterContactDataStringnameEmailemailAddressadress(), 

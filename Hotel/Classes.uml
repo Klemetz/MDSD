@@ -67,15 +67,38 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UkITcKUQEeW-MevX_-oa-Q" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UkMk4KUQEeW-MevX_-oa-Q" value="*"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_lfOpMJkIEeWgf_EMGD-UnQ" name="int fetchAvailability(StartDate, EndDate, RoomType, NrOfGuests)"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_DiJqQJkJEeWgf_EMGD-UnQ" name="Booking fetchBooking(int bookingID)"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_xNxegJkJEeWgf_EMGD-UnQ" name="attemptBookRoom(Booking booking)"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_2DJSAJkJEeWgf_EMGD-UnQ" name="cancelBooking(Booking booking)"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_64WGYJkJEeWgf_EMGD-UnQ" name="changeBooking(Booking booking)"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_D0PDUJkKEeWgf_EMGD-UnQ" name="checkIn(Booking booking)"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_IU388JkKEeWgf_EMGD-UnQ" name="checkOut(Booking booking)"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_PvdfMJkKEeWgf_EMGD-UnQ" name="sendErrorMsg() : String"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_Kw8YkKUEEeW-MevX_-oa-Q" name="getSingletonBooking : BookingHandler"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_lfOpMJkIEeWgf_EMGD-UnQ" name="fetchAvailability">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Er8TALMXEeWpmdwYTYylNw" name="startDate" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_aly7MLMXEeWpmdwYTYylNw" name="endDate" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_dgfxwLMXEeWpmdwYTYylNw" name="roomType" type="_ddD3oJkKEeWgf_EMGD-UnQ" effect="read"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_f8q5QLMXEeWpmdwYTYylNw" name="nrOfGuests" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DiJqQJkJEeWgf_EMGD-UnQ" name="fetchBooking">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_J0vt8LMZEeWpmdwYTYylNw" name="bookingID" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="read"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xNxegJkJEeWgf_EMGD-UnQ" name="attemptBookRoom">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_TAxYoLMZEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="read"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2DJSAJkJEeWgf_EMGD-UnQ" name="cancelBooking">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bKOMALMZEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="read"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_64WGYJkJEeWgf_EMGD-UnQ" name="changeBooking">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gdKsULMZEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="read"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_D0PDUJkKEeWgf_EMGD-UnQ" name="checkIn">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_j16JwLMZEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="read"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_IU388JkKEeWgf_EMGD-UnQ" name="checkOut">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_otyesLMZEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="read"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_PvdfMJkKEeWgf_EMGD-UnQ" name="sendErrorMsg"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Kw8YkKUEEeW-MevX_-oa-Q" name="getSinglettonBooking"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_NVYEMKUEEeW-MevX_-oa-Q" name="createSingletonHandler"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_qMKpUKUEEeW-MevX_-oa-Q" name="fetchAvailableExtras"/>
     </packagedElement>
@@ -152,9 +175,26 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_XQJBYJkVEeWgf_EMGD-UnQ" name="display" visibility="private" type="_O47e0JkVEeWgf_EMGD-UnQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_P1W-kaUNEeW-MevX_-oa-Q" name="logincontroller" type="_766t8JkaEeWgf_EMGD-UnQ" association="_P1VwcKUNEeW-MevX_-oa-Q"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_0QxrYKUQEeW-MevX_-oa-Q" name="bookinghandler" type="_S0sSIJkHEeWgf_EMGD-UnQ" association="_0QwdQKUQEeW-MevX_-oa-Q"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_yFPbkJkVEeWgf_EMGD-UnQ" name="showAvailability(startDate, endDate, roomType, NrOfGuests)"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_39mrMJkXEeWgf_EMGD-UnQ" name="displayError(string errorMsg)"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F-WCEJkYEeWgf_EMGD-UnQ" name="displayExtras(List&lt;extras>Extras)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_yFPbkJkVEeWgf_EMGD-UnQ" name="showAvailability">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xWm5MLMaEeWpmdwYTYylNw" name="startDate" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ymxgkLMaEeWpmdwYTYylNw" name="endDate" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_z1Ft0LMaEeWpmdwYTYylNw" name="roomType" type="_ddD3oJkKEeWgf_EMGD-UnQ" effect="read"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1pUrkLMaEeWpmdwYTYylNw" name="nrOfGuests" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_39mrMJkXEeWgf_EMGD-UnQ" name="displayError"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F-WCEJkYEeWgf_EMGD-UnQ" name="displayExtras">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CKnB4LMbEeWpmdwYTYylNw" name="extras" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D6MJILMbEeWpmdwYTYylNw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D6N-ULMbEeWpmdwYTYylNw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_hwTtIJkYEeWgf_EMGD-UnQ" name="displayParkings(List&lt;parkings>Parkings)"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_uOo2EJkYEeWgf_EMGD-UnQ" name="displayRoomTypes(List&lt;roomType>RoomType)"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_6WAQgJkYEeWgf_EMGD-UnQ" name="displayRoomsGrid(List&lt;Room> roomType)"/>
@@ -167,9 +207,25 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="__nyBQJkaEeWgf_EMGD-UnQ" name="currentUser" type="_3NlPYJkKEeWgf_EMGD-UnQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_4-6W0KUCEeW-MevX_-oa-Q" name="LoginController" visibility="private" type="_766t8JkaEeWgf_EMGD-UnQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_XU__8KUNEeW-MevX_-oa-Q" name="paymenthandler" type="_DXwyoJkeEeWgf_EMGD-UnQ" association="_XU-x0KUNEeW-MevX_-oa-Q"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_0WDY4JkbEeWgf_EMGD-UnQ" name="Employee loginEmployee(int ID, string password)"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_oyVooJkcEeWgf_EMGD-UnQ" name="Guest makeGuestBookingLogin(Booking booking)"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_udBTgJkcEeWgf_EMGD-UnQ" name="Guest loginGuest(int bookingID, string name)"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_0WDY4JkbEeWgf_EMGD-UnQ" name="loginEmployee">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PLsvELMaEeWpmdwYTYylNw" name="ID" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_T0ffILMaEeWpmdwYTYylNw" name="password" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oyVooJkcEeWgf_EMGD-UnQ" name="makeGuestBookingLogin">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_eRNVoLMaEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="read"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_udBTgJkcEeWgf_EMGD-UnQ" name="loginGuest">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_kN3hULMaEeWpmdwYTYylNw" name="bookingID" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_mZDmgLMaEeWpmdwYTYylNw" name="name" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_HcmIYKUDEeW-MevX_-oa-Q" name="getSingletonController"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_SkFaMKUDEeW-MevX_-oa-Q" name="createSingletonHandler"/>
       <nestedClassifier xmi:type="uml:DataType" xmi:id="_9VWZsJkcEeWgf_EMGD-UnQ" name="DataType1"/>

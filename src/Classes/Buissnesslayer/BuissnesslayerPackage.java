@@ -305,85 +305,85 @@ public interface BuissnesslayerPackage extends EPackage {
 	int BOOKING_HANDLER_FEATURE_COUNT = 5;
 
 	/**
-	 * The operation id for the '<em>Intfetch Availability Start Date End Date Room Type Nr Of Guests</em>' operation.
+	 * The operation id for the '<em>Fetch Availability</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___INTFETCH_AVAILABILITY_START_DATE_END_DATE_ROOM_TYPE_NR_OF_GUESTS = 0;
+	int BOOKING_HANDLER___FETCH_AVAILABILITY__INT_INT_ROOM_INT = 0;
 
 	/**
-	 * The operation id for the '<em>Bookingfetch Bookingintbooking ID</em>' operation.
+	 * The operation id for the '<em>Fetch Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___BOOKINGFETCH_BOOKINGINTBOOKING_ID = 1;
+	int BOOKING_HANDLER___FETCH_BOOKING__BOOKING = 1;
 
 	/**
-	 * The operation id for the '<em>Attempt Book Room Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Attempt Book Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___ATTEMPT_BOOK_ROOM_BOOKINGBOOKING = 2;
+	int BOOKING_HANDLER___ATTEMPT_BOOK_ROOM__BOOKING = 2;
 
 	/**
-	 * The operation id for the '<em>Cancel Booking Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Cancel Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___CANCEL_BOOKING_BOOKINGBOOKING = 3;
+	int BOOKING_HANDLER___CANCEL_BOOKING__BOOKING = 3;
 
 	/**
-	 * The operation id for the '<em>Change Booking Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Change Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___CHANGE_BOOKING_BOOKINGBOOKING = 4;
+	int BOOKING_HANDLER___CHANGE_BOOKING__BOOKING = 4;
 
 	/**
-	 * The operation id for the '<em>Check In Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Check In</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___CHECK_IN_BOOKINGBOOKING = 5;
+	int BOOKING_HANDLER___CHECK_IN__BOOKING = 5;
 
 	/**
-	 * The operation id for the '<em>Check Out Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Check Out</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___CHECK_OUT_BOOKINGBOOKING = 6;
+	int BOOKING_HANDLER___CHECK_OUT__BOOKING = 6;
 
 	/**
-	 * The operation id for the '<em>Send Error Msg String</em>' operation.
+	 * The operation id for the '<em>Send Error Msg</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___SEND_ERROR_MSG_STRING = 7;
+	int BOOKING_HANDLER___SEND_ERROR_MSG = 7;
 
 	/**
-	 * The operation id for the '<em>Get Singleton Booking Booking Handler</em>' operation.
+	 * The operation id for the '<em>Get Singletton Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___GET_SINGLETON_BOOKING_BOOKING_HANDLER = 8;
+	int BOOKING_HANDLER___GET_SINGLETTON_BOOKING = 8;
 
 	/**
 	 * The operation id for the '<em>Create Singleton Handler</em>' operation.
@@ -1117,94 +1117,94 @@ public interface BuissnesslayerPackage extends EPackage {
 	EReference getBookingHandler_Database();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#intfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests() <em>Intfetch Availability Start Date End Date Room Type Nr Of Guests</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#fetchAvailability(int, int, Classes.Buissnesslayer.Room, int) <em>Fetch Availability</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Intfetch Availability Start Date End Date Room Type Nr Of Guests</em>' operation.
-	 * @see Classes.Buissnesslayer.BookingHandler#intfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests()
+	 * @return the meta object for the '<em>Fetch Availability</em>' operation.
+	 * @see Classes.Buissnesslayer.BookingHandler#fetchAvailability(int, int, Classes.Buissnesslayer.Room, int)
 	 * @generated
 	 */
-	EOperation getBookingHandler__IntfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests();
+	EOperation getBookingHandler__FetchAvailability__int_int_Room_int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#BookingfetchBookingintbookingID() <em>Bookingfetch Bookingintbooking ID</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#fetchBooking(Classes.Buissnesslayer.Booking) <em>Fetch Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Bookingfetch Bookingintbooking ID</em>' operation.
-	 * @see Classes.Buissnesslayer.BookingHandler#BookingfetchBookingintbookingID()
+	 * @return the meta object for the '<em>Fetch Booking</em>' operation.
+	 * @see Classes.Buissnesslayer.BookingHandler#fetchBooking(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getBookingHandler__BookingfetchBookingintbookingID();
+	EOperation getBookingHandler__FetchBooking__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#attemptBookRoomBookingbooking() <em>Attempt Book Room Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#attemptBookRoom(Classes.Buissnesslayer.Booking) <em>Attempt Book Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Attempt Book Room Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.BookingHandler#attemptBookRoomBookingbooking()
+	 * @return the meta object for the '<em>Attempt Book Room</em>' operation.
+	 * @see Classes.Buissnesslayer.BookingHandler#attemptBookRoom(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getBookingHandler__AttemptBookRoomBookingbooking();
+	EOperation getBookingHandler__AttemptBookRoom__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#cancelBookingBookingbooking() <em>Cancel Booking Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#cancelBooking(Classes.Buissnesslayer.Booking) <em>Cancel Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Cancel Booking Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.BookingHandler#cancelBookingBookingbooking()
+	 * @return the meta object for the '<em>Cancel Booking</em>' operation.
+	 * @see Classes.Buissnesslayer.BookingHandler#cancelBooking(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getBookingHandler__CancelBookingBookingbooking();
+	EOperation getBookingHandler__CancelBooking__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#changeBookingBookingbooking() <em>Change Booking Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#changeBooking(Classes.Buissnesslayer.Booking) <em>Change Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Change Booking Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.BookingHandler#changeBookingBookingbooking()
+	 * @return the meta object for the '<em>Change Booking</em>' operation.
+	 * @see Classes.Buissnesslayer.BookingHandler#changeBooking(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getBookingHandler__ChangeBookingBookingbooking();
+	EOperation getBookingHandler__ChangeBooking__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#checkInBookingbooking() <em>Check In Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#checkIn(Classes.Buissnesslayer.Booking) <em>Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check In Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.BookingHandler#checkInBookingbooking()
+	 * @return the meta object for the '<em>Check In</em>' operation.
+	 * @see Classes.Buissnesslayer.BookingHandler#checkIn(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getBookingHandler__CheckInBookingbooking();
+	EOperation getBookingHandler__CheckIn__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#checkOutBookingbooking() <em>Check Out Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#checkOut(Classes.Buissnesslayer.Booking) <em>Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Out Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.BookingHandler#checkOutBookingbooking()
+	 * @return the meta object for the '<em>Check Out</em>' operation.
+	 * @see Classes.Buissnesslayer.BookingHandler#checkOut(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getBookingHandler__CheckOutBookingbooking();
+	EOperation getBookingHandler__CheckOut__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#sendErrorMsgString() <em>Send Error Msg String</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#sendErrorMsg() <em>Send Error Msg</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Send Error Msg String</em>' operation.
-	 * @see Classes.Buissnesslayer.BookingHandler#sendErrorMsgString()
+	 * @return the meta object for the '<em>Send Error Msg</em>' operation.
+	 * @see Classes.Buissnesslayer.BookingHandler#sendErrorMsg()
 	 * @generated
 	 */
-	EOperation getBookingHandler__SendErrorMsgString();
+	EOperation getBookingHandler__SendErrorMsg();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#getSingletonBookingBookingHandler() <em>Get Singleton Booking Booking Handler</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#getSinglettonBooking() <em>Get Singletton Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Singleton Booking Booking Handler</em>' operation.
-	 * @see Classes.Buissnesslayer.BookingHandler#getSingletonBookingBookingHandler()
+	 * @return the meta object for the '<em>Get Singletton Booking</em>' operation.
+	 * @see Classes.Buissnesslayer.BookingHandler#getSinglettonBooking()
 	 * @generated
 	 */
-	EOperation getBookingHandler__GetSingletonBookingBookingHandler();
+	EOperation getBookingHandler__GetSinglettonBooking();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#createSingletonHandler() <em>Create Singleton Handler</em>}' operation.
@@ -1858,76 +1858,76 @@ public interface BuissnesslayerPackage extends EPackage {
 		EReference BOOKING_HANDLER__DATABASE = eINSTANCE.getBookingHandler_Database();
 
 		/**
-		 * The meta object literal for the '<em><b>Intfetch Availability Start Date End Date Room Type Nr Of Guests</b></em>' operation.
+		 * The meta object literal for the '<em><b>Fetch Availability</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___INTFETCH_AVAILABILITY_START_DATE_END_DATE_ROOM_TYPE_NR_OF_GUESTS = eINSTANCE.getBookingHandler__IntfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests();
+		EOperation BOOKING_HANDLER___FETCH_AVAILABILITY__INT_INT_ROOM_INT = eINSTANCE.getBookingHandler__FetchAvailability__int_int_Room_int();
 
 		/**
-		 * The meta object literal for the '<em><b>Bookingfetch Bookingintbooking ID</b></em>' operation.
+		 * The meta object literal for the '<em><b>Fetch Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___BOOKINGFETCH_BOOKINGINTBOOKING_ID = eINSTANCE.getBookingHandler__BookingfetchBookingintbookingID();
+		EOperation BOOKING_HANDLER___FETCH_BOOKING__BOOKING = eINSTANCE.getBookingHandler__FetchBooking__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Attempt Book Room Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Attempt Book Room</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___ATTEMPT_BOOK_ROOM_BOOKINGBOOKING = eINSTANCE.getBookingHandler__AttemptBookRoomBookingbooking();
+		EOperation BOOKING_HANDLER___ATTEMPT_BOOK_ROOM__BOOKING = eINSTANCE.getBookingHandler__AttemptBookRoom__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Cancel Booking Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Cancel Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___CANCEL_BOOKING_BOOKINGBOOKING = eINSTANCE.getBookingHandler__CancelBookingBookingbooking();
+		EOperation BOOKING_HANDLER___CANCEL_BOOKING__BOOKING = eINSTANCE.getBookingHandler__CancelBooking__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Change Booking Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Change Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___CHANGE_BOOKING_BOOKINGBOOKING = eINSTANCE.getBookingHandler__ChangeBookingBookingbooking();
+		EOperation BOOKING_HANDLER___CHANGE_BOOKING__BOOKING = eINSTANCE.getBookingHandler__ChangeBooking__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Check In Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Check In</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___CHECK_IN_BOOKINGBOOKING = eINSTANCE.getBookingHandler__CheckInBookingbooking();
+		EOperation BOOKING_HANDLER___CHECK_IN__BOOKING = eINSTANCE.getBookingHandler__CheckIn__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Check Out Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Check Out</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___CHECK_OUT_BOOKINGBOOKING = eINSTANCE.getBookingHandler__CheckOutBookingbooking();
+		EOperation BOOKING_HANDLER___CHECK_OUT__BOOKING = eINSTANCE.getBookingHandler__CheckOut__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Send Error Msg String</b></em>' operation.
+		 * The meta object literal for the '<em><b>Send Error Msg</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___SEND_ERROR_MSG_STRING = eINSTANCE.getBookingHandler__SendErrorMsgString();
+		EOperation BOOKING_HANDLER___SEND_ERROR_MSG = eINSTANCE.getBookingHandler__SendErrorMsg();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Singleton Booking Booking Handler</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Singletton Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___GET_SINGLETON_BOOKING_BOOKING_HANDLER = eINSTANCE.getBookingHandler__GetSingletonBookingBookingHandler();
+		EOperation BOOKING_HANDLER___GET_SINGLETTON_BOOKING = eINSTANCE.getBookingHandler__GetSinglettonBooking();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Singleton Handler</b></em>' operation.

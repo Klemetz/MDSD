@@ -4,6 +4,8 @@ package Classes.Interactionlayer;
 
 import Classes.Buissnesslayer.BookingHandler;
 
+import Classes.Buissnesslayer.Room;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -106,26 +108,26 @@ public interface GUIController extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='showAvailability(startDate, endDate, roomType, NrOfGuests)'"
+	 * @model startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" nrOfGuestsRequired="true" nrOfGuestsOrdered="false"
 	 * @generated
 	 */
-	void showAvailabilitystartDateendDateroomTypeNrOfGuests();
+	void showAvailability(int startDate, int endDate, Room roomType, int nrOfGuests);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='displayError(string errorMsg)'"
+	 * @model
 	 * @generated
 	 */
-	void displayErrorstringerrorMsg();
+	void displayError();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='displayExtras(List<extras>Extras)'"
+	 * @model extrasMany="true" extrasOrdered="false"
 	 * @generated
 	 */
-	void displayExtrasListextrasExtras();
+	void displayExtras(EList<Character> extras);
 
 	/**
 	 * <!-- begin-user-doc -->

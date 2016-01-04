@@ -4,6 +4,7 @@ package Classes.Interactionlayer.impl;
 
 import Classes.Buissnesslayer.BookingHandler;
 
+import Classes.Buissnesslayer.Room;
 import Classes.Interactionlayer.GUI;
 import Classes.Interactionlayer.GUIController;
 import Classes.Interactionlayer.InteractionlayerPackage;
@@ -205,7 +206,7 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void showAvailabilitystartDateendDateroomTypeNrOfGuests() {
+	public void showAvailability(int startDate, int endDate, Room roomType, int nrOfGuests) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -216,7 +217,7 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void displayErrorstringerrorMsg() {
+	public void displayError() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -227,7 +228,7 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void displayExtrasListextrasExtras() {
+	public void displayExtras(EList<Character> extras) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -397,16 +398,17 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case InteractionlayerPackage.GUI_CONTROLLER___SHOW_AVAILABILITYSTART_DATEEND_DATEROOM_TYPE_NR_OF_GUESTS:
-				showAvailabilitystartDateendDateroomTypeNrOfGuests();
+			case InteractionlayerPackage.GUI_CONTROLLER___SHOW_AVAILABILITY__INT_INT_ROOM_INT:
+				showAvailability((Integer)arguments.get(0), (Integer)arguments.get(1), (Room)arguments.get(2), (Integer)arguments.get(3));
 				return null;
-			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ERRORSTRINGERROR_MSG:
-				displayErrorstringerrorMsg();
+			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ERROR:
+				displayError();
 				return null;
-			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_EXTRAS_LISTEXTRAS_EXTRAS:
-				displayExtrasListextrasExtras();
+			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_EXTRAS__ELIST:
+				displayExtras((EList<Character>)arguments.get(0));
 				return null;
 			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_PARKINGS_LISTPARKINGS_PARKINGS:
 				displayParkingsListparkingsParkings();

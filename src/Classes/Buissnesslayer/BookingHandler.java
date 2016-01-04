@@ -152,75 +152,74 @@ public interface BookingHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='int fetchAvailability(StartDate, EndDate, RoomType, NrOfGuests)'"
+	 * @model startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" nrOfGuestsRequired="true" nrOfGuestsOrdered="false"
 	 * @generated
 	 */
-	void intfetchAvailabilityStartDateEndDateRoomTypeNrOfGuests();
+	void fetchAvailability(int startDate, int endDate, Room roomType, int nrOfGuests);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='Booking fetchBooking(int bookingID)'"
+	 * @model bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	void BookingfetchBookingintbookingID();
+	void fetchBooking(Booking bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='attemptBookRoom(Booking booking)'"
+	 * @model bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void attemptBookRoomBookingbooking();
+	void attemptBookRoom(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='cancelBooking(Booking booking)'"
+	 * @model bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void cancelBookingBookingbooking();
+	void cancelBooking(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='changeBooking(Booking booking)'"
+	 * @model bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void changeBookingBookingbooking();
+	void changeBooking(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='checkIn(Booking booking)'"
+	 * @model bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void checkInBookingbooking();
+	void checkIn(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='checkOut(Booking booking)'"
+	 * @model bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void checkOutBookingbooking();
+	void checkOut(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='sendErrorMsg() : String'"
+	 * @model
 	 * @generated
 	 */
-	void sendErrorMsgString();
+	void sendErrorMsg();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation"
-	 *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='getSingletonBooking : BookingHandler'"
 	 * @generated
 	 */
-	void getSingletonBookingBookingHandler();
+	void getSinglettonBooking();
 
 	/**
 	 * <!-- begin-user-doc -->
