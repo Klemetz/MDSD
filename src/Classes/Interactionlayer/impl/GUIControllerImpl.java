@@ -239,7 +239,7 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void displayParkingsListparkingsParkings() {
+	public void displayParkings(EList<Integer> parkings) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -250,7 +250,7 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void displayRoomTypesListroomTypeRoomType() {
+	public void displayRoomTypes(EList<Integer> roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -261,7 +261,7 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void displayRoomsGridListRoomroomType() {
+	public void displayRoomsGrid(EList<Integer> roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -283,7 +283,7 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void displayRoomsByIDintbookingID() {
+	public void displayRoomsByID(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -294,7 +294,7 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void displayBookingsByIDintbookingID() {
+	public void displayBookingsByIDintbookingID(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -410,23 +410,23 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_EXTRAS__ELIST:
 				displayExtras((EList<Character>)arguments.get(0));
 				return null;
-			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_PARKINGS_LISTPARKINGS_PARKINGS:
-				displayParkingsListparkingsParkings();
+			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_PARKINGS__ELIST:
+				displayParkings((EList<Integer>)arguments.get(0));
 				return null;
-			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ROOM_TYPES_LISTROOM_TYPE_ROOM_TYPE:
-				displayRoomTypesListroomTypeRoomType();
+			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ROOM_TYPES__ELIST:
+				displayRoomTypes((EList<Integer>)arguments.get(0));
 				return null;
-			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ROOMS_GRID_LIST_ROOMROOM_TYPE:
-				displayRoomsGridListRoomroomType();
+			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ROOMS_GRID__ELIST:
+				displayRoomsGrid((EList<Integer>)arguments.get(0));
 				return null;
 			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_PAYMENT_OPTION:
 				displayPaymentOption();
 				return null;
-			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ROOMS_BY_IDINTBOOKING_ID:
-				displayRoomsByIDintbookingID();
+			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ROOMS_BY_ID__INT:
+				displayRoomsByID((Integer)arguments.get(0));
 				return null;
-			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_BOOKINGS_BY_IDINTBOOKING_ID:
-				displayBookingsByIDintbookingID();
+			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_BOOKINGS_BY_IDINTBOOKING_ID__INT:
+				displayBookingsByIDintbookingID((Integer)arguments.get(0));
 				return null;
 			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_BOOKING_CANCELLED:
 				displayBookingCancelled();

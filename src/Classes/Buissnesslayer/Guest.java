@@ -18,41 +18,41 @@ public interface Guest extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='int bookRoom(Booking booking)'"
+	 * @model bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void intbookRoomBookingbooking();
+	void bookRoom(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='changeBooking(Booking oldBooking, Booking newBooking)'"
+	 * @model oldBookingRequired="true" oldBookingOrdered="false" newBookingRequired="true" newBookingOrdered="false"
 	 * @generated
 	 */
-	void changeBookingBookingoldBookingBookingnewBooking();
+	void changeBooking(Booking oldBooking, Booking newBooking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='cancelBooking(Booking booking)'"
+	 * @model bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void cancelBookingBookingbooking();
+	void cancelBooking(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='attemptCheckIn(Booking booking)'"
+	 * @model bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void attemptCheckInBookingbooking();
+	void attemptCheckIn(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='attemptCheckOut(Booking booking)'"
+	 * @model bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void attemptCheckOutBookingbooking();
+	void attemptCheckOut(Booking booking);
 
 } // Guest

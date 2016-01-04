@@ -220,7 +220,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGUIController__DisplayParkingsListparkingsParkings() {
+	public EOperation getGUIController__DisplayParkings__EList() {
 		return guiControllerEClass.getEOperations().get(3);
 	}
 
@@ -229,7 +229,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGUIController__DisplayRoomTypesListroomTypeRoomType() {
+	public EOperation getGUIController__DisplayRoomTypes__EList() {
 		return guiControllerEClass.getEOperations().get(4);
 	}
 
@@ -238,7 +238,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGUIController__DisplayRoomsGridListRoomroomType() {
+	public EOperation getGUIController__DisplayRoomsGrid__EList() {
 		return guiControllerEClass.getEOperations().get(5);
 	}
 
@@ -256,7 +256,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGUIController__DisplayRoomsByIDintbookingID() {
+	public EOperation getGUIController__DisplayRoomsByID__int() {
 		return guiControllerEClass.getEOperations().get(7);
 	}
 
@@ -265,7 +265,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGUIController__DisplayBookingsByIDintbookingID() {
+	public EOperation getGUIController__DisplayBookingsByIDintbookingID__int() {
 		return guiControllerEClass.getEOperations().get(8);
 	}
 
@@ -406,12 +406,12 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___SHOW_AVAILABILITY__INT_INT_ROOM_INT);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ERROR);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_EXTRAS__ELIST);
-		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_PARKINGS_LISTPARKINGS_PARKINGS);
-		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOM_TYPES_LISTROOM_TYPE_ROOM_TYPE);
-		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOMS_GRID_LIST_ROOMROOM_TYPE);
+		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_PARKINGS__ELIST);
+		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOM_TYPES__ELIST);
+		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOMS_GRID__ELIST);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_PAYMENT_OPTION);
-		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOMS_BY_IDINTBOOKING_ID);
-		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_BOOKINGS_BY_IDINTBOOKING_ID);
+		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOMS_BY_ID__INT);
+		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_BOOKINGS_BY_IDINTBOOKING_ID__INT);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_BOOKING_CANCELLED);
 
 		loginControllerEClass = createEClass(LOGIN_CONTROLLER);
@@ -480,17 +480,22 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		op = initEOperation(getGUIController__DisplayExtras__EList(), null, "displayExtras", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEChar(), "extras", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getGUIController__DisplayParkingsListparkingsParkings(), null, "displayParkingsListparkingsParkings", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getGUIController__DisplayParkings__EList(), null, "displayParkings", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "parkings", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getGUIController__DisplayRoomTypesListroomTypeRoomType(), null, "displayRoomTypesListroomTypeRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getGUIController__DisplayRoomTypes__EList(), null, "displayRoomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "roomType", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getGUIController__DisplayRoomsGridListRoomroomType(), null, "displayRoomsGridListRoomroomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getGUIController__DisplayRoomsGrid__EList(), null, "displayRoomsGrid", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "roomType", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getGUIController__DisplayPaymentOption(), null, "displayPaymentOption", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getGUIController__DisplayRoomsByIDintbookingID(), null, "displayRoomsByIDintbookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getGUIController__DisplayRoomsByID__int(), null, "displayRoomsByID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getGUIController__DisplayBookingsByIDintbookingID(), null, "displayBookingsByIDintbookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getGUIController__DisplayBookingsByIDintbookingID__int(), null, "displayBookingsByIDintbookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getGUIController__DisplayBookingCancelled(), null, "displayBookingCancelled", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -539,46 +544,10 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 			 "originalName", "Interaction layer"
 		   });	
 		addAnnotation
-		  (getGUIController__DisplayParkingsListparkingsParkings(), 
-		   source, 
-		   new String[] {
-			 "originalName", "displayParkings(List<parkings>Parkings)"
-		   });	
-		addAnnotation
-		  (getGUIController__DisplayRoomTypesListroomTypeRoomType(), 
-		   source, 
-		   new String[] {
-			 "originalName", "displayRoomTypes(List<roomType>RoomType)"
-		   });	
-		addAnnotation
-		  (getGUIController__DisplayRoomsGridListRoomroomType(), 
-		   source, 
-		   new String[] {
-			 "originalName", "displayRoomsGrid(List<Room> roomType)"
-		   });	
-		addAnnotation
-		  (getGUIController__DisplayPaymentOption(), 
-		   source, 
-		   new String[] {
-			 "originalName", "displayPaymentOption()"
-		   });	
-		addAnnotation
-		  (getGUIController__DisplayRoomsByIDintbookingID(), 
-		   source, 
-		   new String[] {
-			 "originalName", "displayRoomsByID(int bookingID)"
-		   });	
-		addAnnotation
-		  (getGUIController__DisplayBookingsByIDintbookingID(), 
+		  (getGUIController__DisplayBookingsByIDintbookingID__int(), 
 		   source, 
 		   new String[] {
 			 "originalName", "displayBookingsByID(int bookingID)"
-		   });	
-		addAnnotation
-		  (getGUIController__DisplayBookingCancelled(), 
-		   source, 
-		   new String[] {
-			 "originalName", "displayBookingCancelled()"
 		   });
 	}
 

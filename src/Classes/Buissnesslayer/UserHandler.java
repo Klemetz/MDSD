@@ -2,6 +2,7 @@
  */
 package Classes.Buissnesslayer;
 
+import Classes.BuisnessLogicLayer.PaymentInfo;
 import Classes.Datalayer.Database;
 
 import Classes.Interactionlayer.LoginController;
@@ -135,18 +136,18 @@ public interface UserHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='addGuestDB(PaymentInfo paymentInfo, User user)'"
+	 * @model paymentInfoRequired="true" paymentInfoOrdered="false" userRequired="true" userOrdered="false"
 	 * @generated
 	 */
-	void addGuestDBPaymentInfopaymentInfoUseruser();
+	void addGuestDB(PaymentInfo paymentInfo, User user);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='sendEmailVerification(String email)'"
+	 * @model emailRequired="true" emailOrdered="false"
 	 * @generated
 	 */
-	void sendEmailVerificationStringemail();
+	void sendEmailVerification(char email);
 
 	/**
 	 * <!-- begin-user-doc -->

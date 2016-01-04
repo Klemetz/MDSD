@@ -2,7 +2,9 @@
  */
 package Classes.Buissnesslayer.impl;
 
+import Classes.BuisnessLogicLayer.PaymentInfo;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
+import Classes.Buissnesslayer.User;
 import Classes.Buissnesslayer.UserHandler;
 
 import Classes.Datalayer.Database;
@@ -247,7 +249,7 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addGuestDBPaymentInfopaymentInfoUseruser() {
+	public void addGuestDB(PaymentInfo paymentInfo, User user) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -258,7 +260,7 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void sendEmailVerificationStringemail() {
+	public void sendEmailVerification(char email) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -385,11 +387,11 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BuissnesslayerPackage.USER_HANDLER___ADD_GUEST_DB_PAYMENT_INFOPAYMENT_INFO_USERUSER:
-				addGuestDBPaymentInfopaymentInfoUseruser();
+			case BuissnesslayerPackage.USER_HANDLER___ADD_GUEST_DB__PAYMENTINFO_USER:
+				addGuestDB((PaymentInfo)arguments.get(0), (User)arguments.get(1));
 				return null;
-			case BuissnesslayerPackage.USER_HANDLER___SEND_EMAIL_VERIFICATION_STRINGEMAIL:
-				sendEmailVerificationStringemail();
+			case BuissnesslayerPackage.USER_HANDLER___SEND_EMAIL_VERIFICATION__CHAR:
+				sendEmailVerification((Character)arguments.get(0));
 				return null;
 			case BuissnesslayerPackage.USER_HANDLER___GET_SINGLETON_HANDLER:
 				getSingletonHandler();

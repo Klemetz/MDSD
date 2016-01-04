@@ -486,58 +486,58 @@ public interface BuissnesslayerPackage extends EPackage {
 	int USER_FEATURE_COUNT = 6;
 
 	/**
-	 * The operation id for the '<em>Enter Contact Data Stringname Emailemail Addressadress</em>' operation.
+	 * The operation id for the '<em>Enter Contact Data</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER___ENTER_CONTACT_DATA_STRINGNAME_EMAILEMAIL_ADDRESSADRESS = 0;
+	int USER___ENTER_CONTACT_DATA__CHAR_CHAR_ADDRESS = 0;
 
 	/**
-	 * The operation id for the '<em>Intbook Room Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Book Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER___INTBOOK_ROOM_BOOKINGBOOKING = 1;
+	int USER___BOOK_ROOM__BOOKING = 1;
 
 	/**
-	 * The operation id for the '<em>Change Booking Bookingold Booking Bookingnew Booking</em>' operation.
+	 * The operation id for the '<em>Change Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER___CHANGE_BOOKING_BOOKINGOLD_BOOKING_BOOKINGNEW_BOOKING = 2;
+	int USER___CHANGE_BOOKING__BOOKING_BOOKING = 2;
 
 	/**
-	 * The operation id for the '<em>Cancel Booking Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Cancel Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER___CANCEL_BOOKING_BOOKINGBOOKING = 3;
+	int USER___CANCEL_BOOKING__BOOKING = 3;
 
 	/**
-	 * The operation id for the '<em>Attempt Check In Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Attempt Check In</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER___ATTEMPT_CHECK_IN_BOOKINGBOOKING = 4;
+	int USER___ATTEMPT_CHECK_IN__BOOKING = 4;
 
 	/**
-	 * The operation id for the '<em>Attempt Check Out Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Attempt Check Out</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER___ATTEMPT_CHECK_OUT_BOOKINGBOOKING = 5;
+	int USER___ATTEMPT_CHECK_OUT__BOOKING = 5;
 
 	/**
 	 * The number of operations of the '<em>User</em>' class.
@@ -604,22 +604,22 @@ public interface BuissnesslayerPackage extends EPackage {
 	int USER_HANDLER_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>Add Guest DB Payment Infopayment Info Useruser</em>' operation.
+	 * The operation id for the '<em>Add Guest DB</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_HANDLER___ADD_GUEST_DB_PAYMENT_INFOPAYMENT_INFO_USERUSER = 0;
+	int USER_HANDLER___ADD_GUEST_DB__PAYMENTINFO_USER = 0;
 
 	/**
-	 * The operation id for the '<em>Send Email Verification Stringemail</em>' operation.
+	 * The operation id for the '<em>Send Email Verification</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_HANDLER___SEND_EMAIL_VERIFICATION_STRINGEMAIL = 1;
+	int USER_HANDLER___SEND_EMAIL_VERIFICATION__CHAR = 1;
 
 	/**
 	 * The operation id for the '<em>Get Singleton Handler</em>' operation.
@@ -732,49 +732,49 @@ public interface BuissnesslayerPackage extends EPackage {
 	int GUEST_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Intbook Room Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Book Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___INTBOOK_ROOM_BOOKINGBOOKING = 0;
+	int GUEST___BOOK_ROOM__BOOKING = 0;
 
 	/**
-	 * The operation id for the '<em>Change Booking Bookingold Booking Bookingnew Booking</em>' operation.
+	 * The operation id for the '<em>Change Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___CHANGE_BOOKING_BOOKINGOLD_BOOKING_BOOKINGNEW_BOOKING = 1;
+	int GUEST___CHANGE_BOOKING__BOOKING_BOOKING = 1;
 
 	/**
-	 * The operation id for the '<em>Cancel Booking Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Cancel Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___CANCEL_BOOKING_BOOKINGBOOKING = 2;
+	int GUEST___CANCEL_BOOKING__BOOKING = 2;
 
 	/**
-	 * The operation id for the '<em>Attempt Check In Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Attempt Check In</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___ATTEMPT_CHECK_IN_BOOKINGBOOKING = 3;
+	int GUEST___ATTEMPT_CHECK_IN__BOOKING = 3;
 
 	/**
-	 * The operation id for the '<em>Attempt Check Out Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Attempt Check Out</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST___ATTEMPT_CHECK_OUT_BOOKINGBOOKING = 4;
+	int GUEST___ATTEMPT_CHECK_OUT__BOOKING = 4;
 
 	/**
 	 * The number of operations of the '<em>Guest</em>' class.
@@ -823,49 +823,49 @@ public interface BuissnesslayerPackage extends EPackage {
 	int EMPLOYEE_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>Intbook Room Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Intbook Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE___INTBOOK_ROOM_BOOKINGBOOKING = 0;
+	int EMPLOYEE___INTBOOK_ROOM__BOOKING = 0;
 
 	/**
-	 * The operation id for the '<em>Change Booking Bookingold Booking Bookingnew Booking</em>' operation.
+	 * The operation id for the '<em>Change Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE___CHANGE_BOOKING_BOOKINGOLD_BOOKING_BOOKINGNEW_BOOKING = 1;
+	int EMPLOYEE___CHANGE_BOOKING__BOOKING_BOOKING = 1;
 
 	/**
-	 * The operation id for the '<em>Cancel Booking Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Cancel Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE___CANCEL_BOOKING_BOOKINGBOOKING = 2;
+	int EMPLOYEE___CANCEL_BOOKING__BOOKING = 2;
 
 	/**
-	 * The operation id for the '<em>Attempt Check In Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Attempt Check In</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE___ATTEMPT_CHECK_IN_BOOKINGBOOKING = 3;
+	int EMPLOYEE___ATTEMPT_CHECK_IN__BOOKING = 3;
 
 	/**
-	 * The operation id for the '<em>Attempt Check Out Bookingbooking</em>' operation.
+	 * The operation id for the '<em>Attempt Check Out</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE___ATTEMPT_CHECK_OUT_BOOKINGBOOKING = 4;
+	int EMPLOYEE___ATTEMPT_CHECK_OUT__BOOKING = 4;
 
 	/**
 	 * The number of operations of the '<em>Employee</em>' class.
@@ -1303,64 +1303,64 @@ public interface BuissnesslayerPackage extends EPackage {
 	EReference getUser_Address();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#enterContactDataStringnameEmailemailAddressadress() <em>Enter Contact Data Stringname Emailemail Addressadress</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#enterContactData(char, char, Classes.Buissnesslayer.Address) <em>Enter Contact Data</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Enter Contact Data Stringname Emailemail Addressadress</em>' operation.
-	 * @see Classes.Buissnesslayer.User#enterContactDataStringnameEmailemailAddressadress()
+	 * @return the meta object for the '<em>Enter Contact Data</em>' operation.
+	 * @see Classes.Buissnesslayer.User#enterContactData(char, char, Classes.Buissnesslayer.Address)
 	 * @generated
 	 */
-	EOperation getUser__EnterContactDataStringnameEmailemailAddressadress();
+	EOperation getUser__EnterContactData__char_char_Address();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#intbookRoomBookingbooking() <em>Intbook Room Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#bookRoom(Classes.Buissnesslayer.Booking) <em>Book Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Intbook Room Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.User#intbookRoomBookingbooking()
+	 * @return the meta object for the '<em>Book Room</em>' operation.
+	 * @see Classes.Buissnesslayer.User#bookRoom(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getUser__IntbookRoomBookingbooking();
+	EOperation getUser__BookRoom__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#changeBookingBookingoldBookingBookingnewBooking() <em>Change Booking Bookingold Booking Bookingnew Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#changeBooking(Classes.Buissnesslayer.Booking, Classes.Buissnesslayer.Booking) <em>Change Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Change Booking Bookingold Booking Bookingnew Booking</em>' operation.
-	 * @see Classes.Buissnesslayer.User#changeBookingBookingoldBookingBookingnewBooking()
+	 * @return the meta object for the '<em>Change Booking</em>' operation.
+	 * @see Classes.Buissnesslayer.User#changeBooking(Classes.Buissnesslayer.Booking, Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getUser__ChangeBookingBookingoldBookingBookingnewBooking();
+	EOperation getUser__ChangeBooking__Booking_Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#cancelBookingBookingbooking() <em>Cancel Booking Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#cancelBooking(Classes.Buissnesslayer.Booking) <em>Cancel Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Cancel Booking Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.User#cancelBookingBookingbooking()
+	 * @return the meta object for the '<em>Cancel Booking</em>' operation.
+	 * @see Classes.Buissnesslayer.User#cancelBooking(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getUser__CancelBookingBookingbooking();
+	EOperation getUser__CancelBooking__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#attemptCheckInBookingbooking() <em>Attempt Check In Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#attemptCheckIn(Classes.Buissnesslayer.Booking) <em>Attempt Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Attempt Check In Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.User#attemptCheckInBookingbooking()
+	 * @return the meta object for the '<em>Attempt Check In</em>' operation.
+	 * @see Classes.Buissnesslayer.User#attemptCheckIn(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getUser__AttemptCheckInBookingbooking();
+	EOperation getUser__AttemptCheckIn__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#attemptCheckOutBookingbooking() <em>Attempt Check Out Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#attemptCheckOut(Classes.Buissnesslayer.Booking) <em>Attempt Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Attempt Check Out Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.User#attemptCheckOutBookingbooking()
+	 * @return the meta object for the '<em>Attempt Check Out</em>' operation.
+	 * @see Classes.Buissnesslayer.User#attemptCheckOut(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getUser__AttemptCheckOutBookingbooking();
+	EOperation getUser__AttemptCheckOut__Booking();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Buissnesslayer.UserHandler <em>User Handler</em>}'.
@@ -1417,24 +1417,24 @@ public interface BuissnesslayerPackage extends EPackage {
 	EReference getUserHandler_Database();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#addGuestDBPaymentInfopaymentInfoUseruser() <em>Add Guest DB Payment Infopayment Info Useruser</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#addGuestDB(Classes.BuisnessLogicLayer.PaymentInfo, Classes.Buissnesslayer.User) <em>Add Guest DB</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Guest DB Payment Infopayment Info Useruser</em>' operation.
-	 * @see Classes.Buissnesslayer.UserHandler#addGuestDBPaymentInfopaymentInfoUseruser()
+	 * @return the meta object for the '<em>Add Guest DB</em>' operation.
+	 * @see Classes.Buissnesslayer.UserHandler#addGuestDB(Classes.BuisnessLogicLayer.PaymentInfo, Classes.Buissnesslayer.User)
 	 * @generated
 	 */
-	EOperation getUserHandler__AddGuestDBPaymentInfopaymentInfoUseruser();
+	EOperation getUserHandler__AddGuestDB__PaymentInfo_User();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#sendEmailVerificationStringemail() <em>Send Email Verification Stringemail</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#sendEmailVerification(char) <em>Send Email Verification</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Send Email Verification Stringemail</em>' operation.
-	 * @see Classes.Buissnesslayer.UserHandler#sendEmailVerificationStringemail()
+	 * @return the meta object for the '<em>Send Email Verification</em>' operation.
+	 * @see Classes.Buissnesslayer.UserHandler#sendEmailVerification(char)
 	 * @generated
 	 */
-	EOperation getUserHandler__SendEmailVerificationStringemail();
+	EOperation getUserHandler__SendEmailVerification__char();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#getSingletonHandler() <em>Get Singleton Handler</em>}' operation.
@@ -1521,54 +1521,54 @@ public interface BuissnesslayerPackage extends EPackage {
 	EClass getGuest();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Guest#intbookRoomBookingbooking() <em>Intbook Room Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Guest#bookRoom(Classes.Buissnesslayer.Booking) <em>Book Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Intbook Room Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.Guest#intbookRoomBookingbooking()
+	 * @return the meta object for the '<em>Book Room</em>' operation.
+	 * @see Classes.Buissnesslayer.Guest#bookRoom(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getGuest__IntbookRoomBookingbooking();
+	EOperation getGuest__BookRoom__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Guest#changeBookingBookingoldBookingBookingnewBooking() <em>Change Booking Bookingold Booking Bookingnew Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Guest#changeBooking(Classes.Buissnesslayer.Booking, Classes.Buissnesslayer.Booking) <em>Change Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Change Booking Bookingold Booking Bookingnew Booking</em>' operation.
-	 * @see Classes.Buissnesslayer.Guest#changeBookingBookingoldBookingBookingnewBooking()
+	 * @return the meta object for the '<em>Change Booking</em>' operation.
+	 * @see Classes.Buissnesslayer.Guest#changeBooking(Classes.Buissnesslayer.Booking, Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getGuest__ChangeBookingBookingoldBookingBookingnewBooking();
+	EOperation getGuest__ChangeBooking__Booking_Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Guest#cancelBookingBookingbooking() <em>Cancel Booking Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Guest#cancelBooking(Classes.Buissnesslayer.Booking) <em>Cancel Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Cancel Booking Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.Guest#cancelBookingBookingbooking()
+	 * @return the meta object for the '<em>Cancel Booking</em>' operation.
+	 * @see Classes.Buissnesslayer.Guest#cancelBooking(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getGuest__CancelBookingBookingbooking();
+	EOperation getGuest__CancelBooking__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Guest#attemptCheckInBookingbooking() <em>Attempt Check In Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Guest#attemptCheckIn(Classes.Buissnesslayer.Booking) <em>Attempt Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Attempt Check In Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.Guest#attemptCheckInBookingbooking()
+	 * @return the meta object for the '<em>Attempt Check In</em>' operation.
+	 * @see Classes.Buissnesslayer.Guest#attemptCheckIn(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getGuest__AttemptCheckInBookingbooking();
+	EOperation getGuest__AttemptCheckIn__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Guest#attemptCheckOutBookingbooking() <em>Attempt Check Out Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Guest#attemptCheckOut(Classes.Buissnesslayer.Booking) <em>Attempt Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Attempt Check Out Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.Guest#attemptCheckOutBookingbooking()
+	 * @return the meta object for the '<em>Attempt Check Out</em>' operation.
+	 * @see Classes.Buissnesslayer.Guest#attemptCheckOut(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getGuest__AttemptCheckOutBookingbooking();
+	EOperation getGuest__AttemptCheckOut__Booking();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Buissnesslayer.Employee <em>Employee</em>}'.
@@ -1603,54 +1603,54 @@ public interface BuissnesslayerPackage extends EPackage {
 	EAttribute getEmployee_Password();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Employee#intbookRoomBookingbooking() <em>Intbook Room Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Employee#intbookRoom(Classes.Buissnesslayer.Booking) <em>Intbook Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Intbook Room Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.Employee#intbookRoomBookingbooking()
+	 * @return the meta object for the '<em>Intbook Room</em>' operation.
+	 * @see Classes.Buissnesslayer.Employee#intbookRoom(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getEmployee__IntbookRoomBookingbooking();
+	EOperation getEmployee__IntbookRoom__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Employee#changeBookingBookingoldBookingBookingnewBooking() <em>Change Booking Bookingold Booking Bookingnew Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Employee#changeBooking(Classes.Buissnesslayer.Booking, Classes.Buissnesslayer.Booking) <em>Change Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Change Booking Bookingold Booking Bookingnew Booking</em>' operation.
-	 * @see Classes.Buissnesslayer.Employee#changeBookingBookingoldBookingBookingnewBooking()
+	 * @return the meta object for the '<em>Change Booking</em>' operation.
+	 * @see Classes.Buissnesslayer.Employee#changeBooking(Classes.Buissnesslayer.Booking, Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getEmployee__ChangeBookingBookingoldBookingBookingnewBooking();
+	EOperation getEmployee__ChangeBooking__Booking_Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Employee#cancelBookingBookingbooking() <em>Cancel Booking Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Employee#cancelBooking(Classes.Buissnesslayer.Booking) <em>Cancel Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Cancel Booking Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.Employee#cancelBookingBookingbooking()
+	 * @return the meta object for the '<em>Cancel Booking</em>' operation.
+	 * @see Classes.Buissnesslayer.Employee#cancelBooking(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getEmployee__CancelBookingBookingbooking();
+	EOperation getEmployee__CancelBooking__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Employee#attemptCheckInBookingbooking() <em>Attempt Check In Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Employee#attemptCheckIn(Classes.Buissnesslayer.Booking) <em>Attempt Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Attempt Check In Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.Employee#attemptCheckInBookingbooking()
+	 * @return the meta object for the '<em>Attempt Check In</em>' operation.
+	 * @see Classes.Buissnesslayer.Employee#attemptCheckIn(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getEmployee__AttemptCheckInBookingbooking();
+	EOperation getEmployee__AttemptCheckIn__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Employee#attemptCheckOutBookingbooking() <em>Attempt Check Out Bookingbooking</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Employee#attemptCheckOut(Classes.Buissnesslayer.Booking) <em>Attempt Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Attempt Check Out Bookingbooking</em>' operation.
-	 * @see Classes.Buissnesslayer.Employee#attemptCheckOutBookingbooking()
+	 * @return the meta object for the '<em>Attempt Check Out</em>' operation.
+	 * @see Classes.Buissnesslayer.Employee#attemptCheckOut(Classes.Buissnesslayer.Booking)
 	 * @generated
 	 */
-	EOperation getEmployee__AttemptCheckOutBookingbooking();
+	EOperation getEmployee__AttemptCheckOut__Booking();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2004,52 +2004,52 @@ public interface BuissnesslayerPackage extends EPackage {
 		EReference USER__ADDRESS = eINSTANCE.getUser_Address();
 
 		/**
-		 * The meta object literal for the '<em><b>Enter Contact Data Stringname Emailemail Addressadress</b></em>' operation.
+		 * The meta object literal for the '<em><b>Enter Contact Data</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER___ENTER_CONTACT_DATA_STRINGNAME_EMAILEMAIL_ADDRESSADRESS = eINSTANCE.getUser__EnterContactDataStringnameEmailemailAddressadress();
+		EOperation USER___ENTER_CONTACT_DATA__CHAR_CHAR_ADDRESS = eINSTANCE.getUser__EnterContactData__char_char_Address();
 
 		/**
-		 * The meta object literal for the '<em><b>Intbook Room Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Book Room</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER___INTBOOK_ROOM_BOOKINGBOOKING = eINSTANCE.getUser__IntbookRoomBookingbooking();
+		EOperation USER___BOOK_ROOM__BOOKING = eINSTANCE.getUser__BookRoom__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Change Booking Bookingold Booking Bookingnew Booking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Change Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER___CHANGE_BOOKING_BOOKINGOLD_BOOKING_BOOKINGNEW_BOOKING = eINSTANCE.getUser__ChangeBookingBookingoldBookingBookingnewBooking();
+		EOperation USER___CHANGE_BOOKING__BOOKING_BOOKING = eINSTANCE.getUser__ChangeBooking__Booking_Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Cancel Booking Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Cancel Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER___CANCEL_BOOKING_BOOKINGBOOKING = eINSTANCE.getUser__CancelBookingBookingbooking();
+		EOperation USER___CANCEL_BOOKING__BOOKING = eINSTANCE.getUser__CancelBooking__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Attempt Check In Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Attempt Check In</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER___ATTEMPT_CHECK_IN_BOOKINGBOOKING = eINSTANCE.getUser__AttemptCheckInBookingbooking();
+		EOperation USER___ATTEMPT_CHECK_IN__BOOKING = eINSTANCE.getUser__AttemptCheckIn__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Attempt Check Out Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Attempt Check Out</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER___ATTEMPT_CHECK_OUT_BOOKINGBOOKING = eINSTANCE.getUser__AttemptCheckOutBookingbooking();
+		EOperation USER___ATTEMPT_CHECK_OUT__BOOKING = eINSTANCE.getUser__AttemptCheckOut__Booking();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Buissnesslayer.impl.UserHandlerImpl <em>User Handler</em>}' class.
@@ -2094,20 +2094,20 @@ public interface BuissnesslayerPackage extends EPackage {
 		EReference USER_HANDLER__DATABASE = eINSTANCE.getUserHandler_Database();
 
 		/**
-		 * The meta object literal for the '<em><b>Add Guest DB Payment Infopayment Info Useruser</b></em>' operation.
+		 * The meta object literal for the '<em><b>Add Guest DB</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER_HANDLER___ADD_GUEST_DB_PAYMENT_INFOPAYMENT_INFO_USERUSER = eINSTANCE.getUserHandler__AddGuestDBPaymentInfopaymentInfoUseruser();
+		EOperation USER_HANDLER___ADD_GUEST_DB__PAYMENTINFO_USER = eINSTANCE.getUserHandler__AddGuestDB__PaymentInfo_User();
 
 		/**
-		 * The meta object literal for the '<em><b>Send Email Verification Stringemail</b></em>' operation.
+		 * The meta object literal for the '<em><b>Send Email Verification</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER_HANDLER___SEND_EMAIL_VERIFICATION_STRINGEMAIL = eINSTANCE.getUserHandler__SendEmailVerificationStringemail();
+		EOperation USER_HANDLER___SEND_EMAIL_VERIFICATION__CHAR = eINSTANCE.getUserHandler__SendEmailVerification__char();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Singleton Handler</b></em>' operation.
@@ -2178,44 +2178,44 @@ public interface BuissnesslayerPackage extends EPackage {
 		EClass GUEST = eINSTANCE.getGuest();
 
 		/**
-		 * The meta object literal for the '<em><b>Intbook Room Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Book Room</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUEST___INTBOOK_ROOM_BOOKINGBOOKING = eINSTANCE.getGuest__IntbookRoomBookingbooking();
+		EOperation GUEST___BOOK_ROOM__BOOKING = eINSTANCE.getGuest__BookRoom__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Change Booking Bookingold Booking Bookingnew Booking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Change Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUEST___CHANGE_BOOKING_BOOKINGOLD_BOOKING_BOOKINGNEW_BOOKING = eINSTANCE.getGuest__ChangeBookingBookingoldBookingBookingnewBooking();
+		EOperation GUEST___CHANGE_BOOKING__BOOKING_BOOKING = eINSTANCE.getGuest__ChangeBooking__Booking_Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Cancel Booking Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Cancel Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUEST___CANCEL_BOOKING_BOOKINGBOOKING = eINSTANCE.getGuest__CancelBookingBookingbooking();
+		EOperation GUEST___CANCEL_BOOKING__BOOKING = eINSTANCE.getGuest__CancelBooking__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Attempt Check In Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Attempt Check In</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUEST___ATTEMPT_CHECK_IN_BOOKINGBOOKING = eINSTANCE.getGuest__AttemptCheckInBookingbooking();
+		EOperation GUEST___ATTEMPT_CHECK_IN__BOOKING = eINSTANCE.getGuest__AttemptCheckIn__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Attempt Check Out Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Attempt Check Out</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUEST___ATTEMPT_CHECK_OUT_BOOKINGBOOKING = eINSTANCE.getGuest__AttemptCheckOutBookingbooking();
+		EOperation GUEST___ATTEMPT_CHECK_OUT__BOOKING = eINSTANCE.getGuest__AttemptCheckOut__Booking();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Buissnesslayer.impl.EmployeeImpl <em>Employee</em>}' class.
@@ -2244,44 +2244,44 @@ public interface BuissnesslayerPackage extends EPackage {
 		EAttribute EMPLOYEE__PASSWORD = eINSTANCE.getEmployee_Password();
 
 		/**
-		 * The meta object literal for the '<em><b>Intbook Room Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Intbook Room</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMPLOYEE___INTBOOK_ROOM_BOOKINGBOOKING = eINSTANCE.getEmployee__IntbookRoomBookingbooking();
+		EOperation EMPLOYEE___INTBOOK_ROOM__BOOKING = eINSTANCE.getEmployee__IntbookRoom__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Change Booking Bookingold Booking Bookingnew Booking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Change Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMPLOYEE___CHANGE_BOOKING_BOOKINGOLD_BOOKING_BOOKINGNEW_BOOKING = eINSTANCE.getEmployee__ChangeBookingBookingoldBookingBookingnewBooking();
+		EOperation EMPLOYEE___CHANGE_BOOKING__BOOKING_BOOKING = eINSTANCE.getEmployee__ChangeBooking__Booking_Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Cancel Booking Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Cancel Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMPLOYEE___CANCEL_BOOKING_BOOKINGBOOKING = eINSTANCE.getEmployee__CancelBookingBookingbooking();
+		EOperation EMPLOYEE___CANCEL_BOOKING__BOOKING = eINSTANCE.getEmployee__CancelBooking__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Attempt Check In Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Attempt Check In</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMPLOYEE___ATTEMPT_CHECK_IN_BOOKINGBOOKING = eINSTANCE.getEmployee__AttemptCheckInBookingbooking();
+		EOperation EMPLOYEE___ATTEMPT_CHECK_IN__BOOKING = eINSTANCE.getEmployee__AttemptCheckIn__Booking();
 
 		/**
-		 * The meta object literal for the '<em><b>Attempt Check Out Bookingbooking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Attempt Check Out</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMPLOYEE___ATTEMPT_CHECK_OUT_BOOKINGBOOKING = eINSTANCE.getEmployee__AttemptCheckOutBookingbooking();
+		EOperation EMPLOYEE___ATTEMPT_CHECK_OUT__BOOKING = eINSTANCE.getEmployee__AttemptCheckOut__Booking();
 
 	}
 

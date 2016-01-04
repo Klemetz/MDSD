@@ -3,6 +3,7 @@
 package Classes.Buissnesslayer.impl;
 
 import Classes.Buissnesslayer.Address;
+import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.BookingHandler;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.User;
@@ -339,7 +340,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void enterContactDataStringnameEmailemailAddressadress() {
+	public void enterContactData(char name, char email, Address address) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -350,7 +351,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void intbookRoomBookingbooking() {
+	public void bookRoom(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -361,7 +362,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeBookingBookingoldBookingBookingnewBooking() {
+	public void changeBooking(Booking oldBooking, Booking newBooking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -372,7 +373,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void cancelBookingBookingbooking() {
+	public void cancelBooking(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -383,7 +384,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void attemptCheckInBookingbooking() {
+	public void attemptCheckIn(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -394,7 +395,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void attemptCheckOutBookingbooking() {
+	public void attemptCheckOut(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -520,23 +521,23 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BuissnesslayerPackage.USER___ENTER_CONTACT_DATA_STRINGNAME_EMAILEMAIL_ADDRESSADRESS:
-				enterContactDataStringnameEmailemailAddressadress();
+			case BuissnesslayerPackage.USER___ENTER_CONTACT_DATA__CHAR_CHAR_ADDRESS:
+				enterContactData((Character)arguments.get(0), (Character)arguments.get(1), (Address)arguments.get(2));
 				return null;
-			case BuissnesslayerPackage.USER___INTBOOK_ROOM_BOOKINGBOOKING:
-				intbookRoomBookingbooking();
+			case BuissnesslayerPackage.USER___BOOK_ROOM__BOOKING:
+				bookRoom((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.USER___CHANGE_BOOKING_BOOKINGOLD_BOOKING_BOOKINGNEW_BOOKING:
-				changeBookingBookingoldBookingBookingnewBooking();
+			case BuissnesslayerPackage.USER___CHANGE_BOOKING__BOOKING_BOOKING:
+				changeBooking((Booking)arguments.get(0), (Booking)arguments.get(1));
 				return null;
-			case BuissnesslayerPackage.USER___CANCEL_BOOKING_BOOKINGBOOKING:
-				cancelBookingBookingbooking();
+			case BuissnesslayerPackage.USER___CANCEL_BOOKING__BOOKING:
+				cancelBooking((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.USER___ATTEMPT_CHECK_IN_BOOKINGBOOKING:
-				attemptCheckInBookingbooking();
+			case BuissnesslayerPackage.USER___ATTEMPT_CHECK_IN__BOOKING:
+				attemptCheckIn((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.USER___ATTEMPT_CHECK_OUT_BOOKINGBOOKING:
-				attemptCheckOutBookingbooking();
+			case BuissnesslayerPackage.USER___ATTEMPT_CHECK_OUT__BOOKING:
+				attemptCheckOut((Booking)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

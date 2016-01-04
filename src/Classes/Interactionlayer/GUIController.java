@@ -132,31 +132,31 @@ public interface GUIController extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='displayParkings(List<parkings>Parkings)'"
+	 * @model parkingsMany="true" parkingsOrdered="false"
 	 * @generated
 	 */
-	void displayParkingsListparkingsParkings();
+	void displayParkings(EList<Integer> parkings);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='displayRoomTypes(List<roomType>RoomType)'"
+	 * @model roomTypeMany="true" roomTypeOrdered="false"
 	 * @generated
 	 */
-	void displayRoomTypesListroomTypeRoomType();
+	void displayRoomTypes(EList<Integer> roomType);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='displayRoomsGrid(List<Room> roomType)'"
+	 * @model roomTypeMany="true" roomTypeOrdered="false"
 	 * @generated
 	 */
-	void displayRoomsGridListRoomroomType();
+	void displayRoomsGrid(EList<Integer> roomType);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='displayPaymentOption()'"
+	 * @model
 	 * @generated
 	 */
 	void displayPaymentOption();
@@ -164,23 +164,24 @@ public interface GUIController extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='displayRoomsByID(int bookingID)'"
+	 * @model bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	void displayRoomsByIDintbookingID();
+	void displayRoomsByID(int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='displayBookingsByID(int bookingID)'"
+	 * @model bookingIDRequired="true" bookingIDOrdered="false"
+	 *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='displayBookingsByID(int bookingID)'"
 	 * @generated
 	 */
-	void displayBookingsByIDintbookingID();
+	void displayBookingsByIDintbookingID(int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='displayBookingCancelled()'"
+	 * @model
 	 * @generated
 	 */
 	void displayBookingCancelled();

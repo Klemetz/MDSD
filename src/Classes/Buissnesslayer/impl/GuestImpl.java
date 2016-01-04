@@ -2,6 +2,7 @@
  */
 package Classes.Buissnesslayer.impl;
 
+import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.Guest;
 
@@ -45,7 +46,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void intbookRoomBookingbooking() {
+	public void bookRoom(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -56,7 +57,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeBookingBookingoldBookingBookingnewBooking() {
+	public void changeBooking(Booking oldBooking, Booking newBooking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -67,7 +68,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void cancelBookingBookingbooking() {
+	public void cancelBooking(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -78,7 +79,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void attemptCheckInBookingbooking() {
+	public void attemptCheckIn(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -89,7 +90,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void attemptCheckOutBookingbooking() {
+	public void attemptCheckOut(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -103,20 +104,20 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BuissnesslayerPackage.GUEST___INTBOOK_ROOM_BOOKINGBOOKING:
-				intbookRoomBookingbooking();
+			case BuissnesslayerPackage.GUEST___BOOK_ROOM__BOOKING:
+				bookRoom((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.GUEST___CHANGE_BOOKING_BOOKINGOLD_BOOKING_BOOKINGNEW_BOOKING:
-				changeBookingBookingoldBookingBookingnewBooking();
+			case BuissnesslayerPackage.GUEST___CHANGE_BOOKING__BOOKING_BOOKING:
+				changeBooking((Booking)arguments.get(0), (Booking)arguments.get(1));
 				return null;
-			case BuissnesslayerPackage.GUEST___CANCEL_BOOKING_BOOKINGBOOKING:
-				cancelBookingBookingbooking();
+			case BuissnesslayerPackage.GUEST___CANCEL_BOOKING__BOOKING:
+				cancelBooking((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.GUEST___ATTEMPT_CHECK_IN_BOOKINGBOOKING:
-				attemptCheckInBookingbooking();
+			case BuissnesslayerPackage.GUEST___ATTEMPT_CHECK_IN__BOOKING:
+				attemptCheckIn((Booking)arguments.get(0));
 				return null;
-			case BuissnesslayerPackage.GUEST___ATTEMPT_CHECK_OUT_BOOKINGBOOKING:
-				attemptCheckOutBookingbooking();
+			case BuissnesslayerPackage.GUEST___ATTEMPT_CHECK_OUT__BOOKING:
+				attemptCheckOut((Booking)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

@@ -168,31 +168,31 @@ public interface InteractionlayerPackage extends EPackage {
 	int GUI_CONTROLLER___DISPLAY_EXTRAS__ELIST = 2;
 
 	/**
-	 * The operation id for the '<em>Display Parkings Listparkings Parkings</em>' operation.
+	 * The operation id for the '<em>Display Parkings</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUI_CONTROLLER___DISPLAY_PARKINGS_LISTPARKINGS_PARKINGS = 3;
+	int GUI_CONTROLLER___DISPLAY_PARKINGS__ELIST = 3;
 
 	/**
-	 * The operation id for the '<em>Display Room Types Listroom Type Room Type</em>' operation.
+	 * The operation id for the '<em>Display Room Types</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUI_CONTROLLER___DISPLAY_ROOM_TYPES_LISTROOM_TYPE_ROOM_TYPE = 4;
+	int GUI_CONTROLLER___DISPLAY_ROOM_TYPES__ELIST = 4;
 
 	/**
-	 * The operation id for the '<em>Display Rooms Grid List Roomroom Type</em>' operation.
+	 * The operation id for the '<em>Display Rooms Grid</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUI_CONTROLLER___DISPLAY_ROOMS_GRID_LIST_ROOMROOM_TYPE = 5;
+	int GUI_CONTROLLER___DISPLAY_ROOMS_GRID__ELIST = 5;
 
 	/**
 	 * The operation id for the '<em>Display Payment Option</em>' operation.
@@ -204,13 +204,13 @@ public interface InteractionlayerPackage extends EPackage {
 	int GUI_CONTROLLER___DISPLAY_PAYMENT_OPTION = 6;
 
 	/**
-	 * The operation id for the '<em>Display Rooms By IDintbooking ID</em>' operation.
+	 * The operation id for the '<em>Display Rooms By ID</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUI_CONTROLLER___DISPLAY_ROOMS_BY_IDINTBOOKING_ID = 7;
+	int GUI_CONTROLLER___DISPLAY_ROOMS_BY_ID__INT = 7;
 
 	/**
 	 * The operation id for the '<em>Display Bookings By IDintbooking ID</em>' operation.
@@ -219,7 +219,7 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUI_CONTROLLER___DISPLAY_BOOKINGS_BY_IDINTBOOKING_ID = 8;
+	int GUI_CONTROLLER___DISPLAY_BOOKINGS_BY_IDINTBOOKING_ID__INT = 8;
 
 	/**
 	 * The operation id for the '<em>Display Booking Cancelled</em>' operation.
@@ -463,34 +463,34 @@ public interface InteractionlayerPackage extends EPackage {
 	EOperation getGUIController__DisplayExtras__EList();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayParkingsListparkingsParkings() <em>Display Parkings Listparkings Parkings</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayParkings(org.eclipse.emf.common.util.EList) <em>Display Parkings</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Display Parkings Listparkings Parkings</em>' operation.
-	 * @see Classes.Interactionlayer.GUIController#displayParkingsListparkingsParkings()
+	 * @return the meta object for the '<em>Display Parkings</em>' operation.
+	 * @see Classes.Interactionlayer.GUIController#displayParkings(org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getGUIController__DisplayParkingsListparkingsParkings();
+	EOperation getGUIController__DisplayParkings__EList();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayRoomTypesListroomTypeRoomType() <em>Display Room Types Listroom Type Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayRoomTypes(org.eclipse.emf.common.util.EList) <em>Display Room Types</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Display Room Types Listroom Type Room Type</em>' operation.
-	 * @see Classes.Interactionlayer.GUIController#displayRoomTypesListroomTypeRoomType()
+	 * @return the meta object for the '<em>Display Room Types</em>' operation.
+	 * @see Classes.Interactionlayer.GUIController#displayRoomTypes(org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getGUIController__DisplayRoomTypesListroomTypeRoomType();
+	EOperation getGUIController__DisplayRoomTypes__EList();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayRoomsGridListRoomroomType() <em>Display Rooms Grid List Roomroom Type</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayRoomsGrid(org.eclipse.emf.common.util.EList) <em>Display Rooms Grid</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Display Rooms Grid List Roomroom Type</em>' operation.
-	 * @see Classes.Interactionlayer.GUIController#displayRoomsGridListRoomroomType()
+	 * @return the meta object for the '<em>Display Rooms Grid</em>' operation.
+	 * @see Classes.Interactionlayer.GUIController#displayRoomsGrid(org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getGUIController__DisplayRoomsGridListRoomroomType();
+	EOperation getGUIController__DisplayRoomsGrid__EList();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayPaymentOption() <em>Display Payment Option</em>}' operation.
@@ -503,24 +503,24 @@ public interface InteractionlayerPackage extends EPackage {
 	EOperation getGUIController__DisplayPaymentOption();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayRoomsByIDintbookingID() <em>Display Rooms By IDintbooking ID</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayRoomsByID(int) <em>Display Rooms By ID</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Display Rooms By IDintbooking ID</em>' operation.
-	 * @see Classes.Interactionlayer.GUIController#displayRoomsByIDintbookingID()
+	 * @return the meta object for the '<em>Display Rooms By ID</em>' operation.
+	 * @see Classes.Interactionlayer.GUIController#displayRoomsByID(int)
 	 * @generated
 	 */
-	EOperation getGUIController__DisplayRoomsByIDintbookingID();
+	EOperation getGUIController__DisplayRoomsByID__int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayBookingsByIDintbookingID() <em>Display Bookings By IDintbooking ID</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayBookingsByIDintbookingID(int) <em>Display Bookings By IDintbooking ID</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Display Bookings By IDintbooking ID</em>' operation.
-	 * @see Classes.Interactionlayer.GUIController#displayBookingsByIDintbookingID()
+	 * @see Classes.Interactionlayer.GUIController#displayBookingsByIDintbookingID(int)
 	 * @generated
 	 */
-	EOperation getGUIController__DisplayBookingsByIDintbookingID();
+	EOperation getGUIController__DisplayBookingsByIDintbookingID__int();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayBookingCancelled() <em>Display Booking Cancelled</em>}' operation.
@@ -735,28 +735,28 @@ public interface InteractionlayerPackage extends EPackage {
 		EOperation GUI_CONTROLLER___DISPLAY_EXTRAS__ELIST = eINSTANCE.getGUIController__DisplayExtras__EList();
 
 		/**
-		 * The meta object literal for the '<em><b>Display Parkings Listparkings Parkings</b></em>' operation.
+		 * The meta object literal for the '<em><b>Display Parkings</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUI_CONTROLLER___DISPLAY_PARKINGS_LISTPARKINGS_PARKINGS = eINSTANCE.getGUIController__DisplayParkingsListparkingsParkings();
+		EOperation GUI_CONTROLLER___DISPLAY_PARKINGS__ELIST = eINSTANCE.getGUIController__DisplayParkings__EList();
 
 		/**
-		 * The meta object literal for the '<em><b>Display Room Types Listroom Type Room Type</b></em>' operation.
+		 * The meta object literal for the '<em><b>Display Room Types</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUI_CONTROLLER___DISPLAY_ROOM_TYPES_LISTROOM_TYPE_ROOM_TYPE = eINSTANCE.getGUIController__DisplayRoomTypesListroomTypeRoomType();
+		EOperation GUI_CONTROLLER___DISPLAY_ROOM_TYPES__ELIST = eINSTANCE.getGUIController__DisplayRoomTypes__EList();
 
 		/**
-		 * The meta object literal for the '<em><b>Display Rooms Grid List Roomroom Type</b></em>' operation.
+		 * The meta object literal for the '<em><b>Display Rooms Grid</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUI_CONTROLLER___DISPLAY_ROOMS_GRID_LIST_ROOMROOM_TYPE = eINSTANCE.getGUIController__DisplayRoomsGridListRoomroomType();
+		EOperation GUI_CONTROLLER___DISPLAY_ROOMS_GRID__ELIST = eINSTANCE.getGUIController__DisplayRoomsGrid__EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Payment Option</b></em>' operation.
@@ -767,12 +767,12 @@ public interface InteractionlayerPackage extends EPackage {
 		EOperation GUI_CONTROLLER___DISPLAY_PAYMENT_OPTION = eINSTANCE.getGUIController__DisplayPaymentOption();
 
 		/**
-		 * The meta object literal for the '<em><b>Display Rooms By IDintbooking ID</b></em>' operation.
+		 * The meta object literal for the '<em><b>Display Rooms By ID</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUI_CONTROLLER___DISPLAY_ROOMS_BY_IDINTBOOKING_ID = eINSTANCE.getGUIController__DisplayRoomsByIDintbookingID();
+		EOperation GUI_CONTROLLER___DISPLAY_ROOMS_BY_ID__INT = eINSTANCE.getGUIController__DisplayRoomsByID__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Bookings By IDintbooking ID</b></em>' operation.
@@ -780,7 +780,7 @@ public interface InteractionlayerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUI_CONTROLLER___DISPLAY_BOOKINGS_BY_IDINTBOOKING_ID = eINSTANCE.getGUIController__DisplayBookingsByIDintbookingID();
+		EOperation GUI_CONTROLLER___DISPLAY_BOOKINGS_BY_IDINTBOOKING_ID__INT = eINSTANCE.getGUIController__DisplayBookingsByIDintbookingID__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Booking Cancelled</b></em>' operation.
