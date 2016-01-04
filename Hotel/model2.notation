@@ -520,10 +520,6 @@
               <element xmi:type="uml:Property" href="model2.uml#_XQJBYJkVEeWgf_EMGD-UnQ"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_XRQbsZkVEeWgf_EMGD-UnQ"/>
             </children>
-            <children xmi:type="notation:Shape" xmi:id="_nr6QQJkVEeWgf_EMGD-UnQ" type="3012">
-              <element xmi:type="uml:Property" href="model2.uml#_nq7Y0JkVEeWgf_EMGD-UnQ"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_nr6QQZkVEeWgf_EMGD-UnQ"/>
-            </children>
             <styles xmi:type="notation:TitleStyle" xmi:id="_RygUBJkVEeWgf_EMGD-UnQ"/>
             <styles xmi:type="notation:SortingStyle" xmi:id="_RygUBZkVEeWgf_EMGD-UnQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_RygUBpkVEeWgf_EMGD-UnQ"/>

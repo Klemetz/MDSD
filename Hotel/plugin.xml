@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated model2 -->
+      <package
+            uri="http:///RootElement.ecore"
+            class="RootElement.RootElementPackage"
+            genModel="model2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated model2 -->
+      <package
+            uri="http:///RootElement/Datalayer.ecore"
+            class="RootElement.Datalayer.DatalayerPackage"
+            genModel="model2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated model2 -->
+      <package
+            uri="http:///RootElement/Buissnesslayer.ecore"
+            class="RootElement.Buissnesslayer.BuissnesslayerPackage"
+            genModel="model2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated model2 -->
+      <package
+            uri="http:///RootElement/Interactionlayer.ecore"
+            class="RootElement.Interactionlayer.InteractionlayerPackage"
+            genModel="model2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated model2 -->
+      <package
+            uri="http:///RootElement/BuisnessLogicLayer.ecore"
+            class="RootElement.BuisnessLogicLayer.BuisnessLogicLayerPackage"
+            genModel="model2.genmodel"/>
+   </extension>
+
+</plugin>

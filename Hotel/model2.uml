@@ -75,7 +75,7 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_D0PDUJkKEeWgf_EMGD-UnQ" name="checkIn(Booking booking)"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_IU388JkKEeWgf_EMGD-UnQ" name="checkOut(Booking booking)"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_PvdfMJkKEeWgf_EMGD-UnQ" name="sendErrorMsg() : String"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_Kw8YkKUEEeW-MevX_-oa-Q" name="getSingletonBooking"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Kw8YkKUEEeW-MevX_-oa-Q" name="getSingletonBooking : BookingHandler"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_NVYEMKUEEeW-MevX_-oa-Q" name="createSingletonHandler"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_qMKpUKUEEeW-MevX_-oa-Q" name="fetchAvailableExtras"/>
     </packagedElement>
@@ -150,7 +150,6 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_RxfnYJkVEeWgf_EMGD-UnQ" name="GUIController">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_XQJBYJkVEeWgf_EMGD-UnQ" name="display" visibility="private" type="_O47e0JkVEeWgf_EMGD-UnQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_nq7Y0JkVEeWgf_EMGD-UnQ" name="Attribute1"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_P1W-kaUNEeW-MevX_-oa-Q" name="logincontroller" type="_766t8JkaEeWgf_EMGD-UnQ" association="_P1VwcKUNEeW-MevX_-oa-Q"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_0QxrYKUQEeW-MevX_-oa-Q" name="bookinghandler" type="_S0sSIJkHEeWgf_EMGD-UnQ" association="_0QwdQKUQEeW-MevX_-oa-Q"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_yFPbkJkVEeWgf_EMGD-UnQ" name="showAvailability(startDate, endDate, roomType, NrOfGuests)"/>
