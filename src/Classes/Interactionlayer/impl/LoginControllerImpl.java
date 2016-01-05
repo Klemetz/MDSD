@@ -344,13 +344,13 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT_CHAR:
+			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT_STRING:
 				loginEmployee((Integer)arguments.get(0), (String)arguments.get(1));
 				return null;
 			case InteractionlayerPackage.LOGIN_CONTROLLER___MAKE_GUEST_BOOKING_LOGIN__BOOKING:
 				makeGuestBookingLogin((Booking)arguments.get(0));
 				return null;
-			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_GUEST__INT_CHAR:
+			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_GUEST__INT_STRING:
 				loginGuest((Integer)arguments.get(0), (String)arguments.get(1));
 				return null;
 			case InteractionlayerPackage.LOGIN_CONTROLLER___GET_SINGLETON_CONTROLLER:

@@ -103,142 +103,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getBooking()
 	 * @generated
 	 */
-	int BOOKING = 1;
-
-	/**
-	 * The feature id for the '<em><b>Booking ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__BOOKING_ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Guest</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__GUEST = 1;
-
-	/**
-	 * The feature id for the '<em><b>Nr Of Guests</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__NR_OF_GUESTS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__START_DATE = 3;
-
-	/**
-	 * The feature id for the '<em><b>End Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__END_DATE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Extras</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__EXTRAS = 5;
-
-	/**
-	 * The feature id for the '<em><b>Parkings</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__PARKINGS = 6;
-
-	/**
-	 * The feature id for the '<em><b>Rooms</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__ROOMS = 7;
-
-	/**
-	 * The feature id for the '<em><b>Checked In</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__CHECKED_IN = 8;
-
-	/**
-	 * The feature id for the '<em><b>Checked Out</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__CHECKED_OUT = 9;
-
-	/**
-	 * The feature id for the '<em><b>Payment</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__PAYMENT = 10;
-
-	/**
-	 * The feature id for the '<em><b>Payment Complete</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__PAYMENT_COMPLETE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Room</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING__ROOM = 12;
-
-	/**
-	 * The number of structural features of the '<em>Booking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_FEATURE_COUNT = 13;
-
-	/**
-	 * The number of operations of the '<em>Booking</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_OPERATION_COUNT = 0;
+	int BOOKING = 7;
 
 	/**
 	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.BookingHandlerImpl <em>Booking Handler</em>}' class.
@@ -248,7 +113,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getBookingHandler()
 	 * @generated
 	 */
-	int BOOKING_HANDLER = 2;
+	int BOOKING_HANDLER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Booking</b></em>' reference.
@@ -420,7 +285,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getUser()
 	 * @generated
 	 */
-	int USER = 3;
+	int USER = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -492,7 +357,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER___ENTER_CONTACT_DATA__CHAR_CHAR_ADDRESS = 0;
+	int USER___ENTER_CONTACT_DATA__STRING_STRING_ADDRESS = 0;
 
 	/**
 	 * The operation id for the '<em>Book Room</em>' operation.
@@ -556,7 +421,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getUserHandler()
 	 * @generated
 	 */
-	int USER_HANDLER = 4;
+	int USER_HANDLER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Users</b></em>' attribute.
@@ -619,7 +484,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_HANDLER___SEND_EMAIL_VERIFICATION__CHAR = 1;
+	int USER_HANDLER___SEND_EMAIL_VERIFICATION__STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Get Singleton Handler</em>' operation.
@@ -656,7 +521,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getAddress()
 	 * @generated
 	 */
-	int ADDRESS = 5;
+	int ADDRESS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Street</b></em>' attribute.
@@ -720,7 +585,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getGuest()
 	 * @generated
 	 */
-	int GUEST = 6;
+	int GUEST = 5;
 
 	/**
 	 * The number of structural features of the '<em>Guest</em>' class.
@@ -793,7 +658,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getEmployee()
 	 * @generated
 	 */
-	int EMPLOYEE = 7;
+	int EMPLOYEE = 6;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -875,6 +740,141 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @ordered
 	 */
 	int EMPLOYEE_OPERATION_COUNT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Booking ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__BOOKING_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Guest</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__GUEST = 1;
+
+	/**
+	 * The feature id for the '<em><b>Nr Of Guests</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__NR_OF_GUESTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__START_DATE = 3;
+
+	/**
+	 * The feature id for the '<em><b>End Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__END_DATE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Extras</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__EXTRAS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Parkings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__PARKINGS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Rooms</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__ROOMS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Checked In</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__CHECKED_IN = 8;
+
+	/**
+	 * The feature id for the '<em><b>Checked Out</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__CHECKED_OUT = 9;
+
+	/**
+	 * The feature id for the '<em><b>Payment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__PAYMENT = 10;
+
+	/**
+	 * The feature id for the '<em><b>Payment Complete</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__PAYMENT_COMPLETE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Room</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__ROOM = 12;
+
+	/**
+	 * The number of structural features of the '<em>Booking</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_FEATURE_COUNT = 13;
+
+	/**
+	 * The number of operations of the '<em>Booking</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_OPERATION_COUNT = 0;
 
 
 	/**
@@ -1310,7 +1310,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.User#enterContactData(java.lang.String, java.lang.String, Classes.Buissnesslayer.Address)
 	 * @generated
 	 */
-	EOperation getUser__EnterContactData__char_char_Address();
+	EOperation getUser__EnterContactData__String_String_Address();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#bookRoom(Classes.Buissnesslayer.Booking) <em>Book Room</em>}' operation.
@@ -1434,7 +1434,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.UserHandler#sendEmailVerification(java.lang.String)
 	 * @generated
 	 */
-	EOperation getUserHandler__SendEmailVerification__char();
+	EOperation getUserHandler__SendEmailVerification__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#getSingletonHandler() <em>Get Singleton Handler</em>}' operation.
@@ -2009,7 +2009,7 @@ public interface BuissnesslayerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER___ENTER_CONTACT_DATA__CHAR_CHAR_ADDRESS = eINSTANCE.getUser__EnterContactData__char_char_Address();
+		EOperation USER___ENTER_CONTACT_DATA__STRING_STRING_ADDRESS = eINSTANCE.getUser__EnterContactData__String_String_Address();
 
 		/**
 		 * The meta object literal for the '<em><b>Book Room</b></em>' operation.
@@ -2107,7 +2107,7 @@ public interface BuissnesslayerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER_HANDLER___SEND_EMAIL_VERIFICATION__CHAR = eINSTANCE.getUserHandler__SendEmailVerification__char();
+		EOperation USER_HANDLER___SEND_EMAIL_VERIFICATION__STRING = eINSTANCE.getUserHandler__SendEmailVerification__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Singleton Handler</b></em>' operation.

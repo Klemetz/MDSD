@@ -521,7 +521,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BuissnesslayerPackage.USER___ENTER_CONTACT_DATA__CHAR_CHAR_ADDRESS:
+			case BuissnesslayerPackage.USER___ENTER_CONTACT_DATA__STRING_STRING_ADDRESS:
 				enterContactData((String)arguments.get(0), (String)arguments.get(1), (Address)arguments.get(2));
 				return null;
 			case BuissnesslayerPackage.USER___BOOK_ROOM__BOOKING:

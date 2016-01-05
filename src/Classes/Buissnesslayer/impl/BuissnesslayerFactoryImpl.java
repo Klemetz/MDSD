@@ -57,12 +57,12 @@ public class BuissnesslayerFactoryImpl extends EFactoryImpl implements Buissness
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case BuissnesslayerPackage.ROOM: return createRoom();
-			case BuissnesslayerPackage.BOOKING: return createBooking();
 			case BuissnesslayerPackage.BOOKING_HANDLER: return createBookingHandler();
 			case BuissnesslayerPackage.USER_HANDLER: return createUserHandler();
 			case BuissnesslayerPackage.ADDRESS: return createAddress();
 			case BuissnesslayerPackage.GUEST: return createGuest();
 			case BuissnesslayerPackage.EMPLOYEE: return createEmployee();
+			case BuissnesslayerPackage.BOOKING: return createBooking();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

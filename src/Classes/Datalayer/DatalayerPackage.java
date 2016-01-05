@@ -2,8 +2,10 @@
  */
 package Classes.Datalayer;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,13 +68,58 @@ public interface DatalayerPackage extends EPackage {
 	int DATABASE = 0;
 
 	/**
+	 * The feature id for the '<em><b>User DB</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATABASE__USER_DB = 0;
+
+	/**
+	 * The feature id for the '<em><b>Employee DB</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATABASE__EMPLOYEE_DB = 1;
+
+	/**
+	 * The feature id for the '<em><b>Booking DB</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATABASE__BOOKING_DB = 2;
+
+	/**
+	 * The feature id for the '<em><b>Room DB</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATABASE__ROOM_DB = 3;
+
+	/**
+	 * The feature id for the '<em><b>Extras DB</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATABASE__EXTRAS_DB = 4;
+
+	/**
 	 * The number of structural features of the '<em>Database</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE_FEATURE_COUNT = 0;
+	int DATABASE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Database</em>' class.
@@ -93,6 +140,61 @@ public interface DatalayerPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDatabase();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link Classes.Datalayer.Database#getUserDB <em>User DB</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>User DB</em>'.
+	 * @see Classes.Datalayer.Database#getUserDB()
+	 * @see #getDatabase()
+	 * @generated
+	 */
+	EAttribute getDatabase_UserDB();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link Classes.Datalayer.Database#getEmployeeDB <em>Employee DB</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Employee DB</em>'.
+	 * @see Classes.Datalayer.Database#getEmployeeDB()
+	 * @see #getDatabase()
+	 * @generated
+	 */
+	EAttribute getDatabase_EmployeeDB();
+
+	/**
+	 * Returns the meta object for the reference list '{@link Classes.Datalayer.Database#getBookingDB <em>Booking DB</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Booking DB</em>'.
+	 * @see Classes.Datalayer.Database#getBookingDB()
+	 * @see #getDatabase()
+	 * @generated
+	 */
+	EReference getDatabase_BookingDB();
+
+	/**
+	 * Returns the meta object for the reference list '{@link Classes.Datalayer.Database#getRoomDB <em>Room DB</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Room DB</em>'.
+	 * @see Classes.Datalayer.Database#getRoomDB()
+	 * @see #getDatabase()
+	 * @generated
+	 */
+	EReference getDatabase_RoomDB();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link Classes.Datalayer.Database#getExtrasDB <em>Extras DB</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Extras DB</em>'.
+	 * @see Classes.Datalayer.Database#getExtrasDB()
+	 * @see #getDatabase()
+	 * @generated
+	 */
+	EAttribute getDatabase_ExtrasDB();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -126,6 +228,41 @@ public interface DatalayerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DATABASE = eINSTANCE.getDatabase();
+		/**
+		 * The meta object literal for the '<em><b>User DB</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATABASE__USER_DB = eINSTANCE.getDatabase_UserDB();
+		/**
+		 * The meta object literal for the '<em><b>Employee DB</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATABASE__EMPLOYEE_DB = eINSTANCE.getDatabase_EmployeeDB();
+		/**
+		 * The meta object literal for the '<em><b>Booking DB</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATABASE__BOOKING_DB = eINSTANCE.getDatabase_BookingDB();
+		/**
+		 * The meta object literal for the '<em><b>Room DB</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATABASE__ROOM_DB = eINSTANCE.getDatabase_RoomDB();
+		/**
+		 * The meta object literal for the '<em><b>Extras DB</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATABASE__EXTRAS_DB = eINSTANCE.getDatabase_ExtrasDB();
 
 	}
 

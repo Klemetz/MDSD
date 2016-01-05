@@ -10,6 +10,26 @@
             <layoutConstraint xmi:type="notation:Location" xmi:id="_b2wrYpkOEeWgf_EMGD-UnQ" y="5"/>
           </children>
           <children xmi:type="notation:BasicCompartment" xmi:id="_b2xScJkOEeWgf_EMGD-UnQ" type="7011">
+            <children xmi:type="notation:Shape" xmi:id="_4o_6wLO0EeWbxK3v0VQAjQ" type="3012">
+              <element xmi:type="uml:Property" href="Classes.uml#_4oUlULO0EeWbxK3v0VQAjQ"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_4o_6wbO0EeWbxK3v0VQAjQ"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_ZmGN8LO1EeWbxK3v0VQAjQ" type="3012">
+              <element xmi:type="uml:Property" href="Classes.uml#_ZljbYLO1EeWbxK3v0VQAjQ"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ZmGN8bO1EeWbxK3v0VQAjQ"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_e1xX0LO1EeWbxK3v0VQAjQ" type="3012">
+              <element xmi:type="uml:Property" href="Classes.uml#_e1V6ALO1EeWbxK3v0VQAjQ"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_e1xX0bO1EeWbxK3v0VQAjQ"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_kUDlcLO1EeWbxK3v0VQAjQ" type="3012">
+              <element xmi:type="uml:Property" href="Classes.uml#_kTrK8LO1EeWbxK3v0VQAjQ"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_kUDlcbO1EeWbxK3v0VQAjQ"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_qSpq0LO1EeWbxK3v0VQAjQ" type="3012">
+              <element xmi:type="uml:Property" href="Classes.uml#_qSQpQLO1EeWbxK3v0VQAjQ"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_qSpq0bO1EeWbxK3v0VQAjQ"/>
+            </children>
             <styles xmi:type="notation:TitleStyle" xmi:id="_b2xScZkOEeWgf_EMGD-UnQ"/>
             <styles xmi:type="notation:SortingStyle" xmi:id="_b2xScpkOEeWgf_EMGD-UnQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_b2xSc5kOEeWgf_EMGD-UnQ"/>

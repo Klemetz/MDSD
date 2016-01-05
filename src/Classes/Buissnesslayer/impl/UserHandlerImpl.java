@@ -390,7 +390,7 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 			case BuissnesslayerPackage.USER_HANDLER___ADD_GUEST_DB__PAYMENTINFO_USER:
 				addGuestDB((PaymentInfo)arguments.get(0), (User)arguments.get(1));
 				return null;
-			case BuissnesslayerPackage.USER_HANDLER___SEND_EMAIL_VERIFICATION__CHAR:
+			case BuissnesslayerPackage.USER_HANDLER___SEND_EMAIL_VERIFICATION__STRING:
 				sendEmailVerification((String)arguments.get(0));
 				return null;
 			case BuissnesslayerPackage.USER_HANDLER___GET_SINGLETON_HANDLER:

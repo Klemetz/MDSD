@@ -72,12 +72,6 @@ public class BuissnesslayerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BuissnesslayerPackage.BOOKING: {
-				Booking booking = (Booking)theEObject;
-				T result = caseBooking(booking);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case BuissnesslayerPackage.BOOKING_HANDLER: {
 				BookingHandler bookingHandler = (BookingHandler)theEObject;
 				T result = caseBookingHandler(bookingHandler);
@@ -111,6 +105,12 @@ public class BuissnesslayerSwitch<T> extends Switch<T> {
 			case BuissnesslayerPackage.EMPLOYEE: {
 				Employee employee = (Employee)theEObject;
 				T result = caseEmployee(employee);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BuissnesslayerPackage.BOOKING: {
+				Booking booking = (Booking)theEObject;
+				T result = caseBooking(booking);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

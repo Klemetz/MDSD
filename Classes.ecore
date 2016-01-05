@@ -5,7 +5,18 @@
     <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
       <details key="originalName" value="Data layer"/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="Database"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Database">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="userDB" ordered="false"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="employeeDB" ordered="false"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="bookingDB" ordered="false"
+          upperBound="-1" eType="#//Buissnesslayer/Booking"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="roomDB" ordered="false"
+          upperBound="-1" eType="#//Buissnesslayer/Room"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="extrasDB" ordered="false"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Buissnesslayer" nsURI="http:///Classes/Buissnesslayer.ecore"
       nsPrefix="Classes.Buissnesslayer">
@@ -19,34 +30,6 @@
           <details key="originalName" value="Type : roomType"/>
         </eAnnotations>
       </eStructuralFeatures>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Booking">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingID" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="guest" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrOfGuests" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="extras" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="parkings" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="rooms" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkedIn" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkedOut" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="payment" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="paymentComplete" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="room" ordered="false"
-          lowerBound="1" upperBound="-1" eType="#//Buissnesslayer/Room"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BookingHandler">
       <eOperations name="fetchAvailability" ordered="false" lowerBound="1">
@@ -194,6 +177,34 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="Password" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Booking">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingID" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="guest" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrOfGuests" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="extras" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="parkings" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="rooms" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkedIn" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkedOut" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="payment" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="paymentComplete" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="room" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//Buissnesslayer/Room"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Interactionlayer" nsURI="http:///Classes/Interactionlayer.ecore"

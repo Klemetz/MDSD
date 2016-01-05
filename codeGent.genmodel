@@ -33,28 +33,20 @@
       ecorePackage="Classes.ecore#/">
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Datalayer" basePackage="Classes"
         disposableProviderFactory="true" ecorePackage="Classes.ecore#//Datalayer">
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Datalayer/Database"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Datalayer/Database">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Datalayer/Database/userDB"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Datalayer/Database/employeeDB"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Datalayer/Database/bookingDB"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Datalayer/Database/roomDB"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Datalayer/Database/extrasDB"/>
+      </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Buissnesslayer" basePackage="Classes"
         disposableProviderFactory="true" ecorePackage="Classes.ecore#//Buissnesslayer">
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Buissnesslayer/Room">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Room/TyperoomType"/>
-      </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Buissnesslayer/Booking">
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/bookingID"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/guest"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/nrOfGuests"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/startDate"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/endDate"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/extras"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/parkings"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/rooms"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/checkedIn"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/checkedOut"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/payment"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/paymentComplete"/>
-        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Buissnesslayer/Booking/room"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Buissnesslayer/BookingHandler">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -190,6 +182,22 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/Employee/attemptCheckOut">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/Employee/attemptCheckOut/booking"/>
         </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Buissnesslayer/Booking">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/bookingID"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/guest"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/nrOfGuests"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/startDate"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/endDate"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/extras"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/parkings"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/rooms"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/checkedIn"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/checkedOut"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/payment"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Booking/paymentComplete"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Buissnesslayer/Booking/room"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Interactionlayer" basePackage="Classes"
