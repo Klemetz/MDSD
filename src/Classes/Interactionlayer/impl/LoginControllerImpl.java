@@ -205,7 +205,7 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void loginEmployee(int ID, char password) {
+	public void loginEmployee(int ID, String password) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -227,7 +227,7 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void loginGuest(int bookingID, char name) {
+	public void loginGuest(int bookingID, String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -345,13 +345,13 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT_CHAR:
-				loginEmployee((Integer)arguments.get(0), (Character)arguments.get(1));
+				loginEmployee((Integer)arguments.get(0), (String)arguments.get(1));
 				return null;
 			case InteractionlayerPackage.LOGIN_CONTROLLER___MAKE_GUEST_BOOKING_LOGIN__BOOKING:
 				makeGuestBookingLogin((Booking)arguments.get(0));
 				return null;
 			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_GUEST__INT_CHAR:
-				loginGuest((Integer)arguments.get(0), (Character)arguments.get(1));
+				loginGuest((Integer)arguments.get(0), (String)arguments.get(1));
 				return null;
 			case InteractionlayerPackage.LOGIN_CONTROLLER___GET_SINGLETON_CONTROLLER:
 				getSingletonController();

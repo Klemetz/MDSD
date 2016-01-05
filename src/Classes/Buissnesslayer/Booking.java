@@ -174,12 +174,12 @@ public interface Booking extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extras</em>' attribute.
-	 * @see #setExtras(char)
+	 * @see #setExtras(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBooking_Extras()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	char getExtras();
+	String getExtras();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.Booking#getExtras <em>Extras</em>}' attribute.
@@ -189,7 +189,7 @@ public interface Booking extends EObject {
 	 * @see #getExtras()
 	 * @generated
 	 */
-	void setExtras(char value);
+	void setExtras(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Parkings</b></em>' attribute.
@@ -200,12 +200,12 @@ public interface Booking extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parkings</em>' attribute.
-	 * @see #setParkings(char)
+	 * @see #setParkings(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBooking_Parkings()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	char getParkings();
+	String getParkings();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.Booking#getParkings <em>Parkings</em>}' attribute.
@@ -215,7 +215,7 @@ public interface Booking extends EObject {
 	 * @see #getParkings()
 	 * @generated
 	 */
-	void setParkings(char value);
+	void setParkings(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Rooms</b></em>' attribute.
@@ -226,12 +226,12 @@ public interface Booking extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rooms</em>' attribute.
-	 * @see #setRooms(char)
+	 * @see #setRooms(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBooking_Rooms()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	char getRooms();
+	String getRooms();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.Booking#getRooms <em>Rooms</em>}' attribute.
@@ -241,7 +241,7 @@ public interface Booking extends EObject {
 	 * @see #getRooms()
 	 * @generated
 	 */
-	void setRooms(char value);
+	void setRooms(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Checked In</b></em>' attribute.
@@ -304,12 +304,12 @@ public interface Booking extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Payment</em>' attribute.
-	 * @see #setPayment(char)
+	 * @see #setPayment(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBooking_Payment()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	char getPayment();
+	String getPayment();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.Booking#getPayment <em>Payment</em>}' attribute.
@@ -319,7 +319,7 @@ public interface Booking extends EObject {
 	 * @see #getPayment()
 	 * @generated
 	 */
-	void setPayment(char value);
+	void setPayment(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Payment Complete</b></em>' attribute.

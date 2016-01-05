@@ -70,7 +70,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * @generated
 	 * @ordered
 	 */
-	protected static final char EMAIL_EDEFAULT = '\u0000';
+	protected static final String EMAIL_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getEmail() <em>Email</em>}' attribute.
@@ -80,7 +80,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * @generated
 	 * @ordered
 	 */
-	protected char email = EMAIL_EDEFAULT;
+	protected String email = EMAIL_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getBookingHandler() <em>Booking Handler</em>}' reference.
@@ -167,7 +167,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public char getEmail() {
+	public String getEmail() {
 		return email;
 	}
 
@@ -176,8 +176,8 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEmail(char newEmail) {
-		char oldEmail = email;
+	public void setEmail(String newEmail) {
+		String oldEmail = email;
 		email = newEmail;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER__EMAIL, oldEmail, email));
@@ -340,7 +340,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void enterContactData(char name, char email, Address address) {
+	public void enterContactData(String name, String email, Address address) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -441,7 +441,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 				setName((String)newValue);
 				return;
 			case BuissnesslayerPackage.USER__EMAIL:
-				setEmail((Character)newValue);
+				setEmail((String)newValue);
 				return;
 			case BuissnesslayerPackage.USER__BOOKING_HANDLER:
 				setBookingHandler((BookingHandler)newValue);
@@ -500,7 +500,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 			case BuissnesslayerPackage.USER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case BuissnesslayerPackage.USER__EMAIL:
-				return email != EMAIL_EDEFAULT;
+				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
 			case BuissnesslayerPackage.USER__BOOKING_HANDLER:
 				return bookingHandler != null;
 			case BuissnesslayerPackage.USER__LOGINCONTROLLER:
@@ -522,7 +522,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case BuissnesslayerPackage.USER___ENTER_CONTACT_DATA__CHAR_CHAR_ADDRESS:
-				enterContactData((Character)arguments.get(0), (Character)arguments.get(1), (Address)arguments.get(2));
+				enterContactData((String)arguments.get(0), (String)arguments.get(1), (Address)arguments.get(2));
 				return null;
 			case BuissnesslayerPackage.USER___BOOK_ROOM__BOOKING:
 				bookRoom((Booking)arguments.get(0));

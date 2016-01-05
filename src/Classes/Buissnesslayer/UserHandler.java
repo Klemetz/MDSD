@@ -38,12 +38,12 @@ public interface UserHandler extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Users</em>' attribute.
-	 * @see #setUsers(char)
+	 * @see #setUsers(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUserHandler_Users()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	char getUsers();
+	String getUsers();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.UserHandler#getUsers <em>Users</em>}' attribute.
@@ -53,7 +53,7 @@ public interface UserHandler extends EObject {
 	 * @see #getUsers()
 	 * @generated
 	 */
-	void setUsers(char value);
+	void setUsers(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Singleton User Handler</b></em>' reference.
@@ -147,7 +147,7 @@ public interface UserHandler extends EObject {
 	 * @model emailRequired="true" emailOrdered="false"
 	 * @generated
 	 */
-	void sendEmailVerification(char email);
+	void sendEmailVerification(String email);
 
 	/**
 	 * <!-- begin-user-doc -->

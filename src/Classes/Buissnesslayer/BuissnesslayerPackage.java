@@ -1303,11 +1303,11 @@ public interface BuissnesslayerPackage extends EPackage {
 	EReference getUser_Address();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#enterContactData(char, char, Classes.Buissnesslayer.Address) <em>Enter Contact Data</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#enterContactData(java.lang.String, java.lang.String, Classes.Buissnesslayer.Address) <em>Enter Contact Data</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Enter Contact Data</em>' operation.
-	 * @see Classes.Buissnesslayer.User#enterContactData(char, char, Classes.Buissnesslayer.Address)
+	 * @see Classes.Buissnesslayer.User#enterContactData(java.lang.String, java.lang.String, Classes.Buissnesslayer.Address)
 	 * @generated
 	 */
 	EOperation getUser__EnterContactData__char_char_Address();
@@ -1427,11 +1427,11 @@ public interface BuissnesslayerPackage extends EPackage {
 	EOperation getUserHandler__AddGuestDB__PaymentInfo_User();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#sendEmailVerification(char) <em>Send Email Verification</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#sendEmailVerification(java.lang.String) <em>Send Email Verification</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Send Email Verification</em>' operation.
-	 * @see Classes.Buissnesslayer.UserHandler#sendEmailVerification(char)
+	 * @see Classes.Buissnesslayer.UserHandler#sendEmailVerification(java.lang.String)
 	 * @generated
 	 */
 	EOperation getUserHandler__SendEmailVerification__char();

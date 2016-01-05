@@ -37,7 +37,7 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * @generated
 	 * @ordered
 	 */
-	protected static final char STREET_EDEFAULT = '\u0000';
+	protected static final String STREET_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getStreet() <em>Street</em>}' attribute.
@@ -47,7 +47,7 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * @generated
 	 * @ordered
 	 */
-	protected char street = STREET_EDEFAULT;
+	protected String street = STREET_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPostalNumber() <em>Postal Number</em>}' attribute.
@@ -77,7 +77,7 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * @generated
 	 * @ordered
 	 */
-	protected static final char CITY_EDEFAULT = '\u0000';
+	protected static final String CITY_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCity() <em>City</em>}' attribute.
@@ -87,7 +87,7 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * @generated
 	 * @ordered
 	 */
-	protected char city = CITY_EDEFAULT;
+	protected String city = CITY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCountry() <em>Country</em>}' attribute.
@@ -97,7 +97,7 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * @generated
 	 * @ordered
 	 */
-	protected static final char COUNTRY_EDEFAULT = '\u0000';
+	protected static final String COUNTRY_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCountry() <em>Country</em>}' attribute.
@@ -107,7 +107,7 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * @generated
 	 * @ordered
 	 */
-	protected char country = COUNTRY_EDEFAULT;
+	protected String country = COUNTRY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,7 +133,7 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public char getStreet() {
+	public String getStreet() {
 		return street;
 	}
 
@@ -142,8 +142,8 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStreet(char newStreet) {
-		char oldStreet = street;
+	public void setStreet(String newStreet) {
+		String oldStreet = street;
 		street = newStreet;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.ADDRESS__STREET, oldStreet, street));
@@ -175,7 +175,7 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public char getCity() {
+	public String getCity() {
 		return city;
 	}
 
@@ -184,8 +184,8 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCity(char newCity) {
-		char oldCity = city;
+	public void setCity(String newCity) {
+		String oldCity = city;
 		city = newCity;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.ADDRESS__CITY, oldCity, city));
@@ -196,7 +196,7 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public char getCountry() {
+	public String getCountry() {
 		return country;
 	}
 
@@ -205,8 +205,8 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCountry(char newCountry) {
-		char oldCountry = country;
+	public void setCountry(String newCountry) {
+		String oldCountry = country;
 		country = newCountry;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.ADDRESS__COUNTRY, oldCountry, country));
@@ -241,16 +241,16 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BuissnesslayerPackage.ADDRESS__STREET:
-				setStreet((Character)newValue);
+				setStreet((String)newValue);
 				return;
 			case BuissnesslayerPackage.ADDRESS__POSTAL_NUMBER:
 				setPostalNumber((Integer)newValue);
 				return;
 			case BuissnesslayerPackage.ADDRESS__CITY:
-				setCity((Character)newValue);
+				setCity((String)newValue);
 				return;
 			case BuissnesslayerPackage.ADDRESS__COUNTRY:
-				setCountry((Character)newValue);
+				setCountry((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -289,13 +289,13 @@ public class AddressImpl extends MinimalEObjectImpl.Container implements Address
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case BuissnesslayerPackage.ADDRESS__STREET:
-				return street != STREET_EDEFAULT;
+				return STREET_EDEFAULT == null ? street != null : !STREET_EDEFAULT.equals(street);
 			case BuissnesslayerPackage.ADDRESS__POSTAL_NUMBER:
 				return postalNumber != POSTAL_NUMBER_EDEFAULT;
 			case BuissnesslayerPackage.ADDRESS__CITY:
-				return city != CITY_EDEFAULT;
+				return CITY_EDEFAULT == null ? city != null : !CITY_EDEFAULT.equals(city);
 			case BuissnesslayerPackage.ADDRESS__COUNTRY:
-				return country != COUNTRY_EDEFAULT;
+				return COUNTRY_EDEFAULT == null ? country != null : !COUNTRY_EDEFAULT.equals(country);
 		}
 		return super.eIsSet(featureID);
 	}

@@ -478,7 +478,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		initEOperation(getGUIController__DisplayError(), null, "displayError", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getGUIController__DisplayExtras__EList(), null, "displayExtras", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEChar(), "extras", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "extras", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getGUIController__DisplayParkings__EList(), null, "displayParkings", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "parkings", 0, -1, IS_UNIQUE, !IS_ORDERED);
@@ -506,14 +506,14 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 
 		op = initEOperation(getLoginController__LoginEmployee__int_char(), null, "loginEmployee", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "ID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEChar(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getLoginController__MakeGuestBookingLogin__Booking(), null, "makeGuestBookingLogin", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theBuissnesslayerPackage.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getLoginController__LoginGuest__int_char(), null, "loginGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEChar(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getLoginController__GetSingletonController(), null, "getSingletonController", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

@@ -48,7 +48,7 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * @generated
 	 * @ordered
 	 */
-	protected static final char USERS_EDEFAULT = '\u0000';
+	protected static final String USERS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getUsers() <em>Users</em>}' attribute.
@@ -58,7 +58,7 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * @generated
 	 * @ordered
 	 */
-	protected char users = USERS_EDEFAULT;
+	protected String users = USERS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getSingletonUserHandler() <em>Singleton User Handler</em>}' reference.
@@ -114,7 +114,7 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public char getUsers() {
+	public String getUsers() {
 		return users;
 	}
 
@@ -123,8 +123,8 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUsers(char newUsers) {
-		char oldUsers = users;
+	public void setUsers(String newUsers) {
+		String oldUsers = users;
 		users = newUsers;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER_HANDLER__USERS, oldUsers, users));
@@ -260,7 +260,7 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void sendEmailVerification(char email) {
+	public void sendEmailVerification(String email) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -320,7 +320,7 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BuissnesslayerPackage.USER_HANDLER__USERS:
-				setUsers((Character)newValue);
+				setUsers((String)newValue);
 				return;
 			case BuissnesslayerPackage.USER_HANDLER__SINGLETON_USER_HANDLER:
 				setSingletonUserHandler((UserHandler)newValue);
@@ -368,7 +368,7 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case BuissnesslayerPackage.USER_HANDLER__USERS:
-				return users != USERS_EDEFAULT;
+				return USERS_EDEFAULT == null ? users != null : !USERS_EDEFAULT.equals(users);
 			case BuissnesslayerPackage.USER_HANDLER__SINGLETON_USER_HANDLER:
 				return singletonUserHandler != null;
 			case BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER:
@@ -391,7 +391,7 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 				addGuestDB((PaymentInfo)arguments.get(0), (User)arguments.get(1));
 				return null;
 			case BuissnesslayerPackage.USER_HANDLER___SEND_EMAIL_VERIFICATION__CHAR:
-				sendEmailVerification((Character)arguments.get(0));
+				sendEmailVerification((String)arguments.get(0));
 				return null;
 			case BuissnesslayerPackage.USER_HANDLER___GET_SINGLETON_HANDLER:
 				getSingletonHandler();

@@ -63,12 +63,12 @@ public interface User extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Email</em>' attribute.
-	 * @see #setEmail(char)
+	 * @see #setEmail(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUser_Email()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	char getEmail();
+	String getEmail();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.User#getEmail <em>Email</em>}' attribute.
@@ -78,7 +78,7 @@ public interface User extends EObject {
 	 * @see #getEmail()
 	 * @generated
 	 */
-	void setEmail(char value);
+	void setEmail(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Booking Handler</b></em>' reference.
@@ -190,7 +190,7 @@ public interface User extends EObject {
 	 * @model nameRequired="true" nameOrdered="false" emailRequired="true" emailOrdered="false" addressRequired="true" addressOrdered="false"
 	 * @generated
 	 */
-	void enterContactData(char name, char email, Address address);
+	void enterContactData(String name, String email, Address address);
 
 	/**
 	 * <!-- begin-user-doc -->

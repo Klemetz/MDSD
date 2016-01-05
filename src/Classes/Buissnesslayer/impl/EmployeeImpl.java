@@ -60,7 +60,7 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 	 * @generated
 	 * @ordered
 	 */
-	protected static final char PASSWORD_EDEFAULT = '\u0000';
+	protected static final String PASSWORD_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getPassword() <em>Password</em>}' attribute.
@@ -70,7 +70,7 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 	 * @generated
 	 * @ordered
 	 */
-	protected char password = PASSWORD_EDEFAULT;
+	protected String password = PASSWORD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,7 +117,7 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public char getPassword() {
+	public String getPassword() {
 		return password;
 	}
 
@@ -126,8 +126,8 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPassword(char newPassword) {
-		char oldPassword = password;
+	public void setPassword(String newPassword) {
+		String oldPassword = password;
 		password = newPassword;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.EMPLOYEE__PASSWORD, oldPassword, password));
@@ -216,7 +216,7 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 				setID((Integer)newValue);
 				return;
 			case BuissnesslayerPackage.EMPLOYEE__PASSWORD:
-				setPassword((Character)newValue);
+				setPassword((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -251,7 +251,7 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 			case BuissnesslayerPackage.EMPLOYEE__ID:
 				return id != ID_EDEFAULT;
 			case BuissnesslayerPackage.EMPLOYEE__PASSWORD:
-				return password != PASSWORD_EDEFAULT;
+				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
 		}
 		return super.eIsSet(featureID);
 	}

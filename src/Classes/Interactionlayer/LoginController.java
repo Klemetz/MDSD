@@ -111,7 +111,7 @@ public interface LoginController extends EObject {
 	 * @model IDRequired="true" IDOrdered="false" passwordRequired="true" passwordOrdered="false"
 	 * @generated
 	 */
-	void loginEmployee(int ID, char password);
+	void loginEmployee(int ID, String password);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,7 +127,7 @@ public interface LoginController extends EObject {
 	 * @model bookingIDRequired="true" bookingIDOrdered="false" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
-	void loginGuest(int bookingID, char name);
+	void loginGuest(int bookingID, String name);
 
 	/**
 	 * <!-- begin-user-doc -->

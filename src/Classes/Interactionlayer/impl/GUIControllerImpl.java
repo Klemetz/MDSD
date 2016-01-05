@@ -228,7 +228,7 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void displayExtras(EList<Character> extras) {
+	public void displayExtras(EList<String> extras) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -408,7 +408,7 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 				displayError();
 				return null;
 			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_EXTRAS__ELIST:
-				displayExtras((EList<Character>)arguments.get(0));
+				displayExtras((EList<String>)arguments.get(0));
 				return null;
 			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_PARKINGS__ELIST:
 				displayParkings((EList<Integer>)arguments.get(0));

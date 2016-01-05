@@ -153,7 +153,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected static final char EXTRAS_EDEFAULT = '\u0000';
+	protected static final String EXTRAS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getExtras() <em>Extras</em>}' attribute.
@@ -163,7 +163,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected char extras = EXTRAS_EDEFAULT;
+	protected String extras = EXTRAS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getParkings() <em>Parkings</em>}' attribute.
@@ -173,7 +173,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected static final char PARKINGS_EDEFAULT = '\u0000';
+	protected static final String PARKINGS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getParkings() <em>Parkings</em>}' attribute.
@@ -183,7 +183,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected char parkings = PARKINGS_EDEFAULT;
+	protected String parkings = PARKINGS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRooms() <em>Rooms</em>}' attribute.
@@ -193,7 +193,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected static final char ROOMS_EDEFAULT = '\u0000';
+	protected static final String ROOMS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' attribute.
@@ -203,7 +203,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected char rooms = ROOMS_EDEFAULT;
+	protected String rooms = ROOMS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isCheckedIn() <em>Checked In</em>}' attribute.
@@ -253,7 +253,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected static final char PAYMENT_EDEFAULT = '\u0000';
+	protected static final String PAYMENT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getPayment() <em>Payment</em>}' attribute.
@@ -263,7 +263,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected char payment = PAYMENT_EDEFAULT;
+	protected String payment = PAYMENT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isPaymentComplete() <em>Payment Complete</em>}' attribute.
@@ -424,7 +424,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public char getExtras() {
+	public String getExtras() {
 		return extras;
 	}
 
@@ -433,8 +433,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExtras(char newExtras) {
-		char oldExtras = extras;
+	public void setExtras(String newExtras) {
+		String oldExtras = extras;
 		extras = newExtras;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.BOOKING__EXTRAS, oldExtras, extras));
@@ -445,7 +445,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public char getParkings() {
+	public String getParkings() {
 		return parkings;
 	}
 
@@ -454,8 +454,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParkings(char newParkings) {
-		char oldParkings = parkings;
+	public void setParkings(String newParkings) {
+		String oldParkings = parkings;
 		parkings = newParkings;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.BOOKING__PARKINGS, oldParkings, parkings));
@@ -466,7 +466,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public char getRooms() {
+	public String getRooms() {
 		return rooms;
 	}
 
@@ -475,8 +475,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRooms(char newRooms) {
-		char oldRooms = rooms;
+	public void setRooms(String newRooms) {
+		String oldRooms = rooms;
 		rooms = newRooms;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.BOOKING__ROOMS, oldRooms, rooms));
@@ -529,7 +529,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public char getPayment() {
+	public String getPayment() {
 		return payment;
 	}
 
@@ -538,8 +538,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPayment(char newPayment) {
-		char oldPayment = payment;
+	public void setPayment(String newPayment) {
+		String oldPayment = payment;
 		payment = newPayment;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.BOOKING__PAYMENT, oldPayment, payment));
@@ -641,13 +641,13 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				setEndDate((Integer)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING__EXTRAS:
-				setExtras((Character)newValue);
+				setExtras((String)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING__PARKINGS:
-				setParkings((Character)newValue);
+				setParkings((String)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING__ROOMS:
-				setRooms((Character)newValue);
+				setRooms((String)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING__CHECKED_IN:
 				setCheckedIn((Boolean)newValue);
@@ -656,7 +656,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				setCheckedOut((Boolean)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING__PAYMENT:
-				setPayment((Character)newValue);
+				setPayment((String)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING__PAYMENT_COMPLETE:
 				setPaymentComplete((Boolean)newValue);
@@ -739,17 +739,17 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BuissnesslayerPackage.BOOKING__END_DATE:
 				return endDate != END_DATE_EDEFAULT;
 			case BuissnesslayerPackage.BOOKING__EXTRAS:
-				return extras != EXTRAS_EDEFAULT;
+				return EXTRAS_EDEFAULT == null ? extras != null : !EXTRAS_EDEFAULT.equals(extras);
 			case BuissnesslayerPackage.BOOKING__PARKINGS:
-				return parkings != PARKINGS_EDEFAULT;
+				return PARKINGS_EDEFAULT == null ? parkings != null : !PARKINGS_EDEFAULT.equals(parkings);
 			case BuissnesslayerPackage.BOOKING__ROOMS:
-				return rooms != ROOMS_EDEFAULT;
+				return ROOMS_EDEFAULT == null ? rooms != null : !ROOMS_EDEFAULT.equals(rooms);
 			case BuissnesslayerPackage.BOOKING__CHECKED_IN:
 				return checkedIn != CHECKED_IN_EDEFAULT;
 			case BuissnesslayerPackage.BOOKING__CHECKED_OUT:
 				return checkedOut != CHECKED_OUT_EDEFAULT;
 			case BuissnesslayerPackage.BOOKING__PAYMENT:
-				return payment != PAYMENT_EDEFAULT;
+				return PAYMENT_EDEFAULT == null ? payment != null : !PAYMENT_EDEFAULT.equals(payment);
 			case BuissnesslayerPackage.BOOKING__PAYMENT_COMPLETE:
 				return paymentComplete != PAYMENT_COMPLETE_EDEFAULT;
 			case BuissnesslayerPackage.BOOKING__ROOM:

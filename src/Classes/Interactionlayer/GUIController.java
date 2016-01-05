@@ -127,7 +127,7 @@ public interface GUIController extends EObject {
 	 * @model extrasMany="true" extrasOrdered="false"
 	 * @generated
 	 */
-	void displayExtras(EList<Character> extras);
+	void displayExtras(EList<String> extras);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -33,12 +33,12 @@ public interface Address extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Street</em>' attribute.
-	 * @see #setStreet(char)
+	 * @see #setStreet(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getAddress_Street()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	char getStreet();
+	String getStreet();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.Address#getStreet <em>Street</em>}' attribute.
@@ -48,7 +48,7 @@ public interface Address extends EObject {
 	 * @see #getStreet()
 	 * @generated
 	 */
-	void setStreet(char value);
+	void setStreet(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Postal Number</b></em>' attribute.
@@ -85,12 +85,12 @@ public interface Address extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>City</em>' attribute.
-	 * @see #setCity(char)
+	 * @see #setCity(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getAddress_City()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	char getCity();
+	String getCity();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.Address#getCity <em>City</em>}' attribute.
@@ -100,7 +100,7 @@ public interface Address extends EObject {
 	 * @see #getCity()
 	 * @generated
 	 */
-	void setCity(char value);
+	void setCity(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Country</b></em>' attribute.
@@ -111,12 +111,12 @@ public interface Address extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Country</em>' attribute.
-	 * @see #setCountry(char)
+	 * @see #setCountry(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getAddress_Country()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	char getCountry();
+	String getCountry();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.Address#getCountry <em>Country</em>}' attribute.
@@ -126,6 +126,6 @@ public interface Address extends EObject {
 	 * @see #getCountry()
 	 * @generated
 	 */
-	void setCountry(char value);
+	void setCountry(String value);
 
 } // Address

@@ -57,12 +57,12 @@ public interface Employee extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Password</em>' attribute.
-	 * @see #setPassword(char)
+	 * @see #setPassword(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getEmployee_Password()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	char getPassword();
+	String getPassword();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.Employee#getPassword <em>Password</em>}' attribute.
@@ -72,7 +72,7 @@ public interface Employee extends EObject {
 	 * @see #getPassword()
 	 * @generated
 	 */
-	void setPassword(char value);
+	void setPassword(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

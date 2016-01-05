@@ -576,11 +576,11 @@ public interface InteractionlayerPackage extends EPackage {
 	EReference getLoginController_Paymenthandler();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginEmployee(int, char) <em>Login Employee</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginEmployee(int, java.lang.String) <em>Login Employee</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Login Employee</em>' operation.
-	 * @see Classes.Interactionlayer.LoginController#loginEmployee(int, char)
+	 * @see Classes.Interactionlayer.LoginController#loginEmployee(int, java.lang.String)
 	 * @generated
 	 */
 	EOperation getLoginController__LoginEmployee__int_char();
@@ -596,11 +596,11 @@ public interface InteractionlayerPackage extends EPackage {
 	EOperation getLoginController__MakeGuestBookingLogin__Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginGuest(int, char) <em>Login Guest</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginGuest(int, java.lang.String) <em>Login Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Login Guest</em>' operation.
-	 * @see Classes.Interactionlayer.LoginController#loginGuest(int, char)
+	 * @see Classes.Interactionlayer.LoginController#loginGuest(int, java.lang.String)
 	 * @generated
 	 */
 	EOperation getLoginController__LoginGuest__int_char();
