@@ -37,12 +37,12 @@ public interface User extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(char)
+	 * @see #setName(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUser_Name()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	char getName();
+	String getName();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.User#getName <em>Name</em>}' attribute.
@@ -52,7 +52,7 @@ public interface User extends EObject {
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(char value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Email</b></em>' attribute.

@@ -50,7 +50,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * @generated
 	 * @ordered
 	 */
-	protected static final char NAME_EDEFAULT = '\u0000';
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -60,7 +60,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * @generated
 	 * @ordered
 	 */
-	protected char name = NAME_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEmail() <em>Email</em>}' attribute.
@@ -146,7 +146,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public char getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -155,8 +155,8 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(char newName) {
-		char oldName = name;
+	public void setName(String newName) {
+		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER__NAME, oldName, name));
@@ -438,7 +438,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BuissnesslayerPackage.USER__NAME:
-				setName((Character)newValue);
+				setName((String)newValue);
 				return;
 			case BuissnesslayerPackage.USER__EMAIL:
 				setEmail((Character)newValue);
@@ -498,7 +498,7 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case BuissnesslayerPackage.USER__NAME:
-				return name != NAME_EDEFAULT;
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case BuissnesslayerPackage.USER__EMAIL:
 				return email != EMAIL_EDEFAULT;
 			case BuissnesslayerPackage.USER__BOOKING_HANDLER:

@@ -111,7 +111,7 @@
         <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="Email" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="bookingHandler" ordered="false"
