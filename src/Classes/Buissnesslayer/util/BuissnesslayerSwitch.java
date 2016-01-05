@@ -72,27 +72,15 @@ public class BuissnesslayerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case BuissnesslayerPackage.BOOKING: {
+				Booking booking = (Booking)theEObject;
+				T result = caseBooking(booking);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case BuissnesslayerPackage.BOOKING_HANDLER: {
 				BookingHandler bookingHandler = (BookingHandler)theEObject;
 				T result = caseBookingHandler(bookingHandler);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case BuissnesslayerPackage.USER: {
-				User user = (User)theEObject;
-				T result = caseUser(user);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case BuissnesslayerPackage.USER_HANDLER: {
-				UserHandler userHandler = (UserHandler)theEObject;
-				T result = caseUserHandler(userHandler);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case BuissnesslayerPackage.ADDRESS: {
-				Address address = (Address)theEObject;
-				T result = caseAddress(address);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -108,9 +96,21 @@ public class BuissnesslayerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BuissnesslayerPackage.BOOKING: {
-				Booking booking = (Booking)theEObject;
-				T result = caseBooking(booking);
+			case BuissnesslayerPackage.ADDRESS: {
+				Address address = (Address)theEObject;
+				T result = caseAddress(address);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BuissnesslayerPackage.USER_HANDLER: {
+				UserHandler userHandler = (UserHandler)theEObject;
+				T result = caseUserHandler(userHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BuissnesslayerPackage.USER: {
+				User user = (User)theEObject;
+				T result = caseUser(user);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

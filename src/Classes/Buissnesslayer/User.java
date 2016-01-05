@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Classes.Buissnesslayer.User#getLogincontroller <em>Logincontroller</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.User#getUserhandler <em>Userhandler</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.User#getAddress <em>Address</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.User#getUserHandler <em>User Handler</em>}</li>
  * </ul>
  *
  * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUser()
@@ -185,12 +186,38 @@ public interface User extends EObject {
 	void setAddress(Address value);
 
 	/**
+	 * Returns the value of the '<em><b>User Handler</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>User Handler</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @model nameRequired="true" nameOrdered="false" emailRequired="true" emailOrdered="false" addressRequired="true" addressOrdered="false"
+	 * @return the value of the '<em>User Handler</em>' reference.
+	 * @see #setUserHandler(UserHandler)
+	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUser_UserHandler()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	void enterContactData(String name, String email, Address address);
+	UserHandler getUserHandler();
+
+	/**
+	 * Sets the value of the '{@link Classes.Buissnesslayer.User#getUserHandler <em>User Handler</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>User Handler</em>' reference.
+	 * @see #getUserHandler()
+	 * @generated
+	 */
+	void setUserHandler(UserHandler value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" employeeIDRequired="true" employeeIDOrdered="false" emailRequired="true" emailOrdered="false"
+	 * @generated
+	 */
+	boolean login(int employeeID, String email);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -3,8 +3,6 @@
 package Classes.Interactionlayer.impl;
 
 import Classes.BuisnessLogicLayer.PaymentHandler;
-
-import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.User;
 import Classes.Interactionlayer.InteractionlayerPackage;
 import Classes.Interactionlayer.LoginController;
@@ -205,7 +203,7 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void loginEmployee(int ID, String password) {
+	public boolean loginEmployee(int ID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -216,18 +214,7 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void makeGuestBookingLogin(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void loginGuest(int bookingID, String name) {
+	public boolean loginGuest(int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -344,15 +331,10 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT_STRING:
-				loginEmployee((Integer)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case InteractionlayerPackage.LOGIN_CONTROLLER___MAKE_GUEST_BOOKING_LOGIN__BOOKING:
-				makeGuestBookingLogin((Booking)arguments.get(0));
-				return null;
-			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_GUEST__INT_STRING:
-				loginGuest((Integer)arguments.get(0), (String)arguments.get(1));
-				return null;
+			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT:
+				return loginEmployee((Integer)arguments.get(0));
+			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_GUEST__INT:
+				return loginGuest((Integer)arguments.get(0));
 			case InteractionlayerPackage.LOGIN_CONTROLLER___GET_SINGLETON_CONTROLLER:
 				getSingletonController();
 				return null;

@@ -4,6 +4,7 @@ package Classes.Datalayer;
 
 import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.Room;
+import Classes.Buissnesslayer.User;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -30,36 +31,36 @@ import org.eclipse.emf.ecore.EObject;
 public interface Database extends EObject {
 
 	/**
-	 * Returns the value of the '<em><b>User DB</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>User DB</b></em>' reference list.
+	 * The list contents are of type {@link Classes.Buissnesslayer.User}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User DB</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User DB</em>' attribute list.
+	 * @return the value of the '<em>User DB</em>' reference list.
 	 * @see Classes.Datalayer.DatalayerPackage#getDatabase_UserDB()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<String> getUserDB();
+	EList<User> getUserDB();
 
 	/**
-	 * Returns the value of the '<em><b>Employee DB</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Employee DB</b></em>' reference list.
+	 * The list contents are of type {@link Classes.Buissnesslayer.User}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Employee DB</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Employee DB</em>' attribute list.
+	 * @return the value of the '<em>Employee DB</em>' reference list.
 	 * @see Classes.Datalayer.DatalayerPackage#getDatabase_EmployeeDB()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<String> getEmployeeDB();
+	EList<User> getEmployeeDB();
 
 	/**
 	 * Returns the value of the '<em><b>Booking DB</b></em>' reference list.

@@ -125,8 +125,8 @@ public class DatalayerPackageImpl extends EPackageImpl implements DatalayerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDatabase_UserDB() {
-		return (EAttribute)databaseEClass.getEStructuralFeatures().get(0);
+	public EReference getDatabase_UserDB() {
+		return (EReference)databaseEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -134,8 +134,8 @@ public class DatalayerPackageImpl extends EPackageImpl implements DatalayerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDatabase_EmployeeDB() {
-		return (EAttribute)databaseEClass.getEStructuralFeatures().get(1);
+	public EReference getDatabase_EmployeeDB() {
+		return (EReference)databaseEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -194,8 +194,8 @@ public class DatalayerPackageImpl extends EPackageImpl implements DatalayerPacka
 
 		// Create classes and their features
 		databaseEClass = createEClass(DATABASE);
-		createEAttribute(databaseEClass, DATABASE__USER_DB);
-		createEAttribute(databaseEClass, DATABASE__EMPLOYEE_DB);
+		createEReference(databaseEClass, DATABASE__USER_DB);
+		createEReference(databaseEClass, DATABASE__EMPLOYEE_DB);
 		createEReference(databaseEClass, DATABASE__BOOKING_DB);
 		createEReference(databaseEClass, DATABASE__ROOM_DB);
 		createEAttribute(databaseEClass, DATABASE__EXTRAS_DB);
@@ -235,8 +235,8 @@ public class DatalayerPackageImpl extends EPackageImpl implements DatalayerPacka
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(databaseEClass, Database.class, "Database", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDatabase_UserDB(), ecorePackage.getEString(), "userDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDatabase_EmployeeDB(), ecorePackage.getEString(), "employeeDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDatabase_UserDB(), theBuissnesslayerPackage.getUser(), null, "userDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDatabase_EmployeeDB(), theBuissnesslayerPackage.getUser(), null, "employeeDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDatabase_BookingDB(), theBuissnesslayerPackage.getBooking(), null, "bookingDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDatabase_RoomDB(), theBuissnesslayerPackage.getRoom(), null, "roomDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDatabase_ExtrasDB(), ecorePackage.getEString(), "extrasDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

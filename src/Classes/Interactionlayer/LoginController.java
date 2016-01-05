@@ -3,8 +3,6 @@
 package Classes.Interactionlayer;
 
 import Classes.BuisnessLogicLayer.PaymentHandler;
-
-import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.User;
 import org.eclipse.emf.ecore.EObject;
 
@@ -108,26 +106,18 @@ public interface LoginController extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model IDRequired="true" IDOrdered="false" passwordRequired="true" passwordOrdered="false"
+	 * @model required="true" ordered="false" IDRequired="true" IDOrdered="false"
 	 * @generated
 	 */
-	void loginEmployee(int ID, String password);
+	boolean loginEmployee(int ID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingRequired="true" bookingOrdered="false"
+	 * @model required="true" ordered="false" bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	void makeGuestBookingLogin(Booking booking);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model bookingIDRequired="true" bookingIDOrdered="false" nameRequired="true" nameOrdered="false"
-	 * @generated
-	 */
-	void loginGuest(int bookingID, String name);
+	boolean loginGuest(int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->

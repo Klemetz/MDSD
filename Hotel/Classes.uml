@@ -2,13 +2,11 @@
 <uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_7oIuALMHEeWpmdwYTYylNw" name="Classes">
   <packagedElement xmi:type="uml:Package" xmi:id="_Y88loJkOEeWgf_EMGD-UnQ" name="Data layer">
     <packagedElement xmi:type="uml:Class" xmi:id="_b2BrkJkOEeWgf_EMGD-UnQ" name="Database">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_4oUlULO0EeWbxK3v0VQAjQ" name="userDB">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4oUlULO0EeWbxK3v0VQAjQ" name="userDB" type="_3NlPYJkKEeWgf_EMGD-UnQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FYqrULO1EeWbxK3v0VQAjQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FYsggLO1EeWbxK3v0VQAjQ" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZljbYLO1EeWbxK3v0VQAjQ" name="employeeDB">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZljbYLO1EeWbxK3v0VQAjQ" name="employeeDB" type="_3NlPYJkKEeWgf_EMGD-UnQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_c_qx0LO1EeWbxK3v0VQAjQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_c_r_8LO1EeWbxK3v0VQAjQ" value="*"/>
       </ownedAttribute>
@@ -179,14 +177,17 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_wWDNIaUOEeW-MevX_-oa-Q" name="logincontroller" type="_766t8JkaEeWgf_EMGD-UnQ" association="_wWCmEKUOEeW-MevX_-oa-Q"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_OL8e0aUPEeW-MevX_-oa-Q" name="userhandler" type="_bd3fsJkNEeWgf_EMGD-UnQ" association="_OL73wKUPEeW-MevX_-oa-Q"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_mmlMQaUQEeW-MevX_-oa-Q" name="address" type="_yYCx4JkMEeWgf_EMGD-UnQ" association="_mmj-IKUQEeW-MevX_-oa-Q"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_XuANoJkLEeWgf_EMGD-UnQ" name="enterContactData">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HAoRcLMiEeWpmdwYTYylNw" name="name">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rHpLkLPVEeWbxK3v0VQAjQ" name="userHandler" type="_bd3fsJkNEeWgf_EMGD-UnQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_XuANoJkLEeWgf_EMGD-UnQ" name="login">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HAoRcLMiEeWpmdwYTYylNw" name="employeeID" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_H8nYkLMiEeWpmdwYTYylNw" name="email">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_InceQLMiEeWpmdwYTYylNw" name="address" type="_yYCx4JkMEeWgf_EMGD-UnQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_oJnz4LPYEeWbxK3v0VQAjQ" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_hJ_m8JkLEeWgf_EMGD-UnQ" name="bookRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_WEy0MLMiEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ"/>
@@ -237,6 +238,20 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_UUwbsKUFEeW-MevX_-oa-Q" name="getSingletonHandler"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_wF0u4KUFEeW-MevX_-oa-Q" name="createSingletonHandler"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_E2rhILPMEeWbxK3v0VQAjQ" name="isEmailValid" isStatic="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PdnDkLPMEeWbxK3v0VQAjQ" name="email" effect="read">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_lflwMLPQEeWbxK3v0VQAjQ" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xjKucLPeEeWbxK3v0VQAjQ" name="checkEmployeeID">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4uUtkLPeEeWbxK3v0VQAjQ" name="employeeID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_G--vwLPfEeWbxK3v0VQAjQ" name="returnValue" type="_3NlPYJkKEeWgf_EMGD-UnQ" direction="return"/>
+      </ownedOperation>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_K8QN4JkVEeWgf_EMGD-UnQ" name="Interaction layer">
@@ -309,19 +324,16 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_PLsvELMaEeWpmdwYTYylNw" name="ID" effect="read">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_T0ffILMaEeWpmdwYTYylNw" name="password" effect="read">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_t9aFgLPaEeWbxK3v0VQAjQ" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_oyVooJkcEeWgf_EMGD-UnQ" name="makeGuestBookingLogin">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_eRNVoLMaEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="read"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_udBTgJkcEeWgf_EMGD-UnQ" name="loginGuest">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_kN3hULMaEeWpmdwYTYylNw" name="bookingID" effect="read">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_mZDmgLMaEeWpmdwYTYylNw" name="name" effect="read">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_08n6YLPaEeWbxK3v0VQAjQ" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_HcmIYKUDEeW-MevX_-oa-Q" name="getSingletonController"/>

@@ -68,7 +68,7 @@ public interface DatalayerPackage extends EPackage {
 	int DATABASE = 0;
 
 	/**
-	 * The feature id for the '<em><b>User DB</b></em>' attribute list.
+	 * The feature id for the '<em><b>User DB</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -77,7 +77,7 @@ public interface DatalayerPackage extends EPackage {
 	int DATABASE__USER_DB = 0;
 
 	/**
-	 * The feature id for the '<em><b>Employee DB</b></em>' attribute list.
+	 * The feature id for the '<em><b>Employee DB</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -142,26 +142,26 @@ public interface DatalayerPackage extends EPackage {
 	EClass getDatabase();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link Classes.Datalayer.Database#getUserDB <em>User DB</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Datalayer.Database#getUserDB <em>User DB</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>User DB</em>'.
+	 * @return the meta object for the reference list '<em>User DB</em>'.
 	 * @see Classes.Datalayer.Database#getUserDB()
 	 * @see #getDatabase()
 	 * @generated
 	 */
-	EAttribute getDatabase_UserDB();
+	EReference getDatabase_UserDB();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link Classes.Datalayer.Database#getEmployeeDB <em>Employee DB</em>}'.
+	 * Returns the meta object for the reference list '{@link Classes.Datalayer.Database#getEmployeeDB <em>Employee DB</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Employee DB</em>'.
+	 * @return the meta object for the reference list '<em>Employee DB</em>'.
 	 * @see Classes.Datalayer.Database#getEmployeeDB()
 	 * @see #getDatabase()
 	 * @generated
 	 */
-	EAttribute getDatabase_EmployeeDB();
+	EReference getDatabase_EmployeeDB();
 
 	/**
 	 * Returns the meta object for the reference list '{@link Classes.Datalayer.Database#getBookingDB <em>Booking DB</em>}'.
@@ -229,19 +229,19 @@ public interface DatalayerPackage extends EPackage {
 		 */
 		EClass DATABASE = eINSTANCE.getDatabase();
 		/**
-		 * The meta object literal for the '<em><b>User DB</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>User DB</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATABASE__USER_DB = eINSTANCE.getDatabase_UserDB();
+		EReference DATABASE__USER_DB = eINSTANCE.getDatabase_UserDB();
 		/**
-		 * The meta object literal for the '<em><b>Employee DB</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Employee DB</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATABASE__EMPLOYEE_DB = eINSTANCE.getDatabase_EmployeeDB();
+		EReference DATABASE__EMPLOYEE_DB = eINSTANCE.getDatabase_EmployeeDB();
 		/**
 		 * The meta object literal for the '<em><b>Booking DB</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->

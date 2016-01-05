@@ -292,16 +292,7 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT_STRING = 0;
-
-	/**
-	 * The operation id for the '<em>Make Guest Booking Login</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_CONTROLLER___MAKE_GUEST_BOOKING_LOGIN__BOOKING = 1;
+	int LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT = 0;
 
 	/**
 	 * The operation id for the '<em>Login Guest</em>' operation.
@@ -310,7 +301,7 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER___LOGIN_GUEST__INT_STRING = 2;
+	int LOGIN_CONTROLLER___LOGIN_GUEST__INT = 1;
 
 	/**
 	 * The operation id for the '<em>Get Singleton Controller</em>' operation.
@@ -319,7 +310,7 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER___GET_SINGLETON_CONTROLLER = 3;
+	int LOGIN_CONTROLLER___GET_SINGLETON_CONTROLLER = 2;
 
 	/**
 	 * The operation id for the '<em>Create Singleton Handler</em>' operation.
@@ -328,7 +319,7 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER___CREATE_SINGLETON_HANDLER = 4;
+	int LOGIN_CONTROLLER___CREATE_SINGLETON_HANDLER = 3;
 
 	/**
 	 * The number of operations of the '<em>Login Controller</em>' class.
@@ -337,7 +328,7 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER_OPERATION_COUNT = 5;
+	int LOGIN_CONTROLLER_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link Classes.Interactionlayer.impl.LoginController_DataType1Impl <em>Login Controller Data Type1</em>}' class.
@@ -576,34 +567,24 @@ public interface InteractionlayerPackage extends EPackage {
 	EReference getLoginController_Paymenthandler();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginEmployee(int, java.lang.String) <em>Login Employee</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginEmployee(int) <em>Login Employee</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Login Employee</em>' operation.
-	 * @see Classes.Interactionlayer.LoginController#loginEmployee(int, java.lang.String)
+	 * @see Classes.Interactionlayer.LoginController#loginEmployee(int)
 	 * @generated
 	 */
-	EOperation getLoginController__LoginEmployee__int_String();
+	EOperation getLoginController__LoginEmployee__int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#makeGuestBookingLogin(Classes.Buissnesslayer.Booking) <em>Make Guest Booking Login</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Make Guest Booking Login</em>' operation.
-	 * @see Classes.Interactionlayer.LoginController#makeGuestBookingLogin(Classes.Buissnesslayer.Booking)
-	 * @generated
-	 */
-	EOperation getLoginController__MakeGuestBookingLogin__Booking();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginGuest(int, java.lang.String) <em>Login Guest</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginGuest(int) <em>Login Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Login Guest</em>' operation.
-	 * @see Classes.Interactionlayer.LoginController#loginGuest(int, java.lang.String)
+	 * @see Classes.Interactionlayer.LoginController#loginGuest(int)
 	 * @generated
 	 */
-	EOperation getLoginController__LoginGuest__int_String();
+	EOperation getLoginController__LoginGuest__int();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#getSingletonController() <em>Get Singleton Controller</em>}' operation.
@@ -830,15 +811,7 @@ public interface InteractionlayerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT_STRING = eINSTANCE.getLoginController__LoginEmployee__int_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Make Guest Booking Login</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation LOGIN_CONTROLLER___MAKE_GUEST_BOOKING_LOGIN__BOOKING = eINSTANCE.getLoginController__MakeGuestBookingLogin__Booking();
+		EOperation LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT = eINSTANCE.getLoginController__LoginEmployee__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Login Guest</b></em>' operation.
@@ -846,7 +819,7 @@ public interface InteractionlayerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LOGIN_CONTROLLER___LOGIN_GUEST__INT_STRING = eINSTANCE.getLoginController__LoginGuest__int_String();
+		EOperation LOGIN_CONTROLLER___LOGIN_GUEST__INT = eINSTANCE.getLoginController__LoginGuest__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Singleton Controller</b></em>' operation.

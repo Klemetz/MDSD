@@ -293,6 +293,28 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isEmailValid(String email) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public User checkEmployeeID(int employeeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -399,6 +421,10 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 			case BuissnesslayerPackage.USER_HANDLER___CREATE_SINGLETON_HANDLER:
 				createSingletonHandler();
 				return null;
+			case BuissnesslayerPackage.USER_HANDLER___IS_EMAIL_VALID__STRING:
+				return isEmailValid((String)arguments.get(0));
+			case BuissnesslayerPackage.USER_HANDLER___CHECK_EMPLOYEE_ID__INT:
+				return checkEmployeeID((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

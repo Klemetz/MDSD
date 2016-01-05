@@ -165,4 +165,20 @@ public interface UserHandler extends EObject {
 	 */
 	void createSingletonHandler();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" emailRequired="true" emailOrdered="false"
+	 * @generated
+	 */
+	boolean isEmailValid(String email);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" employeeIDRequired="true" employeeIDOrdered="false"
+	 * @generated
+	 */
+	User checkEmployeeID(int employeeID);
+
 } // UserHandler

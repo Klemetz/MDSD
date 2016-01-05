@@ -103,7 +103,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getBooking()
 	 * @generated
 	 */
-	int BOOKING = 7;
+	int BOOKING = 1;
 
 	/**
 	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.BookingHandlerImpl <em>Booking Handler</em>}' class.
@@ -113,7 +113,192 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getBookingHandler()
 	 * @generated
 	 */
-	int BOOKING_HANDLER = 1;
+	int BOOKING_HANDLER = 2;
+
+	/**
+	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.UserImpl <em>User</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.Buissnesslayer.impl.UserImpl
+	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getUser()
+	 * @generated
+	 */
+	int USER = 7;
+
+	/**
+	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.UserHandlerImpl <em>User Handler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.Buissnesslayer.impl.UserHandlerImpl
+	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getUserHandler()
+	 * @generated
+	 */
+	int USER_HANDLER = 6;
+
+	/**
+	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.AddressImpl <em>Address</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.Buissnesslayer.impl.AddressImpl
+	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getAddress()
+	 * @generated
+	 */
+	int ADDRESS = 5;
+
+	/**
+	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.GuestImpl <em>Guest</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.Buissnesslayer.impl.GuestImpl
+	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getGuest()
+	 * @generated
+	 */
+	int GUEST = 3;
+
+	/**
+	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.EmployeeImpl <em>Employee</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.Buissnesslayer.impl.EmployeeImpl
+	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getEmployee()
+	 * @generated
+	 */
+	int EMPLOYEE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Booking ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__BOOKING_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Guest</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__GUEST = 1;
+
+	/**
+	 * The feature id for the '<em><b>Nr Of Guests</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__NR_OF_GUESTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__START_DATE = 3;
+
+	/**
+	 * The feature id for the '<em><b>End Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__END_DATE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Extras</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__EXTRAS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Parkings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__PARKINGS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Rooms</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__ROOMS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Checked In</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__CHECKED_IN = 8;
+
+	/**
+	 * The feature id for the '<em><b>Checked Out</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__CHECKED_OUT = 9;
+
+	/**
+	 * The feature id for the '<em><b>Payment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__PAYMENT = 10;
+
+	/**
+	 * The feature id for the '<em><b>Payment Complete</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__PAYMENT_COMPLETE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Room</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__ROOM = 12;
+
+	/**
+	 * The number of structural features of the '<em>Booking</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_FEATURE_COUNT = 13;
+
+	/**
+	 * The number of operations of the '<em>Booking</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Booking</b></em>' reference.
@@ -278,316 +463,6 @@ public interface BuissnesslayerPackage extends EPackage {
 	int BOOKING_HANDLER_OPERATION_COUNT = 11;
 
 	/**
-	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.UserImpl <em>User</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Buissnesslayer.impl.UserImpl
-	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getUser()
-	 * @generated
-	 */
-	int USER = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Email</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER__EMAIL = 1;
-
-	/**
-	 * The feature id for the '<em><b>Booking Handler</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER__BOOKING_HANDLER = 2;
-
-	/**
-	 * The feature id for the '<em><b>Logincontroller</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER__LOGINCONTROLLER = 3;
-
-	/**
-	 * The feature id for the '<em><b>Userhandler</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER__USERHANDLER = 4;
-
-	/**
-	 * The feature id for the '<em><b>Address</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER__ADDRESS = 5;
-
-	/**
-	 * The number of structural features of the '<em>User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_FEATURE_COUNT = 6;
-
-	/**
-	 * The operation id for the '<em>Enter Contact Data</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER___ENTER_CONTACT_DATA__STRING_STRING_ADDRESS = 0;
-
-	/**
-	 * The operation id for the '<em>Book Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER___BOOK_ROOM__BOOKING = 1;
-
-	/**
-	 * The operation id for the '<em>Change Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER___CHANGE_BOOKING__BOOKING_BOOKING = 2;
-
-	/**
-	 * The operation id for the '<em>Cancel Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER___CANCEL_BOOKING__BOOKING = 3;
-
-	/**
-	 * The operation id for the '<em>Attempt Check In</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER___ATTEMPT_CHECK_IN__BOOKING = 4;
-
-	/**
-	 * The operation id for the '<em>Attempt Check Out</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER___ATTEMPT_CHECK_OUT__BOOKING = 5;
-
-	/**
-	 * The number of operations of the '<em>User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_OPERATION_COUNT = 6;
-
-	/**
-	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.UserHandlerImpl <em>User Handler</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Buissnesslayer.impl.UserHandlerImpl
-	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getUserHandler()
-	 * @generated
-	 */
-	int USER_HANDLER = 3;
-
-	/**
-	 * The feature id for the '<em><b>Users</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_HANDLER__USERS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Singleton User Handler</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_HANDLER__SINGLETON_USER_HANDLER = 1;
-
-	/**
-	 * The feature id for the '<em><b>Logincontroller</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_HANDLER__LOGINCONTROLLER = 2;
-
-	/**
-	 * The feature id for the '<em><b>Database</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_HANDLER__DATABASE = 3;
-
-	/**
-	 * The number of structural features of the '<em>User Handler</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_HANDLER_FEATURE_COUNT = 4;
-
-	/**
-	 * The operation id for the '<em>Add Guest DB</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_HANDLER___ADD_GUEST_DB__PAYMENTINFO_USER = 0;
-
-	/**
-	 * The operation id for the '<em>Send Email Verification</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_HANDLER___SEND_EMAIL_VERIFICATION__STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Get Singleton Handler</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_HANDLER___GET_SINGLETON_HANDLER = 2;
-
-	/**
-	 * The operation id for the '<em>Create Singleton Handler</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_HANDLER___CREATE_SINGLETON_HANDLER = 3;
-
-	/**
-	 * The number of operations of the '<em>User Handler</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_HANDLER_OPERATION_COUNT = 4;
-
-	/**
-	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.AddressImpl <em>Address</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Buissnesslayer.impl.AddressImpl
-	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getAddress()
-	 * @generated
-	 */
-	int ADDRESS = 4;
-
-	/**
-	 * The feature id for the '<em><b>Street</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS__STREET = 0;
-
-	/**
-	 * The feature id for the '<em><b>Postal Number</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS__POSTAL_NUMBER = 1;
-
-	/**
-	 * The feature id for the '<em><b>City</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS__CITY = 2;
-
-	/**
-	 * The feature id for the '<em><b>Country</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS__COUNTRY = 3;
-
-	/**
-	 * The number of structural features of the '<em>Address</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Address</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.GuestImpl <em>Guest</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Buissnesslayer.impl.GuestImpl
-	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getGuest()
-	 * @generated
-	 */
-	int GUEST = 5;
-
-	/**
 	 * The number of structural features of the '<em>Guest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -649,16 +524,6 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @ordered
 	 */
 	int GUEST_OPERATION_COUNT = 5;
-
-	/**
-	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.EmployeeImpl <em>Employee</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.Buissnesslayer.impl.EmployeeImpl
-	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getEmployee()
-	 * @generated
-	 */
-	int EMPLOYEE = 6;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -742,139 +607,301 @@ public interface BuissnesslayerPackage extends EPackage {
 	int EMPLOYEE_OPERATION_COUNT = 5;
 
 	/**
-	 * The feature id for the '<em><b>Booking ID</b></em>' attribute.
+	 * The feature id for the '<em><b>Street</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__BOOKING_ID = 0;
+	int ADDRESS__STREET = 0;
 
 	/**
-	 * The feature id for the '<em><b>Guest</b></em>' attribute.
+	 * The feature id for the '<em><b>Postal Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__GUEST = 1;
+	int ADDRESS__POSTAL_NUMBER = 1;
 
 	/**
-	 * The feature id for the '<em><b>Nr Of Guests</b></em>' attribute.
+	 * The feature id for the '<em><b>City</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__NR_OF_GUESTS = 2;
+	int ADDRESS__CITY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Country</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__START_DATE = 3;
+	int ADDRESS__COUNTRY = 3;
 
 	/**
-	 * The feature id for the '<em><b>End Date</b></em>' attribute.
+	 * The number of structural features of the '<em>Address</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__END_DATE = 4;
+	int ADDRESS_FEATURE_COUNT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Extras</b></em>' attribute.
+	 * The number of operations of the '<em>Address</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__EXTRAS = 5;
+	int ADDRESS_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Parkings</b></em>' attribute.
+	 * The feature id for the '<em><b>Users</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__PARKINGS = 6;
+	int USER_HANDLER__USERS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Rooms</b></em>' attribute.
+	 * The feature id for the '<em><b>Singleton User Handler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__ROOMS = 7;
+	int USER_HANDLER__SINGLETON_USER_HANDLER = 1;
 
 	/**
-	 * The feature id for the '<em><b>Checked In</b></em>' attribute.
+	 * The feature id for the '<em><b>Logincontroller</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__CHECKED_IN = 8;
+	int USER_HANDLER__LOGINCONTROLLER = 2;
 
 	/**
-	 * The feature id for the '<em><b>Checked Out</b></em>' attribute.
+	 * The feature id for the '<em><b>Database</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__CHECKED_OUT = 9;
+	int USER_HANDLER__DATABASE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Payment</b></em>' attribute.
+	 * The number of structural features of the '<em>User Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__PAYMENT = 10;
+	int USER_HANDLER_FEATURE_COUNT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Payment Complete</b></em>' attribute.
+	 * The operation id for the '<em>Add Guest DB</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__PAYMENT_COMPLETE = 11;
+	int USER_HANDLER___ADD_GUEST_DB__PAYMENTINFO_USER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Room</b></em>' reference list.
+	 * The operation id for the '<em>Send Email Verification</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__ROOM = 12;
+	int USER_HANDLER___SEND_EMAIL_VERIFICATION__STRING = 1;
 
 	/**
-	 * The number of structural features of the '<em>Booking</em>' class.
+	 * The operation id for the '<em>Get Singleton Handler</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_FEATURE_COUNT = 13;
+	int USER_HANDLER___GET_SINGLETON_HANDLER = 2;
 
 	/**
-	 * The number of operations of the '<em>Booking</em>' class.
+	 * The operation id for the '<em>Create Singleton Handler</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 0;
+	int USER_HANDLER___CREATE_SINGLETON_HANDLER = 3;
+
+	/**
+	 * The operation id for the '<em>Is Email Valid</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_HANDLER___IS_EMAIL_VALID__STRING = 4;
+
+	/**
+	 * The operation id for the '<em>Check Employee ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_HANDLER___CHECK_EMPLOYEE_ID__INT = 5;
+
+	/**
+	 * The number of operations of the '<em>User Handler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_HANDLER_OPERATION_COUNT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Email</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__EMAIL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Booking Handler</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__BOOKING_HANDLER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Logincontroller</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__LOGINCONTROLLER = 3;
+
+	/**
+	 * The feature id for the '<em><b>Userhandler</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__USERHANDLER = 4;
+
+	/**
+	 * The feature id for the '<em><b>Address</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__ADDRESS = 5;
+
+	/**
+	 * The feature id for the '<em><b>User Handler</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__USER_HANDLER = 6;
+
+	/**
+	 * The number of structural features of the '<em>User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_FEATURE_COUNT = 7;
+
+	/**
+	 * The operation id for the '<em>Login</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER___LOGIN__INT_STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Book Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER___BOOK_ROOM__BOOKING = 1;
+
+	/**
+	 * The operation id for the '<em>Change Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER___CHANGE_BOOKING__BOOKING_BOOKING = 2;
+
+	/**
+	 * The operation id for the '<em>Cancel Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER___CANCEL_BOOKING__BOOKING = 3;
+
+	/**
+	 * The operation id for the '<em>Attempt Check In</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER___ATTEMPT_CHECK_IN__BOOKING = 4;
+
+	/**
+	 * The operation id for the '<em>Attempt Check Out</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER___ATTEMPT_CHECK_OUT__BOOKING = 5;
+
+	/**
+	 * The number of operations of the '<em>User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_OPERATION_COUNT = 6;
 
 
 	/**
@@ -1303,14 +1330,25 @@ public interface BuissnesslayerPackage extends EPackage {
 	EReference getUser_Address();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#enterContactData(java.lang.String, java.lang.String, Classes.Buissnesslayer.Address) <em>Enter Contact Data</em>}' operation.
+	 * Returns the meta object for the reference '{@link Classes.Buissnesslayer.User#getUserHandler <em>User Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Enter Contact Data</em>' operation.
-	 * @see Classes.Buissnesslayer.User#enterContactData(java.lang.String, java.lang.String, Classes.Buissnesslayer.Address)
+	 * @return the meta object for the reference '<em>User Handler</em>'.
+	 * @see Classes.Buissnesslayer.User#getUserHandler()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EOperation getUser__EnterContactData__String_String_Address();
+	EReference getUser_UserHandler();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#login(int, java.lang.String) <em>Login</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Login</em>' operation.
+	 * @see Classes.Buissnesslayer.User#login(int, java.lang.String)
+	 * @generated
+	 */
+	EOperation getUser__Login__int_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#bookRoom(Classes.Buissnesslayer.Booking) <em>Book Room</em>}' operation.
@@ -1455,6 +1493,26 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getUserHandler__CreateSingletonHandler();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#isEmailValid(java.lang.String) <em>Is Email Valid</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Email Valid</em>' operation.
+	 * @see Classes.Buissnesslayer.UserHandler#isEmailValid(java.lang.String)
+	 * @generated
+	 */
+	EOperation getUserHandler__IsEmailValid__String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#checkEmployeeID(int) <em>Check Employee ID</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Employee ID</em>' operation.
+	 * @see Classes.Buissnesslayer.UserHandler#checkEmployeeID(int)
+	 * @generated
+	 */
+	EOperation getUserHandler__CheckEmployeeID__int();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Buissnesslayer.Address <em>Address</em>}'.
@@ -2004,12 +2062,20 @@ public interface BuissnesslayerPackage extends EPackage {
 		EReference USER__ADDRESS = eINSTANCE.getUser_Address();
 
 		/**
-		 * The meta object literal for the '<em><b>Enter Contact Data</b></em>' operation.
+		 * The meta object literal for the '<em><b>User Handler</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER___ENTER_CONTACT_DATA__STRING_STRING_ADDRESS = eINSTANCE.getUser__EnterContactData__String_String_Address();
+		EReference USER__USER_HANDLER = eINSTANCE.getUser_UserHandler();
+
+		/**
+		 * The meta object literal for the '<em><b>Login</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER___LOGIN__INT_STRING = eINSTANCE.getUser__Login__int_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Book Room</b></em>' operation.
@@ -2124,6 +2190,22 @@ public interface BuissnesslayerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation USER_HANDLER___CREATE_SINGLETON_HANDLER = eINSTANCE.getUserHandler__CreateSingletonHandler();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Email Valid</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER_HANDLER___IS_EMAIL_VALID__STRING = eINSTANCE.getUserHandler__IsEmailValid__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Employee ID</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER_HANDLER___CHECK_EMPLOYEE_ID__INT = eINSTANCE.getUserHandler__CheckEmployeeID__int();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Buissnesslayer.impl.AddressImpl <em>Address</em>}' class.

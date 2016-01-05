@@ -4,6 +4,7 @@ package Classes.Datalayer.impl;
 
 import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.Room;
+import Classes.Buissnesslayer.User;
 import Classes.Datalayer.Database;
 import Classes.Datalayer.DatalayerPackage;
 
@@ -34,24 +35,24 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class DatabaseImpl extends MinimalEObjectImpl.Container implements Database {
 	/**
-	 * The cached value of the '{@link #getUserDB() <em>User DB</em>}' attribute list.
+	 * The cached value of the '{@link #getUserDB() <em>User DB</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getUserDB()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> userDB;
+	protected EList<User> userDB;
 
 	/**
-	 * The cached value of the '{@link #getEmployeeDB() <em>Employee DB</em>}' attribute list.
+	 * The cached value of the '{@link #getEmployeeDB() <em>Employee DB</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEmployeeDB()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> employeeDB;
+	protected EList<User> employeeDB;
 	/**
 	 * The cached value of the '{@link #getBookingDB() <em>Booking DB</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -104,9 +105,9 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getUserDB() {
+	public EList<User> getUserDB() {
 		if (userDB == null) {
-			userDB = new EDataTypeUniqueEList<String>(String.class, this, DatalayerPackage.DATABASE__USER_DB);
+			userDB = new EObjectResolvingEList<User>(User.class, this, DatalayerPackage.DATABASE__USER_DB);
 		}
 		return userDB;
 	}
@@ -116,9 +117,9 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getEmployeeDB() {
+	public EList<User> getEmployeeDB() {
 		if (employeeDB == null) {
-			employeeDB = new EDataTypeUniqueEList<String>(String.class, this, DatalayerPackage.DATABASE__EMPLOYEE_DB);
+			employeeDB = new EObjectResolvingEList<User>(User.class, this, DatalayerPackage.DATABASE__EMPLOYEE_DB);
 		}
 		return employeeDB;
 	}
@@ -192,11 +193,11 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		switch (featureID) {
 			case DatalayerPackage.DATABASE__USER_DB:
 				getUserDB().clear();
-				getUserDB().addAll((Collection<? extends String>)newValue);
+				getUserDB().addAll((Collection<? extends User>)newValue);
 				return;
 			case DatalayerPackage.DATABASE__EMPLOYEE_DB:
 				getEmployeeDB().clear();
-				getEmployeeDB().addAll((Collection<? extends String>)newValue);
+				getEmployeeDB().addAll((Collection<? extends User>)newValue);
 				return;
 			case DatalayerPackage.DATABASE__BOOKING_DB:
 				getBookingDB().clear();
@@ -273,11 +274,7 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (userDB: ");
-		result.append(userDB);
-		result.append(", employeeDB: ");
-		result.append(employeeDB);
-		result.append(", extrasDB: ");
+		result.append(" (extrasDB: ");
 		result.append(extrasDB);
 		result.append(')');
 		return result.toString();
