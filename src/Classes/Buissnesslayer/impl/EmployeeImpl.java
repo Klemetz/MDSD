@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employee {
+public class EmployeeImpl extends UserImpl implements Employee {
 	/**
 	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -149,50 +148,6 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void changeBooking(Booking oldBooking, Booking newBooking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void cancelBooking(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void attemptCheckIn(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void attemptCheckOut(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -266,18 +221,6 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 		switch (operationID) {
 			case BuissnesslayerPackage.EMPLOYEE___INTBOOK_ROOM__BOOKING:
 				intbookRoom((Booking)arguments.get(0));
-				return null;
-			case BuissnesslayerPackage.EMPLOYEE___CHANGE_BOOKING__BOOKING_BOOKING:
-				changeBooking((Booking)arguments.get(0), (Booking)arguments.get(1));
-				return null;
-			case BuissnesslayerPackage.EMPLOYEE___CANCEL_BOOKING__BOOKING:
-				cancelBooking((Booking)arguments.get(0));
-				return null;
-			case BuissnesslayerPackage.EMPLOYEE___ATTEMPT_CHECK_IN__BOOKING:
-				attemptCheckIn((Booking)arguments.get(0));
-				return null;
-			case BuissnesslayerPackage.EMPLOYEE___ATTEMPT_CHECK_OUT__BOOKING:
-				attemptCheckOut((Booking)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

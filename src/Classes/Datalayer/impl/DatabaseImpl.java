@@ -3,15 +3,22 @@
 package Classes.Datalayer.impl;
 
 import Classes.Buissnesslayer.Booking;
+import Classes.Buissnesslayer.BuissnesslayerPackage;
+import Classes.Buissnesslayer.Employee;
+import Classes.Buissnesslayer.Guest;
 import Classes.Buissnesslayer.Room;
-import Classes.Buissnesslayer.User;
+import Classes.Buissnesslayer.UserHandler;
 import Classes.Datalayer.Database;
 import Classes.Datalayer.DatalayerPackage;
 
 import java.util.Collection;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -25,6 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link Classes.Datalayer.impl.DatabaseImpl#getUserDB <em>User DB</em>}</li>
+ *   <li>{@link Classes.Datalayer.impl.DatabaseImpl#getUserhandler <em>Userhandler</em>}</li>
  *   <li>{@link Classes.Datalayer.impl.DatabaseImpl#getEmployeeDB <em>Employee DB</em>}</li>
  *   <li>{@link Classes.Datalayer.impl.DatabaseImpl#getBookingDB <em>Booking DB</em>}</li>
  *   <li>{@link Classes.Datalayer.impl.DatabaseImpl#getRoomDB <em>Room DB</em>}</li>
@@ -42,7 +50,17 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<User> userDB;
+	protected EList<Guest> userDB;
+
+	/**
+	 * The cached value of the '{@link #getUserhandler() <em>Userhandler</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUserhandler()
+	 * @generated
+	 * @ordered
+	 */
+	protected UserHandler userhandler;
 
 	/**
 	 * The cached value of the '{@link #getEmployeeDB() <em>Employee DB</em>}' reference list.
@@ -52,7 +70,7 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<User> employeeDB;
+	protected EList<Employee> employeeDB;
 	/**
 	 * The cached value of the '{@link #getBookingDB() <em>Booking DB</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -105,9 +123,9 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<User> getUserDB() {
+	public EList<Guest> getUserDB() {
 		if (userDB == null) {
-			userDB = new EObjectResolvingEList<User>(User.class, this, DatalayerPackage.DATABASE__USER_DB);
+			userDB = new EObjectResolvingEList<Guest>(Guest.class, this, DatalayerPackage.DATABASE__USER_DB);
 		}
 		return userDB;
 	}
@@ -117,9 +135,69 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<User> getEmployeeDB() {
+	public UserHandler getUserhandler() {
+		if (userhandler != null && userhandler.eIsProxy()) {
+			InternalEObject oldUserhandler = (InternalEObject)userhandler;
+			userhandler = (UserHandler)eResolveProxy(oldUserhandler);
+			if (userhandler != oldUserhandler) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DatalayerPackage.DATABASE__USERHANDLER, oldUserhandler, userhandler));
+			}
+		}
+		return userhandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UserHandler basicGetUserhandler() {
+		return userhandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUserhandler(UserHandler newUserhandler, NotificationChain msgs) {
+		UserHandler oldUserhandler = userhandler;
+		userhandler = newUserhandler;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DatalayerPackage.DATABASE__USERHANDLER, oldUserhandler, newUserhandler);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUserhandler(UserHandler newUserhandler) {
+		if (newUserhandler != userhandler) {
+			NotificationChain msgs = null;
+			if (userhandler != null)
+				msgs = ((InternalEObject)userhandler).eInverseRemove(this, BuissnesslayerPackage.USER_HANDLER__DATABASE, UserHandler.class, msgs);
+			if (newUserhandler != null)
+				msgs = ((InternalEObject)newUserhandler).eInverseAdd(this, BuissnesslayerPackage.USER_HANDLER__DATABASE, UserHandler.class, msgs);
+			msgs = basicSetUserhandler(newUserhandler, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DatalayerPackage.DATABASE__USERHANDLER, newUserhandler, newUserhandler));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Employee> getEmployeeDB() {
 		if (employeeDB == null) {
-			employeeDB = new EObjectResolvingEList<User>(User.class, this, DatalayerPackage.DATABASE__EMPLOYEE_DB);
+			employeeDB = new EObjectResolvingEList<Employee>(Employee.class, this, DatalayerPackage.DATABASE__EMPLOYEE_DB);
 		}
 		return employeeDB;
 	}
@@ -166,10 +244,43 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DatalayerPackage.DATABASE__USERHANDLER:
+				if (userhandler != null)
+					msgs = ((InternalEObject)userhandler).eInverseRemove(this, BuissnesslayerPackage.USER_HANDLER__DATABASE, UserHandler.class, msgs);
+				return basicSetUserhandler((UserHandler)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DatalayerPackage.DATABASE__USERHANDLER:
+				return basicSetUserhandler(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case DatalayerPackage.DATABASE__USER_DB:
 				return getUserDB();
+			case DatalayerPackage.DATABASE__USERHANDLER:
+				if (resolve) return getUserhandler();
+				return basicGetUserhandler();
 			case DatalayerPackage.DATABASE__EMPLOYEE_DB:
 				return getEmployeeDB();
 			case DatalayerPackage.DATABASE__BOOKING_DB:
@@ -193,11 +304,14 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		switch (featureID) {
 			case DatalayerPackage.DATABASE__USER_DB:
 				getUserDB().clear();
-				getUserDB().addAll((Collection<? extends User>)newValue);
+				getUserDB().addAll((Collection<? extends Guest>)newValue);
+				return;
+			case DatalayerPackage.DATABASE__USERHANDLER:
+				setUserhandler((UserHandler)newValue);
 				return;
 			case DatalayerPackage.DATABASE__EMPLOYEE_DB:
 				getEmployeeDB().clear();
-				getEmployeeDB().addAll((Collection<? extends User>)newValue);
+				getEmployeeDB().addAll((Collection<? extends Employee>)newValue);
 				return;
 			case DatalayerPackage.DATABASE__BOOKING_DB:
 				getBookingDB().clear();
@@ -226,6 +340,9 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 			case DatalayerPackage.DATABASE__USER_DB:
 				getUserDB().clear();
 				return;
+			case DatalayerPackage.DATABASE__USERHANDLER:
+				setUserhandler((UserHandler)null);
+				return;
 			case DatalayerPackage.DATABASE__EMPLOYEE_DB:
 				getEmployeeDB().clear();
 				return;
@@ -252,6 +369,8 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		switch (featureID) {
 			case DatalayerPackage.DATABASE__USER_DB:
 				return userDB != null && !userDB.isEmpty();
+			case DatalayerPackage.DATABASE__USERHANDLER:
+				return userhandler != null;
 			case DatalayerPackage.DATABASE__EMPLOYEE_DB:
 				return employeeDB != null && !employeeDB.isEmpty();
 			case DatalayerPackage.DATABASE__BOOKING_DB:

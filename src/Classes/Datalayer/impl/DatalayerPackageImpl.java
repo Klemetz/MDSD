@@ -134,7 +134,7 @@ public class DatalayerPackageImpl extends EPackageImpl implements DatalayerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDatabase_EmployeeDB() {
+	public EReference getDatabase_Userhandler() {
 		return (EReference)databaseEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -143,7 +143,7 @@ public class DatalayerPackageImpl extends EPackageImpl implements DatalayerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDatabase_BookingDB() {
+	public EReference getDatabase_EmployeeDB() {
 		return (EReference)databaseEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -152,7 +152,7 @@ public class DatalayerPackageImpl extends EPackageImpl implements DatalayerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDatabase_RoomDB() {
+	public EReference getDatabase_BookingDB() {
 		return (EReference)databaseEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -161,8 +161,17 @@ public class DatalayerPackageImpl extends EPackageImpl implements DatalayerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDatabase_RoomDB() {
+		return (EReference)databaseEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getDatabase_ExtrasDB() {
-		return (EAttribute)databaseEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)databaseEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -195,6 +204,7 @@ public class DatalayerPackageImpl extends EPackageImpl implements DatalayerPacka
 		// Create classes and their features
 		databaseEClass = createEClass(DATABASE);
 		createEReference(databaseEClass, DATABASE__USER_DB);
+		createEReference(databaseEClass, DATABASE__USERHANDLER);
 		createEReference(databaseEClass, DATABASE__EMPLOYEE_DB);
 		createEReference(databaseEClass, DATABASE__BOOKING_DB);
 		createEReference(databaseEClass, DATABASE__ROOM_DB);
@@ -235,8 +245,9 @@ public class DatalayerPackageImpl extends EPackageImpl implements DatalayerPacka
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(databaseEClass, Database.class, "Database", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDatabase_UserDB(), theBuissnesslayerPackage.getUser(), null, "userDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDatabase_EmployeeDB(), theBuissnesslayerPackage.getUser(), null, "employeeDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDatabase_UserDB(), theBuissnesslayerPackage.getGuest(), null, "userDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDatabase_Userhandler(), theBuissnesslayerPackage.getUserHandler(), theBuissnesslayerPackage.getUserHandler_Database(), "userhandler", null, 1, 1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDatabase_EmployeeDB(), theBuissnesslayerPackage.getEmployee(), null, "employeeDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDatabase_BookingDB(), theBuissnesslayerPackage.getBooking(), null, "bookingDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDatabase_RoomDB(), theBuissnesslayerPackage.getRoom(), null, "roomDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDatabase_ExtrasDB(), ecorePackage.getEString(), "extrasDB", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

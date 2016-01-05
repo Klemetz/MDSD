@@ -301,7 +301,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLoginController_LoginController() {
+	public EReference getLoginController_Paymenthandler() {
 		return (EReference)loginControllerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -310,7 +310,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLoginController_Paymenthandler() {
+	public EReference getLoginController_Userhandler() {
 		return (EReference)loginControllerEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -337,17 +337,8 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLoginController__GetSingletonController() {
+	public EOperation getLoginController__LoginCreateGuest__String() {
 		return loginControllerEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getLoginController__CreateSingletonHandler() {
-		return loginControllerEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -407,12 +398,11 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 
 		loginControllerEClass = createEClass(LOGIN_CONTROLLER);
 		createEReference(loginControllerEClass, LOGIN_CONTROLLER__CURRENT_USER);
-		createEReference(loginControllerEClass, LOGIN_CONTROLLER__LOGIN_CONTROLLER);
 		createEReference(loginControllerEClass, LOGIN_CONTROLLER__PAYMENTHANDLER);
+		createEReference(loginControllerEClass, LOGIN_CONTROLLER__USERHANDLER);
 		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT);
 		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___LOGIN_GUEST__INT);
-		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___GET_SINGLETON_CONTROLLER);
-		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___CREATE_SINGLETON_HANDLER);
+		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING);
 
 		loginController_DataType1EClass = createEClass(LOGIN_CONTROLLER_DATA_TYPE1);
 	}
@@ -491,8 +481,8 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 
 		initEClass(loginControllerEClass, LoginController.class, "LoginController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLoginController_CurrentUser(), theBuissnesslayerPackage.getUser(), null, "currentUser", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getLoginController_LoginController(), this.getLoginController(), null, "LoginController", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getLoginController_Paymenthandler(), theBuisnessLogicLayerPackage.getPaymentHandler(), null, "paymenthandler", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getLoginController_Userhandler(), theBuissnesslayerPackage.getUserHandler(), theBuissnesslayerPackage.getUserHandler_Logincontroller(), "userhandler", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getLoginController__LoginEmployee__int(), ecorePackage.getEBoolean(), "loginEmployee", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "ID", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -500,9 +490,8 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		op = initEOperation(getLoginController__LoginGuest__int(), ecorePackage.getEBoolean(), "loginGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getLoginController__GetSingletonController(), null, "getSingletonController", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getLoginController__CreateSingletonHandler(), null, "createSingletonHandler", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getLoginController__LoginCreateGuest__String(), theBuissnesslayerPackage.getUser(), "loginCreateGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(loginController_DataType1EClass, LoginController_DataType1.class, "LoginController_DataType1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

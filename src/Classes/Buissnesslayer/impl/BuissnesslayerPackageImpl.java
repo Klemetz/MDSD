@@ -343,7 +343,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBookingHandler_SingletonBooking() {
+	public EReference getBookingHandler_User() {
 		return (EReference)bookingHandlerEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -352,7 +352,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBookingHandler_User() {
+	public EReference getBookingHandler_Database() {
 		return (EReference)bookingHandlerEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -361,7 +361,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBookingHandler_Database() {
+	public EReference getBookingHandler_Userhandler() {
 		return (EReference)bookingHandlerEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -442,26 +442,8 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__GetSinglettonBooking() {
-		return bookingHandlerEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBookingHandler__CreateSingletonHandler() {
-		return bookingHandlerEClass.getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getBookingHandler__FetchAvailableExtras() {
-		return bookingHandlerEClass.getEOperations().get(10);
+		return bookingHandlerEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -496,7 +478,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUser_BookingHandler() {
+	public EReference getUser_Logincontroller() {
 		return (EReference)userEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -505,7 +487,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUser_Logincontroller() {
+	public EReference getUser_Userhandler() {
 		return (EReference)userEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -514,7 +496,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUser_Userhandler() {
+	public EReference getUser_Address() {
 		return (EReference)userEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -523,25 +505,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUser_Address() {
-		return (EReference)userEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getUser_UserHandler() {
-		return (EReference)userEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getUser__Login__int_String() {
+	public EOperation getUser__BookRoom__Booking() {
 		return userEClass.getEOperations().get(0);
 	}
 
@@ -550,7 +514,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getUser__BookRoom__Booking() {
+	public EOperation getUser__ChangeBooking__Booking_Booking() {
 		return userEClass.getEOperations().get(1);
 	}
 
@@ -559,7 +523,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getUser__ChangeBooking__Booking_Booking() {
+	public EOperation getUser__CancelBooking__Booking() {
 		return userEClass.getEOperations().get(2);
 	}
 
@@ -568,7 +532,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getUser__CancelBooking__Booking() {
+	public EOperation getUser__AttemptCheckIn__Booking() {
 		return userEClass.getEOperations().get(3);
 	}
 
@@ -577,17 +541,8 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getUser__AttemptCheckIn__Booking() {
-		return userEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getUser__AttemptCheckOut__Booking() {
-		return userEClass.getEOperations().get(5);
+		return userEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -613,15 +568,6 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUserHandler_SingletonUserHandler() {
-		return (EReference)userHandlerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getUserHandler_Logincontroller() {
 		return (EReference)userHandlerEClass.getEStructuralFeatures().get(2);
 	}
@@ -632,16 +578,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * @generated
 	 */
 	public EReference getUserHandler_Database() {
-		return (EReference)userHandlerEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getUserHandler__AddGuestDB__PaymentInfo_User() {
-		return userHandlerEClass.getEOperations().get(0);
+		return (EReference)userHandlerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -650,25 +587,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * @generated
 	 */
 	public EOperation getUserHandler__SendEmailVerification__String() {
-		return userHandlerEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getUserHandler__GetSingletonHandler() {
-		return userHandlerEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getUserHandler__CreateSingletonHandler() {
-		return userHandlerEClass.getEOperations().get(3);
+		return userHandlerEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -677,7 +596,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * @generated
 	 */
 	public EOperation getUserHandler__IsEmailValid__String() {
-		return userHandlerEClass.getEOperations().get(4);
+		return userHandlerEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -686,7 +605,16 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * @generated
 	 */
 	public EOperation getUserHandler__CheckEmployeeID__int() {
-		return userHandlerEClass.getEOperations().get(5);
+		return userHandlerEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getUserHandler__AddNewGuest__String() {
+		return userHandlerEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -748,44 +676,8 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGuest__BookRoom__Booking() {
-		return guestEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__ChangeBooking__Booking_Booking() {
-		return guestEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__CancelBooking__Booking() {
-		return guestEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__AttemptCheckIn__Booking() {
-		return guestEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getGuest__AttemptCheckOut__Booking() {
-		return guestEClass.getEOperations().get(4);
+	public EAttribute getGuest_WrokAround() {
+		return (EAttribute)guestEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -822,42 +714,6 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 */
 	public EOperation getEmployee__IntbookRoom__Booking() {
 		return employeeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEmployee__ChangeBooking__Booking_Booking() {
-		return employeeEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEmployee__CancelBooking__Booking() {
-		return employeeEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEmployee__AttemptCheckIn__Booking() {
-		return employeeEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEmployee__AttemptCheckOut__Booking() {
-		return employeeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -909,9 +765,9 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		bookingHandlerEClass = createEClass(BOOKING_HANDLER);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__BOOKING);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__BOOKINGS);
-		createEReference(bookingHandlerEClass, BOOKING_HANDLER__SINGLETON_BOOKING);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__USER);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__DATABASE);
+		createEReference(bookingHandlerEClass, BOOKING_HANDLER__USERHANDLER);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___FETCH_AVAILABILITY__INT_INT_ROOM_INT);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___FETCH_BOOKING__BOOKING);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___ATTEMPT_BOOK_ROOM__BOOKING);
@@ -920,25 +776,28 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CHECK_IN__BOOKING);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CHECK_OUT__BOOKING);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___SEND_ERROR_MSG);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___GET_SINGLETTON_BOOKING);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___CREATE_SINGLETON_HANDLER);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___FETCH_AVAILABLE_EXTRAS);
 
-		guestEClass = createEClass(GUEST);
-		createEOperation(guestEClass, GUEST___BOOK_ROOM__BOOKING);
-		createEOperation(guestEClass, GUEST___CHANGE_BOOKING__BOOKING_BOOKING);
-		createEOperation(guestEClass, GUEST___CANCEL_BOOKING__BOOKING);
-		createEOperation(guestEClass, GUEST___ATTEMPT_CHECK_IN__BOOKING);
-		createEOperation(guestEClass, GUEST___ATTEMPT_CHECK_OUT__BOOKING);
+		userEClass = createEClass(USER);
+		createEAttribute(userEClass, USER__NAME);
+		createEAttribute(userEClass, USER__EMAIL);
+		createEReference(userEClass, USER__LOGINCONTROLLER);
+		createEReference(userEClass, USER__USERHANDLER);
+		createEReference(userEClass, USER__ADDRESS);
+		createEOperation(userEClass, USER___BOOK_ROOM__BOOKING);
+		createEOperation(userEClass, USER___CHANGE_BOOKING__BOOKING_BOOKING);
+		createEOperation(userEClass, USER___CANCEL_BOOKING__BOOKING);
+		createEOperation(userEClass, USER___ATTEMPT_CHECK_IN__BOOKING);
+		createEOperation(userEClass, USER___ATTEMPT_CHECK_OUT__BOOKING);
 
-		employeeEClass = createEClass(EMPLOYEE);
-		createEAttribute(employeeEClass, EMPLOYEE__ID);
-		createEAttribute(employeeEClass, EMPLOYEE__PASSWORD);
-		createEOperation(employeeEClass, EMPLOYEE___INTBOOK_ROOM__BOOKING);
-		createEOperation(employeeEClass, EMPLOYEE___CHANGE_BOOKING__BOOKING_BOOKING);
-		createEOperation(employeeEClass, EMPLOYEE___CANCEL_BOOKING__BOOKING);
-		createEOperation(employeeEClass, EMPLOYEE___ATTEMPT_CHECK_IN__BOOKING);
-		createEOperation(employeeEClass, EMPLOYEE___ATTEMPT_CHECK_OUT__BOOKING);
+		userHandlerEClass = createEClass(USER_HANDLER);
+		createEAttribute(userHandlerEClass, USER_HANDLER__USERS);
+		createEReference(userHandlerEClass, USER_HANDLER__DATABASE);
+		createEReference(userHandlerEClass, USER_HANDLER__LOGINCONTROLLER);
+		createEOperation(userHandlerEClass, USER_HANDLER___SEND_EMAIL_VERIFICATION__STRING);
+		createEOperation(userHandlerEClass, USER_HANDLER___IS_EMAIL_VALID__STRING);
+		createEOperation(userHandlerEClass, USER_HANDLER___CHECK_EMPLOYEE_ID__INT);
+		createEOperation(userHandlerEClass, USER_HANDLER___ADD_NEW_GUEST__STRING);
 
 		addressEClass = createEClass(ADDRESS);
 		createEAttribute(addressEClass, ADDRESS__STREET);
@@ -946,32 +805,13 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		createEAttribute(addressEClass, ADDRESS__CITY);
 		createEAttribute(addressEClass, ADDRESS__COUNTRY);
 
-		userHandlerEClass = createEClass(USER_HANDLER);
-		createEAttribute(userHandlerEClass, USER_HANDLER__USERS);
-		createEReference(userHandlerEClass, USER_HANDLER__SINGLETON_USER_HANDLER);
-		createEReference(userHandlerEClass, USER_HANDLER__LOGINCONTROLLER);
-		createEReference(userHandlerEClass, USER_HANDLER__DATABASE);
-		createEOperation(userHandlerEClass, USER_HANDLER___ADD_GUEST_DB__PAYMENTINFO_USER);
-		createEOperation(userHandlerEClass, USER_HANDLER___SEND_EMAIL_VERIFICATION__STRING);
-		createEOperation(userHandlerEClass, USER_HANDLER___GET_SINGLETON_HANDLER);
-		createEOperation(userHandlerEClass, USER_HANDLER___CREATE_SINGLETON_HANDLER);
-		createEOperation(userHandlerEClass, USER_HANDLER___IS_EMAIL_VALID__STRING);
-		createEOperation(userHandlerEClass, USER_HANDLER___CHECK_EMPLOYEE_ID__INT);
+		employeeEClass = createEClass(EMPLOYEE);
+		createEAttribute(employeeEClass, EMPLOYEE__ID);
+		createEAttribute(employeeEClass, EMPLOYEE__PASSWORD);
+		createEOperation(employeeEClass, EMPLOYEE___INTBOOK_ROOM__BOOKING);
 
-		userEClass = createEClass(USER);
-		createEAttribute(userEClass, USER__NAME);
-		createEAttribute(userEClass, USER__EMAIL);
-		createEReference(userEClass, USER__BOOKING_HANDLER);
-		createEReference(userEClass, USER__LOGINCONTROLLER);
-		createEReference(userEClass, USER__USERHANDLER);
-		createEReference(userEClass, USER__ADDRESS);
-		createEReference(userEClass, USER__USER_HANDLER);
-		createEOperation(userEClass, USER___LOGIN__INT_STRING);
-		createEOperation(userEClass, USER___BOOK_ROOM__BOOKING);
-		createEOperation(userEClass, USER___CHANGE_BOOKING__BOOKING_BOOKING);
-		createEOperation(userEClass, USER___CANCEL_BOOKING__BOOKING);
-		createEOperation(userEClass, USER___ATTEMPT_CHECK_IN__BOOKING);
-		createEOperation(userEClass, USER___ATTEMPT_CHECK_OUT__BOOKING);
+		guestEClass = createEClass(GUEST);
+		createEAttribute(guestEClass, GUEST__WROK_AROUND);
 	}
 
 	/**
@@ -1000,13 +840,14 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		// Obtain other dependent packages
 		DatalayerPackage theDatalayerPackage = (DatalayerPackage)EPackage.Registry.INSTANCE.getEPackage(DatalayerPackage.eNS_URI);
 		InteractionlayerPackage theInteractionlayerPackage = (InteractionlayerPackage)EPackage.Registry.INSTANCE.getEPackage(InteractionlayerPackage.eNS_URI);
-		BuisnessLogicLayerPackage theBuisnessLogicLayerPackage = (BuisnessLogicLayerPackage)EPackage.Registry.INSTANCE.getEPackage(BuisnessLogicLayerPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		employeeEClass.getESuperTypes().add(this.getUser());
+		guestEClass.getESuperTypes().add(this.getUser());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1030,9 +871,9 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		initEClass(bookingHandlerEClass, BookingHandler.class, "BookingHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBookingHandler_Booking(), this.getBooking(), null, "booking", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingHandler_Bookings(), this.getBooking(), null, "Bookings", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBookingHandler_SingletonBooking(), this.getBookingHandler(), null, "singletonBooking", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingHandler_User(), this.getUser(), null, "User", null, 1, -1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingHandler_Database(), theDatalayerPackage.getDatabase(), null, "database", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookingHandler_Userhandler(), this.getUserHandler(), null, "userhandler", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		EOperation op = initEOperation(getBookingHandler__FetchAvailability__int_int_Room_int(), null, "fetchAvailability", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1060,91 +901,14 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 
 		initEOperation(getBookingHandler__SendErrorMsg(), null, "sendErrorMsg", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBookingHandler__GetSinglettonBooking(), null, "getSinglettonBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBookingHandler__CreateSingletonHandler(), null, "createSingletonHandler", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEOperation(getBookingHandler__FetchAvailableExtras(), null, "fetchAvailableExtras", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(guestEClass, Guest.class, "Guest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		op = initEOperation(getGuest__BookRoom__Booking(), null, "bookRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getGuest__ChangeBooking__Booking_Booking(), null, "changeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "oldBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "newBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getGuest__CancelBooking__Booking(), null, "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getGuest__AttemptCheckIn__Booking(), null, "attemptCheckIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getGuest__AttemptCheckOut__Booking(), null, "attemptCheckOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(employeeEClass, Employee.class, "Employee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEmployee_ID(), ecorePackage.getEInt(), "ID", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEmployee_Password(), ecorePackage.getEString(), "Password", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		op = initEOperation(getEmployee__IntbookRoom__Booking(), null, "intbookRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getEmployee__ChangeBooking__Booking_Booking(), null, "changeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "oldBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "newBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getEmployee__CancelBooking__Booking(), null, "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getEmployee__AttemptCheckIn__Booking(), null, "attemptCheckIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getEmployee__AttemptCheckOut__Booking(), null, "attemptCheckOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(addressEClass, Address.class, "Address", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAddress_Street(), ecorePackage.getEString(), "street", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAddress_PostalNumber(), ecorePackage.getEInt(), "postalNumber", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAddress_City(), ecorePackage.getEString(), "city", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAddress_Country(), ecorePackage.getEString(), "country", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(userHandlerEClass, UserHandler.class, "UserHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getUserHandler_Users(), ecorePackage.getEString(), "Users", null, 1, 1, UserHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getUserHandler_SingletonUserHandler(), this.getUserHandler(), null, "singletonUserHandler", null, 1, 1, UserHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getUserHandler_Logincontroller(), theInteractionlayerPackage.getLoginController(), null, "logincontroller", null, 1, 1, UserHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getUserHandler_Database(), theDatalayerPackage.getDatabase(), null, "database", null, 1, 1, UserHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		op = initEOperation(getUserHandler__AddGuestDB__PaymentInfo_User(), null, "addGuestDB", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theBuisnessLogicLayerPackage.getPaymentInfo(), "paymentInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getUser(), "user", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getUserHandler__SendEmailVerification__String(), null, "sendEmailVerification", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getUserHandler__GetSingletonHandler(), null, "getSingletonHandler", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getUserHandler__CreateSingletonHandler(), null, "createSingletonHandler", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getUserHandler__IsEmailValid__String(), ecorePackage.getEBoolean(), "isEmailValid", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getUserHandler__CheckEmployeeID__int(), this.getUser(), "checkEmployeeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "employeeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(userEClass, User.class, "User", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUser_Name(), ecorePackage.getEString(), "Name", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getUser_Email(), ecorePackage.getEString(), "Email", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getUser_BookingHandler(), this.getBookingHandler(), null, "bookingHandler", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getUser_Logincontroller(), theInteractionlayerPackage.getLoginController(), null, "logincontroller", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getUser_Userhandler(), this.getUserHandler(), null, "userhandler", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getUser_Address(), this.getAddress(), null, "address", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getUser_UserHandler(), this.getUserHandler(), null, "userHandler", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		op = initEOperation(getUser__Login__int_String(), ecorePackage.getEBoolean(), "login", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "employeeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getUser__BookRoom__Booking(), null, "bookRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1161,6 +925,39 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 
 		op = initEOperation(getUser__AttemptCheckOut__Booking(), null, "attemptCheckOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(userHandlerEClass, UserHandler.class, "UserHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUserHandler_Users(), ecorePackage.getEString(), "Users", null, 1, 1, UserHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getUserHandler_Database(), theDatalayerPackage.getDatabase(), theDatalayerPackage.getDatabase_Userhandler(), "database", null, 1, 1, UserHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getUserHandler_Logincontroller(), theInteractionlayerPackage.getLoginController(), theInteractionlayerPackage.getLoginController_Userhandler(), "logincontroller", null, 1, 1, UserHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		op = initEOperation(getUserHandler__SendEmailVerification__String(), null, "sendEmailVerification", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getUserHandler__IsEmailValid__String(), ecorePackage.getEBoolean(), "isEmailValid", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getUserHandler__CheckEmployeeID__int(), this.getUser(), "checkEmployeeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "employeeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getUserHandler__AddNewGuest__String(), this.getUser(), "AddNewGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(addressEClass, Address.class, "Address", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAddress_Street(), ecorePackage.getEString(), "street", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAddress_PostalNumber(), ecorePackage.getEInt(), "postalNumber", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAddress_City(), ecorePackage.getEString(), "city", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAddress_Country(), ecorePackage.getEString(), "country", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(employeeEClass, Employee.class, "Employee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEmployee_ID(), ecorePackage.getEInt(), "ID", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmployee_Password(), ecorePackage.getEString(), "Password", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		op = initEOperation(getEmployee__IntbookRoom__Booking(), null, "intbookRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(guestEClass, Guest.class, "Guest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGuest_WrokAround(), ecorePackage.getEInt(), "wrokAround", null, 0, -1, Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

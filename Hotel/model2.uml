@@ -76,6 +76,16 @@
     <message xmi:type="uml:Message" xmi:id="_G8RLcJkvEeWNibpp71hW3w" name="checkOut Successful" messageSort="asynchCall" receiveEvent="_G8Vc4JkvEeWNibpp71hW3w" sendEvent="_G8UOwJkvEeWNibpp71hW3w"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" href="Classes.uml#_7oIuALMHEeWpmdwYTYylNw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_SXooELP1EeWbxK3v0VQAjQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SXxK8LP1EeWbxK3v0VQAjQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SXxyALP1EeWbxK3v0VQAjQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <memberEnd xmi:type="uml:Property" href="Classes.uml#_SX2DcLP1EeWbxK3v0VQAjQ"/>
+    <memberEnd xmi:type="uml:Property" href="#_SX2qgLP1EeWbxK3v0VQAjQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_SX2qgLP1EeWbxK3v0VQAjQ" name="bookinghandler" association="_SXooELP1EeWbxK3v0VQAjQ">
+      <type xmi:type="uml:Class" href="Classes.uml#_S0sSIJkHEeWgf_EMGD-UnQ"/>
+    </ownedEnd>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_geLt4JgbEeWgf_EMGD-UnQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_geM8AJgbEeWgf_EMGD-UnQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>

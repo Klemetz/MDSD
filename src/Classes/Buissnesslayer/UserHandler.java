@@ -2,7 +2,6 @@
  */
 package Classes.Buissnesslayer;
 
-import Classes.BuisnessLogicLayer.PaymentInfo;
 import Classes.Datalayer.Database;
 
 import Classes.Interactionlayer.LoginController;
@@ -19,9 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link Classes.Buissnesslayer.UserHandler#getUsers <em>Users</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.UserHandler#getSingletonUserHandler <em>Singleton User Handler</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.UserHandler#getLogincontroller <em>Logincontroller</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.UserHandler#getDatabase <em>Database</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.UserHandler#getLogincontroller <em>Logincontroller</em>}</li>
  * </ul>
  *
  * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUserHandler()
@@ -56,33 +54,8 @@ public interface UserHandler extends EObject {
 	void setUsers(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Singleton User Handler</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Singleton User Handler</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Singleton User Handler</em>' reference.
-	 * @see #setSingletonUserHandler(UserHandler)
-	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUserHandler_SingletonUserHandler()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	UserHandler getSingletonUserHandler();
-
-	/**
-	 * Sets the value of the '{@link Classes.Buissnesslayer.UserHandler#getSingletonUserHandler <em>Singleton User Handler</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Singleton User Handler</em>' reference.
-	 * @see #getSingletonUserHandler()
-	 * @generated
-	 */
-	void setSingletonUserHandler(UserHandler value);
-
-	/**
 	 * Returns the value of the '<em><b>Logincontroller</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link Classes.Interactionlayer.LoginController#getUserhandler <em>Userhandler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Logincontroller</em>' reference isn't clear,
@@ -92,7 +65,8 @@ public interface UserHandler extends EObject {
 	 * @return the value of the '<em>Logincontroller</em>' reference.
 	 * @see #setLogincontroller(LoginController)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUserHandler_Logincontroller()
-	 * @model required="true" ordered="false"
+	 * @see Classes.Interactionlayer.LoginController#getUserhandler
+	 * @model opposite="userhandler" required="true" ordered="false"
 	 * @generated
 	 */
 	LoginController getLogincontroller();
@@ -109,6 +83,7 @@ public interface UserHandler extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Database</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link Classes.Datalayer.Database#getUserhandler <em>Userhandler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Database</em>' reference isn't clear,
@@ -118,7 +93,8 @@ public interface UserHandler extends EObject {
 	 * @return the value of the '<em>Database</em>' reference.
 	 * @see #setDatabase(Database)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUserHandler_Database()
-	 * @model required="true" ordered="false"
+	 * @see Classes.Datalayer.Database#getUserhandler
+	 * @model opposite="userhandler" required="true" ordered="false"
 	 * @generated
 	 */
 	Database getDatabase();
@@ -136,34 +112,10 @@ public interface UserHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model paymentInfoRequired="true" paymentInfoOrdered="false" userRequired="true" userOrdered="false"
-	 * @generated
-	 */
-	void addGuestDB(PaymentInfo paymentInfo, User user);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model emailRequired="true" emailOrdered="false"
 	 * @generated
 	 */
 	void sendEmailVerification(String email);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	void getSingletonHandler();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void createSingletonHandler();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -180,5 +132,13 @@ public interface UserHandler extends EObject {
 	 * @generated
 	 */
 	User checkEmployeeID(int employeeID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" emailRequired="true" emailOrdered="false"
+	 * @generated
+	 */
+	User AddNewGuest(String email);
 
 } // UserHandler

@@ -17,11 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link Classes.Buissnesslayer.User#getName <em>Name</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.User#getEmail <em>Email</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.User#getBookingHandler <em>Booking Handler</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.User#getLogincontroller <em>Logincontroller</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.User#getUserhandler <em>Userhandler</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.User#getAddress <em>Address</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.User#getUserHandler <em>User Handler</em>}</li>
  * </ul>
  *
  * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUser()
@@ -80,32 +78,6 @@ public interface User extends EObject {
 	 * @generated
 	 */
 	void setEmail(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Booking Handler</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Booking Handler</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Booking Handler</em>' reference.
-	 * @see #setBookingHandler(BookingHandler)
-	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUser_BookingHandler()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	BookingHandler getBookingHandler();
-
-	/**
-	 * Sets the value of the '{@link Classes.Buissnesslayer.User#getBookingHandler <em>Booking Handler</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Booking Handler</em>' reference.
-	 * @see #getBookingHandler()
-	 * @generated
-	 */
-	void setBookingHandler(BookingHandler value);
 
 	/**
 	 * Returns the value of the '<em><b>Logincontroller</b></em>' reference.
@@ -184,40 +156,6 @@ public interface User extends EObject {
 	 * @generated
 	 */
 	void setAddress(Address value);
-
-	/**
-	 * Returns the value of the '<em><b>User Handler</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>User Handler</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Handler</em>' reference.
-	 * @see #setUserHandler(UserHandler)
-	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUser_UserHandler()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	UserHandler getUserHandler();
-
-	/**
-	 * Sets the value of the '{@link Classes.Buissnesslayer.User#getUserHandler <em>User Handler</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Handler</em>' reference.
-	 * @see #getUserHandler()
-	 * @generated
-	 */
-	void setUserHandler(UserHandler value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" employeeIDRequired="true" employeeIDOrdered="false" emailRequired="true" emailOrdered="false"
-	 * @generated
-	 */
-	boolean login(int employeeID, String email);
 
 	/**
 	 * <!-- begin-user-doc -->

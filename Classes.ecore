@@ -7,9 +7,11 @@
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="Database">
       <eStructuralFeatures xsi:type="ecore:EReference" name="userDB" ordered="false"
-          upperBound="-1" eType="#//Buissnesslayer/User"/>
+          upperBound="-1" eType="#//Buissnesslayer/Guest"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="userhandler" ordered="false"
+          lowerBound="1" eType="#//Buissnesslayer/UserHandler" eOpposite="#//Buissnesslayer/UserHandler/database"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="employeeDB" ordered="false"
-          upperBound="-1" eType="#//Buissnesslayer/User"/>
+          upperBound="-1" eType="#//Buissnesslayer/Employee"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="bookingDB" ordered="false"
           upperBound="-1" eType="#//Buissnesslayer/Booking"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="roomDB" ordered="false"
@@ -85,103 +87,19 @@
         <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
       <eOperations name="sendErrorMsg" ordered="false" lowerBound="1"/>
-      <eOperations name="getSinglettonBooking" ordered="false" lowerBound="1"/>
-      <eOperations name="createSingletonHandler" ordered="false" lowerBound="1"/>
       <eOperations name="fetchAvailableExtras" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="booking" ordered="false"
           lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="Bookings" ordered="false"
           lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="singletonBooking" ordered="false"
-          lowerBound="1" eType="#//Buissnesslayer/BookingHandler"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="User" ordered="false"
           lowerBound="1" upperBound="-1" eType="#//Buissnesslayer/User"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="database" ordered="false"
           lowerBound="1" eType="#//Datalayer/Database"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Guest">
-      <eOperations name="bookRoom" ordered="false" lowerBound="1">
-        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      </eOperations>
-      <eOperations name="changeBooking" ordered="false" lowerBound="1">
-        <eParameters name="oldBooking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-        <eParameters name="newBooking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      </eOperations>
-      <eOperations name="cancelBooking" ordered="false" lowerBound="1">
-        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      </eOperations>
-      <eOperations name="attemptCheckIn" ordered="false" lowerBound="1">
-        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      </eOperations>
-      <eOperations name="attemptCheckOut" ordered="false" lowerBound="1">
-        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      </eOperations>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Employee">
-      <eOperations name="intbookRoom" ordered="false" lowerBound="1">
-        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details key="originalName" value="int bookRoom"/>
-        </eAnnotations>
-        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      </eOperations>
-      <eOperations name="changeBooking" ordered="false" lowerBound="1">
-        <eParameters name="oldBooking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-        <eParameters name="newBooking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      </eOperations>
-      <eOperations name="cancelBooking" ordered="false" lowerBound="1">
-        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      </eOperations>
-      <eOperations name="attemptCheckIn" ordered="false" lowerBound="1">
-        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      </eOperations>
-      <eOperations name="attemptCheckOut" ordered="false" lowerBound="1">
-        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      </eOperations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Password" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Address">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="street" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="postalNumber" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="UserHandler">
-      <eOperations name="addGuestDB" ordered="false" lowerBound="1">
-        <eParameters name="paymentInfo" ordered="false" lowerBound="1" eType="#//BuisnessLogicLayer/PaymentInfo"/>
-        <eParameters name="user" ordered="false" lowerBound="1" eType="#//Buissnesslayer/User"/>
-      </eOperations>
-      <eOperations name="sendEmailVerification" ordered="false" lowerBound="1">
-        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eOperations>
-      <eOperations name="getSingletonHandler" ordered="false" lowerBound="1"/>
-      <eOperations name="createSingletonHandler" ordered="false" lowerBound="1"/>
-      <eOperations name="isEmailValid" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eOperations>
-      <eOperations name="checkEmployeeID" ordered="false" lowerBound="1" eType="#//Buissnesslayer/User">
-        <eParameters name="employeeID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </eOperations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Users" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="singletonUserHandler"
-          ordered="false" lowerBound="1" eType="#//Buissnesslayer/UserHandler"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="logincontroller" ordered="false"
-          lowerBound="1" eType="#//Interactionlayer/LoginController"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="database" ordered="false"
-          lowerBound="1" eType="#//Datalayer/Database"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="userhandler" ordered="false"
+          lowerBound="1" eType="#//Buissnesslayer/UserHandler"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="User" abstract="true">
-      <eOperations name="login" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-        <eParameters name="employeeID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eOperations>
       <eOperations name="bookRoom" ordered="false" lowerBound="1">
         <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
@@ -202,16 +120,58 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="Email" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="bookingHandler" ordered="false"
-          lowerBound="1" eType="#//Buissnesslayer/BookingHandler"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="logincontroller" ordered="false"
           lowerBound="1" eType="#//Interactionlayer/LoginController"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="userhandler" ordered="false"
           lowerBound="1" eType="#//Buissnesslayer/UserHandler"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="address" ordered="false"
           lowerBound="1" eType="#//Buissnesslayer/Address"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="userHandler" ordered="false"
-          lowerBound="1" eType="#//Buissnesslayer/UserHandler"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="UserHandler">
+      <eOperations name="sendEmailVerification" ordered="false" lowerBound="1">
+        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="isEmailValid" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="checkEmployeeID" ordered="false" lowerBound="1" eType="#//Buissnesslayer/User">
+        <eParameters name="employeeID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eOperations name="AddNewGuest" ordered="false" lowerBound="1" eType="#//Buissnesslayer/User">
+        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Users" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="database" ordered="false"
+          lowerBound="1" eType="#//Datalayer/Database" eOpposite="#//Datalayer/Database/userhandler"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="logincontroller" ordered="false"
+          lowerBound="1" eType="#//Interactionlayer/LoginController" eOpposite="#//Interactionlayer/LoginController/userhandler"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Address">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="street" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="postalNumber" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Employee" eSuperTypes="#//Buissnesslayer/User">
+      <eOperations name="intbookRoom" ordered="false" lowerBound="1">
+        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details key="originalName" value="int bookRoom"/>
+        </eAnnotations>
+        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Password" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Guest" eSuperTypes="#//Buissnesslayer/User">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="wrokAround" ordered="false"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Interactionlayer" nsURI="http:///Classes/Interactionlayer.ecore"
@@ -268,14 +228,15 @@
       <eOperations name="loginGuest" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-      <eOperations name="getSingletonController" ordered="false" lowerBound="1"/>
-      <eOperations name="createSingletonHandler" ordered="false" lowerBound="1"/>
+      <eOperations name="loginCreateGuest" ordered="false" lowerBound="1" eType="#//Buissnesslayer/User">
+        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="currentUser" ordered="false"
           lowerBound="1" eType="#//Buissnesslayer/User"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="LoginController" ordered="false"
-          lowerBound="1" eType="#//Interactionlayer/LoginController"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="paymenthandler" ordered="false"
           lowerBound="1" eType="#//BuisnessLogicLayer/PaymentHandler"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="userhandler" ordered="false"
+          lowerBound="1" eType="#//Buissnesslayer/UserHandler" eOpposite="#//Buissnesslayer/UserHandler/logincontroller"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LoginController_DataType1"/>
   </eSubpackages>

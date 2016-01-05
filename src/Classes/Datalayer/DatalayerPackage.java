@@ -77,13 +77,22 @@ public interface DatalayerPackage extends EPackage {
 	int DATABASE__USER_DB = 0;
 
 	/**
+	 * The feature id for the '<em><b>Userhandler</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATABASE__USERHANDLER = 1;
+
+	/**
 	 * The feature id for the '<em><b>Employee DB</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__EMPLOYEE_DB = 1;
+	int DATABASE__EMPLOYEE_DB = 2;
 
 	/**
 	 * The feature id for the '<em><b>Booking DB</b></em>' reference list.
@@ -92,7 +101,7 @@ public interface DatalayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__BOOKING_DB = 2;
+	int DATABASE__BOOKING_DB = 3;
 
 	/**
 	 * The feature id for the '<em><b>Room DB</b></em>' reference list.
@@ -101,7 +110,7 @@ public interface DatalayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__ROOM_DB = 3;
+	int DATABASE__ROOM_DB = 4;
 
 	/**
 	 * The feature id for the '<em><b>Extras DB</b></em>' attribute list.
@@ -110,7 +119,7 @@ public interface DatalayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__EXTRAS_DB = 4;
+	int DATABASE__EXTRAS_DB = 5;
 
 	/**
 	 * The number of structural features of the '<em>Database</em>' class.
@@ -119,7 +128,7 @@ public interface DatalayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE_FEATURE_COUNT = 5;
+	int DATABASE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Database</em>' class.
@@ -151,6 +160,17 @@ public interface DatalayerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDatabase_UserDB();
+
+	/**
+	 * Returns the meta object for the reference '{@link Classes.Datalayer.Database#getUserhandler <em>Userhandler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Userhandler</em>'.
+	 * @see Classes.Datalayer.Database#getUserhandler()
+	 * @see #getDatabase()
+	 * @generated
+	 */
+	EReference getDatabase_Userhandler();
 
 	/**
 	 * Returns the meta object for the reference list '{@link Classes.Datalayer.Database#getEmployeeDB <em>Employee DB</em>}'.
@@ -235,6 +255,13 @@ public interface DatalayerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DATABASE__USER_DB = eINSTANCE.getDatabase_UserDB();
+		/**
+		 * The meta object literal for the '<em><b>Userhandler</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATABASE__USERHANDLER = eINSTANCE.getDatabase_Userhandler();
 		/**
 		 * The meta object literal for the '<em><b>Employee DB</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->

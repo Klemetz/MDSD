@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link Classes.Buissnesslayer.BookingHandler#getBooking <em>Booking</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.BookingHandler#getBookings <em>Bookings</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.BookingHandler#getSingletonBooking <em>Singleton Booking</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.BookingHandler#getUser <em>User</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.BookingHandler#getDatabase <em>Database</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.BookingHandler#getUserhandler <em>Userhandler</em>}</li>
  * </ul>
  *
  * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBookingHandler()
@@ -82,32 +82,6 @@ public interface BookingHandler extends EObject {
 	void setBookings(Booking value);
 
 	/**
-	 * Returns the value of the '<em><b>Singleton Booking</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Singleton Booking</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Singleton Booking</em>' reference.
-	 * @see #setSingletonBooking(BookingHandler)
-	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBookingHandler_SingletonBooking()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	BookingHandler getSingletonBooking();
-
-	/**
-	 * Sets the value of the '{@link Classes.Buissnesslayer.BookingHandler#getSingletonBooking <em>Singleton Booking</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Singleton Booking</em>' reference.
-	 * @see #getSingletonBooking()
-	 * @generated
-	 */
-	void setSingletonBooking(BookingHandler value);
-
-	/**
 	 * Returns the value of the '<em><b>User</b></em>' reference list.
 	 * The list contents are of type {@link Classes.Buissnesslayer.User}.
 	 * <!-- begin-user-doc -->
@@ -148,6 +122,32 @@ public interface BookingHandler extends EObject {
 	 * @generated
 	 */
 	void setDatabase(Database value);
+
+	/**
+	 * Returns the value of the '<em><b>Userhandler</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Userhandler</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Userhandler</em>' reference.
+	 * @see #setUserhandler(UserHandler)
+	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBookingHandler_Userhandler()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	UserHandler getUserhandler();
+
+	/**
+	 * Sets the value of the '{@link Classes.Buissnesslayer.BookingHandler#getUserhandler <em>Userhandler</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Userhandler</em>' reference.
+	 * @see #getUserhandler()
+	 * @generated
+	 */
+	void setUserhandler(UserHandler value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -212,22 +212,6 @@ public interface BookingHandler extends EObject {
 	 * @generated
 	 */
 	void sendErrorMsg();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	void getSinglettonBooking();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void createSingletonHandler();
 
 	/**
 	 * <!-- begin-user-doc -->

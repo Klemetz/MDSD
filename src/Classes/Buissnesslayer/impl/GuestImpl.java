@@ -2,26 +2,37 @@
  */
 package Classes.Buissnesslayer.impl;
 
-import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.Guest;
-
-import java.lang.reflect.InvocationTargetException;
-
+import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Guest</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link Classes.Buissnesslayer.impl.GuestImpl#getWrokAround <em>Wrok Around</em>}</li>
+ * </ul>
  *
  * @generated
  */
-public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
+public class GuestImpl extends UserImpl implements Guest {
+	/**
+	 * The cached value of the '{@link #getWrokAround() <em>Wrok Around</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWrokAround()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Integer> wrokAround;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -46,54 +57,11 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void bookRoom(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void changeBooking(Booking oldBooking, Booking newBooking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void cancelBooking(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void attemptCheckIn(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void attemptCheckOut(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public EList<Integer> getWrokAround() {
+		if (wrokAround == null) {
+			wrokAround = new EDataTypeUniqueEList<Integer>(Integer.class, this, BuissnesslayerPackage.GUEST__WROK_AROUND);
+		}
+		return wrokAround;
 	}
 
 	/**
@@ -102,25 +70,74 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 * @generated
 	 */
 	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case BuissnesslayerPackage.GUEST___BOOK_ROOM__BOOKING:
-				bookRoom((Booking)arguments.get(0));
-				return null;
-			case BuissnesslayerPackage.GUEST___CHANGE_BOOKING__BOOKING_BOOKING:
-				changeBooking((Booking)arguments.get(0), (Booking)arguments.get(1));
-				return null;
-			case BuissnesslayerPackage.GUEST___CANCEL_BOOKING__BOOKING:
-				cancelBooking((Booking)arguments.get(0));
-				return null;
-			case BuissnesslayerPackage.GUEST___ATTEMPT_CHECK_IN__BOOKING:
-				attemptCheckIn((Booking)arguments.get(0));
-				return null;
-			case BuissnesslayerPackage.GUEST___ATTEMPT_CHECK_OUT__BOOKING:
-				attemptCheckOut((Booking)arguments.get(0));
-				return null;
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BuissnesslayerPackage.GUEST__WROK_AROUND:
+				return getWrokAround();
 		}
-		return super.eInvoke(operationID, arguments);
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BuissnesslayerPackage.GUEST__WROK_AROUND:
+				getWrokAround().clear();
+				getWrokAround().addAll((Collection<? extends Integer>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BuissnesslayerPackage.GUEST__WROK_AROUND:
+				getWrokAround().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BuissnesslayerPackage.GUEST__WROK_AROUND:
+				return wrokAround != null && !wrokAround.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (wrokAround: ");
+		result.append(wrokAround);
+		result.append(')');
+		return result.toString();
 	}
 
 } //GuestImpl

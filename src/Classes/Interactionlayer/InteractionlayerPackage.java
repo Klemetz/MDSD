@@ -259,22 +259,22 @@ public interface InteractionlayerPackage extends EPackage {
 	int LOGIN_CONTROLLER__CURRENT_USER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Login Controller</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_CONTROLLER__LOGIN_CONTROLLER = 1;
-
-	/**
 	 * The feature id for the '<em><b>Paymenthandler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER__PAYMENTHANDLER = 2;
+	int LOGIN_CONTROLLER__PAYMENTHANDLER = 1;
+
+	/**
+	 * The feature id for the '<em><b>Userhandler</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_CONTROLLER__USERHANDLER = 2;
 
 	/**
 	 * The number of structural features of the '<em>Login Controller</em>' class.
@@ -304,22 +304,13 @@ public interface InteractionlayerPackage extends EPackage {
 	int LOGIN_CONTROLLER___LOGIN_GUEST__INT = 1;
 
 	/**
-	 * The operation id for the '<em>Get Singleton Controller</em>' operation.
+	 * The operation id for the '<em>Login Create Guest</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER___GET_SINGLETON_CONTROLLER = 2;
-
-	/**
-	 * The operation id for the '<em>Create Singleton Handler</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_CONTROLLER___CREATE_SINGLETON_HANDLER = 3;
+	int LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING = 2;
 
 	/**
 	 * The number of operations of the '<em>Login Controller</em>' class.
@@ -328,7 +319,7 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER_OPERATION_COUNT = 4;
+	int LOGIN_CONTROLLER_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Classes.Interactionlayer.impl.LoginController_DataType1Impl <em>Login Controller Data Type1</em>}' class.
@@ -545,17 +536,6 @@ public interface InteractionlayerPackage extends EPackage {
 	EReference getLoginController_CurrentUser();
 
 	/**
-	 * Returns the meta object for the reference '{@link Classes.Interactionlayer.LoginController#getLoginController <em>Login Controller</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Login Controller</em>'.
-	 * @see Classes.Interactionlayer.LoginController#getLoginController()
-	 * @see #getLoginController()
-	 * @generated
-	 */
-	EReference getLoginController_LoginController();
-
-	/**
 	 * Returns the meta object for the reference '{@link Classes.Interactionlayer.LoginController#getPaymenthandler <em>Paymenthandler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -565,6 +545,17 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLoginController_Paymenthandler();
+
+	/**
+	 * Returns the meta object for the reference '{@link Classes.Interactionlayer.LoginController#getUserhandler <em>Userhandler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Userhandler</em>'.
+	 * @see Classes.Interactionlayer.LoginController#getUserhandler()
+	 * @see #getLoginController()
+	 * @generated
+	 */
+	EReference getLoginController_Userhandler();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginEmployee(int) <em>Login Employee</em>}' operation.
@@ -587,24 +578,14 @@ public interface InteractionlayerPackage extends EPackage {
 	EOperation getLoginController__LoginGuest__int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#getSingletonController() <em>Get Singleton Controller</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#loginCreateGuest(java.lang.String) <em>Login Create Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Singleton Controller</em>' operation.
-	 * @see Classes.Interactionlayer.LoginController#getSingletonController()
+	 * @return the meta object for the '<em>Login Create Guest</em>' operation.
+	 * @see Classes.Interactionlayer.LoginController#loginCreateGuest(java.lang.String)
 	 * @generated
 	 */
-	EOperation getLoginController__GetSingletonController();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#createSingletonHandler() <em>Create Singleton Handler</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Singleton Handler</em>' operation.
-	 * @see Classes.Interactionlayer.LoginController#createSingletonHandler()
-	 * @generated
-	 */
-	EOperation getLoginController__CreateSingletonHandler();
+	EOperation getLoginController__LoginCreateGuest__String();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Interactionlayer.LoginController_DataType1 <em>Login Controller Data Type1</em>}'.
@@ -790,20 +771,20 @@ public interface InteractionlayerPackage extends EPackage {
 		EReference LOGIN_CONTROLLER__CURRENT_USER = eINSTANCE.getLoginController_CurrentUser();
 
 		/**
-		 * The meta object literal for the '<em><b>Login Controller</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOGIN_CONTROLLER__LOGIN_CONTROLLER = eINSTANCE.getLoginController_LoginController();
-
-		/**
 		 * The meta object literal for the '<em><b>Paymenthandler</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference LOGIN_CONTROLLER__PAYMENTHANDLER = eINSTANCE.getLoginController_Paymenthandler();
+
+		/**
+		 * The meta object literal for the '<em><b>Userhandler</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOGIN_CONTROLLER__USERHANDLER = eINSTANCE.getLoginController_Userhandler();
 
 		/**
 		 * The meta object literal for the '<em><b>Login Employee</b></em>' operation.
@@ -822,20 +803,12 @@ public interface InteractionlayerPackage extends EPackage {
 		EOperation LOGIN_CONTROLLER___LOGIN_GUEST__INT = eINSTANCE.getLoginController__LoginGuest__int();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Singleton Controller</b></em>' operation.
+		 * The meta object literal for the '<em><b>Login Create Guest</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LOGIN_CONTROLLER___GET_SINGLETON_CONTROLLER = eINSTANCE.getLoginController__GetSingletonController();
-
-		/**
-		 * The meta object literal for the '<em><b>Create Singleton Handler</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation LOGIN_CONTROLLER___CREATE_SINGLETON_HANDLER = eINSTANCE.getLoginController__CreateSingletonHandler();
+		EOperation LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING = eINSTANCE.getLoginController__LoginCreateGuest__String();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Interactionlayer.impl.LoginController_DataType1Impl <em>Login Controller Data Type1</em>}' class.

@@ -4,6 +4,7 @@ package Classes.Interactionlayer;
 
 import Classes.BuisnessLogicLayer.PaymentHandler;
 import Classes.Buissnesslayer.User;
+import Classes.Buissnesslayer.UserHandler;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link Classes.Interactionlayer.LoginController#getCurrentUser <em>Current User</em>}</li>
- *   <li>{@link Classes.Interactionlayer.LoginController#getLoginController <em>Login Controller</em>}</li>
  *   <li>{@link Classes.Interactionlayer.LoginController#getPaymenthandler <em>Paymenthandler</em>}</li>
+ *   <li>{@link Classes.Interactionlayer.LoginController#getUserhandler <em>Userhandler</em>}</li>
  * </ul>
  *
  * @see Classes.Interactionlayer.InteractionlayerPackage#getLoginController()
@@ -52,32 +53,6 @@ public interface LoginController extends EObject {
 	void setCurrentUser(User value);
 
 	/**
-	 * Returns the value of the '<em><b>Login Controller</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Login Controller</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Login Controller</em>' reference.
-	 * @see #setLoginController(LoginController)
-	 * @see Classes.Interactionlayer.InteractionlayerPackage#getLoginController_LoginController()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	LoginController getLoginController();
-
-	/**
-	 * Sets the value of the '{@link Classes.Interactionlayer.LoginController#getLoginController <em>Login Controller</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Login Controller</em>' reference.
-	 * @see #getLoginController()
-	 * @generated
-	 */
-	void setLoginController(LoginController value);
-
-	/**
 	 * Returns the value of the '<em><b>Paymenthandler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -104,6 +79,34 @@ public interface LoginController extends EObject {
 	void setPaymenthandler(PaymentHandler value);
 
 	/**
+	 * Returns the value of the '<em><b>Userhandler</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link Classes.Buissnesslayer.UserHandler#getLogincontroller <em>Logincontroller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Userhandler</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Userhandler</em>' reference.
+	 * @see #setUserhandler(UserHandler)
+	 * @see Classes.Interactionlayer.InteractionlayerPackage#getLoginController_Userhandler()
+	 * @see Classes.Buissnesslayer.UserHandler#getLogincontroller
+	 * @model opposite="logincontroller" required="true" ordered="false"
+	 * @generated
+	 */
+	UserHandler getUserhandler();
+
+	/**
+	 * Sets the value of the '{@link Classes.Interactionlayer.LoginController#getUserhandler <em>Userhandler</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Userhandler</em>' reference.
+	 * @see #getUserhandler()
+	 * @generated
+	 */
+	void setUserhandler(UserHandler value);
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" IDRequired="true" IDOrdered="false"
@@ -122,17 +125,9 @@ public interface LoginController extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model required="true" ordered="false" emailRequired="true" emailOrdered="false"
 	 * @generated
 	 */
-	void getSingletonController();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void createSingletonHandler();
+	User loginCreateGuest(String email);
 
 } // LoginController

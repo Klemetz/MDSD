@@ -4,17 +4,21 @@ package Classes.Buissnesslayer.impl;
 
 import Classes.BuisnessLogicLayer.PaymentInfo;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
+import Classes.Buissnesslayer.Guest;
 import Classes.Buissnesslayer.User;
 import Classes.Buissnesslayer.UserHandler;
 
 import Classes.Datalayer.Database;
 
+import Classes.Datalayer.DatalayerPackage;
+import Classes.Interactionlayer.InteractionlayerPackage;
 import Classes.Interactionlayer.LoginController;
 
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -32,9 +36,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link Classes.Buissnesslayer.impl.UserHandlerImpl#getUsers <em>Users</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.impl.UserHandlerImpl#getSingletonUserHandler <em>Singleton User Handler</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.impl.UserHandlerImpl#getLogincontroller <em>Logincontroller</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.UserHandlerImpl#getDatabase <em>Database</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.impl.UserHandlerImpl#getLogincontroller <em>Logincontroller</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,14 +64,14 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	protected String users = USERS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSingletonUserHandler() <em>Singleton User Handler</em>}' reference.
+	 * The cached value of the '{@link #getDatabase() <em>Database</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSingletonUserHandler()
+	 * @see #getDatabase()
 	 * @generated
 	 * @ordered
 	 */
-	protected UserHandler singletonUserHandler;
+	protected Database database;
 
 	/**
 	 * The cached value of the '{@link #getLogincontroller() <em>Logincontroller</em>}' reference.
@@ -79,16 +82,6 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * @ordered
 	 */
 	protected LoginController logincontroller;
-
-	/**
-	 * The cached value of the '{@link #getDatabase() <em>Database</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDatabase()
-	 * @generated
-	 * @ordered
-	 */
-	protected Database database;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,44 +128,6 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserHandler getSingletonUserHandler() {
-		if (singletonUserHandler != null && singletonUserHandler.eIsProxy()) {
-			InternalEObject oldSingletonUserHandler = (InternalEObject)singletonUserHandler;
-			singletonUserHandler = (UserHandler)eResolveProxy(oldSingletonUserHandler);
-			if (singletonUserHandler != oldSingletonUserHandler) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BuissnesslayerPackage.USER_HANDLER__SINGLETON_USER_HANDLER, oldSingletonUserHandler, singletonUserHandler));
-			}
-		}
-		return singletonUserHandler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserHandler basicGetSingletonUserHandler() {
-		return singletonUserHandler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSingletonUserHandler(UserHandler newSingletonUserHandler) {
-		UserHandler oldSingletonUserHandler = singletonUserHandler;
-		singletonUserHandler = newSingletonUserHandler;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER_HANDLER__SINGLETON_USER_HANDLER, oldSingletonUserHandler, singletonUserHandler));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public LoginController getLogincontroller() {
 		if (logincontroller != null && logincontroller.eIsProxy()) {
 			InternalEObject oldLogincontroller = (InternalEObject)logincontroller;
@@ -199,11 +154,33 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLogincontroller(LoginController newLogincontroller) {
+	public NotificationChain basicSetLogincontroller(LoginController newLogincontroller, NotificationChain msgs) {
 		LoginController oldLogincontroller = logincontroller;
 		logincontroller = newLogincontroller;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER, oldLogincontroller, logincontroller));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER, oldLogincontroller, newLogincontroller);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLogincontroller(LoginController newLogincontroller) {
+		if (newLogincontroller != logincontroller) {
+			NotificationChain msgs = null;
+			if (logincontroller != null)
+				msgs = ((InternalEObject)logincontroller).eInverseRemove(this, InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER, LoginController.class, msgs);
+			if (newLogincontroller != null)
+				msgs = ((InternalEObject)newLogincontroller).eInverseAdd(this, InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER, LoginController.class, msgs);
+			msgs = basicSetLogincontroller(newLogincontroller, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER, newLogincontroller, newLogincontroller));
 	}
 
 	/**
@@ -237,11 +214,14 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDatabase(Database newDatabase) {
+	public NotificationChain basicSetDatabase(Database newDatabase, NotificationChain msgs) {
 		Database oldDatabase = database;
 		database = newDatabase;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER_HANDLER__DATABASE, oldDatabase, database));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER_HANDLER__DATABASE, oldDatabase, newDatabase);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -249,10 +229,37 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addGuestDB(PaymentInfo paymentInfo, User user) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void setDatabase(Database newDatabase) {
+		if (newDatabase != database) {
+			NotificationChain msgs = null;
+			if (database != null)
+				msgs = ((InternalEObject)database).eInverseRemove(this, DatalayerPackage.DATABASE__USERHANDLER, Database.class, msgs);
+			if (newDatabase != null)
+				msgs = ((InternalEObject)newDatabase).eInverseAdd(this, DatalayerPackage.DATABASE__USERHANDLER, Database.class, msgs);
+			msgs = basicSetDatabase(newDatabase, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER_HANDLER__DATABASE, newDatabase, newDatabase));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public User addGuestDB(PaymentInfo paymentInfo, Guest user) {
+		//Not sure this should have paymentinfo
+		
+		for (User existingUsers : getDatabase().getUserDB()) {
+			if (user.getEmail() == existingUsers.getEmail()) {
+				return existingUsers;
+			}
+		}
+		
+		getDatabase().getUserDB().add(user);
+		return user;
+
 	}
 
 	/**
@@ -261,28 +268,6 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * @generated
 	 */
 	public void sendEmailVerification(String email) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getSingletonHandler() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void createSingletonHandler() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -302,12 +287,67 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public User checkEmployeeID(int employeeID){
+		
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public User AddNewGuest(String email) {
+		for (User existingUsers : getDatabase().getUserDB()) {
+			if (email == existingUsers.getEmail()) {
+				return existingUsers;
+			}
+		}
+		
+		
+		Guest newGuest = BuissnesslayerFactoryImpl.init().createGuest();
+		newGuest.setEmail(email);
+		
+		getDatabase().getUserDB().add(newGuest);
+		return newGuest;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public User checkEmployeeID(int employeeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BuissnesslayerPackage.USER_HANDLER__DATABASE:
+				if (database != null)
+					msgs = ((InternalEObject)database).eInverseRemove(this, DatalayerPackage.DATABASE__USERHANDLER, Database.class, msgs);
+				return basicSetDatabase((Database)otherEnd, msgs);
+			case BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER:
+				if (logincontroller != null)
+					msgs = ((InternalEObject)logincontroller).eInverseRemove(this, InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER, LoginController.class, msgs);
+				return basicSetLogincontroller((LoginController)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BuissnesslayerPackage.USER_HANDLER__DATABASE:
+				return basicSetDatabase(null, msgs);
+			case BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER:
+				return basicSetLogincontroller(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -320,15 +360,12 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 		switch (featureID) {
 			case BuissnesslayerPackage.USER_HANDLER__USERS:
 				return getUsers();
-			case BuissnesslayerPackage.USER_HANDLER__SINGLETON_USER_HANDLER:
-				if (resolve) return getSingletonUserHandler();
-				return basicGetSingletonUserHandler();
-			case BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER:
-				if (resolve) return getLogincontroller();
-				return basicGetLogincontroller();
 			case BuissnesslayerPackage.USER_HANDLER__DATABASE:
 				if (resolve) return getDatabase();
 				return basicGetDatabase();
+			case BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER:
+				if (resolve) return getLogincontroller();
+				return basicGetLogincontroller();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -344,14 +381,11 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 			case BuissnesslayerPackage.USER_HANDLER__USERS:
 				setUsers((String)newValue);
 				return;
-			case BuissnesslayerPackage.USER_HANDLER__SINGLETON_USER_HANDLER:
-				setSingletonUserHandler((UserHandler)newValue);
+			case BuissnesslayerPackage.USER_HANDLER__DATABASE:
+				setDatabase((Database)newValue);
 				return;
 			case BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER:
 				setLogincontroller((LoginController)newValue);
-				return;
-			case BuissnesslayerPackage.USER_HANDLER__DATABASE:
-				setDatabase((Database)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -368,14 +402,11 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 			case BuissnesslayerPackage.USER_HANDLER__USERS:
 				setUsers(USERS_EDEFAULT);
 				return;
-			case BuissnesslayerPackage.USER_HANDLER__SINGLETON_USER_HANDLER:
-				setSingletonUserHandler((UserHandler)null);
+			case BuissnesslayerPackage.USER_HANDLER__DATABASE:
+				setDatabase((Database)null);
 				return;
 			case BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER:
 				setLogincontroller((LoginController)null);
-				return;
-			case BuissnesslayerPackage.USER_HANDLER__DATABASE:
-				setDatabase((Database)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -391,12 +422,10 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 		switch (featureID) {
 			case BuissnesslayerPackage.USER_HANDLER__USERS:
 				return USERS_EDEFAULT == null ? users != null : !USERS_EDEFAULT.equals(users);
-			case BuissnesslayerPackage.USER_HANDLER__SINGLETON_USER_HANDLER:
-				return singletonUserHandler != null;
-			case BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER:
-				return logincontroller != null;
 			case BuissnesslayerPackage.USER_HANDLER__DATABASE:
 				return database != null;
+			case BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER:
+				return logincontroller != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -409,22 +438,15 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BuissnesslayerPackage.USER_HANDLER___ADD_GUEST_DB__PAYMENTINFO_USER:
-				addGuestDB((PaymentInfo)arguments.get(0), (User)arguments.get(1));
-				return null;
 			case BuissnesslayerPackage.USER_HANDLER___SEND_EMAIL_VERIFICATION__STRING:
 				sendEmailVerification((String)arguments.get(0));
-				return null;
-			case BuissnesslayerPackage.USER_HANDLER___GET_SINGLETON_HANDLER:
-				getSingletonHandler();
-				return null;
-			case BuissnesslayerPackage.USER_HANDLER___CREATE_SINGLETON_HANDLER:
-				createSingletonHandler();
 				return null;
 			case BuissnesslayerPackage.USER_HANDLER___IS_EMAIL_VALID__STRING:
 				return isEmailValid((String)arguments.get(0));
 			case BuissnesslayerPackage.USER_HANDLER___CHECK_EMPLOYEE_ID__INT:
 				return checkEmployeeID((Integer)arguments.get(0));
+			case BuissnesslayerPackage.USER_HANDLER___ADD_NEW_GUEST__STRING:
+				return AddNewGuest((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

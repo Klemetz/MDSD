@@ -80,24 +80,24 @@ public class BuissnesslayerAdapterFactory extends AdapterFactoryImpl {
 				return createBookingHandlerAdapter();
 			}
 			@Override
-			public Adapter caseGuest(Guest object) {
-				return createGuestAdapter();
-			}
-			@Override
-			public Adapter caseEmployee(Employee object) {
-				return createEmployeeAdapter();
-			}
-			@Override
-			public Adapter caseAddress(Address object) {
-				return createAddressAdapter();
+			public Adapter caseUser(User object) {
+				return createUserAdapter();
 			}
 			@Override
 			public Adapter caseUserHandler(UserHandler object) {
 				return createUserHandlerAdapter();
 			}
 			@Override
-			public Adapter caseUser(User object) {
-				return createUserAdapter();
+			public Adapter caseAddress(Address object) {
+				return createAddressAdapter();
+			}
+			@Override
+			public Adapter caseEmployee(Employee object) {
+				return createEmployeeAdapter();
+			}
+			@Override
+			public Adapter caseGuest(Guest object) {
+				return createGuestAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {

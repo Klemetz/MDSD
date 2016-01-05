@@ -7,6 +7,7 @@ import Classes.Buissnesslayer.BookingHandler;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.Room;
 import Classes.Buissnesslayer.User;
+import Classes.Buissnesslayer.UserHandler;
 import Classes.Datalayer.Database;
 
 import java.lang.reflect.InvocationTargetException;
@@ -35,9 +36,9 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingHandlerImpl#getBooking <em>Booking</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingHandlerImpl#getBookings <em>Bookings</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.impl.BookingHandlerImpl#getSingletonBooking <em>Singleton Booking</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingHandlerImpl#getUser <em>User</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingHandlerImpl#getDatabase <em>Database</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.impl.BookingHandlerImpl#getUserhandler <em>Userhandler</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,16 +65,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	protected Booking bookings;
 
 	/**
-	 * The cached value of the '{@link #getSingletonBooking() <em>Singleton Booking</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSingletonBooking()
-	 * @generated
-	 * @ordered
-	 */
-	protected BookingHandler singletonBooking;
-
-	/**
 	 * The cached value of the '{@link #getUser() <em>User</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,6 +83,16 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected Database database;
+
+	/**
+	 * The cached value of the '{@link #getUserhandler() <em>Userhandler</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUserhandler()
+	 * @generated
+	 * @ordered
+	 */
+	protected UserHandler userhandler;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -193,44 +194,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookingHandler getSingletonBooking() {
-		if (singletonBooking != null && singletonBooking.eIsProxy()) {
-			InternalEObject oldSingletonBooking = (InternalEObject)singletonBooking;
-			singletonBooking = (BookingHandler)eResolveProxy(oldSingletonBooking);
-			if (singletonBooking != oldSingletonBooking) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BuissnesslayerPackage.BOOKING_HANDLER__SINGLETON_BOOKING, oldSingletonBooking, singletonBooking));
-			}
-		}
-		return singletonBooking;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BookingHandler basicGetSingletonBooking() {
-		return singletonBooking;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSingletonBooking(BookingHandler newSingletonBooking) {
-		BookingHandler oldSingletonBooking = singletonBooking;
-		singletonBooking = newSingletonBooking;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.BOOKING_HANDLER__SINGLETON_BOOKING, oldSingletonBooking, singletonBooking));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<User> getUser() {
 		if (user == null) {
 			user = new EObjectResolvingEList<User>(User.class, this, BuissnesslayerPackage.BOOKING_HANDLER__USER);
@@ -281,6 +244,44 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public UserHandler getUserhandler() {
+		if (userhandler != null && userhandler.eIsProxy()) {
+			InternalEObject oldUserhandler = (InternalEObject)userhandler;
+			userhandler = (UserHandler)eResolveProxy(oldUserhandler);
+			if (userhandler != oldUserhandler) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BuissnesslayerPackage.BOOKING_HANDLER__USERHANDLER, oldUserhandler, userhandler));
+			}
+		}
+		return userhandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UserHandler basicGetUserhandler() {
+		return userhandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUserhandler(UserHandler newUserhandler) {
+		UserHandler oldUserhandler = userhandler;
+		userhandler = newUserhandler;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.BOOKING_HANDLER__USERHANDLER, oldUserhandler, userhandler));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void fetchAvailability(int startDate, int endDate, Room roomType, int nrOfGuests) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -290,9 +291,12 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void fetchBooking(Booking bookingID) {
+		
+		
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -369,28 +373,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getSinglettonBooking() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void createSingletonHandler() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void fetchAvailableExtras() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -411,14 +393,14 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case BuissnesslayerPackage.BOOKING_HANDLER__BOOKINGS:
 				if (resolve) return getBookings();
 				return basicGetBookings();
-			case BuissnesslayerPackage.BOOKING_HANDLER__SINGLETON_BOOKING:
-				if (resolve) return getSingletonBooking();
-				return basicGetSingletonBooking();
 			case BuissnesslayerPackage.BOOKING_HANDLER__USER:
 				return getUser();
 			case BuissnesslayerPackage.BOOKING_HANDLER__DATABASE:
 				if (resolve) return getDatabase();
 				return basicGetDatabase();
+			case BuissnesslayerPackage.BOOKING_HANDLER__USERHANDLER:
+				if (resolve) return getUserhandler();
+				return basicGetUserhandler();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -438,15 +420,15 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case BuissnesslayerPackage.BOOKING_HANDLER__BOOKINGS:
 				setBookings((Booking)newValue);
 				return;
-			case BuissnesslayerPackage.BOOKING_HANDLER__SINGLETON_BOOKING:
-				setSingletonBooking((BookingHandler)newValue);
-				return;
 			case BuissnesslayerPackage.BOOKING_HANDLER__USER:
 				getUser().clear();
 				getUser().addAll((Collection<? extends User>)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING_HANDLER__DATABASE:
 				setDatabase((Database)newValue);
+				return;
+			case BuissnesslayerPackage.BOOKING_HANDLER__USERHANDLER:
+				setUserhandler((UserHandler)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -466,14 +448,14 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case BuissnesslayerPackage.BOOKING_HANDLER__BOOKINGS:
 				setBookings((Booking)null);
 				return;
-			case BuissnesslayerPackage.BOOKING_HANDLER__SINGLETON_BOOKING:
-				setSingletonBooking((BookingHandler)null);
-				return;
 			case BuissnesslayerPackage.BOOKING_HANDLER__USER:
 				getUser().clear();
 				return;
 			case BuissnesslayerPackage.BOOKING_HANDLER__DATABASE:
 				setDatabase((Database)null);
+				return;
+			case BuissnesslayerPackage.BOOKING_HANDLER__USERHANDLER:
+				setUserhandler((UserHandler)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -491,12 +473,12 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return booking != null;
 			case BuissnesslayerPackage.BOOKING_HANDLER__BOOKINGS:
 				return bookings != null;
-			case BuissnesslayerPackage.BOOKING_HANDLER__SINGLETON_BOOKING:
-				return singletonBooking != null;
 			case BuissnesslayerPackage.BOOKING_HANDLER__USER:
 				return user != null && !user.isEmpty();
 			case BuissnesslayerPackage.BOOKING_HANDLER__DATABASE:
 				return database != null;
+			case BuissnesslayerPackage.BOOKING_HANDLER__USERHANDLER:
+				return userhandler != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -532,12 +514,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return null;
 			case BuissnesslayerPackage.BOOKING_HANDLER___SEND_ERROR_MSG:
 				sendErrorMsg();
-				return null;
-			case BuissnesslayerPackage.BOOKING_HANDLER___GET_SINGLETTON_BOOKING:
-				getSinglettonBooking();
-				return null;
-			case BuissnesslayerPackage.BOOKING_HANDLER___CREATE_SINGLETON_HANDLER:
-				createSingletonHandler();
 				return null;
 			case BuissnesslayerPackage.BOOKING_HANDLER___FETCH_AVAILABLE_EXTRAS:
 				fetchAvailableExtras();

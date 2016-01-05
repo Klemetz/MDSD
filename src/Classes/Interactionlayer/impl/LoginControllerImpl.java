@@ -3,7 +3,10 @@
 package Classes.Interactionlayer.impl;
 
 import Classes.BuisnessLogicLayer.PaymentHandler;
+import Classes.Buissnesslayer.Booking;
+import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.User;
+import Classes.Buissnesslayer.UserHandler;
 import Classes.Interactionlayer.InteractionlayerPackage;
 import Classes.Interactionlayer.LoginController;
 
@@ -11,6 +14,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -30,6 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getCurrentUser <em>Current User</em>}</li>
  *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getLoginController <em>Login Controller</em>}</li>
  *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getPaymenthandler <em>Paymenthandler</em>}</li>
+ *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getUserhandler <em>Userhandler</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,6 +69,16 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected PaymentHandler paymenthandler;
+
+	/**
+	 * The cached value of the '{@link #getUserhandler() <em>Userhandler</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUserhandler()
+	 * @generated
+	 * @ordered
+	 */
+	protected UserHandler userhandler;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,10 +218,16 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean loginEmployee(int ID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public UserHandler getUserhandler() {
+		if (userhandler != null && userhandler.eIsProxy()) {
+			InternalEObject oldUserhandler = (InternalEObject)userhandler;
+			userhandler = (UserHandler)eResolveProxy(oldUserhandler);
+			if (userhandler != oldUserhandler) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER, oldUserhandler, userhandler));
+			}
+		}
+		return userhandler;
 	}
 
 	/**
@@ -214,10 +235,80 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean loginGuest(int bookingID) {
+	public UserHandler basicGetUserhandler() {
+		return userhandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUserhandler(UserHandler newUserhandler, NotificationChain msgs) {
+		UserHandler oldUserhandler = userhandler;
+		userhandler = newUserhandler;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER, oldUserhandler, newUserhandler);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUserhandler(UserHandler newUserhandler) {
+		if (newUserhandler != userhandler) {
+			NotificationChain msgs = null;
+			if (userhandler != null)
+				msgs = ((InternalEObject)userhandler).eInverseRemove(this, BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER, UserHandler.class, msgs);
+			if (newUserhandler != null)
+				msgs = ((InternalEObject)newUserhandler).eInverseAdd(this, BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER, UserHandler.class, msgs);
+			msgs = basicSetUserhandler(newUserhandler, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER, newUserhandler, newUserhandler));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean loginEmployee(int ID) {
+		
+	
+		User result = getUserhandler().checkEmployeeID(ID);
+		if (result != null) {
+			currentUser = result;
+			return true;
+			
+		}
+		currentUser = null;
+		return false;
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean loginGuest(int bookingID) {
+		
+		User result = getUserhandler().AddNewGuest()));
+		if (result != null) {
+			currentUser = result;
+			return true;
+			
+		}
+		currentUser = null;
+		return false;
 	}
 
 	/**
@@ -245,6 +336,48 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public User loginCreateGuest(String email, Booking booking) {
+		
+		//getUserHandler().addGuestDB(new GuestImpl());
+		
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER:
+				if (userhandler != null)
+					msgs = ((InternalEObject)userhandler).eInverseRemove(this, BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER, UserHandler.class, msgs);
+				return basicSetUserhandler((UserHandler)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER:
+				return basicSetUserhandler(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -259,6 +392,9 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 			case InteractionlayerPackage.LOGIN_CONTROLLER__PAYMENTHANDLER:
 				if (resolve) return getPaymenthandler();
 				return basicGetPaymenthandler();
+			case InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER:
+				if (resolve) return getUserhandler();
+				return basicGetUserhandler();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -279,6 +415,9 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case InteractionlayerPackage.LOGIN_CONTROLLER__PAYMENTHANDLER:
 				setPaymenthandler((PaymentHandler)newValue);
+				return;
+			case InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER:
+				setUserhandler((UserHandler)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -301,6 +440,9 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 			case InteractionlayerPackage.LOGIN_CONTROLLER__PAYMENTHANDLER:
 				setPaymenthandler((PaymentHandler)null);
 				return;
+			case InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER:
+				setUserhandler((UserHandler)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -319,6 +461,8 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 				return loginController != null;
 			case InteractionlayerPackage.LOGIN_CONTROLLER__PAYMENTHANDLER:
 				return paymenthandler != null;
+			case InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER:
+				return userhandler != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -341,6 +485,8 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 			case InteractionlayerPackage.LOGIN_CONTROLLER___CREATE_SINGLETON_HANDLER:
 				createSingletonHandler();
 				return null;
+			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING_BOOKING:
+				return loginCreateGuest((String)arguments.get(0), (Booking)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

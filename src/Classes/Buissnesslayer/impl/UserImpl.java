@@ -4,7 +4,6 @@ package Classes.Buissnesslayer.impl;
 
 import Classes.Buissnesslayer.Address;
 import Classes.Buissnesslayer.Booking;
-import Classes.Buissnesslayer.BookingHandler;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.User;
 import Classes.Buissnesslayer.UserHandler;
@@ -33,11 +32,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link Classes.Buissnesslayer.impl.UserImpl#getName <em>Name</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.UserImpl#getEmail <em>Email</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.impl.UserImpl#getBookingHandler <em>Booking Handler</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.UserImpl#getLogincontroller <em>Logincontroller</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.UserImpl#getUserhandler <em>Userhandler</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.UserImpl#getAddress <em>Address</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.impl.UserImpl#getUserHandler <em>User Handler</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,16 +81,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	protected String email = EMAIL_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getBookingHandler() <em>Booking Handler</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBookingHandler()
-	 * @generated
-	 * @ordered
-	 */
-	protected BookingHandler bookingHandler;
-
-	/**
 	 * The cached value of the '{@link #getLogincontroller() <em>Logincontroller</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -122,16 +109,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * @ordered
 	 */
 	protected Address address;
-
-	/**
-	 * The cached value of the '{@link #getUserHandler() <em>User Handler</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUserHandler()
-	 * @generated
-	 * @ordered
-	 */
-	protected UserHandler userHandler;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -192,44 +169,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 		email = newEmail;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER__EMAIL, oldEmail, email));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BookingHandler getBookingHandler() {
-		if (bookingHandler != null && bookingHandler.eIsProxy()) {
-			InternalEObject oldBookingHandler = (InternalEObject)bookingHandler;
-			bookingHandler = (BookingHandler)eResolveProxy(oldBookingHandler);
-			if (bookingHandler != oldBookingHandler) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BuissnesslayerPackage.USER__BOOKING_HANDLER, oldBookingHandler, bookingHandler));
-			}
-		}
-		return bookingHandler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BookingHandler basicGetBookingHandler() {
-		return bookingHandler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBookingHandler(BookingHandler newBookingHandler) {
-		BookingHandler oldBookingHandler = bookingHandler;
-		bookingHandler = newBookingHandler;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER__BOOKING_HANDLER, oldBookingHandler, bookingHandler));
 	}
 
 	/**
@@ -351,55 +290,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserHandler getUserHandler() {
-		if (userHandler != null && userHandler.eIsProxy()) {
-			InternalEObject oldUserHandler = (InternalEObject)userHandler;
-			userHandler = (UserHandler)eResolveProxy(oldUserHandler);
-			if (userHandler != oldUserHandler) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BuissnesslayerPackage.USER__USER_HANDLER, oldUserHandler, userHandler));
-			}
-		}
-		return userHandler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserHandler basicGetUserHandler() {
-		return userHandler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUserHandler(UserHandler newUserHandler) {
-		UserHandler oldUserHandler = userHandler;
-		userHandler = newUserHandler;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER__USER_HANDLER, oldUserHandler, userHandler));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean login(int employeeID, String email) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void bookRoom(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -462,9 +352,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 				return getName();
 			case BuissnesslayerPackage.USER__EMAIL:
 				return getEmail();
-			case BuissnesslayerPackage.USER__BOOKING_HANDLER:
-				if (resolve) return getBookingHandler();
-				return basicGetBookingHandler();
 			case BuissnesslayerPackage.USER__LOGINCONTROLLER:
 				if (resolve) return getLogincontroller();
 				return basicGetLogincontroller();
@@ -474,9 +361,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 			case BuissnesslayerPackage.USER__ADDRESS:
 				if (resolve) return getAddress();
 				return basicGetAddress();
-			case BuissnesslayerPackage.USER__USER_HANDLER:
-				if (resolve) return getUserHandler();
-				return basicGetUserHandler();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -495,9 +379,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 			case BuissnesslayerPackage.USER__EMAIL:
 				setEmail((String)newValue);
 				return;
-			case BuissnesslayerPackage.USER__BOOKING_HANDLER:
-				setBookingHandler((BookingHandler)newValue);
-				return;
 			case BuissnesslayerPackage.USER__LOGINCONTROLLER:
 				setLogincontroller((LoginController)newValue);
 				return;
@@ -506,9 +387,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 				return;
 			case BuissnesslayerPackage.USER__ADDRESS:
 				setAddress((Address)newValue);
-				return;
-			case BuissnesslayerPackage.USER__USER_HANDLER:
-				setUserHandler((UserHandler)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -528,9 +406,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 			case BuissnesslayerPackage.USER__EMAIL:
 				setEmail(EMAIL_EDEFAULT);
 				return;
-			case BuissnesslayerPackage.USER__BOOKING_HANDLER:
-				setBookingHandler((BookingHandler)null);
-				return;
 			case BuissnesslayerPackage.USER__LOGINCONTROLLER:
 				setLogincontroller((LoginController)null);
 				return;
@@ -539,9 +414,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 				return;
 			case BuissnesslayerPackage.USER__ADDRESS:
 				setAddress((Address)null);
-				return;
-			case BuissnesslayerPackage.USER__USER_HANDLER:
-				setUserHandler((UserHandler)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -559,16 +431,12 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case BuissnesslayerPackage.USER__EMAIL:
 				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
-			case BuissnesslayerPackage.USER__BOOKING_HANDLER:
-				return bookingHandler != null;
 			case BuissnesslayerPackage.USER__LOGINCONTROLLER:
 				return logincontroller != null;
 			case BuissnesslayerPackage.USER__USERHANDLER:
 				return userhandler != null;
 			case BuissnesslayerPackage.USER__ADDRESS:
 				return address != null;
-			case BuissnesslayerPackage.USER__USER_HANDLER:
-				return userHandler != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -581,8 +449,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BuissnesslayerPackage.USER___LOGIN__INT_STRING:
-				return login((Integer)arguments.get(0), (String)arguments.get(1));
 			case BuissnesslayerPackage.USER___BOOK_ROOM__BOOKING:
 				bookRoom((Booking)arguments.get(0));
 				return null;
