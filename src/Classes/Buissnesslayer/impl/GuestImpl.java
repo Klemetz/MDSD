@@ -3,6 +3,7 @@
 package Classes.Buissnesslayer.impl;
 
 import Classes.Buissnesslayer.Booking;
+import Classes.Buissnesslayer.BookingHandler;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.Guest;
 import java.lang.reflect.InvocationTargetException;
@@ -69,9 +70,58 @@ public class GuestImpl extends UserImpl implements Guest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void bookRoom(Booking booking) {
+		
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void changeBooking(Booking oldBooking, Booking newBooking) {
+		
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void cancelBooking(Booking booking) {
+		
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void attemptCheckin(Booking booking) {	//SHOULD BE booking-ID 
+		System.out.println("A guest can't check in on their own.");
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void attemptCheckout(Booking booking) {	//SHOULD BE booking-ID 
+		System.out.println("A guest can't check out on their own.");
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

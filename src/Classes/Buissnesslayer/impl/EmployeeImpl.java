@@ -118,17 +118,6 @@ public class EmployeeImpl extends UserImpl implements Employee {
 	public String getPassword() {
 		return password;
 	}
-
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public void changeBooking(Booking oldBooking, Booking newBooking) {
-		return;
-	}
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,9 +130,6 @@ public class EmployeeImpl extends UserImpl implements Employee {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.EMPLOYEE__PASSWORD, oldPassword, password));
 	}
-
-	
-	
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,9 +145,55 @@ public class EmployeeImpl extends UserImpl implements Employee {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void bookRoom(Booking booking) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void changeBooking(Booking oldBooking, Booking newBooking) {
+		
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void cancelBooking(Booking booking) {
+		
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void attemptCheckin(Booking booking) {	//SHOULD BE booking-ID 
+		
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void attemptCheckout(Booking booking) {	//SHOULD BE booking-ID 
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
