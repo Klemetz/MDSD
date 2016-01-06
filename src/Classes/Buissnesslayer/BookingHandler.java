@@ -84,6 +84,7 @@ public interface BookingHandler extends EObject {
 	/**
 	 * Returns the value of the '<em><b>User</b></em>' reference list.
 	 * The list contents are of type {@link Classes.Buissnesslayer.User}.
+	 * It is bidirectional and its opposite is '{@link Classes.Buissnesslayer.User#getBookinghandler <em>Bookinghandler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>User</em>' reference list isn't clear,
@@ -92,7 +93,8 @@ public interface BookingHandler extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>User</em>' reference list.
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBookingHandler_User()
-	 * @model required="true" ordered="false"
+	 * @see Classes.Buissnesslayer.User#getBookinghandler
+	 * @model opposite="bookinghandler" required="true" ordered="false"
 	 * @generated
 	 */
 	EList<User> getUser();
@@ -152,26 +154,26 @@ public interface BookingHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" nrOfGuestsRequired="true" nrOfGuestsOrdered="false"
+	 * @model ordered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" nrOfGuestsRequired="true" nrOfGuestsOrdered="false"
 	 * @generated
 	 */
-	Room fetchAvailability(String startDate, String endDate, Room roomType, int nrOfGuests);
+	EList<Room> fetchAvailability(String startDate, String endDate, int roomType, int nrOfGuests);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingIDRequired="true" bookingIDOrdered="false"
+	 * @model required="true" ordered="false" bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	void fetchBooking(Booking bookingID);
+	Booking fetchBooking(int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingRequired="true" bookingOrdered="false"
-	 * @generated
+	 * @model required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
+	 * @generated NOT 
 	 */
-	void attemptBookRoom(Booking booking);
+	boolean attemptBookRoom(Booking booking);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,9 +218,17 @@ public interface BookingHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model ordered="false"
 	 * @generated
 	 */
-	void fetchAvailableExtras();
+	EList<String> fetchAvailableExtras();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<String> displayPaymentOptions();
 
 } // BookingHandler

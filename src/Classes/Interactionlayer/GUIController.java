@@ -55,6 +55,7 @@ public interface GUIController extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Logincontroller</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link Classes.Interactionlayer.LoginController#getGuicontroller <em>Guicontroller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Logincontroller</em>' reference isn't clear,
@@ -64,7 +65,8 @@ public interface GUIController extends EObject {
 	 * @return the value of the '<em>Logincontroller</em>' reference.
 	 * @see #setLogincontroller(LoginController)
 	 * @see Classes.Interactionlayer.InteractionlayerPackage#getGUIController_Logincontroller()
-	 * @model required="true" ordered="false"
+	 * @see Classes.Interactionlayer.LoginController#getGuicontroller
+	 * @model opposite="guicontroller" required="true" ordered="false"
 	 * @generated
 	 */
 	LoginController getLogincontroller();
@@ -108,10 +110,10 @@ public interface GUIController extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" nrOfGuestsRequired="true" nrOfGuestsOrdered="false"
+	 * @model required="true" ordered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" nrOfGuestsRequired="true" nrOfGuestsOrdered="false"
 	 * @generated
 	 */
-	void showAvailability(int startDate, int endDate, Room roomType, int nrOfGuests);
+	int showAvailableRooms(String startDate, String endDate, Room roomType, int nrOfGuests);
 
 	/**
 	 * <!-- begin-user-doc -->

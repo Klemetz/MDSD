@@ -20,31 +20,31 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Classes.Buissnesslayer.impl.RoomImpl#getTyperoomType <em>Typeroom Type</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.impl.RoomImpl#getRoomType <em>Room Type</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	/**
-	 * The default value of the '{@link #getTyperoomType() <em>Typeroom Type</em>}' attribute.
+	 * The default value of the '{@link #getRoomType() <em>Room Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTyperoomType()
+	 * @see #getRoomType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int TYPEROOM_TYPE_EDEFAULT = 0;
+	protected static final int ROOM_TYPE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getTyperoomType() <em>Typeroom Type</em>}' attribute.
+	 * The cached value of the '{@link #getRoomType() <em>Room Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTyperoomType()
+	 * @see #getRoomType()
 	 * @generated
 	 * @ordered
 	 */
-	protected int typeroomType = TYPEROOM_TYPE_EDEFAULT;
+	protected int roomType = ROOM_TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getTyperoomType() {
-		return typeroomType;
+	public int getRoomType() {
+		return roomType;
 	}
 
 	/**
@@ -79,11 +79,11 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTyperoomType(int newTyperoomType) {
-		int oldTyperoomType = typeroomType;
-		typeroomType = newTyperoomType;
+	public void setRoomType(int newRoomType) {
+		int oldRoomType = roomType;
+		roomType = newRoomType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.ROOM__TYPEROOM_TYPE, oldTyperoomType, typeroomType));
+			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.ROOM__ROOM_TYPE, oldRoomType, roomType));
 	}
 
 	/**
@@ -94,8 +94,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BuissnesslayerPackage.ROOM__TYPEROOM_TYPE:
-				return getTyperoomType();
+			case BuissnesslayerPackage.ROOM__ROOM_TYPE:
+				return getRoomType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,8 +108,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BuissnesslayerPackage.ROOM__TYPEROOM_TYPE:
-				setTyperoomType((Integer)newValue);
+			case BuissnesslayerPackage.ROOM__ROOM_TYPE:
+				setRoomType((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +123,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BuissnesslayerPackage.ROOM__TYPEROOM_TYPE:
-				setTyperoomType(TYPEROOM_TYPE_EDEFAULT);
+			case BuissnesslayerPackage.ROOM__ROOM_TYPE:
+				setRoomType(ROOM_TYPE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,8 +138,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BuissnesslayerPackage.ROOM__TYPEROOM_TYPE:
-				return typeroomType != TYPEROOM_TYPE_EDEFAULT;
+			case BuissnesslayerPackage.ROOM__ROOM_TYPE:
+				return roomType != ROOM_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -154,8 +154,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (TyperoomType: ");
-		result.append(typeroomType);
+		result.append(" (roomType: ");
+		result.append(roomType);
 		result.append(')');
 		return result.toString();
 	}

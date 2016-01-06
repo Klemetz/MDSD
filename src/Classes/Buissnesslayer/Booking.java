@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Classes.Buissnesslayer.Booking#getEndDate <em>End Date</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.Booking#getExtras <em>Extras</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.Booking#getParkings <em>Parkings</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.Booking#getRooms <em>Rooms</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.Booking#isCheckedIn <em>Checked In</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.Booking#isCheckedOut <em>Checked Out</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.Booking#getPayment <em>Payment</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.Booking#isPaymentComplete <em>Payment Complete</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.Booking#getRoom <em>Room</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.Booking#getRooms <em>Rooms</em>}</li>
  * </ul>
  *
  * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBooking()
@@ -218,30 +218,20 @@ public interface Booking extends EObject {
 	void setParkings(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Rooms</b></em>' attribute.
+	 * Returns the value of the '<em><b>Rooms</b></em>' reference list.
+	 * The list contents are of type {@link Classes.Buissnesslayer.Room}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Rooms</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rooms</em>' attribute.
-	 * @see #setRooms(String)
+	 * @return the value of the '<em>Rooms</em>' reference list.
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBooking_Rooms()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	String getRooms();
-
-	/**
-	 * Sets the value of the '{@link Classes.Buissnesslayer.Booking#getRooms <em>Rooms</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rooms</em>' attribute.
-	 * @see #getRooms()
-	 * @generated
-	 */
-	void setRooms(String value);
+	EList<Room> getRooms();
 
 	/**
 	 * Returns the value of the '<em><b>Checked In</b></em>' attribute.

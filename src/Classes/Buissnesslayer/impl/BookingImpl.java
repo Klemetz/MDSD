@@ -34,12 +34,12 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#getExtras <em>Extras</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#getParkings <em>Parkings</em>}</li>
- *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#getRooms <em>Rooms</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#isCheckedIn <em>Checked In</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#isCheckedOut <em>Checked Out</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#getPayment <em>Payment</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#isPaymentComplete <em>Payment Complete</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#getRoom <em>Room</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#getRooms <em>Rooms</em>}</li>
  * </ul>
  *
  * @generated
@@ -186,26 +186,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected String parkings = PARKINGS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getRooms() <em>Rooms</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRooms()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ROOMS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRooms()
-	 * @generated
-	 * @ordered
-	 */
-	protected String rooms = ROOMS_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #isCheckedIn() <em>Checked In</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -294,6 +274,16 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @ordered
 	 */
 	protected EList<Room> room;
+
+	/**
+	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRooms()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Room> rooms;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -466,20 +456,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRooms() {
+	public EList<Room> getRooms() {
+		if (rooms == null) {
+			rooms = new EObjectResolvingEList<Room>(Room.class, this, BuissnesslayerPackage.BOOKING__ROOMS);
+		}
 		return rooms;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRooms(String newRooms) {
-		String oldRooms = rooms;
-		rooms = newRooms;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.BOOKING__ROOMS, oldRooms, rooms));
 	}
 
 	/**
@@ -600,8 +581,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return getExtras();
 			case BuissnesslayerPackage.BOOKING__PARKINGS:
 				return getParkings();
-			case BuissnesslayerPackage.BOOKING__ROOMS:
-				return getRooms();
 			case BuissnesslayerPackage.BOOKING__CHECKED_IN:
 				return isCheckedIn();
 			case BuissnesslayerPackage.BOOKING__CHECKED_OUT:
@@ -612,6 +591,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return isPaymentComplete();
 			case BuissnesslayerPackage.BOOKING__ROOM:
 				return getRoom();
+			case BuissnesslayerPackage.BOOKING__ROOMS:
+				return getRooms();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -646,9 +627,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BuissnesslayerPackage.BOOKING__PARKINGS:
 				setParkings((String)newValue);
 				return;
-			case BuissnesslayerPackage.BOOKING__ROOMS:
-				setRooms((String)newValue);
-				return;
 			case BuissnesslayerPackage.BOOKING__CHECKED_IN:
 				setCheckedIn((Boolean)newValue);
 				return;
@@ -664,6 +642,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BuissnesslayerPackage.BOOKING__ROOM:
 				getRoom().clear();
 				getRoom().addAll((Collection<? extends Room>)newValue);
+				return;
+			case BuissnesslayerPackage.BOOKING__ROOMS:
+				getRooms().clear();
+				getRooms().addAll((Collection<? extends Room>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -698,9 +680,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BuissnesslayerPackage.BOOKING__PARKINGS:
 				setParkings(PARKINGS_EDEFAULT);
 				return;
-			case BuissnesslayerPackage.BOOKING__ROOMS:
-				setRooms(ROOMS_EDEFAULT);
-				return;
 			case BuissnesslayerPackage.BOOKING__CHECKED_IN:
 				setCheckedIn(CHECKED_IN_EDEFAULT);
 				return;
@@ -715,6 +694,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return;
 			case BuissnesslayerPackage.BOOKING__ROOM:
 				getRoom().clear();
+				return;
+			case BuissnesslayerPackage.BOOKING__ROOMS:
+				getRooms().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -742,8 +724,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return EXTRAS_EDEFAULT == null ? extras != null : !EXTRAS_EDEFAULT.equals(extras);
 			case BuissnesslayerPackage.BOOKING__PARKINGS:
 				return PARKINGS_EDEFAULT == null ? parkings != null : !PARKINGS_EDEFAULT.equals(parkings);
-			case BuissnesslayerPackage.BOOKING__ROOMS:
-				return ROOMS_EDEFAULT == null ? rooms != null : !ROOMS_EDEFAULT.equals(rooms);
 			case BuissnesslayerPackage.BOOKING__CHECKED_IN:
 				return checkedIn != CHECKED_IN_EDEFAULT;
 			case BuissnesslayerPackage.BOOKING__CHECKED_OUT:
@@ -754,6 +734,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return paymentComplete != PAYMENT_COMPLETE_EDEFAULT;
 			case BuissnesslayerPackage.BOOKING__ROOM:
 				return room != null && !room.isEmpty();
+			case BuissnesslayerPackage.BOOKING__ROOMS:
+				return rooms != null && !rooms.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -782,8 +764,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		result.append(extras);
 		result.append(", parkings: ");
 		result.append(parkings);
-		result.append(", rooms: ");
-		result.append(rooms);
 		result.append(", checkedIn: ");
 		result.append(checkedIn);
 		result.append(", checkedOut: ");

@@ -3,10 +3,10 @@
 package Classes.Interactionlayer.impl;
 
 import Classes.BuisnessLogicLayer.PaymentHandler;
-import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.User;
 import Classes.Buissnesslayer.UserHandler;
+import Classes.Interactionlayer.GUIController;
 import Classes.Interactionlayer.InteractionlayerPackage;
 import Classes.Interactionlayer.LoginController;
 
@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getGuicontroller <em>Guicontroller</em>}</li>
  *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getCurrentUser <em>Current User</em>}</li>
  *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getPaymenthandler <em>Paymenthandler</em>}</li>
  *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getUserhandler <em>Userhandler</em>}</li>
@@ -39,6 +40,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class LoginControllerImpl extends MinimalEObjectImpl.Container implements LoginController {
+
+	
+	/**
+	 * The cached value of the '{@link #getGuicontroller() <em>Guicontroller</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGuicontroller()
+	 * @generated
+	 * @ordered
+	 */
+	protected GUIController guicontroller;
+
 	/**
 	 * The cached value of the '{@link #getCurrentUser() <em>Current User</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -72,10 +85,12 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected LoginControllerImpl() {
 		super();
+
+		
 	}
 
 	/**
@@ -86,6 +101,66 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	protected EClass eStaticClass() {
 		return InteractionlayerPackage.Literals.LOGIN_CONTROLLER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GUIController getGuicontroller() {
+		if (guicontroller != null && guicontroller.eIsProxy()) {
+			InternalEObject oldGuicontroller = (InternalEObject)guicontroller;
+			guicontroller = (GUIController)eResolveProxy(oldGuicontroller);
+			if (guicontroller != oldGuicontroller) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER, oldGuicontroller, guicontroller));
+			}
+		}
+		return guicontroller;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GUIController basicGetGuicontroller() {
+		return guicontroller;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetGuicontroller(GUIController newGuicontroller, NotificationChain msgs) {
+		GUIController oldGuicontroller = guicontroller;
+		guicontroller = newGuicontroller;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER, oldGuicontroller, newGuicontroller);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGuicontroller(GUIController newGuicontroller) {
+		if (newGuicontroller != guicontroller) {
+			NotificationChain msgs = null;
+			if (guicontroller != null)
+				msgs = ((InternalEObject)guicontroller).eInverseRemove(this, InteractionlayerPackage.GUI_CONTROLLER__LOGINCONTROLLER, GUIController.class, msgs);
+			if (newGuicontroller != null)
+				msgs = ((InternalEObject)newGuicontroller).eInverseAdd(this, InteractionlayerPackage.GUI_CONTROLLER__LOGINCONTROLLER, GUIController.class, msgs);
+			msgs = basicSetGuicontroller(newGuicontroller, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER, newGuicontroller, newGuicontroller));
 	}
 
 	/**
@@ -257,38 +332,15 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public User loginCreateGuest(String email) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void _() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public User loginCreateGuest(String email, Booking booking) {
-		
+	public User loginCreateGuest(String email) {
 		UserHandler handler = getUserhandler();
 	 	currentUser = handler.AddNewGuest(email);
+	 	currentUser.setBookinghandler(getGuicontroller().getBookinghandler());
+	 	
 		
 	 	return currentUser;
-		
-
 	}
 
 	/**
@@ -299,6 +351,10 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER:
+				if (guicontroller != null)
+					msgs = ((InternalEObject)guicontroller).eInverseRemove(this, InteractionlayerPackage.GUI_CONTROLLER__LOGINCONTROLLER, GUIController.class, msgs);
+				return basicSetGuicontroller((GUIController)otherEnd, msgs);
 			case InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER:
 				if (userhandler != null)
 					msgs = ((InternalEObject)userhandler).eInverseRemove(this, BuissnesslayerPackage.USER_HANDLER__LOGINCONTROLLER, UserHandler.class, msgs);
@@ -315,6 +371,8 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER:
+				return basicSetGuicontroller(null, msgs);
 			case InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER:
 				return basicSetUserhandler(null, msgs);
 		}
@@ -329,6 +387,9 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER:
+				if (resolve) return getGuicontroller();
+				return basicGetGuicontroller();
 			case InteractionlayerPackage.LOGIN_CONTROLLER__CURRENT_USER:
 				if (resolve) return getCurrentUser();
 				return basicGetCurrentUser();
@@ -350,6 +411,9 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER:
+				setGuicontroller((GUIController)newValue);
+				return;
 			case InteractionlayerPackage.LOGIN_CONTROLLER__CURRENT_USER:
 				setCurrentUser((User)newValue);
 				return;
@@ -371,6 +435,9 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER:
+				setGuicontroller((GUIController)null);
+				return;
 			case InteractionlayerPackage.LOGIN_CONTROLLER__CURRENT_USER:
 				setCurrentUser((User)null);
 				return;
@@ -392,6 +459,8 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER:
+				return guicontroller != null;
 			case InteractionlayerPackage.LOGIN_CONTROLLER__CURRENT_USER:
 				return currentUser != null;
 			case InteractionlayerPackage.LOGIN_CONTROLLER__PAYMENTHANDLER:
@@ -416,9 +485,6 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 				return loginGuest((Integer)arguments.get(0));
 			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING:
 				return loginCreateGuest((String)arguments.get(0));
-			case InteractionlayerPackage.LOGIN_CONTROLLER___:
-				_();
-				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

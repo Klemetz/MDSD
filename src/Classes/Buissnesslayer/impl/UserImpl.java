@@ -4,6 +4,7 @@ package Classes.Buissnesslayer.impl;
 
 import Classes.Buissnesslayer.Address;
 import Classes.Buissnesslayer.Booking;
+import Classes.Buissnesslayer.BookingHandler;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.User;
 import Classes.Buissnesslayer.UserHandler;
@@ -14,6 +15,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -35,6 +37,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link Classes.Buissnesslayer.impl.UserImpl#getLogincontroller <em>Logincontroller</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.UserImpl#getUserhandler <em>Userhandler</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.UserImpl#getAddress <em>Address</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.impl.UserImpl#getBookinghandler <em>Bookinghandler</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,6 +112,16 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * @ordered
 	 */
 	protected Address address;
+
+	/**
+	 * The cached value of the '{@link #getBookinghandler() <em>Bookinghandler</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBookinghandler()
+	 * @generated
+	 * @ordered
+	 */
+	protected BookingHandler bookinghandler;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -290,6 +303,66 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BookingHandler getBookinghandler() {
+		if (bookinghandler != null && bookinghandler.eIsProxy()) {
+			InternalEObject oldBookinghandler = (InternalEObject)bookinghandler;
+			bookinghandler = (BookingHandler)eResolveProxy(oldBookinghandler);
+			if (bookinghandler != oldBookinghandler) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BuissnesslayerPackage.USER__BOOKINGHANDLER, oldBookinghandler, bookinghandler));
+			}
+		}
+		return bookinghandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BookingHandler basicGetBookinghandler() {
+		return bookinghandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBookinghandler(BookingHandler newBookinghandler, NotificationChain msgs) {
+		BookingHandler oldBookinghandler = bookinghandler;
+		bookinghandler = newBookinghandler;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER__BOOKINGHANDLER, oldBookinghandler, newBookinghandler);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBookinghandler(BookingHandler newBookinghandler) {
+		if (newBookinghandler != bookinghandler) {
+			NotificationChain msgs = null;
+			if (bookinghandler != null)
+				msgs = ((InternalEObject)bookinghandler).eInverseRemove(this, BuissnesslayerPackage.BOOKING_HANDLER__USER, BookingHandler.class, msgs);
+			if (newBookinghandler != null)
+				msgs = ((InternalEObject)newBookinghandler).eInverseAdd(this, BuissnesslayerPackage.BOOKING_HANDLER__USER, BookingHandler.class, msgs);
+			msgs = basicSetBookinghandler(newBookinghandler, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.USER__BOOKINGHANDLER, newBookinghandler, newBookinghandler));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void changeBooking(Booking oldBooking, Booking newBooking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -332,6 +405,45 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean bookRoom(Booking booking) {
+		return bookinghandler.attemptBookRoom(booking);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BuissnesslayerPackage.USER__BOOKINGHANDLER:
+				if (bookinghandler != null)
+					msgs = ((InternalEObject)bookinghandler).eInverseRemove(this, BuissnesslayerPackage.BOOKING_HANDLER__USER, BookingHandler.class, msgs);
+				return basicSetBookinghandler((BookingHandler)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BuissnesslayerPackage.USER__BOOKINGHANDLER:
+				return basicSetBookinghandler(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -350,6 +462,9 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 			case BuissnesslayerPackage.USER__ADDRESS:
 				if (resolve) return getAddress();
 				return basicGetAddress();
+			case BuissnesslayerPackage.USER__BOOKINGHANDLER:
+				if (resolve) return getBookinghandler();
+				return basicGetBookinghandler();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -376,6 +491,9 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 				return;
 			case BuissnesslayerPackage.USER__ADDRESS:
 				setAddress((Address)newValue);
+				return;
+			case BuissnesslayerPackage.USER__BOOKINGHANDLER:
+				setBookinghandler((BookingHandler)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -404,6 +522,9 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 			case BuissnesslayerPackage.USER__ADDRESS:
 				setAddress((Address)null);
 				return;
+			case BuissnesslayerPackage.USER__BOOKINGHANDLER:
+				setBookinghandler((BookingHandler)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -426,6 +547,8 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 				return userhandler != null;
 			case BuissnesslayerPackage.USER__ADDRESS:
 				return address != null;
+			case BuissnesslayerPackage.USER__BOOKINGHANDLER:
+				return bookinghandler != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -450,6 +573,8 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 			case BuissnesslayerPackage.USER___ATTEMPT_CHECK_OUT__BOOKING:
 				attemptCheckOut((Booking)arguments.get(0));
 				return null;
+			case BuissnesslayerPackage.USER___BOOK_ROOM__BOOKING:
+				return bookRoom((Booking)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

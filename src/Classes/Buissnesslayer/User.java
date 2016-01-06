@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Classes.Buissnesslayer.User#getLogincontroller <em>Logincontroller</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.User#getUserhandler <em>Userhandler</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.User#getAddress <em>Address</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.User#getBookinghandler <em>Bookinghandler</em>}</li>
  * </ul>
  *
  * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUser()
@@ -158,6 +159,34 @@ public interface User extends EObject {
 	void setAddress(Address value);
 
 	/**
+	 * Returns the value of the '<em><b>Bookinghandler</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link Classes.Buissnesslayer.BookingHandler#getUser <em>User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bookinghandler</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bookinghandler</em>' reference.
+	 * @see #setBookinghandler(BookingHandler)
+	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getUser_Bookinghandler()
+	 * @see Classes.Buissnesslayer.BookingHandler#getUser
+	 * @model opposite="User" required="true" ordered="false"
+	 * @generated
+	 */
+	BookingHandler getBookinghandler();
+
+	/**
+	 * Sets the value of the '{@link Classes.Buissnesslayer.User#getBookinghandler <em>Bookinghandler</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bookinghandler</em>' reference.
+	 * @see #getBookinghandler()
+	 * @generated
+	 */
+	void setBookinghandler(BookingHandler value);
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model oldBookingRequired="true" oldBookingOrdered="false" newBookingRequired="true" newBookingOrdered="false"
@@ -188,5 +217,13 @@ public interface User extends EObject {
 	 * @generated
 	 */
 	void attemptCheckOut(Booking booking);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
+	 * @generated
+	 */
+	boolean bookRoom(Booking booking);
 
 } // User

@@ -141,13 +141,13 @@ public interface InteractionlayerPackage extends EPackage {
 	int GUI_CONTROLLER_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Show Availability</em>' operation.
+	 * The operation id for the '<em>Show Available Rooms</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUI_CONTROLLER___SHOW_AVAILABILITY__INT_INT_ROOM_INT = 0;
+	int GUI_CONTROLLER___SHOW_AVAILABLE_ROOMS__STRING_STRING_ROOM_INT = 0;
 
 	/**
 	 * The operation id for the '<em>Display Error</em>' operation.
@@ -259,13 +259,22 @@ public interface InteractionlayerPackage extends EPackage {
 	int LOGIN_CONTROLLER = 2;
 
 	/**
+	 * The feature id for the '<em><b>Guicontroller</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_CONTROLLER__GUICONTROLLER = 0;
+
+	/**
 	 * The feature id for the '<em><b>Current User</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER__CURRENT_USER = 0;
+	int LOGIN_CONTROLLER__CURRENT_USER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Paymenthandler</b></em>' reference.
@@ -274,7 +283,7 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER__PAYMENTHANDLER = 1;
+	int LOGIN_CONTROLLER__PAYMENTHANDLER = 2;
 
 	/**
 	 * The feature id for the '<em><b>Userhandler</b></em>' reference.
@@ -283,7 +292,7 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER__USERHANDLER = 2;
+	int LOGIN_CONTROLLER__USERHANDLER = 3;
 
 	/**
 	 * The number of structural features of the '<em>Login Controller</em>' class.
@@ -292,7 +301,7 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER_FEATURE_COUNT = 3;
+	int LOGIN_CONTROLLER_FEATURE_COUNT = 4;
 
 	/**
 	 * The operation id for the '<em>Login Employee</em>' operation.
@@ -322,22 +331,13 @@ public interface InteractionlayerPackage extends EPackage {
 	int LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING = 2;
 
 	/**
-	 * The operation id for the '<em></em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_CONTROLLER___ = 3;
-
-	/**
 	 * The number of operations of the '<em>Login Controller</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER_OPERATION_COUNT = 4;
+	int LOGIN_CONTROLLER_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Classes.Interactionlayer.impl.LoginController_DataType1Impl <em>Login Controller Data Type1</em>}' class.
@@ -433,14 +433,14 @@ public interface InteractionlayerPackage extends EPackage {
 	EReference getGUIController_Bookinghandler();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#showAvailability(int, int, Classes.Buissnesslayer.Room, int) <em>Show Availability</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#showAvailableRooms(java.lang.String, java.lang.String, Classes.Buissnesslayer.Room, int) <em>Show Available Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Show Availability</em>' operation.
-	 * @see Classes.Interactionlayer.GUIController#showAvailability(int, int, Classes.Buissnesslayer.Room, int)
+	 * @return the meta object for the '<em>Show Available Rooms</em>' operation.
+	 * @see Classes.Interactionlayer.GUIController#showAvailableRooms(java.lang.String, java.lang.String, Classes.Buissnesslayer.Room, int)
 	 * @generated
 	 */
-	EOperation getGUIController__ShowAvailability__int_int_Room_int();
+	EOperation getGUIController__ShowAvailableRooms__String_String_Room_int();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayError() <em>Display Error</em>}' operation.
@@ -553,6 +553,17 @@ public interface InteractionlayerPackage extends EPackage {
 	EClass getLoginController();
 
 	/**
+	 * Returns the meta object for the reference '{@link Classes.Interactionlayer.LoginController#getGuicontroller <em>Guicontroller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Guicontroller</em>'.
+	 * @see Classes.Interactionlayer.LoginController#getGuicontroller()
+	 * @see #getLoginController()
+	 * @generated
+	 */
+	EReference getLoginController_Guicontroller();
+
+	/**
 	 * Returns the meta object for the reference '{@link Classes.Interactionlayer.LoginController#getCurrentUser <em>Current User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -614,16 +625,6 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getLoginController__LoginCreateGuest__String();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#_() <em></em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em></em>' operation.
-	 * @see Classes.Interactionlayer.LoginController#_()
-	 * @generated
-	 */
-	EOperation getLoginController___();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Interactionlayer.LoginController_DataType1 <em>Login Controller Data Type1</em>}'.
@@ -711,12 +712,12 @@ public interface InteractionlayerPackage extends EPackage {
 		EReference GUI_CONTROLLER__BOOKINGHANDLER = eINSTANCE.getGUIController_Bookinghandler();
 
 		/**
-		 * The meta object literal for the '<em><b>Show Availability</b></em>' operation.
+		 * The meta object literal for the '<em><b>Show Available Rooms</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUI_CONTROLLER___SHOW_AVAILABILITY__INT_INT_ROOM_INT = eINSTANCE.getGUIController__ShowAvailability__int_int_Room_int();
+		EOperation GUI_CONTROLLER___SHOW_AVAILABLE_ROOMS__STRING_STRING_ROOM_INT = eINSTANCE.getGUIController__ShowAvailableRooms__String_String_Room_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Error</b></em>' operation.
@@ -809,6 +810,14 @@ public interface InteractionlayerPackage extends EPackage {
 		EClass LOGIN_CONTROLLER = eINSTANCE.getLoginController();
 
 		/**
+		 * The meta object literal for the '<em><b>Guicontroller</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOGIN_CONTROLLER__GUICONTROLLER = eINSTANCE.getLoginController_Guicontroller();
+
+		/**
 		 * The meta object literal for the '<em><b>Current User</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -855,14 +864,6 @@ public interface InteractionlayerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING = eINSTANCE.getLoginController__LoginCreateGuest__String();
-
-		/**
-		 * The meta object literal for the '<em><b></b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation LOGIN_CONTROLLER___ = eINSTANCE.getLoginController___();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Interactionlayer.impl.LoginController_DataType1Impl <em>Login Controller Data Type1</em>}' class.

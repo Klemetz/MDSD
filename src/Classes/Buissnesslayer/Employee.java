@@ -72,21 +72,4 @@ public interface Employee extends User {
 	 */
 	void setPassword(String value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model bookingRequired="true" bookingOrdered="false"
-	 *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='int bookRoom'"
-	 * @generated
-	 */
-	void intbookRoom(Booking booking);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model bookingRequired="true" bookingOrdered="false"
-	 * @generated
-	 */
-	void bookRoom(Booking booking);
-
 } // Employee

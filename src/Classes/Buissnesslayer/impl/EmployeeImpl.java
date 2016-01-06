@@ -5,12 +5,7 @@ package Classes.Buissnesslayer.impl;
 import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.Employee;
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -97,6 +92,19 @@ public class EmployeeImpl extends UserImpl implements Employee {
 	public int getID() {
 		return id;
 	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public boolean bookRoom(Booking booking)
+	{
+		return getBookinghandler().attemptBookRoom(booking);
+		
+	} 
+	
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,27 +139,6 @@ public class EmployeeImpl extends UserImpl implements Employee {
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.EMPLOYEE__PASSWORD, oldPassword, password));
 	}
 	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void intbookRoom(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void bookRoom(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -265,24 +252,6 @@ public class EmployeeImpl extends UserImpl implements Employee {
 				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case BuissnesslayerPackage.EMPLOYEE___INTBOOK_ROOM__BOOKING:
-				intbookRoom((Booking)arguments.get(0));
-				return null;
-			case BuissnesslayerPackage.EMPLOYEE___BOOK_ROOM__BOOKING:
-				bookRoom((Booking)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

@@ -4,12 +4,12 @@ package Classes.Buissnesslayer.impl;
 
 import Classes.BuisnessLogicLayer.PaymentInfo;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
+import Classes.Buissnesslayer.Employee;
 import Classes.Buissnesslayer.Guest;
 import Classes.Buissnesslayer.User;
 import Classes.Buissnesslayer.UserHandler;
 
 import Classes.Datalayer.Database;
-
 import Classes.Datalayer.DatalayerPackage;
 import Classes.Interactionlayer.InteractionlayerPackage;
 import Classes.Interactionlayer.LoginController;
@@ -86,10 +86,12 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected UserHandlerImpl() {
 		super();
+
+
 	}
 
 	/**
@@ -276,12 +278,22 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean isEmailValid(String email) {
 		// TODO: implement this method
+		  String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+          java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
+          java.util.regex.Matcher m = p.matcher(email);
+          if (m.matches()){
+        	   return true; 
+          }else if(!m.matches()){
+        	  return false;
+          }else{
+        	  throw new UnsupportedOperationException();
+          } 
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
 	}
 
 	/**
@@ -291,6 +303,9 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 */
 	public User checkEmployeeID(int employeeID){
 		
+		for (Employee emp : getDatabase().getEmployeeDB()) {
+			if (emp.getID() == employeeID) return emp;
+		}
 		return null;
 	}
 

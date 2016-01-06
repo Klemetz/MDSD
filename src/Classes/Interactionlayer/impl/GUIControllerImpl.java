@@ -5,6 +5,10 @@ package Classes.Interactionlayer.impl;
 import Classes.Buissnesslayer.BookingHandler;
 
 import Classes.Buissnesslayer.Room;
+import Classes.Buissnesslayer.UserHandler;
+import Classes.Buissnesslayer.impl.BuissnesslayerFactoryImpl;
+import Classes.Datalayer.Database;
+import Classes.Datalayer.impl.DatalayerFactoryImpl;
 import Classes.Interactionlayer.GUI;
 import Classes.Interactionlayer.GUIController;
 import Classes.Interactionlayer.InteractionlayerPackage;
@@ -14,6 +18,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -71,10 +76,35 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected GUIControllerImpl() {
 		super();
+		InteractionlayerFactoryImpl.init();
+		DatalayerFactoryImpl.init();
+		BuissnesslayerFactoryImpl.init();
+		
+		LoginController loginController = InteractionlayerFactoryImpl.eINSTANCE.createLoginController();
+		BookingHandler bookingHandler = BuissnesslayerFactoryImpl.eINSTANCE.createBookingHandler();
+		UserHandler userHandler = BuissnesslayerFactoryImpl.eINSTANCE.createUserHandler();
+		Database DB = DatalayerFactoryImpl.eINSTANCE.createDatabase();
+		
+		bookingHandler.setDatabase(DB);
+		userHandler.setDatabase(DB);
+		
+		bookingHandler.setUserhandler(userHandler);
+		
+		userHandler.setLogincontroller(loginController);
+		
+		loginController.setUserhandler(userHandler);
+		
+		
+		
+		
+		setLogincontroller(loginController);
+		setBookinghandler(bookingHandler);
+		
+		
 	}
 
 	/**
@@ -156,11 +186,33 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLogincontroller(LoginController newLogincontroller) {
+	public NotificationChain basicSetLogincontroller(LoginController newLogincontroller, NotificationChain msgs) {
 		LoginController oldLogincontroller = logincontroller;
 		logincontroller = newLogincontroller;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, InteractionlayerPackage.GUI_CONTROLLER__LOGINCONTROLLER, oldLogincontroller, logincontroller));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, InteractionlayerPackage.GUI_CONTROLLER__LOGINCONTROLLER, oldLogincontroller, newLogincontroller);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLogincontroller(LoginController newLogincontroller) {
+		if (newLogincontroller != logincontroller) {
+			NotificationChain msgs = null;
+			if (logincontroller != null)
+				msgs = ((InternalEObject)logincontroller).eInverseRemove(this, InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER, LoginController.class, msgs);
+			if (newLogincontroller != null)
+				msgs = ((InternalEObject)newLogincontroller).eInverseAdd(this, InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER, LoginController.class, msgs);
+			msgs = basicSetLogincontroller(newLogincontroller, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, InteractionlayerPackage.GUI_CONTROLLER__LOGINCONTROLLER, newLogincontroller, newLogincontroller));
 	}
 
 	/**
@@ -204,12 +256,10 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void showAvailability(int startDate, int endDate, Room roomType, int nrOfGuests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int showAvailableRooms(String startDate, String endDate, Room roomType, int nrOfGuests) {
+		return this.bookinghandler.fetchAvailability(startDate, endDate, roomType.getRoomType(), nrOfGuests).size();
 	}
 
 	/**
@@ -328,6 +378,36 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case InteractionlayerPackage.GUI_CONTROLLER__LOGINCONTROLLER:
+				if (logincontroller != null)
+					msgs = ((InternalEObject)logincontroller).eInverseRemove(this, InteractionlayerPackage.LOGIN_CONTROLLER__GUICONTROLLER, LoginController.class, msgs);
+				return basicSetLogincontroller((LoginController)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case InteractionlayerPackage.GUI_CONTROLLER__LOGINCONTROLLER:
+				return basicSetLogincontroller(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case InteractionlayerPackage.GUI_CONTROLLER__DISPLAY:
@@ -412,9 +492,8 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case InteractionlayerPackage.GUI_CONTROLLER___SHOW_AVAILABILITY__INT_INT_ROOM_INT:
-				showAvailability((Integer)arguments.get(0), (Integer)arguments.get(1), (Room)arguments.get(2), (Integer)arguments.get(3));
-				return null;
+			case InteractionlayerPackage.GUI_CONTROLLER___SHOW_AVAILABLE_ROOMS__STRING_STRING_ROOM_INT:
+				return showAvailableRooms((String)arguments.get(0), (String)arguments.get(1), (Room)arguments.get(2), (Integer)arguments.get(3));
 			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ERROR:
 				displayError();
 				return null;

@@ -3,10 +3,8 @@
 package Classes.Buissnesslayer.impl;
 
 import Classes.Buissnesslayer.Booking;
-import Classes.Buissnesslayer.BookingHandler;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.Guest;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -54,7 +52,18 @@ public class GuestImpl extends UserImpl implements Guest {
 	protected EClass eStaticClass() {
 		return BuissnesslayerPackage.Literals.GUEST;
 	}
-
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public boolean bookRoom(Booking booking)
+	{
+		return getBookinghandler().attemptBookRoom(booking);
+		
+	} 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,18 +76,6 @@ public class GuestImpl extends UserImpl implements Guest {
 		return wrokAround;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void bookRoom(Booking booking) {
-		
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -185,21 +182,6 @@ public class GuestImpl extends UserImpl implements Guest {
 				return wrokAround != null && !wrokAround.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case BuissnesslayerPackage.GUEST___BOOK_ROOM__BOOKING:
-				bookRoom((Booking)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link Classes.Buissnesslayer.Room#getTyperoomType <em>Typeroom Type</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.Room#getRoomType <em>Room Type</em>}</li>
  * </ul>
  *
  * @see Classes.Buissnesslayer.BuissnesslayerPackage#getRoom()
@@ -22,30 +22,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Room extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Typeroom Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Room Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Typeroom Type</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Room Type</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Typeroom Type</em>' attribute.
-	 * @see #setTyperoomType(int)
-	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getRoom_TyperoomType()
+	 * @return the value of the '<em>Room Type</em>' attribute.
+	 * @see #setRoomType(int)
+	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getRoom_RoomType()
 	 * @model required="true" ordered="false"
-	 *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='Type : roomType'"
 	 * @generated
 	 */
-	int getTyperoomType();
+	int getRoomType();
 
 	/**
-	 * Sets the value of the '{@link Classes.Buissnesslayer.Room#getTyperoomType <em>Typeroom Type</em>}' attribute.
+	 * Sets the value of the '{@link Classes.Buissnesslayer.Room#getRoomType <em>Room Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Typeroom Type</em>' attribute.
-	 * @see #getTyperoomType()
+	 * @param value the new value of the '<em>Room Type</em>' attribute.
+	 * @see #getRoomType()
 	 * @generated
 	 */
-	void setTyperoomType(int value);
+	void setRoomType(int value);
 
 } // Room

@@ -13,10 +13,16 @@ import Classes.Datalayer.Database;
 import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -24,8 +30,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,10 +104,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected BookingHandlerImpl() {
 		super();
+		
 	}
 
 	/**
@@ -197,7 +204,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public EList<User> getUser() {
 		if (user == null) {
-			user = new EObjectResolvingEList<User>(User.class, this, BuissnesslayerPackage.BOOKING_HANDLER__USER);
+			user = new EObjectWithInverseResolvingEList<User>(User.class, this, BuissnesslayerPackage.BOOKING_HANDLER__USER, BuissnesslayerPackage.USER__BOOKINGHANDLER);
 		}
 		return user;
 	}
@@ -283,24 +290,106 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public Room fetchAvailability(String startDate, String endDate, Room roomType, int nrOfGuests) {
+	public EList<Room> fetchAvailability(String startDate, String endDate, int roomType, int nrOfGuests) {
 		
+		EList<Room> NonOccupiedRooms = (EList<Room>) new ArrayList<Room>();
+		
+		ArrayList<Room> PossibleRooms = new ArrayList<Room>();
+		
+		for (Room room : getDatabase().getRoomDB()) {
+			if (room.getRoomType() == roomType) {
+				PossibleRooms.add(room);
+			}
+		}
+		
+		for (Room room : PossibleRooms) {
+			boolean occupied = false;
+			for (Booking booking : getDatabase().getBookingDB()) {
+				
+				SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
+
+
+				try {
+				    Date NewStart = myFormat.parse(startDate);
+				    Date NewEnd = myFormat.parse(endDate);
+				    
+				    Date OldStart = myFormat.parse(booking.getStartDate());
+				    Date OldNew = myFormat.parse(booking.getEndDate());
+				    
+				    if (!((NewStart.before(OldStart) && NewEnd.before(OldStart)) || ((NewStart.after(NewStart) && NewEnd.after(NewEnd))))) {
+						occupied = true;
+					}
+				    
+				} catch (ParseException e) {
+				    e.printStackTrace();
+				}
+				
+			}
+			if(!occupied) NonOccupiedRooms.add(room);
+			occupied = false;
+		}
+		
+		return NonOccupiedRooms;
+		
+		
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public Booking fetchBooking(int bookingID) {
+		for (Booking booking : database.getBookingDB()) {
+			if(booking.getBookingID()==bookingID){
+				return booking;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public EList<Room> fetchAvailability(String startDate, String endDate, int roomType) {
+		
+		
+		ArrayList<Room> Output = new ArrayList<Room>();
 		
 		EList<Booking> bookings =  getDatabase().getBookingDB();
 		
 		SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
-	
+		boolean occupiedRoom = false;
 		
 		try {
-			Date orderedDate = myFormat.parse(startDate);
-			for (Booking booking : bookings) {
-				
-			    Date date1 = myFormat.parse(booking.getStartDate());
-			    Date date2 = myFormat.parse(booking.getEndDate());
-			    if ((orderedDate.before(date1) && orderedDate.before(date2)) || (orderedDate.after(date1) && orderedDate.after(date2))) {
-			//		return booking;
+				for (Room room : getDatabase().getRoomDB()) {
+					if (roomType == room.getRoomType()){
+					
+					for (Booking booking : bookings) {
+					    if (booking.getRoom() == room) {
+					    	
+					    	
+							Date orderedDate = myFormat.parse(startDate);
+						    Date date1 = myFormat.parse(booking.getStartDate());
+						    Date date2 = myFormat.parse(booking.getEndDate());
+							if ((orderedDate.before(date1) && orderedDate.before(date2)) || (orderedDate.after(date1) && orderedDate.after(date2))) {
+								
+							}
+							else {
+								occupiedRoom = true;
+							}
+						}
+
+					    
+					}
+					if (!occupiedRoom) {
+						Output.add(room);
+					}
+					occupiedRoom = false;
 				}
-			    
 			}
 
 		    
@@ -314,7 +403,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		return null;
+		return (EList<Room>) Output;
 	}
 
 	/**
@@ -322,24 +411,13 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void fetchBooking(Booking bookingID) {
-		
-		
-		
+	public boolean attemptBookRoom(Booking booking) {
+			
+		 return database.getBookingDB().add(booking);
+			
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void attemptBookRoom(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
 	}
 
 	/**
@@ -400,12 +478,149 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public EList<String> fetchAvailableExtras() {
+		
+		ArrayList<String> result = new ArrayList<String>();
+		
+		System.out.println("Available Extras.");
+
+		System.out.println("Towels");
+		System.out.println("Mini-bar");
+		System.out.println("Pillows");
+		
+
+		while (true) {
+		//  prompt the user to enter their name
+		      System.out.print("Enter your desired extra, exit with the command 'end': ");
+
+		      //  open up standard input
+		      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		      String userName = null;
+
+		      //  read the username from the command-line; need to use try/catch with the
+		      //  readLine() method
+		      while(true){
+			      try {
+			         userName = br.readLine();
+			         if (userName == "Towels") {
+						result.add("Towels");
+					}
+			         else if (userName == "Mini-bar") {
+			        	 result.add("Mini-bar");
+					}
+			         else if (userName == "Pillows") {
+			        	 result.add("Pillows");
+					}
+			         else if (userName == "end") {
+			        	 break;
+							
+					}
+			      } catch (IOException ioe) {
+			         System.out.println("IO error trying to read your extra!");
+			         System.exit(1);
+			      }
+		      }
+		      
+
+		      
+				return (EList<String>) result;
+		}
+		
+
+		
+		
+		
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public EList<String> displayPaymentOptions() {
+		ArrayList<String> result = new ArrayList<String>();
+		
+		System.out.println("Available Payment options.");
+
+		System.out.println("Cash");
+		System.out.println("Card");
+		System.out.println("Bill");
+		
+
+		while (true) {
+		//  prompt the user to enter their name
+		      System.out.print("Enter your desired payment option");
+
+		      //  open up standard input
+		      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		      String userName = null;
+
+		      //  read the username from the command-line; need to use try/catch with the
+		      //  readLine() method
+		      while(true){
+			      try {
+			         userName = br.readLine();
+			         if (userName == "Cash") {
+						result.add("Cash");
+						break;
+					}
+			         else if (userName == "Card") {
+			        	 result.add("Card");
+			        	 break;
+					}
+			         else if (userName == "Bill") {
+			        	 result.add("Bill");
+			        	 break;
+					}
+			         else 
+			        	 System.out.println("Not acceptable payment option!");
+			        
+							
+					}
+			         
+			         
+			       catch (IOException ioe) {
+			         System.out.println("IO error trying to read your extra!");
+			         System.exit(1);
+			      }
+		      }
+		      
+		      return (EList<String>) result;
+	}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void fetchAvailableExtras() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BuissnesslayerPackage.BOOKING_HANDLER__USER:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUser()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BuissnesslayerPackage.BOOKING_HANDLER__USER:
+				return ((InternalEList<?>)getUser()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -520,11 +735,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BuissnesslayerPackage.BOOKING_HANDLER___FETCH_AVAILABILITY__INT_INT_ROOM_INT:
-				return fetchAvailability((String)arguments.get(0), (String)arguments.get(1), (Room)arguments.get(2), (Integer)arguments.get(3));
-			case BuissnesslayerPackage.BOOKING_HANDLER___FETCH_BOOKING__BOOKING:
-				fetchBooking((Booking)arguments.get(0));
-				return null;
+			case BuissnesslayerPackage.BOOKING_HANDLER___FETCH_AVAILABILITY__STRING_STRING_INT_INT:
+				return fetchAvailability((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3));
+			case BuissnesslayerPackage.BOOKING_HANDLER___FETCH_BOOKING__INT:
+				return fetchBooking((Integer)arguments.get(0));
 			case BuissnesslayerPackage.BOOKING_HANDLER___ATTEMPT_BOOK_ROOM__BOOKING:
 				attemptBookRoom((Booking)arguments.get(0));
 				return null;
@@ -544,10 +758,20 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				sendErrorMsg();
 				return null;
 			case BuissnesslayerPackage.BOOKING_HANDLER___FETCH_AVAILABLE_EXTRAS:
-				fetchAvailableExtras();
-				return null;
+				return fetchAvailableExtras();
+			case BuissnesslayerPackage.BOOKING_HANDLER___DISPLAY_PAYMENT_OPTIONS:
+				return displayPaymentOptions();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
-
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public static void Main(String[] args){
+		System.out.println("Det går att köra");
+		
+	}
 } //BookingHandlerImpl

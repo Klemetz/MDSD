@@ -193,7 +193,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGUIController__ShowAvailability__int_int_Room_int() {
+	public EOperation getGUIController__ShowAvailableRooms__String_String_Room_int() {
 		return guiControllerEClass.getEOperations().get(0);
 	}
 
@@ -301,7 +301,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLoginController_CurrentUser() {
+	public EReference getLoginController_Guicontroller() {
 		return (EReference)loginControllerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -310,7 +310,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLoginController_Paymenthandler() {
+	public EReference getLoginController_CurrentUser() {
 		return (EReference)loginControllerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -319,8 +319,17 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLoginController_Userhandler() {
+	public EReference getLoginController_Paymenthandler() {
 		return (EReference)loginControllerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLoginController_Userhandler() {
+		return (EReference)loginControllerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -348,15 +357,6 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 */
 	public EOperation getLoginController__LoginCreateGuest__String() {
 		return loginControllerEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getLoginController___() {
-		return loginControllerEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -403,7 +403,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		createEReference(guiControllerEClass, GUI_CONTROLLER__DISPLAY);
 		createEReference(guiControllerEClass, GUI_CONTROLLER__LOGINCONTROLLER);
 		createEReference(guiControllerEClass, GUI_CONTROLLER__BOOKINGHANDLER);
-		createEOperation(guiControllerEClass, GUI_CONTROLLER___SHOW_AVAILABILITY__INT_INT_ROOM_INT);
+		createEOperation(guiControllerEClass, GUI_CONTROLLER___SHOW_AVAILABLE_ROOMS__STRING_STRING_ROOM_INT);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ERROR);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_EXTRAS__ELIST);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_PARKINGS__ELIST);
@@ -416,13 +416,13 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_DATE_OPTIONS);
 
 		loginControllerEClass = createEClass(LOGIN_CONTROLLER);
+		createEReference(loginControllerEClass, LOGIN_CONTROLLER__GUICONTROLLER);
 		createEReference(loginControllerEClass, LOGIN_CONTROLLER__CURRENT_USER);
 		createEReference(loginControllerEClass, LOGIN_CONTROLLER__PAYMENTHANDLER);
 		createEReference(loginControllerEClass, LOGIN_CONTROLLER__USERHANDLER);
 		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT);
 		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___LOGIN_GUEST__INT);
 		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING);
-		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___);
 
 		loginController_DataType1EClass = createEClass(LOGIN_CONTROLLER_DATA_TYPE1);
 	}
@@ -466,12 +466,12 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 
 		initEClass(guiControllerEClass, GUIController.class, "GUIController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGUIController_Display(), this.getGUI(), null, "display", null, 1, 1, GUIController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getGUIController_Logincontroller(), this.getLoginController(), null, "logincontroller", null, 1, 1, GUIController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getGUIController_Logincontroller(), this.getLoginController(), this.getLoginController_Guicontroller(), "logincontroller", null, 1, 1, GUIController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getGUIController_Bookinghandler(), theBuissnesslayerPackage.getBookingHandler(), null, "bookinghandler", null, 1, 1, GUIController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		EOperation op = initEOperation(getGUIController__ShowAvailability__int_int_Room_int(), null, "showAvailability", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getGUIController__ShowAvailableRooms__String_String_Room_int(), ecorePackage.getEInt(), "showAvailableRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theBuissnesslayerPackage.getRoom(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "nrOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -501,6 +501,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		initEOperation(getGUIController__DisplayDateOptions(), null, "displayDateOptions", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(loginControllerEClass, LoginController.class, "LoginController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLoginController_Guicontroller(), this.getGUIController(), this.getGUIController_Logincontroller(), "guicontroller", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getLoginController_CurrentUser(), theBuissnesslayerPackage.getUser(), null, "currentUser", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getLoginController_Paymenthandler(), theBuisnessLogicLayerPackage.getPaymentHandler(), null, "paymenthandler", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getLoginController_Userhandler(), theBuissnesslayerPackage.getUserHandler(), theBuissnesslayerPackage.getUserHandler_Logincontroller(), "userhandler", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -513,8 +514,6 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 
 		op = initEOperation(getLoginController__LoginCreateGuest__String(), theBuissnesslayerPackage.getUser(), "loginCreateGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getLoginController___(), null, "_", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(loginController_DataType1EClass, LoginController_DataType1.class, "LoginController_DataType1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -545,12 +544,6 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		   source, 
 		   new String[] {
 			 "originalName", "displayBookingsByID(int bookingID)"
-		   });	
-		addAnnotation
-		  (getLoginController___(), 
-		   source, 
-		   new String[] {
-			 "originalName", ")"
 		   });
 	}
 
