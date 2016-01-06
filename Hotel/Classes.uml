@@ -12,7 +12,7 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_e1V6ALO1EeWbxK3v0VQAjQ" name="bookingDB" type="_vvIsQJgXEeWgf_EMGD-UnQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jP_gYLO1EeWbxK3v0VQAjQ"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jQAHcLO1EeWbxK3v0VQAjQ" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jQAHcLO1EeWbxK3v0VQAjQ" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_kTrK8LO1EeWbxK3v0VQAjQ" name="roomDB" type="_ddD3oJkKEeWgf_EMGD-UnQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pVQOcLO1EeWbxK3v0VQAjQ"/>
@@ -92,15 +92,16 @@
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_lfOpMJkIEeWgf_EMGD-UnQ" name="fetchAvailability">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Er8TALMXEeWpmdwYTYylNw" name="startDate" effect="read">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_aly7MLMXEeWpmdwYTYylNw" name="endDate" effect="read">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_dgfxwLMXEeWpmdwYTYylNw" name="roomType" type="_ddD3oJkKEeWgf_EMGD-UnQ" effect="read"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_f8q5QLMXEeWpmdwYTYylNw" name="nrOfGuests" effect="read">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_V0SWULQPEeWbxK3v0VQAjQ" name="ReturnVal" type="_ddD3oJkKEeWgf_EMGD-UnQ" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_DiJqQJkJEeWgf_EMGD-UnQ" name="fetchBooking">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_J0vt8LMZEeWpmdwYTYylNw" name="bookingID" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="read"/>
@@ -162,7 +163,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_M-8NgLMjEeWpmdwYTYylNw" name="oldBooking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="update"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_PiJxILMjEeWpmdwYTYylNw" name="newBooking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="update"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_CEwwIJkSEeWgf_EMGD-UnQ" name="cancelBooking">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_CEwwIJkSEeWgf_EMGD-UnQ" name="cancelBooking" isLeaf="true">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Uxgx8LMjEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="delete"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_LrTMkJkSEeWgf_EMGD-UnQ" name="attemptCheckIn">
@@ -170,6 +171,9 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_6Im8cJkSEeWgf_EMGD-UnQ" name="attemptCheckOut">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_b8hAELMjEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="update"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hJ_m8JkLEeWgf_EMGD-UnQ" name="bookRoom" isAbstract="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WEy0MLMiEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_3NlPYJkKEeWgf_EMGD-UnQ" name="User" visibility="public" isAbstract="true">
@@ -182,9 +186,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_wWDNIaUOEeW-MevX_-oa-Q" name="logincontroller" type="_766t8JkaEeWgf_EMGD-UnQ" association="_wWCmEKUOEeW-MevX_-oa-Q"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_OL8e0aUPEeW-MevX_-oa-Q" name="userhandler" type="_bd3fsJkNEeWgf_EMGD-UnQ" association="_OL73wKUPEeW-MevX_-oa-Q"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_mmlMQaUQEeW-MevX_-oa-Q" name="address" type="_yYCx4JkMEeWgf_EMGD-UnQ" association="_mmj-IKUQEeW-MevX_-oa-Q"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_hJ_m8JkLEeWgf_EMGD-UnQ" name="bookRoom" isAbstract="true">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WEy0MLMiEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ"/>
-      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_vO328JkLEeWgf_EMGD-UnQ" name="changeBooking" isAbstract="true">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_a8uzgLMiEeWpmdwYTYylNw" name="oldBooking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="update"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_brSioLMiEeWpmdwYTYylNw" name="newBooking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="update"/>
@@ -282,10 +283,8 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_uOo2EJkYEeWgf_EMGD-UnQ" name="displayRoomTypes">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AshrkLMhEeWpmdwYTYylNw" name="roomType" effect="read">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WMZtoLQKEeWbxK3v0VQAjQ" name="returnValue" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EvDF0LMhEeWpmdwYTYylNw"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EvET8LMhEeWpmdwYTYylNw" value="*"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_6WAQgJkYEeWgf_EMGD-UnQ" name="displayRoomsGrid">
@@ -307,6 +306,7 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_hZAyAJkZEeWgf_EMGD-UnQ" name="displayBookingCancelled"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_sBIBYLQOEeWbxK3v0VQAjQ" name="displayDateOptions"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_766t8JkaEeWgf_EMGD-UnQ" name="LoginController">
       <ownedAttribute xmi:type="uml:Property" xmi:id="__nyBQJkaEeWgf_EMGD-UnQ" name="currentUser" type="_3NlPYJkKEeWgf_EMGD-UnQ"/>
@@ -334,6 +334,7 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_VYOIYLPuEeWbxK3v0VQAjQ" name="user" type="_3NlPYJkKEeWgf_EMGD-UnQ" direction="return"/>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_W5B4MLQMEeWbxK3v0VQAjQ" name=")"/>
       <nestedClassifier xmi:type="uml:DataType" xmi:id="_9VWZsJkcEeWgf_EMGD-UnQ" name="DataType1"/>
     </packagedElement>
   </packagedElement>

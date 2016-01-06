@@ -160,14 +160,6 @@ public interface User extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingRequired="true" bookingOrdered="false"
-	 * @generated
-	 */
-	void bookRoom(Booking booking);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model oldBookingRequired="true" oldBookingOrdered="false" newBookingRequired="true" newBookingOrdered="false"
 	 * @generated
 	 */

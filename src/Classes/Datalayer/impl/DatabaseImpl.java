@@ -72,14 +72,14 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 */
 	protected EList<Employee> employeeDB;
 	/**
-	 * The cached value of the '{@link #getBookingDB() <em>Booking DB</em>}' reference list.
+	 * The cached value of the '{@link #getBookingDB() <em>Booking DB</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBookingDB()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Booking> bookingDB;
+	protected Booking bookingDB;
 	/**
 	 * The cached value of the '{@link #getRoomDB() <em>Room DB</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -207,11 +207,37 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Booking> getBookingDB() {
-		if (bookingDB == null) {
-			bookingDB = new EObjectResolvingEList<Booking>(Booking.class, this, DatalayerPackage.DATABASE__BOOKING_DB);
+	public Booking getBookingDB() {
+		if (bookingDB != null && bookingDB.eIsProxy()) {
+			InternalEObject oldBookingDB = (InternalEObject)bookingDB;
+			bookingDB = (Booking)eResolveProxy(oldBookingDB);
+			if (bookingDB != oldBookingDB) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DatalayerPackage.DATABASE__BOOKING_DB, oldBookingDB, bookingDB));
+			}
 		}
 		return bookingDB;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Booking basicGetBookingDB() {
+		return bookingDB;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBookingDB(Booking newBookingDB) {
+		Booking oldBookingDB = bookingDB;
+		bookingDB = newBookingDB;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DatalayerPackage.DATABASE__BOOKING_DB, oldBookingDB, bookingDB));
 	}
 
 	/**
@@ -284,7 +310,8 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 			case DatalayerPackage.DATABASE__EMPLOYEE_DB:
 				return getEmployeeDB();
 			case DatalayerPackage.DATABASE__BOOKING_DB:
-				return getBookingDB();
+				if (resolve) return getBookingDB();
+				return basicGetBookingDB();
 			case DatalayerPackage.DATABASE__ROOM_DB:
 				return getRoomDB();
 			case DatalayerPackage.DATABASE__EXTRAS_DB:
@@ -314,8 +341,7 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 				getEmployeeDB().addAll((Collection<? extends Employee>)newValue);
 				return;
 			case DatalayerPackage.DATABASE__BOOKING_DB:
-				getBookingDB().clear();
-				getBookingDB().addAll((Collection<? extends Booking>)newValue);
+				setBookingDB((Booking)newValue);
 				return;
 			case DatalayerPackage.DATABASE__ROOM_DB:
 				getRoomDB().clear();
@@ -347,7 +373,7 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 				getEmployeeDB().clear();
 				return;
 			case DatalayerPackage.DATABASE__BOOKING_DB:
-				getBookingDB().clear();
+				setBookingDB((Booking)null);
 				return;
 			case DatalayerPackage.DATABASE__ROOM_DB:
 				getRoomDB().clear();
@@ -374,7 +400,7 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 			case DatalayerPackage.DATABASE__EMPLOYEE_DB:
 				return employeeDB != null && !employeeDB.isEmpty();
 			case DatalayerPackage.DATABASE__BOOKING_DB:
-				return bookingDB != null && !bookingDB.isEmpty();
+				return bookingDB != null;
 			case DatalayerPackage.DATABASE__ROOM_DB:
 				return roomDB != null && !roomDB.isEmpty();
 			case DatalayerPackage.DATABASE__EXTRAS_DB:

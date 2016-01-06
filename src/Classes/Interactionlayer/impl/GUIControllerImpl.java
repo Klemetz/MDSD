@@ -250,7 +250,7 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void displayRoomTypes(EList<Integer> roomType) {
+	public int displayRoomTypes() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -306,6 +306,17 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	 * @generated
 	 */
 	public void displayBookingCancelled() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void displayDateOptions() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -413,9 +424,8 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_PARKINGS__ELIST:
 				displayParkings((EList<Integer>)arguments.get(0));
 				return null;
-			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ROOM_TYPES__ELIST:
-				displayRoomTypes((EList<Integer>)arguments.get(0));
-				return null;
+			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ROOM_TYPES:
+				return displayRoomTypes();
 			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_ROOMS_GRID__ELIST:
 				displayRoomsGrid((EList<Integer>)arguments.get(0));
 				return null;
@@ -430,6 +440,9 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 				return null;
 			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_BOOKING_CANCELLED:
 				displayBookingCancelled();
+				return null;
+			case InteractionlayerPackage.GUI_CONTROLLER___DISPLAY_DATE_OPTIONS:
+				displayDateOptions();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

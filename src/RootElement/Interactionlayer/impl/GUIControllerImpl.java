@@ -247,12 +247,16 @@ public class GUIControllerImpl extends MinimalEObjectImpl.Container implements G
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void displayRoomTypesListroomTypeRoomType() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		System.out.println("Select room type");
+		System.out.println("1 = Economy");
+		System.out.println("2 = Business");
+		System.out.println("3 = Luxury");
+		System.out.println("4 = Suite");
+		String input = System.console().readLine();
+		//return input;
 	}
 
 	/**

@@ -11,9 +11,10 @@ import Classes.Buissnesslayer.UserHandler;
 import Classes.Datalayer.Database;
 
 import java.lang.reflect.InvocationTargetException;
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
-
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
@@ -280,12 +281,40 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void fetchAvailability(int startDate, int endDate, Room roomType, int nrOfGuests) {
+	public Room fetchAvailability(String startDate, String endDate, Room roomType, int nrOfGuests) {
+		
+		
+		EList<Booking> bookings =  getDatabase().getBookingDB();
+		
+		SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
+	
+		
+		try {
+			Date orderedDate = myFormat.parse(startDate);
+			for (Booking booking : bookings) {
+				
+			    Date date1 = myFormat.parse(booking.getStartDate());
+			    Date date2 = myFormat.parse(booking.getEndDate());
+			    if ((orderedDate.before(date1) && orderedDate.before(date2)) || (orderedDate.after(date1) && orderedDate.after(date2))) {
+			//		return booking;
+				}
+			    
+			}
+
+		    
+		    
+		  
+		    
+		    
+		} catch (ParseException e) {
+		    e.printStackTrace();
+		}
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
 	/**
@@ -492,8 +521,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case BuissnesslayerPackage.BOOKING_HANDLER___FETCH_AVAILABILITY__INT_INT_ROOM_INT:
-				fetchAvailability((Integer)arguments.get(0), (Integer)arguments.get(1), (Room)arguments.get(2), (Integer)arguments.get(3));
-				return null;
+				return fetchAvailability((String)arguments.get(0), (String)arguments.get(1), (Room)arguments.get(2), (Integer)arguments.get(3));
 			case BuissnesslayerPackage.BOOKING_HANDLER___FETCH_BOOKING__BOOKING:
 				fetchBooking((Booking)arguments.get(0));
 				return null;

@@ -113,7 +113,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int START_DATE_EDEFAULT = 0;
+	protected static final String START_DATE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
@@ -123,7 +123,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected int startDate = START_DATE_EDEFAULT;
+	protected String startDate = START_DATE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEndDate() <em>End Date</em>}' attribute.
@@ -133,7 +133,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int END_DATE_EDEFAULT = 0;
+	protected static final String END_DATE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getEndDate() <em>End Date</em>}' attribute.
@@ -143,7 +143,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 * @ordered
 	 */
-	protected int endDate = END_DATE_EDEFAULT;
+	protected String endDate = END_DATE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getExtras() <em>Extras</em>}' attribute.
@@ -382,7 +382,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getStartDate() {
+	public String getStartDate() {
 		return startDate;
 	}
 
@@ -391,8 +391,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStartDate(int newStartDate) {
-		int oldStartDate = startDate;
+	public void setStartDate(String newStartDate) {
+		String oldStartDate = startDate;
 		startDate = newStartDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.BOOKING__START_DATE, oldStartDate, startDate));
@@ -403,7 +403,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
 
@@ -412,8 +412,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEndDate(int newEndDate) {
-		int oldEndDate = endDate;
+	public void setEndDate(String newEndDate) {
+		String oldEndDate = endDate;
 		endDate = newEndDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.BOOKING__END_DATE, oldEndDate, endDate));
@@ -635,10 +635,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				setNrOfGuests((Integer)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING__START_DATE:
-				setStartDate((Integer)newValue);
+				setStartDate((String)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING__END_DATE:
-				setEndDate((Integer)newValue);
+				setEndDate((String)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING__EXTRAS:
 				setExtras((String)newValue);
@@ -735,9 +735,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BuissnesslayerPackage.BOOKING__NR_OF_GUESTS:
 				return nrOfGuests != NR_OF_GUESTS_EDEFAULT;
 			case BuissnesslayerPackage.BOOKING__START_DATE:
-				return startDate != START_DATE_EDEFAULT;
+				return START_DATE_EDEFAULT == null ? startDate != null : !START_DATE_EDEFAULT.equals(startDate);
 			case BuissnesslayerPackage.BOOKING__END_DATE:
-				return endDate != END_DATE_EDEFAULT;
+				return END_DATE_EDEFAULT == null ? endDate != null : !END_DATE_EDEFAULT.equals(endDate);
 			case BuissnesslayerPackage.BOOKING__EXTRAS:
 				return EXTRAS_EDEFAULT == null ? extras != null : !EXTRAS_EDEFAULT.equals(extras);
 			case BuissnesslayerPackage.BOOKING__PARKINGS:

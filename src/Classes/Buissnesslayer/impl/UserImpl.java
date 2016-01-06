@@ -290,17 +290,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void bookRoom(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void changeBooking(Booking oldBooking, Booking newBooking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -449,9 +438,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BuissnesslayerPackage.USER___BOOK_ROOM__BOOKING:
-				bookRoom((Booking)arguments.get(0));
-				return null;
 			case BuissnesslayerPackage.USER___CHANGE_BOOKING__BOOKING_BOOKING:
 				changeBooking((Booking)arguments.get(0), (Booking)arguments.get(1));
 				return null;

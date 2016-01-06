@@ -183,7 +183,7 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GUI_CONTROLLER___DISPLAY_ROOM_TYPES__ELIST = 4;
+	int GUI_CONTROLLER___DISPLAY_ROOM_TYPES = 4;
 
 	/**
 	 * The operation id for the '<em>Display Rooms Grid</em>' operation.
@@ -231,13 +231,22 @@ public interface InteractionlayerPackage extends EPackage {
 	int GUI_CONTROLLER___DISPLAY_BOOKING_CANCELLED = 9;
 
 	/**
+	 * The operation id for the '<em>Display Date Options</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUI_CONTROLLER___DISPLAY_DATE_OPTIONS = 10;
+
+	/**
 	 * The number of operations of the '<em>GUI Controller</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUI_CONTROLLER_OPERATION_COUNT = 10;
+	int GUI_CONTROLLER_OPERATION_COUNT = 11;
 
 	/**
 	 * The meta object id for the '{@link Classes.Interactionlayer.impl.LoginControllerImpl <em>Login Controller</em>}' class.
@@ -313,13 +322,22 @@ public interface InteractionlayerPackage extends EPackage {
 	int LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING = 2;
 
 	/**
+	 * The operation id for the '<em></em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_CONTROLLER___ = 3;
+
+	/**
 	 * The number of operations of the '<em>Login Controller</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_CONTROLLER_OPERATION_COUNT = 3;
+	int LOGIN_CONTROLLER_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link Classes.Interactionlayer.impl.LoginController_DataType1Impl <em>Login Controller Data Type1</em>}' class.
@@ -455,14 +473,14 @@ public interface InteractionlayerPackage extends EPackage {
 	EOperation getGUIController__DisplayParkings__EList();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayRoomTypes(org.eclipse.emf.common.util.EList) <em>Display Room Types</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayRoomTypes() <em>Display Room Types</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Display Room Types</em>' operation.
-	 * @see Classes.Interactionlayer.GUIController#displayRoomTypes(org.eclipse.emf.common.util.EList)
+	 * @see Classes.Interactionlayer.GUIController#displayRoomTypes()
 	 * @generated
 	 */
-	EOperation getGUIController__DisplayRoomTypes__EList();
+	EOperation getGUIController__DisplayRoomTypes();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayRoomsGrid(org.eclipse.emf.common.util.EList) <em>Display Rooms Grid</em>}' operation.
@@ -513,6 +531,16 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getGUIController__DisplayBookingCancelled();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.GUIController#displayDateOptions() <em>Display Date Options</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Display Date Options</em>' operation.
+	 * @see Classes.Interactionlayer.GUIController#displayDateOptions()
+	 * @generated
+	 */
+	EOperation getGUIController__DisplayDateOptions();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Interactionlayer.LoginController <em>Login Controller</em>}'.
@@ -586,6 +614,16 @@ public interface InteractionlayerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getLoginController__LoginCreateGuest__String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Interactionlayer.LoginController#_() <em></em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em></em>' operation.
+	 * @see Classes.Interactionlayer.LoginController#_()
+	 * @generated
+	 */
+	EOperation getLoginController___();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Interactionlayer.LoginController_DataType1 <em>Login Controller Data Type1</em>}'.
@@ -710,7 +748,7 @@ public interface InteractionlayerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GUI_CONTROLLER___DISPLAY_ROOM_TYPES__ELIST = eINSTANCE.getGUIController__DisplayRoomTypes__EList();
+		EOperation GUI_CONTROLLER___DISPLAY_ROOM_TYPES = eINSTANCE.getGUIController__DisplayRoomTypes();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Rooms Grid</b></em>' operation.
@@ -751,6 +789,14 @@ public interface InteractionlayerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation GUI_CONTROLLER___DISPLAY_BOOKING_CANCELLED = eINSTANCE.getGUIController__DisplayBookingCancelled();
+
+		/**
+		 * The meta object literal for the '<em><b>Display Date Options</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GUI_CONTROLLER___DISPLAY_DATE_OPTIONS = eINSTANCE.getGUIController__DisplayDateOptions();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Interactionlayer.impl.LoginControllerImpl <em>Login Controller</em>}' class.
@@ -809,6 +855,14 @@ public interface InteractionlayerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING = eINSTANCE.getLoginController__LoginCreateGuest__String();
+
+		/**
+		 * The meta object literal for the '<em><b></b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LOGIN_CONTROLLER___ = eINSTANCE.getLoginController___();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Interactionlayer.impl.LoginController_DataType1Impl <em>Login Controller Data Type1</em>}' class.

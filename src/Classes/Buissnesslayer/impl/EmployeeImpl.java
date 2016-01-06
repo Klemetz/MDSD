@@ -5,7 +5,6 @@ package Classes.Buissnesslayer.impl;
 import Classes.Buissnesslayer.Booking;
 import Classes.Buissnesslayer.BuissnesslayerPackage;
 import Classes.Buissnesslayer.Employee;
-
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -120,6 +119,17 @@ public class EmployeeImpl extends UserImpl implements Employee {
 		return password;
 	}
 
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public void changeBooking(Booking oldBooking, Booking newBooking) {
+		return;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -132,12 +142,26 @@ public class EmployeeImpl extends UserImpl implements Employee {
 			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.EMPLOYEE__PASSWORD, oldPassword, password));
 	}
 
+	
+	
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void intbookRoom(Booking booking) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void bookRoom(Booking booking) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -221,6 +245,9 @@ public class EmployeeImpl extends UserImpl implements Employee {
 		switch (operationID) {
 			case BuissnesslayerPackage.EMPLOYEE___INTBOOK_ROOM__BOOKING:
 				intbookRoom((Booking)arguments.get(0));
+				return null;
+			case BuissnesslayerPackage.EMPLOYEE___BOOK_ROOM__BOOKING:
+				bookRoom((Booking)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

@@ -113,9 +113,6 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Buissnesslayer/User/userhandler"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Buissnesslayer/User/address"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/User/bookRoom">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/User/bookRoom/booking"/>
-        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/User/changeBooking">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/User/changeBooking/oldBooking"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/User/changeBooking/newBooking"/>
@@ -161,9 +158,15 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/Employee/intbookRoom">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/Employee/intbookRoom/booking"/>
         </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/Employee/bookRoom">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/Employee/bookRoom/booking"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Buissnesslayer/Guest">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/Guest/wrokAround"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/Guest/bookRoom">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/Guest/bookRoom/booking"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Interactionlayer" basePackage="Classes"
@@ -192,9 +195,7 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Interactionlayer/GUIController/displayParkings">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Interactionlayer/GUIController/displayParkings/parkings"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Interactionlayer/GUIController/displayRoomTypes">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Interactionlayer/GUIController/displayRoomTypes/roomType"/>
-        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Interactionlayer/GUIController/displayRoomTypes"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Interactionlayer/GUIController/displayRoomsGrid">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Interactionlayer/GUIController/displayRoomsGrid/roomType"/>
         </genOperations>
@@ -206,6 +207,7 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Interactionlayer/GUIController/displayBookingsByIDintbookingID/bookingID"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Interactionlayer/GUIController/displayBookingCancelled"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Interactionlayer/GUIController/displayDateOptions"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Interactionlayer/LoginController">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -223,6 +225,7 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Interactionlayer/LoginController/loginCreateGuest">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Interactionlayer/LoginController/loginCreateGuest/email"/>
         </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Interactionlayer/LoginController/_"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Interactionlayer/LoginController_DataType1"/>
     </nestedGenPackages>

@@ -95,7 +95,7 @@ public interface DatalayerPackage extends EPackage {
 	int DATABASE__EMPLOYEE_DB = 2;
 
 	/**
-	 * The feature id for the '<em><b>Booking DB</b></em>' reference list.
+	 * The feature id for the '<em><b>Booking DB</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -184,10 +184,10 @@ public interface DatalayerPackage extends EPackage {
 	EReference getDatabase_EmployeeDB();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Classes.Datalayer.Database#getBookingDB <em>Booking DB</em>}'.
+	 * Returns the meta object for the reference '{@link Classes.Datalayer.Database#getBookingDB <em>Booking DB</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Booking DB</em>'.
+	 * @return the meta object for the reference '<em>Booking DB</em>'.
 	 * @see Classes.Datalayer.Database#getBookingDB()
 	 * @see #getDatabase()
 	 * @generated
@@ -270,7 +270,7 @@ public interface DatalayerPackage extends EPackage {
 		 */
 		EReference DATABASE__EMPLOYEE_DB = eINSTANCE.getDatabase_EmployeeDB();
 		/**
-		 * The meta object literal for the '<em><b>Booking DB</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Booking DB</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

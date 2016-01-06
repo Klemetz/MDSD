@@ -94,20 +94,30 @@ public interface Database extends EObject {
 	EList<Employee> getEmployeeDB();
 
 	/**
-	 * Returns the value of the '<em><b>Booking DB</b></em>' reference list.
-	 * The list contents are of type {@link Classes.Buissnesslayer.Booking}.
+	 * Returns the value of the '<em><b>Booking DB</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Booking DB</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Booking DB</em>' reference list.
+	 * @return the value of the '<em>Booking DB</em>' reference.
+	 * @see #setBookingDB(Booking)
 	 * @see Classes.Datalayer.DatalayerPackage#getDatabase_BookingDB()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Booking> getBookingDB();
+	Booking getBookingDB();
+
+	/**
+	 * Sets the value of the '{@link Classes.Datalayer.Database#getBookingDB <em>Booking DB</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Booking DB</em>' reference.
+	 * @see #getBookingDB()
+	 * @generated
+	 */
+	void setBookingDB(Booking value);
 
 	/**
 	 * Returns the value of the '<em><b>Room DB</b></em>' reference list.

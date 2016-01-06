@@ -140,10 +140,10 @@ public interface GUIController extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model roomTypeMany="true" roomTypeOrdered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	void displayRoomTypes(EList<Integer> roomType);
+	int displayRoomTypes();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,5 +185,13 @@ public interface GUIController extends EObject {
 	 * @generated
 	 */
 	void displayBookingCancelled();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void displayDateOptions();
 
 } // GUIController

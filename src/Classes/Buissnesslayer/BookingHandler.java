@@ -152,10 +152,10 @@ public interface BookingHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" nrOfGuestsRequired="true" nrOfGuestsOrdered="false"
+	 * @model required="true" ordered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" nrOfGuestsRequired="true" nrOfGuestsOrdered="false"
 	 * @generated
 	 */
-	void fetchAvailability(int startDate, int endDate, Room roomType, int nrOfGuests);
+	Room fetchAvailability(String startDate, String endDate, Room roomType, int nrOfGuests);
 
 	/**
 	 * <!-- begin-user-doc -->

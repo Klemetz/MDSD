@@ -122,12 +122,12 @@ public interface Booking extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Start Date</em>' attribute.
-	 * @see #setStartDate(int)
+	 * @see #setStartDate(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBooking_StartDate()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	int getStartDate();
+	String getStartDate();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.Booking#getStartDate <em>Start Date</em>}' attribute.
@@ -137,7 +137,7 @@ public interface Booking extends EObject {
 	 * @see #getStartDate()
 	 * @generated
 	 */
-	void setStartDate(int value);
+	void setStartDate(String value);
 
 	/**
 	 * Returns the value of the '<em><b>End Date</b></em>' attribute.
@@ -148,12 +148,12 @@ public interface Booking extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Date</em>' attribute.
-	 * @see #setEndDate(int)
+	 * @see #setEndDate(String)
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBooking_EndDate()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	int getEndDate();
+	String getEndDate();
 
 	/**
 	 * Sets the value of the '{@link Classes.Buissnesslayer.Booking#getEndDate <em>End Date</em>}' attribute.
@@ -163,7 +163,7 @@ public interface Booking extends EObject {
 	 * @see #getEndDate()
 	 * @generated
 	 */
-	void setEndDate(int value);
+	void setEndDate(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Extras</b></em>' attribute.

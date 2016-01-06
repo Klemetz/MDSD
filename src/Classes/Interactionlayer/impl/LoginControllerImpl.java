@@ -32,7 +32,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getCurrentUser <em>Current User</em>}</li>
- *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getLoginController <em>Login Controller</em>}</li>
  *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getPaymenthandler <em>Paymenthandler</em>}</li>
  *   <li>{@link Classes.Interactionlayer.impl.LoginControllerImpl#getUserhandler <em>Userhandler</em>}</li>
  * </ul>
@@ -49,16 +48,6 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected User currentUser;
-
-	/**
-	 * The cached value of the '{@link #getLoginController() <em>Login Controller</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLoginController()
-	 * @generated
-	 * @ordered
-	 */
-	protected LoginController loginController;
 
 	/**
 	 * The cached value of the '{@link #getPaymenthandler() <em>Paymenthandler</em>}' reference.
@@ -135,44 +124,6 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 		currentUser = newCurrentUser;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, InteractionlayerPackage.LOGIN_CONTROLLER__CURRENT_USER, oldCurrentUser, currentUser));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LoginController getLoginController() {
-		if (loginController != null && loginController.eIsProxy()) {
-			InternalEObject oldLoginController = (InternalEObject)loginController;
-			loginController = (LoginController)eResolveProxy(oldLoginController);
-			if (loginController != oldLoginController) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, InteractionlayerPackage.LOGIN_CONTROLLER__LOGIN_CONTROLLER, oldLoginController, loginController));
-			}
-		}
-		return loginController;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LoginController basicGetLoginController() {
-		return loginController;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLoginController(LoginController newLoginController) {
-		LoginController oldLoginController = loginController;
-		loginController = newLoginController;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, InteractionlayerPackage.LOGIN_CONTROLLER__LOGIN_CONTROLLER, oldLoginController, loginController));
 	}
 
 	/**
@@ -300,14 +251,6 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public boolean loginGuest(int bookingID) {
-		
-		User result = getUserhandler().AddNewGuest()));
-		if (result != null) {
-			currentUser = result;
-			return true;
-			
-		}
-		currentUser = null;
 		return false;
 	}
 
@@ -316,7 +259,7 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getSingletonController() {
+	public User loginCreateGuest(String email) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -327,7 +270,7 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createSingletonHandler() {
+	public void _() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -340,9 +283,12 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public User loginCreateGuest(String email, Booking booking) {
 		
-		//getUserHandler().addGuestDB(new GuestImpl());
+		UserHandler handler = getUserhandler();
+	 	currentUser = handler.AddNewGuest(email);
 		
-		throw new UnsupportedOperationException();
+	 	return currentUser;
+		
+
 	}
 
 	/**
@@ -386,9 +332,6 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 			case InteractionlayerPackage.LOGIN_CONTROLLER__CURRENT_USER:
 				if (resolve) return getCurrentUser();
 				return basicGetCurrentUser();
-			case InteractionlayerPackage.LOGIN_CONTROLLER__LOGIN_CONTROLLER:
-				if (resolve) return getLoginController();
-				return basicGetLoginController();
 			case InteractionlayerPackage.LOGIN_CONTROLLER__PAYMENTHANDLER:
 				if (resolve) return getPaymenthandler();
 				return basicGetPaymenthandler();
@@ -409,9 +352,6 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 			case InteractionlayerPackage.LOGIN_CONTROLLER__CURRENT_USER:
 				setCurrentUser((User)newValue);
-				return;
-			case InteractionlayerPackage.LOGIN_CONTROLLER__LOGIN_CONTROLLER:
-				setLoginController((LoginController)newValue);
 				return;
 			case InteractionlayerPackage.LOGIN_CONTROLLER__PAYMENTHANDLER:
 				setPaymenthandler((PaymentHandler)newValue);
@@ -434,9 +374,6 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 			case InteractionlayerPackage.LOGIN_CONTROLLER__CURRENT_USER:
 				setCurrentUser((User)null);
 				return;
-			case InteractionlayerPackage.LOGIN_CONTROLLER__LOGIN_CONTROLLER:
-				setLoginController((LoginController)null);
-				return;
 			case InteractionlayerPackage.LOGIN_CONTROLLER__PAYMENTHANDLER:
 				setPaymenthandler((PaymentHandler)null);
 				return;
@@ -457,8 +394,6 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 			case InteractionlayerPackage.LOGIN_CONTROLLER__CURRENT_USER:
 				return currentUser != null;
-			case InteractionlayerPackage.LOGIN_CONTROLLER__LOGIN_CONTROLLER:
-				return loginController != null;
 			case InteractionlayerPackage.LOGIN_CONTROLLER__PAYMENTHANDLER:
 				return paymenthandler != null;
 			case InteractionlayerPackage.LOGIN_CONTROLLER__USERHANDLER:
@@ -479,14 +414,11 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 				return loginEmployee((Integer)arguments.get(0));
 			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_GUEST__INT:
 				return loginGuest((Integer)arguments.get(0));
-			case InteractionlayerPackage.LOGIN_CONTROLLER___GET_SINGLETON_CONTROLLER:
-				getSingletonController();
+			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING:
+				return loginCreateGuest((String)arguments.get(0));
+			case InteractionlayerPackage.LOGIN_CONTROLLER___:
+				_();
 				return null;
-			case InteractionlayerPackage.LOGIN_CONTROLLER___CREATE_SINGLETON_HANDLER:
-				createSingletonHandler();
-				return null;
-			case InteractionlayerPackage.LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING_BOOKING:
-				return loginCreateGuest((String)arguments.get(0), (Booking)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

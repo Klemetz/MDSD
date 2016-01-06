@@ -229,7 +229,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGUIController__DisplayRoomTypes__EList() {
+	public EOperation getGUIController__DisplayRoomTypes() {
 		return guiControllerEClass.getEOperations().get(4);
 	}
 
@@ -276,6 +276,15 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 */
 	public EOperation getGUIController__DisplayBookingCancelled() {
 		return guiControllerEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getGUIController__DisplayDateOptions() {
+		return guiControllerEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -346,6 +355,15 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getLoginController___() {
+		return loginControllerEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLoginController_DataType1() {
 		return loginController_DataType1EClass;
 	}
@@ -389,12 +407,13 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ERROR);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_EXTRAS__ELIST);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_PARKINGS__ELIST);
-		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOM_TYPES__ELIST);
+		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOM_TYPES);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOMS_GRID__ELIST);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_PAYMENT_OPTION);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_ROOMS_BY_ID__INT);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_BOOKINGS_BY_IDINTBOOKING_ID__INT);
 		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_BOOKING_CANCELLED);
+		createEOperation(guiControllerEClass, GUI_CONTROLLER___DISPLAY_DATE_OPTIONS);
 
 		loginControllerEClass = createEClass(LOGIN_CONTROLLER);
 		createEReference(loginControllerEClass, LOGIN_CONTROLLER__CURRENT_USER);
@@ -403,6 +422,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___LOGIN_EMPLOYEE__INT);
 		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___LOGIN_GUEST__INT);
 		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___LOGIN_CREATE_GUEST__STRING);
+		createEOperation(loginControllerEClass, LOGIN_CONTROLLER___);
 
 		loginController_DataType1EClass = createEClass(LOGIN_CONTROLLER_DATA_TYPE1);
 	}
@@ -463,8 +483,7 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		op = initEOperation(getGUIController__DisplayParkings__EList(), null, "displayParkings", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "parkings", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getGUIController__DisplayRoomTypes__EList(), null, "displayRoomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "roomType", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getGUIController__DisplayRoomTypes(), ecorePackage.getEInt(), "displayRoomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getGUIController__DisplayRoomsGrid__EList(), null, "displayRoomsGrid", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "roomType", 0, -1, IS_UNIQUE, !IS_ORDERED);
@@ -479,6 +498,8 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 
 		initEOperation(getGUIController__DisplayBookingCancelled(), null, "displayBookingCancelled", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		initEOperation(getGUIController__DisplayDateOptions(), null, "displayDateOptions", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(loginControllerEClass, LoginController.class, "LoginController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLoginController_CurrentUser(), theBuissnesslayerPackage.getUser(), null, "currentUser", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getLoginController_Paymenthandler(), theBuisnessLogicLayerPackage.getPaymentHandler(), null, "paymenthandler", null, 1, 1, LoginController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -492,6 +513,8 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 
 		op = initEOperation(getLoginController__LoginCreateGuest__String(), theBuissnesslayerPackage.getUser(), "loginCreateGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getLoginController___(), null, "_", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(loginController_DataType1EClass, LoginController_DataType1.class, "LoginController_DataType1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -522,6 +545,12 @@ public class InteractionlayerPackageImpl extends EPackageImpl implements Interac
 		   source, 
 		   new String[] {
 			 "originalName", "displayBookingsByID(int bookingID)"
+		   });	
+		addAnnotation
+		  (getLoginController___(), 
+		   source, 
+		   new String[] {
+			 "originalName", ")"
 		   });
 	}
 

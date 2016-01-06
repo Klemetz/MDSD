@@ -13,7 +13,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="employeeDB" ordered="false"
           upperBound="-1" eType="#//Buissnesslayer/Employee"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="bookingDB" ordered="false"
-          upperBound="-1" eType="#//Buissnesslayer/Booking"/>
+          eType="#//Buissnesslayer/Booking"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="roomDB" ordered="false"
           upperBound="-1" eType="#//Buissnesslayer/Room"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="extrasDB" ordered="false"
@@ -41,9 +41,9 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="nrOfGuests" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="extras" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="parkings" ordered="false"
@@ -62,9 +62,9 @@
           lowerBound="1" upperBound="-1" eType="#//Buissnesslayer/Room"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BookingHandler">
-      <eOperations name="fetchAvailability" ordered="false" lowerBound="1">
-        <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eOperations name="fetchAvailability" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Room">
+        <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Room"/>
         <eParameters name="nrOfGuests" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
@@ -100,9 +100,6 @@
           lowerBound="1" eType="#//Buissnesslayer/UserHandler"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="User" abstract="true">
-      <eOperations name="bookRoom" ordered="false" lowerBound="1">
-        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
-      </eOperations>
       <eOperations name="changeBooking" ordered="false" lowerBound="1">
         <eParameters name="oldBooking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
         <eParameters name="newBooking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
@@ -164,12 +161,18 @@
         </eAnnotations>
         <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
+      <eOperations name="bookRoom" ordered="false" lowerBound="1">
+        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="Password" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Guest" eSuperTypes="#//Buissnesslayer/User">
+      <eOperations name="bookRoom" ordered="false" lowerBound="1">
+        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="wrokAround" ordered="false"
           upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
@@ -197,9 +200,7 @@
       <eOperations name="displayParkings" ordered="false" lowerBound="1">
         <eParameters name="parkings" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-      <eOperations name="displayRoomTypes" ordered="false" lowerBound="1">
-        <eParameters name="roomType" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </eOperations>
+      <eOperations name="displayRoomTypes" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eOperations name="displayRoomsGrid" ordered="false" lowerBound="1">
         <eParameters name="roomType" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
@@ -214,6 +215,7 @@
         <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
       <eOperations name="displayBookingCancelled" ordered="false" lowerBound="1"/>
+      <eOperations name="displayDateOptions" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="display" ordered="false"
           lowerBound="1" eType="#//Interactionlayer/GUI"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="logincontroller" ordered="false"
@@ -230,6 +232,11 @@
       </eOperations>
       <eOperations name="loginCreateGuest" ordered="false" lowerBound="1" eType="#//Buissnesslayer/User">
         <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="_" ordered="false" lowerBound="1">
+        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details key="originalName" value=")"/>
+        </eAnnotations>
       </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="currentUser" ordered="false"
           lowerBound="1" eType="#//Buissnesslayer/User"/>

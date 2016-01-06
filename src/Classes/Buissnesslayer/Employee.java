@@ -81,4 +81,12 @@ public interface Employee extends User {
 	 */
 	void intbookRoom(Booking booking);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model bookingRequired="true" bookingOrdered="false"
+	 * @generated
+	 */
+	void bookRoom(Booking booking);
+
 } // Employee

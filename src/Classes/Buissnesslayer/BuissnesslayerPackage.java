@@ -499,22 +499,13 @@ public interface BuissnesslayerPackage extends EPackage {
 	int USER_FEATURE_COUNT = 5;
 
 	/**
-	 * The operation id for the '<em>Book Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER___BOOK_ROOM__BOOKING = 0;
-
-	/**
 	 * The operation id for the '<em>Change Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER___CHANGE_BOOKING__BOOKING_BOOKING = 1;
+	int USER___CHANGE_BOOKING__BOOKING_BOOKING = 0;
 
 	/**
 	 * The operation id for the '<em>Cancel Booking</em>' operation.
@@ -523,7 +514,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER___CANCEL_BOOKING__BOOKING = 2;
+	int USER___CANCEL_BOOKING__BOOKING = 1;
 
 	/**
 	 * The operation id for the '<em>Attempt Check In</em>' operation.
@@ -532,7 +523,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER___ATTEMPT_CHECK_IN__BOOKING = 3;
+	int USER___ATTEMPT_CHECK_IN__BOOKING = 2;
 
 	/**
 	 * The operation id for the '<em>Attempt Check Out</em>' operation.
@@ -541,7 +532,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER___ATTEMPT_CHECK_OUT__BOOKING = 4;
+	int USER___ATTEMPT_CHECK_OUT__BOOKING = 3;
 
 	/**
 	 * The number of operations of the '<em>User</em>' class.
@@ -550,7 +541,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_OPERATION_COUNT = 5;
+	int USER_OPERATION_COUNT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Users</b></em>' attribute.
@@ -760,15 +751,6 @@ public interface BuissnesslayerPackage extends EPackage {
 	int EMPLOYEE_FEATURE_COUNT = USER_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Book Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE___BOOK_ROOM__BOOKING = USER___BOOK_ROOM__BOOKING;
-
-	/**
 	 * The operation id for the '<em>Change Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -814,13 +796,22 @@ public interface BuissnesslayerPackage extends EPackage {
 	int EMPLOYEE___INTBOOK_ROOM__BOOKING = USER_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Book Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE___BOOK_ROOM__BOOKING = USER_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Employee</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE_OPERATION_COUNT = USER_OPERATION_COUNT + 1;
+	int EMPLOYEE_OPERATION_COUNT = USER_OPERATION_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -886,15 +877,6 @@ public interface BuissnesslayerPackage extends EPackage {
 	int GUEST_FEATURE_COUNT = USER_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Book Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUEST___BOOK_ROOM__BOOKING = USER___BOOK_ROOM__BOOKING;
-
-	/**
 	 * The operation id for the '<em>Change Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -931,13 +913,22 @@ public interface BuissnesslayerPackage extends EPackage {
 	int GUEST___ATTEMPT_CHECK_OUT__BOOKING = USER___ATTEMPT_CHECK_OUT__BOOKING;
 
 	/**
+	 * The operation id for the '<em>Book Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUEST___BOOK_ROOM__BOOKING = USER_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Guest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUEST_OPERATION_COUNT = USER_OPERATION_COUNT + 0;
+	int GUEST_OPERATION_COUNT = USER_OPERATION_COUNT + 1;
 
 
 	/**
@@ -1180,11 +1171,11 @@ public interface BuissnesslayerPackage extends EPackage {
 	EReference getBookingHandler_Userhandler();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#fetchAvailability(int, int, Classes.Buissnesslayer.Room, int) <em>Fetch Availability</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#fetchAvailability(java.lang.String, java.lang.String, Classes.Buissnesslayer.Room, int) <em>Fetch Availability</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Fetch Availability</em>' operation.
-	 * @see Classes.Buissnesslayer.BookingHandler#fetchAvailability(int, int, Classes.Buissnesslayer.Room, int)
+	 * @see Classes.Buissnesslayer.BookingHandler#fetchAvailability(java.lang.String, java.lang.String, Classes.Buissnesslayer.Room, int)
 	 * @generated
 	 */
 	EOperation getBookingHandler__FetchAvailability__int_int_Room_int();
@@ -1333,16 +1324,6 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUser_Address();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#bookRoom(Classes.Buissnesslayer.Booking) <em>Book Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Book Room</em>' operation.
-	 * @see Classes.Buissnesslayer.User#bookRoom(Classes.Buissnesslayer.Booking)
-	 * @generated
-	 */
-	EOperation getUser__BookRoom__Booking();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Buissnesslayer.User#changeBooking(Classes.Buissnesslayer.Booking, Classes.Buissnesslayer.Booking) <em>Change Booking</em>}' operation.
@@ -1543,6 +1524,16 @@ public interface BuissnesslayerPackage extends EPackage {
 	EAttribute getGuest_WrokAround();
 
 	/**
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Guest#bookRoom(Classes.Buissnesslayer.Booking) <em>Book Room</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Book Room</em>' operation.
+	 * @see Classes.Buissnesslayer.Guest#bookRoom(Classes.Buissnesslayer.Booking)
+	 * @generated
+	 */
+	EOperation getGuest__BookRoom__Booking();
+
+	/**
 	 * Returns the meta object for class '{@link Classes.Buissnesslayer.Employee <em>Employee</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1583,6 +1574,16 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getEmployee__IntbookRoom__Booking();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.Employee#bookRoom(Classes.Buissnesslayer.Booking) <em>Book Room</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Book Room</em>' operation.
+	 * @see Classes.Buissnesslayer.Employee#bookRoom(Classes.Buissnesslayer.Booking)
+	 * @generated
+	 */
+	EOperation getEmployee__BookRoom__Booking();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1912,14 +1913,6 @@ public interface BuissnesslayerPackage extends EPackage {
 		EReference USER__ADDRESS = eINSTANCE.getUser_Address();
 
 		/**
-		 * The meta object literal for the '<em><b>Book Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation USER___BOOK_ROOM__BOOKING = eINSTANCE.getUser__BookRoom__Booking();
-
-		/**
 		 * The meta object literal for the '<em><b>Change Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2078,6 +2071,14 @@ public interface BuissnesslayerPackage extends EPackage {
 		EAttribute GUEST__WROK_AROUND = eINSTANCE.getGuest_WrokAround();
 
 		/**
+		 * The meta object literal for the '<em><b>Book Room</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation GUEST___BOOK_ROOM__BOOKING = eINSTANCE.getGuest__BookRoom__Booking();
+
+		/**
 		 * The meta object literal for the '{@link Classes.Buissnesslayer.impl.EmployeeImpl <em>Employee</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2110,6 +2111,14 @@ public interface BuissnesslayerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation EMPLOYEE___INTBOOK_ROOM__BOOKING = eINSTANCE.getEmployee__IntbookRoom__Booking();
+
+		/**
+		 * The meta object literal for the '<em><b>Book Room</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EMPLOYEE___BOOK_ROOM__BOOKING = eINSTANCE.getEmployee__BookRoom__Booking();
 
 	}
 
