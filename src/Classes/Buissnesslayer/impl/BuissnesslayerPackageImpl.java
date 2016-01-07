@@ -904,7 +904,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		op = initEOperation(getBookingHandler__FetchBooking__int(), this.getBooking(), "fetchBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBookingHandler__AttemptBookRoom__Booking(), null, "attemptBookRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingHandler__AttemptBookRoom__Booking(), ecorePackage.getEBoolean(), "attemptBookRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingHandler__CancelBooking__Booking(), null, "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);

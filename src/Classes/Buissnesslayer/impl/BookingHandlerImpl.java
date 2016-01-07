@@ -13,10 +13,13 @@ import Classes.Datalayer.Database;
 import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Date.*;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -493,7 +496,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		
 		list.add("Bill");
 		list.add("Cash");
-		list.add("Cash");
+		list.add("Card");
 		
 		return list;
 	}
@@ -501,31 +504,45 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int CalculatePayment(Booking booking) {
 		SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
-		 
+		Calendar cal1 = new GregorianCalendar();
+	     Calendar cal2 = new GregorianCalendar();
+
+	     
+
+	     
+	     
+	    //cal1.set(2008, 8, 1); 
+	     //cal2.set(2008, 9, 31);
+	     
 		try {
 			Date date1 = myFormat.parse(booking.getStartDate());
 			Date date2 = myFormat.parse(booking.getEndDate());
 			
+			cal1.setTime(date1);
+			cal2.setTime(date2);
 			
+			int results = daysBetween(cal1.getTime(),cal2.getTime());
 			
-			
+			if (results ==0) {
+				return 1*100*booking.getRooms().get(0).getRoomType();
+			}
+			return results*100*booking.getRooms().get(0).getRoomType();
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+		return 0;
+		
 	}
-	public static long daysDiff(Date from, Date to) {
-	    return daysDiff(from.getTime(), to.getTime());
-	}
+	 public int daysBetween(Date d1, Date d2){
+         return (int)( (d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
+ }
 
-	public static long daysDiff(long from, long to) {
-	    return Math.round( (to - from) / 86400000D ); // 1000 * 60 * 60 * 24
-	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -673,8 +690,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case BuissnesslayerPackage.BOOKING_HANDLER___FETCH_BOOKING__INT:
 				return fetchBooking((Integer)arguments.get(0));
 			case BuissnesslayerPackage.BOOKING_HANDLER___ATTEMPT_BOOK_ROOM__BOOKING:
-				attemptBookRoom((Booking)arguments.get(0));
-				return null;
+				return attemptBookRoom((Booking)arguments.get(0));
 			case BuissnesslayerPackage.BOOKING_HANDLER___CANCEL_BOOKING__BOOKING:
 				cancelBooking((Booking)arguments.get(0));
 				return null;

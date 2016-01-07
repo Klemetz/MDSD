@@ -67,7 +67,7 @@
       <eOperations name="fetchBooking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking">
         <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-      <eOperations name="attemptBookRoom" ordered="false" lowerBound="1">
+      <eOperations name="attemptBookRoom" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       </eOperations>
       <eOperations name="cancelBooking" ordered="false" lowerBound="1">

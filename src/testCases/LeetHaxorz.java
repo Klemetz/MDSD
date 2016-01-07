@@ -29,7 +29,7 @@ public class LeetHaxorz {
 		
 		
 		setupMakeBooking();
-		//Kommenterade ut det här. Kändes inte uppdaterat.
+		//Kommenterade ut det hï¿½r. Kï¿½ndes inte uppdaterat.
 		//UserHandler.getSingletonHandler().AddGuestDB(new PaymentInfo(), new Guest());
 		
 		
@@ -37,6 +37,41 @@ public class LeetHaxorz {
 		
 		Booking succesful1 = makeBooking(1, 2, 3, "09 06 2016", "12 06 2016");
 		Booking succesful2 = makeBooking(2, 3, 2, "07 08 2018", "14 08 2018");
+		
+		//check that rooms is available between two given dates
+//		BasicEList<Room> banan = GetRoomTypes("10 10 2016", "15 10 2016", 1);
+//		assertEquals(banan, (BasicEList)Start.getBookinghandler().fetchAvailability("10 10 2016", "15 10 2016", 1, 0));
+		
+//		//check that the booking contains the same rooms that were chosen
+//		Booking booking3 = makeBooking(17, 3, 2, "10 10 2016", "15 10 2016");
+//		BasicEList<Room> rooooooom = new BasicEList<Room>();
+//		//vilka rum ska vi skicka in i listan(rooooooom)
+//		booking3 = SelectRooms(rooooooom, booking3, 2, 3);
+//		assertEquals(rooooooom, booking3.getRooms());
+		
+//		//Checks that extras are available
+		BasicEList<String> extras = getAvailableExtras();
+		int extSize = extras.size();
+//		assertTrue(extSize > 0);
+		
+		//check that right extras are included in the booking
+		Booking booking1 = makeBooking(15, 2, 1, "10 10 2016", "15 10 2016");
+		ChooseAvailableExtras(booking1, extras);
+		EList<String> chosenExtras = booking1.getExtras();
+		assertEquals(extras, chosenExtras);
+		
+		//Checks that payment options exists
+		BasicEList<String> options = getPaymentOptions();
+		int optSize = options.size();
+		System.out.println(optSize);
+		assertEquals(optSize, 3);
+		
+		//check that the correct paymentoption is included in the booking
+		Booking booking2 = makeBooking(16, 2, 1, "10 10 2016", "15 10 2016");
+		choosePaymentOptions(booking2 , "gÃ¶ran");
+		String chosenPayment = booking2.getPayment();
+		assertEquals("gÃ¶ran", chosenPayment);
+		
 		
 		
 		//Should fail since there are no entreis.
@@ -69,8 +104,19 @@ public class LeetHaxorz {
 		
 		setupCheckInAndOut();
 		
-		//check if booking id is valid. Låt oss använda en ful-lösning innan
-		//setup funktionerna är färdiga.
+		//makes sure we can find a booking to check in
+		Booking bookingA = makeBooking(20, 2, 1, "10 10 2016", "15 10 2016");
+		System.out.println(bookingA.getRooms());
+		MakeBooking(bookingA);
+		Booking bookingToCheckIn = SearchForBookingID(20);
+		System.out.println(bookingToCheckIn);
+		assertEquals(bookingA, bookingToCheckIn);
+		
+		
+		
+		
+		//check if booking id is valid. Lï¿½t oss anvï¿½nda en ful-lï¿½sning innan
+		//setup funktionerna ï¿½r fï¿½rdiga.
 		
 		//Booking successfulCheckIn1 = makeBooking(1,1,3, "09 06 2016", "12 06 2016");
 		//assertSame(Start.getLogincontroller().currentUser.bookingHandler.fetchBooking(1), succesfulCheckIn1);
@@ -118,8 +164,11 @@ public class LeetHaxorz {
 	
 	// Sets up the system so that it may be tested.
 	public void setupCheckInAndOut(){
-		//TODO Skapa bokningar som ska kunna slås upp
-		return;
+		
+		Employee emp = BuissnesslayerFactoryImpl.eINSTANCE.createEmployee();
+		emp.setID(1);
+		Start.getBookinghandler().getDatabase().getEmployeeDB().add(emp);
+		Start.getLogincontroller().loginEmployee(1);
 	}
 	
 	// Sets up the system so that it may be tested.
@@ -132,9 +181,13 @@ public class LeetHaxorz {
 	
 	
 	//1,2
-	private void IdentifyUser() {
-		Start.getLogincontroller().loginCreateGuest("Solitaire@Email.com");
-	}
+    private User IdentifyUser(String email) {
+        return Start.getLogincontroller().loginCreateGuest(email);
+    }
+    //1,2
+    private void IdentifyEmployee(int id) {
+        Start.getLogincontroller().loginEmployee(id);
+    }
 	//3
 	private Booking ChooseDesireDate(Booking oldBooking, String startDate, String endDate)
 	{
@@ -278,7 +331,7 @@ public class LeetHaxorz {
 		}
 
 		booking.getRooms().addAll(rooms); 
-
+		
 		return booking;
 	}
 	
