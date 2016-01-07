@@ -20,7 +20,7 @@ import org.junit.Ignore;
 
 import Classes.*;
 
-public class LeetHaxorz {
+public class TestSuite {
 
 	public GUIController Start = Classes.Interactionlayer.impl.InteractionlayerFactoryImpl.init().createGUIController();
 	
@@ -89,7 +89,6 @@ public class LeetHaxorz {
 		//Checks that payment options exists
 		BasicEList<String> options = getPaymentOptions();
 		int optSize = options.size();
-		System.out.println(optSize);
 		assertEquals(optSize, 3);
 		
 		//check that the correct paymentoption is included in the booking
@@ -149,7 +148,6 @@ public class LeetHaxorz {
 		
 		//alternative flow 1: booking-ID doesn't exist
 		Booking bookingToCheckIn2 = SearchForBookingID(23344555);
-		System.out.println(bookingToCheckIn2);
 		assertEquals(bookingToCheckIn2, null);
 		
 		//make new booking since ID was missing
@@ -193,7 +191,6 @@ public class LeetHaxorz {
 		
 		//get correct payment amount is set
 		int amount = ReceivePayAmount(IdentifyBooking(22));
-		System.out.println(amount);
 		cal1.setTime(date1);
 		cal2.setTime(date2);
 		int nights = daysBetween(cal1.getTime(),cal2.getTime());
@@ -377,19 +374,7 @@ public class LeetHaxorz {
 	}
 	
 	
-	private Booking checkInBooking(int bookingID){
-		Booking booking = BuissnesslayerFactoryImpl.eINSTANCE.createBooking();
-		booking.setBookingID(bookingID);
-		//leta efter en booking
-		if(booking.isCheckedIn() == false){
-			booking.setCheckedIn(true);
-		}
-		else{
-			System.out.println("Already checked in");
-		}
-		return booking;
-			
-	}
+	
 	
 	public int daysBetween(Date d1, Date d2){
         return (int)( (d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));

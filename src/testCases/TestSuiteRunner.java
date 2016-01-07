@@ -5,7 +5,7 @@ import org.junit.runner.notification.Failure;
 
 
 
-public class LeetHaxorzRunner {
+public class TestSuiteRunner {
 
 	public static void main(String[] args){
 		Result result = JUnitCore.runClasses(AllTests.class);

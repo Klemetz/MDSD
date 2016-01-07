@@ -6,7 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-	LeetHaxorz.class
+	TestSuite.class
 })
 public class AllTests {
 
