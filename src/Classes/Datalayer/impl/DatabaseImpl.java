@@ -8,6 +8,7 @@ import Classes.Buissnesslayer.Employee;
 import Classes.Buissnesslayer.Guest;
 import Classes.Buissnesslayer.Room;
 import Classes.Buissnesslayer.UserHandler;
+import Classes.Buissnesslayer.impl.BuissnesslayerFactoryImpl;
 import Classes.Datalayer.Database;
 import Classes.Datalayer.DatalayerPackage;
 import java.util.Collection;
@@ -110,6 +111,45 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		  bookingDB = new BasicEList<Booking>();
 		  roomDB = new BasicEList<Room>();
 		  extrasDB = new BasicEList<String>();
+		  
+		  Room a1 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  a1.setRoomType(1);
+		  roomDB.add(a1);
+		  Room a2 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  a2.setRoomType(1);
+		  roomDB.add(a2);
+		  Room a3 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  a3.setRoomType(1);
+		  roomDB.add(a3);
+		  Room a4 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  a4.setRoomType(1);
+		  roomDB.add(a4);
+		  
+		  Room b1 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  b1.setRoomType(2);
+		  roomDB.add(b1);
+		  Room b2 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  b2.setRoomType(2);
+		  roomDB.add(b2);
+		  Room b3 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  b3.setRoomType(2);
+		  roomDB.add(b3);
+		  Room b4 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  b4.setRoomType(2);
+		  roomDB.add(b4);
+		  
+		  Room c1 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  c1.setRoomType(3);
+		  roomDB.add(c1);
+		  Room c2 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  c2.setRoomType(3);
+		  roomDB.add(c2);
+		  Room c3 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  c3.setRoomType(3);
+		  roomDB.add(c3);
+		  Room c4 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
+		  c4.setRoomType(3);
+		  roomDB.add(c4);
 	}
 
 	/**

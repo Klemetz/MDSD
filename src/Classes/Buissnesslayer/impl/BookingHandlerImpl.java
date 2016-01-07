@@ -293,7 +293,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public EList<Room> fetchAvailability(String startDate, String endDate, int roomType, int nrOfGuests) {
 		
-		EList<Room> NonOccupiedRooms = (EList<Room>) new ArrayList<Room>();
+		BasicEList<Room> NonOccupiedRooms = new BasicEList<Room>();
 		
 		ArrayList<Room> PossibleRooms = new ArrayList<Room>();
 		
@@ -317,7 +317,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				    Date OldStart = myFormat.parse(booking.getStartDate());
 				    Date OldNew = myFormat.parse(booking.getEndDate());
 				    
-				    if (!((NewStart.before(OldStart) && NewEnd.before(OldStart)) || ((NewStart.after(NewStart) && NewEnd.after(NewEnd))))) {
+				    if (((NewStart.before(OldStart) && NewEnd.before(OldStart)) || ((NewStart.after(OldNew) && NewEnd.after(OldNew))))) {
 						occupied = true;
 					}
 				    
@@ -722,7 +722,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public static void Main(String[] args){
-		System.out.println("Det går att köra");
+		System.out.println("Det gï¿½r att kï¿½ra");
 		
 	}
 } //BookingHandlerImpl

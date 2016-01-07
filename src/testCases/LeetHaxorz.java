@@ -55,7 +55,7 @@ public class LeetHaxorz {
 //		assertTrue(extSize > 0);
 		
 		//check that right extras are included in the booking
-		Booking booking1 = makeBooking(15, 2, 1, "10 10 2016", "15 10 2016");
+		Booking booking1 = makeBooking(15, 2, 1, "10 10 2019", "15 10 2019");
 		ChooseAvailableExtras(booking1, extras);
 		EList<String> chosenExtras = booking1.getExtras();
 		assertEquals(extras, chosenExtras);
@@ -67,7 +67,7 @@ public class LeetHaxorz {
 		assertEquals(optSize, 3);
 		
 		//check that the correct paymentoption is included in the booking
-		Booking booking2 = makeBooking(16, 2, 1, "10 10 2016", "15 10 2016");
+		Booking booking2 = makeBooking(16, 2, 1, "10 10 2020", "15 10 2020");
 		choosePaymentOptions(booking2 , "göran");
 		String chosenPayment = booking2.getPayment();
 		assertEquals("göran", chosenPayment);
@@ -75,19 +75,19 @@ public class LeetHaxorz {
 		
 		
 		//Should fail since there are no entreis.
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom((makeBooking(0, 0, 0, "09 06 2016", "12 06 2016"))));
+		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom((makeBooking(0, 0, 0, "09 06 2021", "12 06 2021"))));
 		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(succesful1));
 		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(succesful2));
 		//Should fail since no "Room Type" is selected.
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(3, 4, 0, "20 12 2015", "02 01 2016")));
+		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(3, 4, 0, "20 12 2022", "02 01 2023")));
 		//Shold fail since illegal entery, there is no "-1" room type.
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(4, 2, -1, "20 12 2015", "02 01 2016")));
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(5, 1, -40,"20 12 2015", "02 01 2016")));
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(1000, 6000, 3000, "20 12 2015", "02 01 2016")));
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(7, 52, -51,"20 12 2015", "02 01 2016")));
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(1, 1, 4, "45 15 2569", "02 10 1567")));
+		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(4, 2, -1, "20 12 2023", "02 01 2024")));
+		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(5, 1, -40,"20 12 2024", "02 01 2025")));
+		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(1000, 6000, 3000, "20 12 2025", "02 01 2026")));
+		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(7, 52, -51,"20 12 2026", "02 01 2027")));
+		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(1, 1, 4, "45 15 2569", "02 10 3567")));
 		//Should fail, since zero rooms has been entered.
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(9, 0, 2, "09 06 2016", "12 06 2016")));
+		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(9, 0, 2, "09 06 2027", "12 06 2027")));
 		
 		
 		//Start.getLogincontroller().currentUser.bookingHandler.fetchBooking;
@@ -105,14 +105,19 @@ public class LeetHaxorz {
 		setupCheckInAndOut();
 		
 		//makes sure we can find a booking to check in
-		Booking bookingA = makeBooking(20, 2, 1, "10 10 2016", "15 10 2016");
+		Booking bookingA = makeBooking(20, 2, 1, "10 10 2099", "15 10 2099");
+		Booking bookingB = makeBooking(20, 2, 1, "10 10 4000", "15 10 3999");
+		Booking bookingC = makeBooking(20, 2, 1, "10 10 2899", "15 10 2999");
+		Booking bookingD = makeBooking(20, 2, 1, "10 10 2299", "15 10 2399");
 		System.out.println(bookingA.getRooms());
 		MakeBooking(bookingA);
 		Booking bookingToCheckIn = SearchForBookingID(20);
 		System.out.println(bookingToCheckIn);
 		assertEquals(bookingA, bookingToCheckIn);
 		
-		
+		// 
+		Room roomA = GetRoomForTheBookingNCheckIn(bookingA);
+		assertNotNull(roomA);
 		
 		
 		//check if booking id is valid. L�t oss anv�nda en ful-l�sning innan
@@ -165,9 +170,9 @@ public class LeetHaxorz {
 	// Sets up the system so that it may be tested.
 	public void setupCheckInAndOut(){
 		
-		Employee emp = BuissnesslayerFactoryImpl.eINSTANCE.createEmployee();
-		emp.setID(1);
-		Start.getBookinghandler().getDatabase().getEmployeeDB().add(emp);
+//		Employee emp = BuissnesslayerFactoryImpl.eINSTANCE.createEmployee();
+//		emp.setID(1);
+		Start.getLogincontroller().getUserhandler().CreateEmployee(1);
 		Start.getLogincontroller().loginEmployee(1);
 	}
 	
@@ -325,11 +330,10 @@ public class LeetHaxorz {
 		booking.setEndDate(endDate);
 		booking.setBookingID(bookingID);
 		
+		
+		
 		EList<Room> rooms = new BasicEList<Room>();
-		for (int i = 0; i < amntOfRooms; i++) {
-			rooms.add(BuissnesslayerFactoryImpl.eINSTANCE.createRoom());
-		}
-
+		rooms = Start.getBookinghandler().fetchAvailability(startDate, endDate, roomType, 0);
 		booking.getRooms().addAll(rooms); 
 		
 		return booking;
