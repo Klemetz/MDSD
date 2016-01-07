@@ -30,27 +30,11 @@ public class TestSuite {
 		
 		
 		setupMakeBooking();
-		//Kommenterade ut det h�r. K�ndes inte uppdaterat.
-		//UserHandler.getSingletonHandler().AddGuestDB(new PaymentInfo(), new Guest());
-		
-		
-
-		
+				
 		Booking succesful1 = makeBooking(1, 2, 3, "09 06 2016", "12 06 2016");
 		Booking succesful2 = makeBooking(2, 3, 2, "07 08 2018", "14 08 2018");
 		
-		//check that rooms is available between two given dates
-//		BasicEList<Room> banan = GetRoomTypes("10 10 2016", "15 10 2016", 1);
-//		assertEquals(banan, (BasicEList)Start.getBookinghandler().fetchAvailability("10 10 2016", "15 10 2016", 1, 0));
-		
-//		//check that the booking contains the same rooms that were chosen
-//		Booking booking3 = makeBooking(17, 3, 2, "10 10 2016", "15 10 2016");
-//		BasicEList<Room> rooooooom = new BasicEList<Room>();
-//		//vilka rum ska vi skicka in i listan(rooooooom)
-//		booking3 = SelectRooms(rooooooom, booking3, 2, 3);
-//		assertEquals(rooooooom, booking3.getRooms());
-		
-		
+				
 		//should succeed since a user with the email exists in the DB
 		assertNotNull(Start.getBookinghandler().getUserhandler().identifyUser("lennart@hotmail.com"));
 		//should fail since no user with this email does not exist in the DB
@@ -75,7 +59,7 @@ public class TestSuite {
 		assertEquals(endDate, desiredDate.getEndDate());		
 		
 		
-//		//Checks that extras are available
+//		//Checks that all of our 3 extras are available
 		BasicEList<String> extras = getAvailableExtras();
 		int extSize = extras.size();
 		assertEquals(extSize , 3);
@@ -86,41 +70,18 @@ public class TestSuite {
 		EList<String> chosenExtras = booking1.getExtras();
 		assertEquals(extras, chosenExtras);
 		
-		//Checks that payment options exists
+		//Checks that our 3 payment options exist
 		BasicEList<String> options = getPaymentOptions();
 		int optSize = options.size();
 		assertEquals(optSize, 3);
 		
-		//check that the correct paymentoption is included in the booking
+		//check that the correct payment option is included in the booking
 		Booking booking2 = makeBooking(16, 2, 1, "10 10 2020", "15 10 2020");
-		choosePaymentOptions(booking2 , "göran");
+		choosePaymentOptions(booking2 , "Card");
 		String chosenPayment = booking2.getPayment();
-		assertEquals("göran", chosenPayment);
+		assertEquals("Card", chosenPayment);
 		
 		
-		
-		//Should fail since there are no entreis.
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom((makeBooking(0, 0, 0, "09 06 2021", "12 06 2021"))));
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(succesful1));
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(succesful2));
-		//Should fail since no "Room Type" is selected.
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(3, 4, 0, "20 12 2022", "02 01 2023")));
-		//Shold fail since illegal entery, there is no "-1" room type.
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(4, 2, -1, "20 12 2023", "02 01 2024")));
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(5, 1, -40,"20 12 2024", "02 01 2025")));
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(1000, 6000, 3000, "20 12 2025", "02 01 2026")));
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(7, 52, -51,"20 12 2026", "02 01 2027")));
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(1, 1, 4, "45 15 2569", "02 10 3567")));
-		//Should fail, since zero rooms has been entered.
-		assertTrue(Start.getLogincontroller().getCurrentUser().bookRoom(makeBooking(9, 0, 2, "09 06 2027", "12 06 2027")));
-		
-		
-		//Start.getLogincontroller().currentUser.bookingHandler.fetchBooking;
-		
-		
-		//Make sure that the two that were assertTrue have been successfully entered into the database
-		assertSame(Start.getLogincontroller().getCurrentUser().getBookinghandler().fetchBooking(1), succesful1);
-		assertSame(Start.getLogincontroller().getCurrentUser().getBookinghandler().fetchBooking(2), succesful2);
 	}
 	
 	@Test
@@ -129,9 +90,6 @@ public class TestSuite {
 		
 		//makes sure we can find a booking to check in
 		Booking bookingA = makeBooking(20, 2, 1, "10 10 2099", "15 10 2099");
-		Booking bookingB = makeBooking(20, 2, 1, "10 10 4000", "15 10 5999");
-		Booking bookingC = makeBooking(20, 2, 1, "10 10 2899", "15 10 2999");
-		Booking bookingD = makeBooking(20, 2, 1, "10 10 2299", "15 10 2399");
 //		System.out.println(bookingA.getRooms());
 		MakeBooking(bookingA);
 		Booking bookingToCheckIn = SearchForBookingID(20);
@@ -156,7 +114,7 @@ public class TestSuite {
 		Booking booking99 = SearchForBookingID(25);
 		assertEquals(booking99, bookingToCheckIn3);
 		
-		//alternative flow 2: not enough rooms
+		//alternative flow 2: not enough rooms of selected roomType upon check-in
 		int rooooooomType = 2;
 		Booking bookingToCheckIn4 = makeBooking(26, 2, rooooooomType, "10 10 2500", "15 10 2699");
 		int roomType12 = bookingToCheckIn4.getRoomType();
@@ -189,14 +147,14 @@ public class TestSuite {
 		Booking result = IdentifyBooking(22);
 		assertEquals(BTCO, result);
 		
-		//get correct payment amount is set
+		//make sure correct payment amount is set for booking
 		int amount = ReceivePayAmount(IdentifyBooking(22));
 		cal1.setTime(date1);
 		cal2.setTime(date2);
 		int nights = daysBetween(cal1.getTime(),cal2.getTime());
 		assertEquals(amount, (((roomtype * 100) * rooms) * nights));
 		
-		//Make sure that the booking is checked out after payment is displayed
+		//Make sure that the booking is checked out after payment has been made
 		Booking checkedOut = IdentifyBooking(22);
 		CheckOut(checkedOut);
 		assertEquals(checkedOut.isCheckedOut(), true);
@@ -210,8 +168,7 @@ public class TestSuite {
 	// Sets up the system so that it may be tested.
 	public void setupCheckInAndOut(){
 		
-//		Employee emp = BuissnesslayerFactoryImpl.eINSTANCE.createEmployee();
-//		emp.setID(1);
+
 		Start.getLogincontroller().getUserhandler().CreateEmployee(1);
 		Start.getLogincontroller().loginEmployee(1);
 	}
