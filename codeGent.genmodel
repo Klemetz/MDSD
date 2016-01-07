@@ -149,14 +149,17 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/UserHandler/isEmailValid">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/UserHandler/isEmailValid/email"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/UserHandler/checkEmployeeID">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/UserHandler/checkEmployeeID/employeeID"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/UserHandler/identifyUser">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/UserHandler/identifyUser/employeeID"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/UserHandler/AddNewGuest">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/UserHandler/AddNewGuest/email"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/UserHandler/CreateEmployee">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/UserHandler/CreateEmployee/ID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/UserHandler/identifyUser.1">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/UserHandler/identifyUser.1/email"/>
         </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Buissnesslayer/Employee">

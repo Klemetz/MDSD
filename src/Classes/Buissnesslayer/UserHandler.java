@@ -131,7 +131,7 @@ public interface UserHandler extends EObject {
 	 * @model required="true" ordered="false" employeeIDRequired="true" employeeIDOrdered="false"
 	 * @generated
 	 */
-	User checkEmployeeID(int employeeID);
+	Employee identifyUser(int employeeID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,5 +148,13 @@ public interface UserHandler extends EObject {
 	 * @generated
 	 */
 	Employee CreateEmployee(int ID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" emailRequired="true" emailOrdered="false"
+	 * @generated
+	 */
+	Guest identifyUser(String email);
 
 } // UserHandler

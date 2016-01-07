@@ -631,7 +631,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getUserHandler__CheckEmployeeID__int() {
+	public EOperation getUserHandler__IdentifyUser__int() {
 		return userHandlerEClass.getEOperations().get(2);
 	}
 
@@ -651,6 +651,15 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 */
 	public EOperation getUserHandler__CreateEmployee__int() {
 		return userHandlerEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getUserHandler__IdentifyUser__String() {
+		return userHandlerEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -826,9 +835,10 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		createEReference(userHandlerEClass, USER_HANDLER__LOGINCONTROLLER);
 		createEOperation(userHandlerEClass, USER_HANDLER___SEND_EMAIL_VERIFICATION__STRING);
 		createEOperation(userHandlerEClass, USER_HANDLER___IS_EMAIL_VALID__STRING);
-		createEOperation(userHandlerEClass, USER_HANDLER___CHECK_EMPLOYEE_ID__INT);
+		createEOperation(userHandlerEClass, USER_HANDLER___IDENTIFY_USER__INT);
 		createEOperation(userHandlerEClass, USER_HANDLER___ADD_NEW_GUEST__STRING);
 		createEOperation(userHandlerEClass, USER_HANDLER___CREATE_EMPLOYEE__INT);
+		createEOperation(userHandlerEClass, USER_HANDLER___IDENTIFY_USER__STRING);
 
 		employeeEClass = createEClass(EMPLOYEE);
 		createEAttribute(employeeEClass, EMPLOYEE__ID);
@@ -973,7 +983,7 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		op = initEOperation(getUserHandler__IsEmailValid__String(), ecorePackage.getEBoolean(), "isEmailValid", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getUserHandler__CheckEmployeeID__int(), this.getUser(), "checkEmployeeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getUserHandler__IdentifyUser__int(), this.getEmployee(), "identifyUser", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "employeeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getUserHandler__AddNewGuest__String(), this.getUser(), "AddNewGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -981,6 +991,9 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 
 		op = initEOperation(getUserHandler__CreateEmployee__int(), this.getEmployee(), "CreateEmployee", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "ID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getUserHandler__IdentifyUser__String(), this.getGuest(), "identifyUser", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(employeeEClass, Employee.class, "Employee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEmployee_ID(), ecorePackage.getEInt(), "ID", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

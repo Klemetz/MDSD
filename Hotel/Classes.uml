@@ -276,11 +276,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_xjKucLPeEeWbxK3v0VQAjQ" name="checkEmployeeID">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xjKucLPeEeWbxK3v0VQAjQ" name="identifyUser">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_4uUtkLPeEeWbxK3v0VQAjQ" name="employeeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_G--vwLPfEeWbxK3v0VQAjQ" name="returnValue" type="_3NlPYJkKEeWgf_EMGD-UnQ" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_G--vwLPfEeWbxK3v0VQAjQ" name="returnValue" type="_qIqOQJkPEeWgf_EMGD-UnQ" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_5CSXILP5EeWbxK3v0VQAjQ" name="AddNewGuest">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_7wEzELP5EeWbxK3v0VQAjQ" name="email">
@@ -293,6 +293,12 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z1tUkLTkEeWjBpqx86XPZQ" name="ID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2ea6ELTnEeWjBpqx86XPZQ" name="identifyUser">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_52qoQLTnEeWjBpqx86XPZQ" name="email">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6q0CALTnEeWjBpqx86XPZQ" name="returnValue" type="_qu-nYJkPEeWgf_EMGD-UnQ" direction="return"/>
       </ownedOperation>
     </packagedElement>
   </packagedElement>

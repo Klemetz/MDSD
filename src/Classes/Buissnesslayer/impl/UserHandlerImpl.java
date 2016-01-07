@@ -299,6 +299,17 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Employee identifyUser(int employeeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public User checkEmployeeID(int employeeID){
@@ -341,6 +352,20 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 			getDatabase().getEmployeeDB().add(newEmp);
 			return newEmp;
 		}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public Guest identifyUser(String email) {
+		for(Guest guest : database.getUserDB()) {
+			if(guest.getEmail() == email) {
+				return guest;
+			}
+		}
+		return null;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -471,12 +496,14 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 				return null;
 			case BuissnesslayerPackage.USER_HANDLER___IS_EMAIL_VALID__STRING:
 				return isEmailValid((String)arguments.get(0));
-			case BuissnesslayerPackage.USER_HANDLER___CHECK_EMPLOYEE_ID__INT:
-				return checkEmployeeID((Integer)arguments.get(0));
+			case BuissnesslayerPackage.USER_HANDLER___IDENTIFY_USER__INT:
+				return identifyUser((Integer)arguments.get(0));
 			case BuissnesslayerPackage.USER_HANDLER___ADD_NEW_GUEST__STRING:
 				return AddNewGuest((String)arguments.get(0));
 			case BuissnesslayerPackage.USER_HANDLER___CREATE_EMPLOYEE__INT:
 				return CreateEmployee((Integer)arguments.get(0));
+			case BuissnesslayerPackage.USER_HANDLER___IDENTIFY_USER__STRING:
+				return identifyUser((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

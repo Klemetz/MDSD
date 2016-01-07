@@ -307,7 +307,7 @@ public class LoginControllerImpl extends MinimalEObjectImpl.Container implements
 	public boolean loginEmployee(int ID) {
 		
 	
-		User result = getUserhandler().checkEmployeeID(ID);
+		User result = getUserhandler().identifyUser(ID);
 		if (result != null) {
 			currentUser = result;
 			return true;

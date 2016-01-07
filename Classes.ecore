@@ -136,7 +136,7 @@
       <eOperations name="isEmailValid" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="checkEmployeeID" ordered="false" lowerBound="1" eType="#//Buissnesslayer/User">
+      <eOperations name="identifyUser" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Employee">
         <eParameters name="employeeID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
       <eOperations name="AddNewGuest" ordered="false" lowerBound="1" eType="#//Buissnesslayer/User">
@@ -144,6 +144,9 @@
       </eOperations>
       <eOperations name="CreateEmployee" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Employee">
         <eParameters name="ID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eOperations name="identifyUser" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Guest">
+        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="Users" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
