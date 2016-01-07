@@ -13,16 +13,14 @@ import Classes.Datalayer.Database;
 import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -373,6 +371,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 					    	
 					    	
 							Date orderedDate = myFormat.parse(startDate);
+							
 						    Date date1 = myFormat.parse(booking.getStartDate());
 						    Date date2 = myFormat.parse(booking.getEndDate());
 							if ((orderedDate.before(date1) && orderedDate.before(date2)) || (orderedDate.after(date1) && orderedDate.after(date2))) {
@@ -445,23 +444,19 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void checkIn(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		booking.setCheckedIn(true);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void checkOut(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		booking.setCheckedOut(true);
 	}
 
 	/**
@@ -482,58 +477,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public EList<String> fetchAvailableExtras() {
 		
-		ArrayList<String> result = new ArrayList<String>();
-		
-		System.out.println("Available Extras.");
-
-		System.out.println("Towels");
-		System.out.println("Mini-bar");
-		System.out.println("Pillows");
+		return getDatabase().getExtrasDB();
 		
 
-		while (true) {
-		//  prompt the user to enter their name
-		      System.out.print("Enter your desired extra, exit with the command 'end': ");
-
-		      //  open up standard input
-		      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-		      String userName = null;
-
-		      //  read the username from the command-line; need to use try/catch with the
-		      //  readLine() method
-		      while(true){
-			      try {
-			         userName = br.readLine();
-			         if (userName == "Towels") {
-						result.add("Towels");
-					}
-			         else if (userName == "Mini-bar") {
-			        	 result.add("Mini-bar");
-					}
-			         else if (userName == "Pillows") {
-			        	 result.add("Pillows");
-					}
-			         else if (userName == "end") {
-			        	 break;
-							
-					}
-			      } catch (IOException ioe) {
-			         System.out.println("IO error trying to read your extra!");
-			         System.exit(1);
-			      }
-		      }
-		      
-
-		      
-				return (EList<String>) result;
-		}
-		
-
-		
-		
-		
-		
 	}
 
 	/**
@@ -542,56 +488,43 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public EList<String> displayPaymentOptions() {
-		ArrayList<String> result = new ArrayList<String>();
 		
-		System.out.println("Available Payment options.");
-
-		System.out.println("Cash");
-		System.out.println("Card");
-		System.out.println("Bill");
+		BasicEList<String> list = new BasicEList<String>();
 		
-
-		while (true) {
-		//  prompt the user to enter their name
-		      System.out.print("Enter your desired payment option");
-
-		      //  open up standard input
-		      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-		      String userName = null;
-
-		      //  read the username from the command-line; need to use try/catch with the
-		      //  readLine() method
-		      while(true){
-			      try {
-			         userName = br.readLine();
-			         if (userName == "Cash") {
-						result.add("Cash");
-						break;
-					}
-			         else if (userName == "Card") {
-			        	 result.add("Card");
-			        	 break;
-					}
-			         else if (userName == "Bill") {
-			        	 result.add("Bill");
-			        	 break;
-					}
-			         else 
-			        	 System.out.println("Not acceptable payment option!");
-			        
-							
-					}
-			         
-			         
-			       catch (IOException ioe) {
-			         System.out.println("IO error trying to read your extra!");
-			         System.exit(1);
-			      }
-		      }
-		      
-		      return (EList<String>) result;
+		list.add("Bill");
+		list.add("Cash");
+		list.add("Cash");
+		
+		return list;
 	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int CalculatePayment(Booking booking) {
+		SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
+		 
+		try {
+			Date date1 = myFormat.parse(booking.getStartDate());
+			Date date2 = myFormat.parse(booking.getEndDate());
+			
+			
+			
+			
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	public static long daysDiff(Date from, Date to) {
+	    return daysDiff(from.getTime(), to.getTime());
+	}
+
+	public static long daysDiff(long from, long to) {
+	    return Math.round( (to - from) / 86400000D ); // 1000 * 60 * 60 * 24
 	}
 
 	/**
@@ -761,6 +694,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return fetchAvailableExtras();
 			case BuissnesslayerPackage.BOOKING_HANDLER___DISPLAY_PAYMENT_OPTIONS:
 				return displayPaymentOptions();
+			case BuissnesslayerPackage.BOOKING_HANDLER___CALCULATE_PAYMENT__BOOKING:
+				return CalculatePayment((Booking)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

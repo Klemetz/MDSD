@@ -231,4 +231,12 @@ public interface BookingHandler extends EObject {
 	 */
 	EList<String> displayPaymentOptions();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
+	 * @generated
+	 */
+	int CalculatePayment(Booking booking);
+
 } // BookingHandler

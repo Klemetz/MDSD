@@ -105,6 +105,9 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/BookingHandler/sendErrorMsg"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/BookingHandler/fetchAvailableExtras"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/BookingHandler/displayPaymentOptions"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//Buissnesslayer/BookingHandler/CalculatePayment">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//Buissnesslayer/BookingHandler/CalculatePayment/booking"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//Buissnesslayer/User">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Buissnesslayer/User/Name"/>

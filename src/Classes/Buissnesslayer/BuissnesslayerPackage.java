@@ -211,7 +211,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	int BOOKING__END_DATE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Extras</b></em>' attribute.
+	 * The feature id for the '<em><b>Extras</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -445,13 +445,22 @@ public interface BuissnesslayerPackage extends EPackage {
 	int BOOKING_HANDLER___DISPLAY_PAYMENT_OPTIONS = 9;
 
 	/**
+	 * The operation id for the '<em>Calculate Payment</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_HANDLER___CALCULATE_PAYMENT__BOOKING = 10;
+
+	/**
 	 * The number of operations of the '<em>Booking Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER_OPERATION_COUNT = 10;
+	int BOOKING_HANDLER_OPERATION_COUNT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1054,10 +1063,10 @@ public interface BuissnesslayerPackage extends EPackage {
 	EAttribute getBooking_EndDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Classes.Buissnesslayer.Booking#getExtras <em>Extras</em>}'.
+	 * Returns the meta object for the attribute list '{@link Classes.Buissnesslayer.Booking#getExtras <em>Extras</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Extras</em>'.
+	 * @return the meta object for the attribute list '<em>Extras</em>'.
 	 * @see Classes.Buissnesslayer.Booking#getExtras()
 	 * @see #getBooking()
 	 * @generated
@@ -1305,6 +1314,16 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingHandler__DisplayPaymentOptions();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.BookingHandler#CalculatePayment(Classes.Buissnesslayer.Booking) <em>Calculate Payment</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Calculate Payment</em>' operation.
+	 * @see Classes.Buissnesslayer.BookingHandler#CalculatePayment(Classes.Buissnesslayer.Booking)
+	 * @generated
+	 */
+	EOperation getBookingHandler__CalculatePayment__Booking();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Buissnesslayer.User <em>User</em>}'.
@@ -1714,7 +1733,7 @@ public interface BuissnesslayerPackage extends EPackage {
 		EAttribute BOOKING__END_DATE = eINSTANCE.getBooking_EndDate();
 
 		/**
-		 * The meta object literal for the '<em><b>Extras</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Extras</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1906,6 +1925,14 @@ public interface BuissnesslayerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_HANDLER___DISPLAY_PAYMENT_OPTIONS = eINSTANCE.getBookingHandler__DisplayPaymentOptions();
+
+		/**
+		 * The meta object literal for the '<em><b>Calculate Payment</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_HANDLER___CALCULATE_PAYMENT__BOOKING = eINSTANCE.getBookingHandler__CalculatePayment__Booking();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Buissnesslayer.impl.UserImpl <em>User</em>}' class.

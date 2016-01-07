@@ -51,6 +51,8 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_dqRb0JgbEeWgf_EMGD-UnQ" name="extras">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_55qYELTKEeWjBpqx86XPZQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_55s0ULTKEeWjBpqx86XPZQ" value="*"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_0ECoQJgdEeWgf_EMGD-UnQ" name="parkings">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
@@ -145,6 +147,12 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GyBEcLQkEeWbxK3v0VQAjQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GyCSkLQkEeWbxK3v0VQAjQ" value="*"/>
         </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ucdJYLTUEeWjBpqx86XPZQ" name="CalculatePayment">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zdwgELTUEeWjBpqx86XPZQ" name="returnVal" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1gdXoLTUEeWjBpqx86XPZQ" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_qu-nYJkPEeWgf_EMGD-UnQ" name="Guest">

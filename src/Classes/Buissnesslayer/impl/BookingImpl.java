@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -146,24 +147,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected String endDate = END_DATE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getExtras() <em>Extras</em>}' attribute.
+	 * The cached value of the '{@link #getExtras() <em>Extras</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExtras()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EXTRAS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getExtras() <em>Extras</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExtras()
-	 * @generated
-	 * @ordered
-	 */
-	protected String extras = EXTRAS_EDEFAULT;
+	protected EList<String> extras;
 
 	/**
 	 * The default value of the '{@link #getParkings() <em>Parkings</em>}' attribute.
@@ -414,20 +405,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getExtras() {
+	public EList<String> getExtras() {
+		if (extras == null) {
+			extras = new EDataTypeUniqueEList<String>(String.class, this, BuissnesslayerPackage.BOOKING__EXTRAS);
+		}
 		return extras;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExtras(String newExtras) {
-		String oldExtras = extras;
-		extras = newExtras;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.BOOKING__EXTRAS, oldExtras, extras));
 	}
 
 	/**
@@ -622,7 +604,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				setEndDate((String)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING__EXTRAS:
-				setExtras((String)newValue);
+				getExtras().clear();
+				getExtras().addAll((Collection<? extends String>)newValue);
 				return;
 			case BuissnesslayerPackage.BOOKING__PARKINGS:
 				setParkings((String)newValue);
@@ -675,7 +658,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				setEndDate(END_DATE_EDEFAULT);
 				return;
 			case BuissnesslayerPackage.BOOKING__EXTRAS:
-				setExtras(EXTRAS_EDEFAULT);
+				getExtras().clear();
 				return;
 			case BuissnesslayerPackage.BOOKING__PARKINGS:
 				setParkings(PARKINGS_EDEFAULT);
@@ -721,7 +704,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BuissnesslayerPackage.BOOKING__END_DATE:
 				return END_DATE_EDEFAULT == null ? endDate != null : !END_DATE_EDEFAULT.equals(endDate);
 			case BuissnesslayerPackage.BOOKING__EXTRAS:
-				return EXTRAS_EDEFAULT == null ? extras != null : !EXTRAS_EDEFAULT.equals(extras);
+				return extras != null && !extras.isEmpty();
 			case BuissnesslayerPackage.BOOKING__PARKINGS:
 				return PARKINGS_EDEFAULT == null ? parkings != null : !PARKINGS_EDEFAULT.equals(parkings);
 			case BuissnesslayerPackage.BOOKING__CHECKED_IN:

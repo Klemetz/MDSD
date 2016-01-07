@@ -41,7 +41,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="extras" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="parkings" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkedIn" ordered="false"
@@ -85,6 +85,9 @@
       <eOperations name="sendErrorMsg" ordered="false" lowerBound="1"/>
       <eOperations name="fetchAvailableExtras" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eOperations name="displayPaymentOptions" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="CalculatePayment" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Booking"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="booking" ordered="false"
           lowerBound="1" eType="#//Buissnesslayer/Booking"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="Bookings" ordered="false"

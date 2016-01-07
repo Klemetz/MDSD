@@ -166,30 +166,20 @@ public interface Booking extends EObject {
 	void setEndDate(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Extras</b></em>' attribute.
+	 * Returns the value of the '<em><b>Extras</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Extras</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Extras</em>' attribute.
-	 * @see #setExtras(String)
+	 * @return the value of the '<em>Extras</em>' attribute list.
 	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBooking_Extras()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	String getExtras();
-
-	/**
-	 * Sets the value of the '{@link Classes.Buissnesslayer.Booking#getExtras <em>Extras</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Extras</em>' attribute.
-	 * @see #getExtras()
-	 * @generated
-	 */
-	void setExtras(String value);
+	EList<String> getExtras();
 
 	/**
 	 * Returns the value of the '<em><b>Parkings</b></em>' attribute.
