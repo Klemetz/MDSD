@@ -10,6 +10,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -23,7 +24,7 @@ public class LeetHaxorz {
 
 	public GUIController Start = Classes.Interactionlayer.impl.InteractionlayerFactoryImpl.init().createGUIController();
 	
-	
+	// Use case: Booking of room
 	@Test
 	public void bookingIsMade() {
 		
@@ -49,10 +50,35 @@ public class LeetHaxorz {
 //		booking3 = SelectRooms(rooooooom, booking3, 2, 3);
 //		assertEquals(rooooooom, booking3.getRooms());
 		
+		
+		//should succeed since a user with the email exists in the DB
+		assertNotNull(Start.getBookinghandler().getUserhandler().identifyUser("lennart@hotmail.com"));
+		//should fail since no user with this email does not exist in the DB
+		assertNull(Start.getBookinghandler().getUserhandler().identifyUser("dettaefel"));
+		//should succed since the employeeID exists in the DB
+		assertNotNull(Start.getBookinghandler().getUserhandler().identifyUser(656));
+		//should fail since the employeeID does not exist in the DB
+		assertNull(Start.getBookinghandler().getUserhandler().identifyUser(99));
+		
+		//should fail since not valid email
+		assertFalse(Start.getLogincontroller().getUserhandler().isEmailValid("johangillarkakor"));
+		//should succeed since email is valid
+		assertTrue(Start.getLogincontroller().getUserhandler().isEmailValid("johangillarkakor@hotmail.com"));
+		//should fail since invalid EmployeeID, remeber to create Employee Users in setup
+		
+		String startDate = "07 01 2016";
+		String endDate = "08 01 2016";
+		Booking newBooking = makeBooking(99, 1, 0, "20 12 2015", "02 01 2016");
+		Booking desiredDate = chooseDesireDate(newBooking, startDate, endDate);
+		// should succeed
+		assertEquals(startDate, desiredDate.getStartDate());
+		assertEquals(endDate, desiredDate.getEndDate());		
+		
+		
 //		//Checks that extras are available
 		BasicEList<String> extras = getAvailableExtras();
 		int extSize = extras.size();
-//		assertTrue(extSize > 0);
+		assertEquals(extSize , 3);
 		
 		//check that right extras are included in the booking
 		Booking booking1 = makeBooking(15, 2, 1, "10 10 2019", "15 10 2019");
@@ -100,70 +126,87 @@ public class LeetHaxorz {
 	
 	@Test
 	public void checkInTest(){
-		
-		
 		setupCheckInAndOut();
 		
 		//makes sure we can find a booking to check in
 		Booking bookingA = makeBooking(20, 2, 1, "10 10 2099", "15 10 2099");
-		Booking bookingB = makeBooking(20, 2, 1, "10 10 4000", "15 10 3999");
+		Booking bookingB = makeBooking(20, 2, 1, "10 10 4000", "15 10 5999");
 		Booking bookingC = makeBooking(20, 2, 1, "10 10 2899", "15 10 2999");
 		Booking bookingD = makeBooking(20, 2, 1, "10 10 2299", "15 10 2399");
-		System.out.println(bookingA.getRooms());
+//		System.out.println(bookingA.getRooms());
 		MakeBooking(bookingA);
 		Booking bookingToCheckIn = SearchForBookingID(20);
-		System.out.println(bookingToCheckIn);
+//		System.out.println(bookingToCheckIn);
 		assertEquals(bookingA, bookingToCheckIn);
 		
-		// 
+		// get correct rooms for the booking
 		Room roomA = GetRoomForTheBookingNCheckIn(bookingA);
 		assertNotNull(roomA);
 		
+		//make sure the booking is checked in
+		bookingToCheckIn.setCheckedIn(true);
+		assertEquals(bookingToCheckIn.isCheckedIn(), true);
 		
-		//check if booking id is valid. L�t oss anv�nda en ful-l�sning innan
-		//setup funktionerna �r f�rdiga.
+		//alternative flow 1: booking-ID doesn't exist
+		Booking bookingToCheckIn2 = SearchForBookingID(23344555);
+		System.out.println(bookingToCheckIn2);
+		assertEquals(bookingToCheckIn2, null);
 		
-		//Booking successfulCheckIn1 = makeBooking(1,1,3, "09 06 2016", "12 06 2016");
-		//assertSame(Start.getLogincontroller().currentUser.bookingHandler.fetchBooking(1), succesfulCheckIn1);
+		//make new booking since ID was missing
+		Booking bookingToCheckIn3 = makeBooking(25, 2, 2, "10 10 2399", "15 10 2499");
+		MakeBooking(bookingToCheckIn3);
+		Booking booking99 = SearchForBookingID(25);
+		assertEquals(booking99, bookingToCheckIn3);
 		
+		//alternative flow 2: not enough rooms
+		int rooooooomType = 2;
+		Booking bookingToCheckIn4 = makeBooking(26, 2, rooooooomType, "10 10 2500", "15 10 2699");
+		int roomType12 = bookingToCheckIn4.getRoomType();
+		Booking newBooking123 = RoomTypeInsufficient(bookingToCheckIn4, roomType12);
 		
-		//Check if guest is assigned room(s).
+		assertTrue(newBooking123.getRoomType() > roomType12);
 		
-		//assertNotNull(check Booking ID with corresponding email)
-		//Maybe that should be done seperatly
-		
-		
-		//Check if guest is checked in.
-		//Don't think this will suffice
-		//assertTrue(isCheckedIn);
-		
-		//Check if guest can be checked in twice (should fail)
-		
-		//Enter the same values but however with some slight difference
-		//Then assertSame with the old entry with the new since it should not be changed
 		
 	}
 	
 	@Test
-	public void checkOutTest(){
+	public void checkOutTest() throws ParseException{
 		
 		setupCheckInAndOut();
 		
+		//make sure that the booking is checked in before the checkout can be made
+		int roomtype = 2;
+		int rooms = 1;
+		SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
+		Calendar cal1 = new GregorianCalendar();
+	    Calendar cal2 = new GregorianCalendar();
+	    String sDate = "21 12 2016";
+	    String eDate = "26 12 2016";
+		Date date1 = myFormat.parse(sDate);
+		Date date2 = myFormat.parse(eDate);
+		
+		Booking BTCO = makeBooking(22, rooms, roomtype, sDate, eDate);
+		MakeBooking(BTCO);
+		BTCO.setCheckedIn(true);
+		Booking result = IdentifyBooking(22);
+		assertEquals(BTCO, result);
+		
+		//get correct payment amount is set
+		int amount = ReceivePayAmount(IdentifyBooking(22));
+		System.out.println(amount);
+		cal1.setTime(date1);
+		cal2.setTime(date2);
+		int nights = daysBetween(cal1.getTime(),cal2.getTime());
+		assertEquals(amount, (((roomtype * 100) * rooms) * nights));
+		
+		//Make sure that the booking is checked out after payment is displayed
+		Booking checkedOut = IdentifyBooking(22);
+		CheckOut(checkedOut);
+		assertEquals(checkedOut.isCheckedOut(), true);
 		
 		
 		
-		//Check if price (debt) is put to zero
-		
-		//Check if guest is checked out
-		
-		//Fail if the booking isn't checked in before check out
-		
-		//Success if check in is true
-		
-		//assertTrue(isCheckedOut);
-		
-		//Check so that the system returns fail if 
-		//Another attempt at checking out is made.
+
 		
 	}
 	
@@ -185,16 +228,9 @@ public class LeetHaxorz {
 	}
 	
 	
-	//1,2
-    private User IdentifyUser(String email) {
-        return Start.getLogincontroller().loginCreateGuest(email);
-    }
-    //1,2
-    private void IdentifyEmployee(int id) {
-        Start.getLogincontroller().loginEmployee(id);
-    }
+	
 	//3
-	private Booking ChooseDesireDate(Booking oldBooking, String startDate, String endDate)
+	private Booking chooseDesireDate(Booking oldBooking, String startDate, String endDate)
 	{
 		oldBooking.setStartDate(startDate);
 		oldBooking.setEndDate(endDate);
@@ -280,7 +316,7 @@ public class LeetHaxorz {
 		if (roomType < 3) {
 			roomType++;
 		}
-		booking.getRooms().add(Start.getBookinghandler().fetchAvailability(booking.getStartDate(), booking.getEndDate(), roomType, 0).get(0));
+		booking.setRoomType(roomType);
 		
 		return booking;
 
@@ -329,6 +365,7 @@ public class LeetHaxorz {
 		booking.setStartDate(startDate);
 		booking.setEndDate(endDate);
 		booking.setBookingID(bookingID);
+		booking.setRoomType(roomType);
 		
 		
 		
@@ -353,5 +390,9 @@ public class LeetHaxorz {
 		return booking;
 			
 	}
+	
+	public int daysBetween(Date d1, Date d2){
+        return (int)( (d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
+}
 	
 }

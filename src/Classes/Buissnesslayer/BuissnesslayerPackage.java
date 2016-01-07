@@ -283,13 +283,22 @@ public interface BuissnesslayerPackage extends EPackage {
 	int BOOKING__ROOMS = 12;
 
 	/**
+	 * The feature id for the '<em><b>Room Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__ROOM_TYPE = 13;
+
+	/**
 	 * The number of structural features of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_FEATURE_COUNT = 13;
+	int BOOKING_FEATURE_COUNT = 14;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -634,13 +643,13 @@ public interface BuissnesslayerPackage extends EPackage {
 	int USER_HANDLER___IS_EMAIL_VALID__STRING = 1;
 
 	/**
-	 * The operation id for the '<em>Check Employee ID</em>' operation.
+	 * The operation id for the '<em>Identify User</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_HANDLER___CHECK_EMPLOYEE_ID__INT = 2;
+	int USER_HANDLER___IDENTIFY_USER__INT = 2;
 
 	/**
 	 * The operation id for the '<em>Add New Guest</em>' operation.
@@ -661,13 +670,22 @@ public interface BuissnesslayerPackage extends EPackage {
 	int USER_HANDLER___CREATE_EMPLOYEE__INT = 4;
 
 	/**
+	 * The operation id for the '<em>Identify User</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_HANDLER___IDENTIFY_USER__STRING = 5;
+
+	/**
 	 * The number of operations of the '<em>User Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_HANDLER_OPERATION_COUNT = 5;
+	int USER_HANDLER_OPERATION_COUNT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1105,6 +1123,17 @@ public interface BuissnesslayerPackage extends EPackage {
 	EReference getBooking_Rooms();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Classes.Buissnesslayer.Booking#getRoomType <em>Room Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Room Type</em>'.
+	 * @see Classes.Buissnesslayer.Booking#getRoomType()
+	 * @see #getBooking()
+	 * @generated
+	 */
+	EAttribute getBooking_RoomType();
+
+	/**
 	 * Returns the meta object for the attribute '{@link Classes.Buissnesslayer.Booking#isCheckedIn <em>Checked In</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1524,14 +1553,14 @@ public interface BuissnesslayerPackage extends EPackage {
 	EOperation getUserHandler__IsEmailValid__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#checkEmployeeID(int) <em>Check Employee ID</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#identifyUser(int) <em>Identify User</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Employee ID</em>' operation.
-	 * @see Classes.Buissnesslayer.UserHandler#checkEmployeeID(int)
+	 * @return the meta object for the '<em>Identify User</em>' operation.
+	 * @see Classes.Buissnesslayer.UserHandler#identifyUser(int)
 	 * @generated
 	 */
-	EOperation getUserHandler__CheckEmployeeID__int();
+	EOperation getUserHandler__IdentifyUser__int();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#AddNewGuest(java.lang.String) <em>Add New Guest</em>}' operation.
@@ -1552,6 +1581,16 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getUserHandler__CreateEmployee__int();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#identifyUser(java.lang.String) <em>Identify User</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Identify User</em>' operation.
+	 * @see Classes.Buissnesslayer.UserHandler#identifyUser(java.lang.String)
+	 * @generated
+	 */
+	EOperation getUserHandler__IdentifyUser__String();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.Buissnesslayer.Address <em>Address</em>}'.
@@ -1774,6 +1813,14 @@ public interface BuissnesslayerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BOOKING__ROOMS = eINSTANCE.getBooking_Rooms();
+
+		/**
+		 * The meta object literal for the '<em><b>Room Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING__ROOM_TYPE = eINSTANCE.getBooking_RoomType();
 
 		/**
 		 * The meta object literal for the '<em><b>Checked In</b></em>' attribute feature.
@@ -2102,12 +2149,12 @@ public interface BuissnesslayerPackage extends EPackage {
 		EOperation USER_HANDLER___IS_EMAIL_VALID__STRING = eINSTANCE.getUserHandler__IsEmailValid__String();
 
 		/**
-		 * The meta object literal for the '<em><b>Check Employee ID</b></em>' operation.
+		 * The meta object literal for the '<em><b>Identify User</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER_HANDLER___CHECK_EMPLOYEE_ID__INT = eINSTANCE.getUserHandler__CheckEmployeeID__int();
+		EOperation USER_HANDLER___IDENTIFY_USER__INT = eINSTANCE.getUserHandler__IdentifyUser__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Add New Guest</b></em>' operation.
@@ -2124,6 +2171,14 @@ public interface BuissnesslayerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation USER_HANDLER___CREATE_EMPLOYEE__INT = eINSTANCE.getUserHandler__CreateEmployee__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Identify User</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER_HANDLER___IDENTIFY_USER__STRING = eINSTANCE.getUserHandler__IdentifyUser__String();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Buissnesslayer.impl.AddressImpl <em>Address</em>}' class.

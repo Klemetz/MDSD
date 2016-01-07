@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Classes.Buissnesslayer.Booking#isPaymentComplete <em>Payment Complete</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.Booking#getRoom <em>Room</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.Booking#getRooms <em>Rooms</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.Booking#getRoomType <em>Room Type</em>}</li>
  * </ul>
  *
  * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBooking()
@@ -222,6 +223,32 @@ public interface Booking extends EObject {
 	 * @generated
 	 */
 	EList<Room> getRooms();
+
+	/**
+	 * Returns the value of the '<em><b>Room Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Room Type</em>' attribute.
+	 * @see #setRoomType(int)
+	 * @see Classes.Buissnesslayer.BuissnesslayerPackage#getBooking_RoomType()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	int getRoomType();
+
+	/**
+	 * Sets the value of the '{@link Classes.Buissnesslayer.Booking#getRoomType <em>Room Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Room Type</em>' attribute.
+	 * @see #getRoomType()
+	 * @generated
+	 */
+	void setRoomType(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Checked In</b></em>' attribute.

@@ -150,6 +150,20 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		  Room c4 = BuissnesslayerFactoryImpl.eINSTANCE.createRoom();
 		  c4.setRoomType(3);
 		  roomDB.add(c4);
+		  
+		  Guest g1 = BuissnesslayerFactoryImpl.eINSTANCE.createGuest();
+		  g1.setName("Lennart");
+		  g1.setEmail("lennart@hotmail.com");
+		  userDB.add(g1);
+		  
+		  Employee e1 = BuissnesslayerFactoryImpl.eINSTANCE.createEmployee();
+		  e1.setID(656);
+		  employeeDB.add(e1);
+		  
+		  extrasDB.add("Towel");
+		  extrasDB.add("Mini-bar");
+		  extrasDB.add("Pillow");
+		  
 	}
 
 	/**

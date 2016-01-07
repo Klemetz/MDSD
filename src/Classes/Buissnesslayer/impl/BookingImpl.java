@@ -41,6 +41,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#isPaymentComplete <em>Payment Complete</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#getRoom <em>Room</em>}</li>
  *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#getRooms <em>Rooms</em>}</li>
+ *   <li>{@link Classes.Buissnesslayer.impl.BookingImpl#getRoomType <em>Room Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -277,6 +278,26 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected EList<Room> rooms;
 
 	/**
+	 * The default value of the '{@link #getRoomType() <em>Room Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ROOM_TYPE_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getRoomType() <em>Room Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomType()
+	 * @generated
+	 * @ordered
+	 */
+	protected int roomType = ROOM_TYPE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -450,6 +471,27 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getRoomType() {
+		return roomType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoomType(int newRoomType) {
+		int oldRoomType = roomType;
+		roomType = newRoomType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BuissnesslayerPackage.BOOKING__ROOM_TYPE, oldRoomType, roomType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isCheckedIn() {
 		return checkedIn;
 	}
@@ -575,6 +617,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return getRoom();
 			case BuissnesslayerPackage.BOOKING__ROOMS:
 				return getRooms();
+			case BuissnesslayerPackage.BOOKING__ROOM_TYPE:
+				return getRoomType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -630,6 +674,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				getRooms().clear();
 				getRooms().addAll((Collection<? extends Room>)newValue);
 				return;
+			case BuissnesslayerPackage.BOOKING__ROOM_TYPE:
+				setRoomType((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -681,6 +728,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BuissnesslayerPackage.BOOKING__ROOMS:
 				getRooms().clear();
 				return;
+			case BuissnesslayerPackage.BOOKING__ROOM_TYPE:
+				setRoomType(ROOM_TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -719,6 +769,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return room != null && !room.isEmpty();
 			case BuissnesslayerPackage.BOOKING__ROOMS:
 				return rooms != null && !rooms.isEmpty();
+			case BuissnesslayerPackage.BOOKING__ROOM_TYPE:
+				return roomType != ROOM_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -755,6 +807,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		result.append(payment);
 		result.append(", paymentComplete: ");
 		result.append(paymentComplete);
+		result.append(", RoomType: ");
+		result.append(roomType);
 		result.append(')');
 		return result.toString();
 	}

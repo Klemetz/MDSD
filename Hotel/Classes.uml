@@ -77,6 +77,9 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LnLUwLShEeWjBpqx86XPZQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LnMi4LShEeWjBpqx86XPZQ" value="*"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_uJuAgLUJEeWjBpqx86XPZQ" name="RoomType">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_S0sSIJkHEeWgf_EMGD-UnQ" name="BookingHandler">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_1qCgYJkHEeWgf_EMGD-UnQ" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ"/>
@@ -276,11 +279,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_xjKucLPeEeWbxK3v0VQAjQ" name="checkEmployeeID">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xjKucLPeEeWbxK3v0VQAjQ" name="identifyUser">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_4uUtkLPeEeWbxK3v0VQAjQ" name="employeeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_G--vwLPfEeWbxK3v0VQAjQ" name="returnValue" type="_3NlPYJkKEeWgf_EMGD-UnQ" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_G--vwLPfEeWbxK3v0VQAjQ" name="returnValue" type="_qIqOQJkPEeWgf_EMGD-UnQ" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_5CSXILP5EeWbxK3v0VQAjQ" name="AddNewGuest">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_7wEzELP5EeWbxK3v0VQAjQ" name="email">
@@ -293,6 +296,12 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z1tUkLTkEeWjBpqx86XPZQ" name="ID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_U06SMLT6EeWjBpqx86XPZQ" name="identifyUser">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YVXhMLT6EeWjBpqx86XPZQ" name="email">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZKZrwLT6EeWjBpqx86XPZQ" name="returnValue" type="_qu-nYJkPEeWgf_EMGD-UnQ" direction="return"/>
       </ownedOperation>
     </packagedElement>
   </packagedElement>
