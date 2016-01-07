@@ -332,13 +332,15 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Employee CreateEmployee(int ID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+			Employee newEmp = BuissnesslayerFactoryImpl.eINSTANCE.createEmployee();
+			newEmp.setBookinghandler(getLogincontroller().getGuicontroller().getBookinghandler());
+			newEmp.setID(ID);
+			getDatabase().getEmployeeDB().add(newEmp);
+			return newEmp;
+		}
 
 	/**
 	 * <!-- begin-user-doc -->
