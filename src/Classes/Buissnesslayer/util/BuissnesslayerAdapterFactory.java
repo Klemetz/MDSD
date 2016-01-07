@@ -88,12 +88,12 @@ public class BuissnesslayerAdapterFactory extends AdapterFactoryImpl {
 				return createUserHandlerAdapter();
 			}
 			@Override
-			public Adapter caseAddress(Address object) {
-				return createAddressAdapter();
-			}
-			@Override
 			public Adapter caseEmployee(Employee object) {
 				return createEmployeeAdapter();
+			}
+			@Override
+			public Adapter caseAddress(Address object) {
+				return createAddressAdapter();
 			}
 			@Override
 			public Adapter caseGuest(Guest object) {

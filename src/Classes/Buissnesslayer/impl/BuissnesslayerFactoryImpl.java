@@ -60,8 +60,8 @@ public class BuissnesslayerFactoryImpl extends EFactoryImpl implements Buissness
 			case BuissnesslayerPackage.BOOKING: return createBooking();
 			case BuissnesslayerPackage.BOOKING_HANDLER: return createBookingHandler();
 			case BuissnesslayerPackage.USER_HANDLER: return createUserHandler();
-			case BuissnesslayerPackage.ADDRESS: return createAddress();
 			case BuissnesslayerPackage.EMPLOYEE: return createEmployee();
+			case BuissnesslayerPackage.ADDRESS: return createAddress();
 			case BuissnesslayerPackage.GUEST: return createGuest();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");

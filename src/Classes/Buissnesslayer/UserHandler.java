@@ -141,4 +141,12 @@ public interface UserHandler extends EObject {
 	 */
 	User AddNewGuest(String email);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" IDRequired="true" IDOrdered="false"
+	 * @generated
+	 */
+	Employee CreateEmployee(int ID);
+
 } // UserHandler

@@ -184,7 +184,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_GhFZQLMjEeWpmdwYTYylNw" name="booking" type="_vvIsQJgXEeWgf_EMGD-UnQ" effect="update"/>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_qIqOQJkPEeWgf_EMGD-UnQ" name="Employee">
+    <packagedElement xmi:type="uml:Class" xmi:id="_qIqOQJkPEeWgf_EMGD-UnQ" name="Employee" visibility="public">
       <generalization xmi:type="uml:Generalization" xmi:id="__eEpcLPmEeWbxK3v0VQAjQ" general="_3NlPYJkKEeWgf_EMGD-UnQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Gd8BwJkQEeWgf_EMGD-UnQ" name="ID">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
@@ -287,6 +287,12 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_E5nxgLP6EeWbxK3v0VQAjQ" name="return value" type="_3NlPYJkKEeWgf_EMGD-UnQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_W0Hy4LTkEeWjBpqx86XPZQ" name="CreateEmployee">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y5rKILTkEeWjBpqx86XPZQ" name="returnVal" type="_qIqOQJkPEeWgf_EMGD-UnQ" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z1tUkLTkEeWjBpqx86XPZQ" name="ID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
       </ownedOperation>
     </packagedElement>
   </packagedElement>

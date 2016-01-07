@@ -649,6 +649,15 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getUserHandler__CreateEmployee__int() {
+		return userHandlerEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAddress() {
 		return addressEClass;
 	}
@@ -819,16 +828,17 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		createEOperation(userHandlerEClass, USER_HANDLER___IS_EMAIL_VALID__STRING);
 		createEOperation(userHandlerEClass, USER_HANDLER___CHECK_EMPLOYEE_ID__INT);
 		createEOperation(userHandlerEClass, USER_HANDLER___ADD_NEW_GUEST__STRING);
+		createEOperation(userHandlerEClass, USER_HANDLER___CREATE_EMPLOYEE__INT);
+
+		employeeEClass = createEClass(EMPLOYEE);
+		createEAttribute(employeeEClass, EMPLOYEE__ID);
+		createEAttribute(employeeEClass, EMPLOYEE__PASSWORD);
 
 		addressEClass = createEClass(ADDRESS);
 		createEAttribute(addressEClass, ADDRESS__STREET);
 		createEAttribute(addressEClass, ADDRESS__POSTAL_NUMBER);
 		createEAttribute(addressEClass, ADDRESS__CITY);
 		createEAttribute(addressEClass, ADDRESS__COUNTRY);
-
-		employeeEClass = createEClass(EMPLOYEE);
-		createEAttribute(employeeEClass, EMPLOYEE__ID);
-		createEAttribute(employeeEClass, EMPLOYEE__PASSWORD);
 
 		guestEClass = createEClass(GUEST);
 		createEAttribute(guestEClass, GUEST__WROK_AROUND);
@@ -969,15 +979,18 @@ public class BuissnesslayerPackageImpl extends EPackageImpl implements Buissness
 		op = initEOperation(getUserHandler__AddNewGuest__String(), this.getUser(), "AddNewGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getUserHandler__CreateEmployee__int(), this.getEmployee(), "CreateEmployee", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "ID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(employeeEClass, Employee.class, "Employee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEmployee_ID(), ecorePackage.getEInt(), "ID", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmployee_Password(), ecorePackage.getEString(), "Password", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
 		initEClass(addressEClass, Address.class, "Address", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAddress_Street(), ecorePackage.getEString(), "street", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAddress_PostalNumber(), ecorePackage.getEInt(), "postalNumber", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAddress_City(), ecorePackage.getEString(), "city", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAddress_Country(), ecorePackage.getEString(), "country", null, 1, 1, Address.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(employeeEClass, Employee.class, "Employee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEmployee_ID(), ecorePackage.getEInt(), "ID", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEmployee_Password(), ecorePackage.getEString(), "Password", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(guestEClass, Guest.class, "Guest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGuest_WrokAround(), ecorePackage.getEInt(), "wrokAround", null, 0, -1, Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

@@ -142,12 +142,21 @@
       <eOperations name="AddNewGuest" ordered="false" lowerBound="1" eType="#//Buissnesslayer/User">
         <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
+      <eOperations name="CreateEmployee" ordered="false" lowerBound="1" eType="#//Buissnesslayer/Employee">
+        <eParameters name="ID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="Users" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="database" ordered="false"
           lowerBound="1" eType="#//Datalayer/Database" eOpposite="#//Datalayer/Database/userhandler"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="logincontroller" ordered="false"
           lowerBound="1" eType="#//Interactionlayer/LoginController" eOpposite="#//Interactionlayer/LoginController/userhandler"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Employee" eSuperTypes="#//Buissnesslayer/User">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Password" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Address">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="street" ordered="false"
@@ -157,12 +166,6 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Employee" eSuperTypes="#//Buissnesslayer/User">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Password" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Guest" eSuperTypes="#//Buissnesslayer/User">

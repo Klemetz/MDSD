@@ -96,16 +96,16 @@ public class BuissnesslayerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BuissnesslayerPackage.ADDRESS: {
-				Address address = (Address)theEObject;
-				T result = caseAddress(address);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case BuissnesslayerPackage.EMPLOYEE: {
 				Employee employee = (Employee)theEObject;
 				T result = caseEmployee(employee);
 				if (result == null) result = caseUser(employee);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BuissnesslayerPackage.ADDRESS: {
+				Address address = (Address)theEObject;
+				T result = caseAddress(address);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

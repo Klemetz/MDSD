@@ -143,7 +143,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getAddress()
 	 * @generated
 	 */
-	int ADDRESS = 5;
+	int ADDRESS = 6;
 
 	/**
 	 * The meta object id for the '{@link Classes.Buissnesslayer.impl.GuestImpl <em>Guest</em>}' class.
@@ -163,7 +163,7 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @see Classes.Buissnesslayer.impl.BuissnesslayerPackageImpl#getEmployee()
 	 * @generated
 	 */
-	int EMPLOYEE = 6;
+	int EMPLOYEE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Booking ID</b></em>' attribute.
@@ -652,67 +652,22 @@ public interface BuissnesslayerPackage extends EPackage {
 	int USER_HANDLER___ADD_NEW_GUEST__STRING = 3;
 
 	/**
+	 * The operation id for the '<em>Create Employee</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_HANDLER___CREATE_EMPLOYEE__INT = 4;
+
+	/**
 	 * The number of operations of the '<em>User Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_HANDLER_OPERATION_COUNT = 4;
-
-	/**
-	 * The feature id for the '<em><b>Street</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS__STREET = 0;
-
-	/**
-	 * The feature id for the '<em><b>Postal Number</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS__POSTAL_NUMBER = 1;
-
-	/**
-	 * The feature id for the '<em><b>City</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS__CITY = 2;
-
-	/**
-	 * The feature id for the '<em><b>Country</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS__COUNTRY = 3;
-
-	/**
-	 * The number of structural features of the '<em>Address</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Address</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDRESS_OPERATION_COUNT = 0;
+	int USER_HANDLER_OPERATION_COUNT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -848,6 +803,60 @@ public interface BuissnesslayerPackage extends EPackage {
 	 * @ordered
 	 */
 	int EMPLOYEE_OPERATION_COUNT = USER_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Street</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS__STREET = 0;
+
+	/**
+	 * The feature id for the '<em><b>Postal Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS__POSTAL_NUMBER = 1;
+
+	/**
+	 * The feature id for the '<em><b>City</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS__CITY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Country</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS__COUNTRY = 3;
+
+	/**
+	 * The number of structural features of the '<em>Address</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Address</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1535,6 +1544,16 @@ public interface BuissnesslayerPackage extends EPackage {
 	EOperation getUserHandler__AddNewGuest__String();
 
 	/**
+	 * Returns the meta object for the '{@link Classes.Buissnesslayer.UserHandler#CreateEmployee(int) <em>Create Employee</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Employee</em>' operation.
+	 * @see Classes.Buissnesslayer.UserHandler#CreateEmployee(int)
+	 * @generated
+	 */
+	EOperation getUserHandler__CreateEmployee__int();
+
+	/**
 	 * Returns the meta object for class '{@link Classes.Buissnesslayer.Address <em>Address</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2097,6 +2116,14 @@ public interface BuissnesslayerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation USER_HANDLER___ADD_NEW_GUEST__STRING = eINSTANCE.getUserHandler__AddNewGuest__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Employee</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER_HANDLER___CREATE_EMPLOYEE__INT = eINSTANCE.getUserHandler__CreateEmployee__int();
 
 		/**
 		 * The meta object literal for the '{@link Classes.Buissnesslayer.impl.AddressImpl <em>Address</em>}' class.

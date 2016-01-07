@@ -334,6 +334,17 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Employee CreateEmployee(int ID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -462,6 +473,8 @@ public class UserHandlerImpl extends MinimalEObjectImpl.Container implements Use
 				return checkEmployeeID((Integer)arguments.get(0));
 			case BuissnesslayerPackage.USER_HANDLER___ADD_NEW_GUEST__STRING:
 				return AddNewGuest((String)arguments.get(0));
+			case BuissnesslayerPackage.USER_HANDLER___CREATE_EMPLOYEE__INT:
+				return CreateEmployee((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
